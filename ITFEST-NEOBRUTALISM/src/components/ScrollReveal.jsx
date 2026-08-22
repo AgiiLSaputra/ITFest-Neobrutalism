@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useScrollAnimation(threshold = 0.15, once = true) {
+export default function ScrollReveal({
+  children,
+  animation = 'animate-neo-slam',
+  delay = 0,
+  threshold = 0.15,
+  className = '',
+  once = true,
+}) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -24,5 +31,18 @@ export function useScrollAnimation(threshold = 0.15, once = true) {
     return () => observer.disconnect();
   }, [threshold, once]);
 
-  return [ref, isVisible];
+  if (!isVisible) {
+    return <div ref={ref} className={className} style={{ opacity: 0 }} />;
+  }
+
+  return (
+    <div className={`${className} h-full`}>
+      <div
+        className={`${animation} h-full`}
+        style={delay ? { animationDelay: `${delay}s` } : undefined}
+      >
+        {children}
+      </div>
+    </div>
+  );
 }

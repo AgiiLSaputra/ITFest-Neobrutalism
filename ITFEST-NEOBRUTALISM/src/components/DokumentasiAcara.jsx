@@ -1,4 +1,6 @@
-﻿const GALERI_FOTO = "/img/Foto.jpeg";
+﻿import ScrollReveal from './ScrollReveal';
+
+const GALERI_FOTO = "/img/Foto.jpeg";
 
 const topRowImages = [
   { src: GALERI_FOTO, rotation: "-rotate-2" },
@@ -47,10 +49,14 @@ const DokumentasiAcara = () => {
   return (
     <section className="py-24 relative bg-neo-blue border-b-8 border-black overflow-hidden" id="gallery">
       <div className="container mx-auto px-6 max-w-screen-xl text-center mb-12">
-        <div className="inline-block bg-white p-6 neo-border neo-shadow mb-6 transform rotate-1">
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">Dokumentasi <span className="text-neo-pink">Acara</span></h2>
-        </div>
-        <p className="text-xl font-bold bg-white inline-block px-4 py-2 neo-border">Kilas balik keseruan dan inovasi di perhelatan Milad IT Fest sebelumnya.</p>
+        <ScrollReveal animation="animate-neo-stamp">
+          <div className="inline-block bg-white p-6 neo-border neo-shadow mb-6 transform rotate-1">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">Dokumentasi <span className="text-neo-pink">Acara</span></h2>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal animation="animate-neo-flip" delay={0.2}>
+          <p className="text-xl font-bold bg-white inline-block px-4 py-2 neo-border">Kilas balik keseruan dan inovasi di perhelatan Milad IT Fest sebelumnya.</p>
+        </ScrollReveal>
       </div>
       <div className="space-y-12">
         <ImageRow images={topRowImages} scrollDirection="left" />

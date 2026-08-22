@@ -1,8 +1,15 @@
 const LOGO_URL = "/img/LogoITFESTUIR.png";
 
+const socialLinks = [
+  { icon: 'camera_alt', label: 'Instagram' },
+  { icon: 'smart_display', label: 'YouTube' },
+  { icon: 'tag', label: 'TikTok' },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-[#f0f0f0] border-t-8 border-black pt-16 pb-8 text-black">
+    <footer className="bg-[#f0f0f0] border-t-8 border-black pt-16 pb-8 text-black relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-neo-yellow via-neo-pink to-neo-blue"></div>
       <div className="container mx-auto px-6 max-w-screen-xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -14,6 +21,13 @@ export default function Footer() {
             <p className="font-bold text-lg max-w-sm mb-6 bg-white p-4 neo-border">
               Merayakan perjalanan inovasi dan kolaborasi di Teknik Informatika Universitas Islam Riau. Code the Stars, Beyond the Horizons.
             </p>
+            <div className="flex gap-3">
+              {socialLinks.map((s) => (
+                <a key={s.label} href="#" className="w-12 h-12 bg-white neo-border neo-shadow-sm flex items-center justify-center hover:bg-neo-yellow hover:shadow-none hover:-translate-y-1 transition-all group" aria-label={s.label}>
+                  <span className="material-symbols-outlined text-xl group-hover:animate-wiggle">{s.icon}</span>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Links */}
@@ -43,6 +57,10 @@ export default function Footer() {
           <p className="text-sm bg-white px-4 py-2 neo-border">
             © 2026 Teknik Informatika UIR. Hak Cipta Dilindungi.
           </p>
+          <div className="flex items-center gap-2 text-sm">
+            <span className="w-2 h-2 bg-neo-green neo-border animate-pulse-ring"></span>
+            <span className="bg-white px-3 py-1 neo-border font-black text-xs uppercase tracking-widest">Made with ❤ by IF'26</span>
+          </div>
         </div>
       </div>
     </footer>

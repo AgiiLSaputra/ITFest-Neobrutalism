@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import ScrollReveal from './ScrollReveal';
 
 const events = [
   {
@@ -10,8 +11,8 @@ const events = [
     title: 'Hackathon',
     description: 'Tantang kemampuan teknismu dalam membangun solusi inovatif dalam waktu terbatas.',
     daftarBg: 'bg-neo-yellow',
-    backBg: 'bg-neo-blue',
-    backDetail: 'Tim 2-3 orang. Fokus pada pengembangan solusi digital untuk masalah lokal.',
+    cardBg: 'bg-white',
+    accent: 'bg-neo-blue',
   },
   {
     id: 'esport',
@@ -22,8 +23,8 @@ const events = [
     title: 'E-Sport Tournament',
     description: 'Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik.',
     daftarBg: 'bg-neo-blue',
-    backBg: 'bg-neo-pink',
-    backDetail: 'Sistem gugur. 5 Pemain + 1 Cadangan. Venue: GOR Volley UIR.',
+    cardBg: 'bg-white',
+    accent: 'bg-neo-pink',
   },
   {
     id: 'badminton',
@@ -34,8 +35,8 @@ const events = [
     title: 'Badminton Tournament',
     description: 'Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra.',
     daftarBg: 'bg-neo-pink',
-    backBg: 'bg-neo-green',
-    backDetail: 'Kategori Ganda Putra. Lokasi: GOR Badminton UIR.',
+    cardBg: 'bg-white',
+    accent: 'bg-neo-green',
   },
   {
     id: 'expo',
@@ -46,8 +47,8 @@ const events = [
     title: 'IT Expo',
     description: 'Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan.',
     daftarBg: 'bg-neo-blue',
-    backBg: 'bg-neo-yellow',
-    backDetail: 'Terbuka untuk pameran produk IoT, Web, dan Mobile Apps.',
+    cardBg: 'bg-white',
+    accent: 'bg-neo-yellow',
   },
   {
     id: 'seminar',
@@ -58,8 +59,8 @@ const events = [
     title: 'Nasional Seminar',
     description: 'Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI.',
     daftarBg: 'bg-neo-green',
-    backBg: 'bg-neo-blue',
-    backDetail: 'Pembicara dari Tech Giant. Sertifikat Nasional disediakan.',
+    cardBg: 'bg-white',
+    accent: 'bg-neo-blue',
   },
   {
     id: 'typing',
@@ -70,72 +71,65 @@ const events = [
     title: 'Typing Test',
     description: 'Seberapa cepat jarimu menari di atas keyboard? Buktikan kecepatan dan akurasimu di sini.',
     daftarBg: 'bg-neo-yellow',
-    backBg: 'bg-neo-pink',
-    backDetail: 'Kompetisi WPM (Words Per Minute) dengan akurasi minimal 95%.',
+    cardBg: 'bg-white',
+    accent: 'bg-neo-pink',
   },
 ];
 
-function FlipCard({ event }) {
-  const [isFlipped, setIsFlipped] = useState(false);
-
+function EventCard({ event, index }) {
   return (
-    <div className="relative group">
-      <div className="flip-container h-[600px] relative">
-        <div className={`flip-inner h-full w-full${isFlipped ? ' is-flipped' : ''}`}>
-          {/* Front */}
-          <div className="flip-front absolute inset-0 bg-white neo-border neo-shadow flex flex-col h-full p-8 transition-transform group-hover:-translate-y-2 group-hover:-translate-x-2">
-            <div className="flex justify-between items-start mb-8 pb-4 border-b-4 border-black">
-              <span className={`px-3 py-1 ${event.categoryBg} neo-border text-sm font-black text-black uppercase tracking-widest`}>{event.category}</span>
-              <span className="material-symbols-outlined text-black text-3xl">{event.icon}</span>
-            </div>
-            <div className="flex gap-2 mb-4">
-              {event.tags.map((tag) => (
-                <span key={tag} className="px-2 py-1 bg-black text-white text-xs font-black uppercase">{tag}</span>
-              ))}
-            </div>
-            <h3 className="text-4xl font-black mb-4 uppercase">{event.title}</h3>
-            <p className="text-lg font-bold mb-8 leading-relaxed">{event.description}</p>
-            <div className="mt-auto space-y-4">
-              <a className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm neo-shadow-active`} href="#">DAFTAR SEKARANG</a>
-              <button className="flex items-center justify-center gap-2 w-full py-4 bg-white text-black font-black uppercase neo-border neo-shadow-sm neo-shadow-active" onClick={() => setIsFlipped(true)}>LIHAT DETAIL ACARA</button>
-            </div>
-          </div>
-          {/* Back */}
-          <div className={`flip-back absolute inset-0 ${event.backBg} neo-border neo-shadow flex flex-col h-full p-8`}>
-            <div className="flex justify-between items-start mb-6 pb-4 border-b-4 border-black">
-              <span className="px-3 py-1 bg-white neo-border text-sm font-black text-black uppercase tracking-widest">EVENT DETAILS</span>
-              <span className="material-symbols-outlined text-black text-3xl">info</span>
-            </div>
-            <div className="space-y-6 flex-grow bg-white p-6 neo-border">
-              <p className="text-sm font-bold">{event.backDetail}</p>
-            </div>
-            <div className="mt-6">
-              <button className="flex items-center justify-center gap-2 w-full py-4 bg-black text-white font-black uppercase neo-border neo-shadow-sm neo-shadow-active" onClick={() => setIsFlipped(false)}>
-                <span className="material-symbols-outlined">arrow_back</span> KEMBALI
-              </button>
-            </div>
-          </div>
+    <ScrollReveal animation="animate-neo-slam" delay={index * 0.12} className="relative group h-full">
+      <div className={`${event.cardBg} neo-border neo-shadow flex flex-col h-full p-8 transition-all duration-200 group-hover:-translate-y-2 group-hover:-translate-x-2 group-hover:shadow-none neo-tilt group-hover:animate-neo-squish`}>
+        <div className="flex justify-between items-start mb-6 pb-4 border-b-4 border-black">
+          <span className={`px-3 py-1 ${event.categoryBg} neo-border text-sm font-black text-black uppercase tracking-widest animate-neo-jitter`}>{event.category}</span>
+          <span className="material-symbols-outlined text-black text-3xl group-hover:animate-neo-swing">{event.icon}</span>
+        </div>
+        <div className="flex gap-2 mb-4">
+          {event.tags.map((tag) => (
+            <span key={tag} className="px-2 py-1 bg-black text-white text-xs font-black uppercase animate-neo-glitch">{tag}</span>
+          ))}
+        </div>
+        <h3 className="text-3xl font-black mb-4 uppercase">{event.title}</h3>
+        <p className="text-lg font-bold mb-8 leading-relaxed flex-grow">{event.description}</p>
+        <div className="mt-auto space-y-3">
+          <a className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none animate-neo-jitter`} href="#">
+            DAFTAR SEKARANG
+          </a>
+          <Link to={`/event/${event.id}`} className="flex items-center justify-center gap-2 w-full py-4 bg-black text-white font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none">
+            <span className="material-symbols-outlined text-lg">arrow_forward</span>
+            LIHAT DETAIL ACARA
+          </Link>
         </div>
       </div>
-    </div>
+    </ScrollReveal>
   );
 }
 
 export default function Pendaftaran() {
   return (
     <section className="py-24 relative bg-[#f0f0f0] border-b-8 border-black" id="pendaftaran">
+      <div className="absolute top-8 left-8 bg-neo-orange neo-border neo-shadow-sm px-3 py-1 font-black text-xs uppercase transform -rotate-6 animate-wiggle hidden lg:block z-20">
+        🔥 Terbatas!
+      </div>
+      <div className="absolute bottom-12 right-8 bg-neo-green neo-border neo-shadow-sm px-3 py-1 font-black text-xs uppercase transform rotate-6 animate-bounce-slow hidden lg:block z-20">
+        ★ Buka Pendaftaran
+      </div>
       <div className="container mx-auto px-6 max-w-screen-xl relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block bg-neo-pink p-4 neo-border neo-shadow mb-6 transform -rotate-1">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase">PENDAFTARAN ACARA</h2>
-          </div>
-          <p className="text-xl font-bold max-w-2xl mx-auto bg-white p-4 neo-border">
-            Pilih cabang kegiatan SwitchFest 2026 yang ingin kamu ikuti. Pelajari informasi selengkapnya atau langsung lakukan pendaftaran!
-          </p>
+          <ScrollReveal animation="animate-neo-stamp">
+            <div className="inline-block bg-neo-pink p-4 neo-border neo-shadow mb-6 transform -rotate-1">
+              <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase">PENDAFTARAN ACARA</h2>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal animation="animate-neo-flip" delay={0.2}>
+            <p className="text-xl font-bold max-w-2xl mx-auto bg-white p-4 neo-border">
+              Pilih cabang kegiatan SwitchFest 2026 yang ingin kamu ikuti. Pelajari informasi selengkapnya atau langsung lakukan pendaftaran!
+            </p>
+          </ScrollReveal>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {events.map((event) => (
-            <FlipCard key={event.id} event={event} />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          {events.map((event, i) => (
+            <EventCard key={event.id} event={event} index={i} />
           ))}
         </div>
       </div>
