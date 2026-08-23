@@ -78,8 +78,8 @@ const events = [
 
 function EventCard({ event, index }) {
   return (
-    <ScrollReveal animation="animate-neo-slam" delay={index * 0.12} className="relative group h-full">
-      <div className={`${event.cardBg} neo-border neo-shadow flex flex-col h-full p-8 transition-all duration-200 group-hover:-translate-y-2 group-hover:-translate-x-2 group-hover:shadow-none neo-tilt group-hover:animate-neo-squish`}>
+    <ScrollReveal animation="animate-pop-up" delay={index * 0.12} className="relative group h-full">
+      <div className={`${event.cardBg} dark:bg-[#16213e] neo-border dark:border-white neo-shadow flex flex-col h-full p-8 transition-all duration-200 group-hover:-translate-y-2 group-hover:-translate-x-2 group-hover:shadow-none neo-tilt group-hover:animate-neo-squish`}>
         <div className="flex justify-between items-start mb-6 pb-4 border-b-4 border-black">
           <span className={`px-3 py-1 ${event.categoryBg} neo-border text-sm font-black text-black uppercase tracking-widest animate-neo-jitter`}>{event.category}</span>
           <span className="material-symbols-outlined text-black text-3xl group-hover:animate-neo-swing">{event.icon}</span>
@@ -107,7 +107,7 @@ function EventCard({ event, index }) {
 
 export default function Pendaftaran() {
   return (
-    <section className="py-24 relative bg-[#f0f0f0] border-b-8 border-black" id="pendaftaran">
+    <section className="py-24 relative bg-[#f0f0f0] dark:bg-[#1a1a2e] border-b-8 border-black dark:border-white transition-colors" id="pendaftaran">
       <div className="absolute top-8 left-8 bg-neo-orange neo-border neo-shadow-sm px-3 py-1 font-black text-xs uppercase transform -rotate-6 animate-wiggle hidden lg:block z-20">
         🔥 Terbatas!
       </div>
@@ -116,13 +116,13 @@ export default function Pendaftaran() {
       </div>
       <div className="container mx-auto px-6 max-w-screen-xl relative z-10">
         <div className="text-center mb-16">
-          <ScrollReveal animation="animate-neo-stamp">
+          <ScrollReveal animation="animate-pop-up">
             <div className="inline-block bg-neo-pink p-4 neo-border neo-shadow mb-6 transform -rotate-1">
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase">PENDAFTARAN ACARA</h2>
             </div>
           </ScrollReveal>
-          <ScrollReveal animation="animate-neo-flip" delay={0.2}>
-            <p className="text-xl font-bold max-w-2xl mx-auto bg-white p-4 neo-border">
+          <ScrollReveal animation="animate-pop-up" delay={0.2}>
+            <p className="text-xl font-bold max-w-2xl mx-auto bg-white dark:bg-[#16213e] p-4 neo-border dark:border-white transition-colors">
               Pilih cabang kegiatan SwitchFest 2026 yang ingin kamu ikuti. Pelajari informasi selengkapnya atau langsung lakukan pendaftaran!
             </p>
           </ScrollReveal>

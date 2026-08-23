@@ -2,19 +2,19 @@ import ScrollReveal from './ScrollReveal';
 
 export default function Roadmap() {
   return (
-    <section className="py-24 relative bg-white border-b-8 border-black overflow-hidden" id="roadmap">
+    <section className="py-24 relative bg-white dark:bg-[#16213e] border-b-8 border-black dark:border-white overflow-hidden transition-colors" id="roadmap">
       <div className="absolute top-4 right-8 bg-neo-pink neo-border neo-shadow-sm px-3 py-1 font-black text-xs uppercase transform rotate-3 animate-wiggle hidden md:block z-20">
         ★ Upcoming
       </div>
       <div className="container mx-auto px-6 max-w-screen-xl relative z-10">
         <div className="text-center mb-16">
-          <ScrollReveal animation="animate-neo-stamp">
+          <ScrollReveal animation="animate-pop-up">
             <div className="inline-block bg-white p-6 neo-border neo-shadow mb-6 transform rotate-1">
               <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">Roadmap <span className="text-neo-pink animate-neo-jitter">Acara</span></h2>
             </div>
           </ScrollReveal>
           <div className="block">
-            <ScrollReveal animation="animate-neo-flip" delay={0.15}>
+            <ScrollReveal animation="animate-pop-up" delay={0.15}>
               <p className="text-xl font-bold bg-white inline-block px-4 py-2 neo-border">
                 Perjalanan menuju puncak perayaan Milad IT Fest 2026.
               </p>
@@ -35,11 +35,11 @@ export default function Roadmap() {
                 <div className="w-3 h-3 bg-black"></div>
               </div>
               <div className="md:w-5/12 w-full pl-12 md:pl-0">
-                <ScrollReveal animation="animate-neo-slam" delay={0.1}>
-                  <div className="p-6 bg-white neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt">
-                    <div className="inline-block px-3 py-1 mb-4 bg-neo-blue neo-border text-xs font-black text-black tracking-wider animate-neo-jitter">MINGGU 1-2</div>
-                    <h3 className="text-2xl font-black text-black mb-2 uppercase">Finalisasi Konsep &amp; Perencanaan</h3>
-                    <p className="text-sm font-bold text-black">Pembentukan panitia, penyusunan anggaran, dan penetapan tema visual.</p>
+                <ScrollReveal animation="animate-pop-up" delay={0.1}>
+                  <div className="p-6 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow hover:-translate-y-1 transition-transform neo-tilt">
+                    <div className="inline-block px-3 py-1 mb-4 bg-neo-blue neo-border text-xs font-black text-black dark:text-white tracking-wider animate-neo-jitter">MINGGU 1-2</div>
+                    <h3 className="text-2xl font-black text-black dark:text-white mb-2 uppercase">Finalisasi Konsep &amp; Perencanaan</h3>
+                    <p className="text-sm font-bold text-black dark:text-[#e0e0e0]">Pembentukan panitia, penyusunan anggaran, dan penetapan tema visual.</p>
                   </div>
                 </ScrollReveal>
               </div>
@@ -52,11 +52,11 @@ export default function Roadmap() {
                 <div className="w-3 h-3 bg-black"></div>
               </div>
               <div className="md:w-5/12 w-full pl-12 md:pl-0 text-left md:text-right">
-                <ScrollReveal animation="animate-neo-slam" delay={0.2}>
-                  <div className="p-6 bg-white neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt">
-                    <div className="inline-block px-3 py-1 mb-4 bg-neo-pink neo-border text-xs font-black text-black tracking-wider animate-neo-jitter">MINGGU 3-4</div>
-                    <h3 className="text-2xl font-black text-black mb-2 uppercase">Development &amp; Promosi Awal</h3>
-                    <p className="text-sm font-bold text-black">Pembuatan aset desain, peluncuran website teaser, dan pencarian sponsor.</p>
+                <ScrollReveal animation="animate-pop-up" delay={0.2}>
+                  <div className="p-6 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow hover:-translate-y-1 transition-transform neo-tilt">
+                    <div className="inline-block px-3 py-1 mb-4 bg-neo-pink neo-border text-xs font-black text-black dark:text-white tracking-wider animate-neo-jitter">MINGGU 3-4</div>
+                    <h3 className="text-2xl font-black text-black dark:text-white mb-2 uppercase">Development &amp; Promosi Awal</h3>
+                    <p className="text-sm font-bold text-black dark:text-[#e0e0e0]">Pembuatan aset desain, peluncuran website teaser, dan pencarian sponsor.</p>
                   </div>
                 </ScrollReveal>
               </div>
@@ -69,11 +69,11 @@ export default function Roadmap() {
                 <div className="w-3 h-3 bg-black"></div>
               </div>
               <div className="md:w-5/12 w-full pl-12 md:pl-0">
-                <ScrollReveal animation="animate-neo-slam" delay={0.3}>
-                  <div className="p-6 bg-white neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt">
-                    <div className="inline-block px-3 py-1 mb-4 bg-neo-green neo-border text-xs font-black text-black tracking-wider animate-neo-jitter">MINGGU 5</div>
-                    <h3 className="text-2xl font-black text-black mb-2 uppercase">Soft Launch &amp; Registrasi</h3>
-                    <p className="text-sm font-bold text-black">Pembukaan pendaftaran lomba, publikasi jadwal acara, dan kampanye media sosial.</p>
+                <ScrollReveal animation="animate-pop-up" delay={0.3}>
+                  <div className="p-6 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow hover:-translate-y-1 transition-transform neo-tilt">
+                    <div className="inline-block px-3 py-1 mb-4 bg-neo-green neo-border text-xs font-black text-black dark:text-white tracking-wider animate-neo-jitter">MINGGU 5</div>
+                    <h3 className="text-2xl font-black text-black dark:text-white mb-2 uppercase">Soft Launch &amp; Registrasi</h3>
+                    <p className="text-sm font-bold text-black dark:text-[#e0e0e0]">Pembukaan pendaftaran lomba, publikasi jadwal acara, dan kampanye media sosial.</p>
                   </div>
                 </ScrollReveal>
               </div>
@@ -86,11 +86,11 @@ export default function Roadmap() {
                 <div className="w-4 h-4 bg-black"></div>
               </div>
               <div className="md:w-5/12 w-full pl-12 md:pl-0 text-left md:text-right">
-                <ScrollReveal animation="animate-neo-slam" delay={0.4}>
+                <ScrollReveal animation="animate-pop-up" delay={0.4}>
                   <div className="p-6 bg-neo-yellow neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt">
                     <div className="inline-block px-3 py-1 mb-4 bg-black text-white neo-border text-xs font-black tracking-wider animate-neo-glitch">HARI-H | 2-3 DES 2026</div>
-                    <h3 className="text-2xl font-black text-black mb-2 uppercase">Puncak Acara</h3>
-                    <p className="text-sm font-black text-black">Pelaksanaan seluruh rangkaian lomba, seminar, dan acara puncak di GOR Volley UIR.</p>
+                    <h3 className="text-2xl font-black text-black dark:text-white mb-2 uppercase">Puncak Acara</h3>
+                    <p className="text-sm font-black text-black dark:text-[#e0e0e0]">Pelaksanaan seluruh rangkaian lomba, seminar, dan acara puncak di GOR Volley UIR.</p>
                   </div>
                 </ScrollReveal>
               </div>

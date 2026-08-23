@@ -215,8 +215,8 @@ export default function EventDetail() {
     return (
       <section className="pt-32 pb-24 px-6 min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-6xl font-black uppercase mb-4">404</h1>
-          <p className="text-xl font-bold mb-8">Event tidak ditemukan.</p>
+          <h1 className="text-6xl font-black uppercase mb-4 dark:text-white">404</h1>
+          <p className="text-xl font-bold mb-8 dark:text-[#e0e0e0]">Event tidak ditemukan.</p>
           <Link to="/" className="bg-neo-yellow text-black px-8 py-4 font-black neo-border neo-shadow uppercase inline-block">
             Kembali ke Beranda
           </Link>
@@ -235,24 +235,24 @@ export default function EventDetail() {
       <div className="absolute bottom-48 left-12 w-8 h-8 bg-black neo-border -rotate-12 hidden lg:block animate-neo-jitter"></div>
 
       {/* Back Button */}
-      <Link to="/" className="inline-flex items-center gap-2 mb-8 text-black font-black hover:bg-black hover:text-white px-3 py-1 transition-colors neo-border font-mono text-sm uppercase neo-shadow-hover animate-neo-stamp">
+      <Link to="/" className="inline-flex items-center gap-2 mb-8 text-black dark:text-white font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-3 py-1 transition-colors neo-border dark:border-white font-mono text-sm uppercase neo-shadow-hover animate-pop-up">
         <span className="material-symbols-outlined text-[18px]">arrow_back</span>
         BACK TO LANDING PAGE
       </Link>
 
       {/* Hero Banner */}
-      <div className="relative overflow-hidden neo-border neo-shadow bg-black mb-12 animate-neo-slam">
+      <div className="relative overflow-hidden neo-border neo-shadow bg-black mb-12 animate-pop-up">
         <img alt={event.title} className="w-full h-[300px] md:h-[500px] object-cover scale-110 brightness-75 contrast-110 transition-transform duration-300 hover:scale-125" src={event.heroImg} />
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.6) 100%)' }}></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-          <div className={`inline-block px-4 py-1 mb-6 border-2 border-black font-black text-sm uppercase ${event.tagBg} text-black neo-shadow-sm transform -rotate-1 animate-neo-stamp`}>
+          <div className={`inline-block px-4 py-1 mb-6 border-2 border-black font-black text-sm uppercase ${event.tagBg} text-black neo-shadow-sm transform -rotate-1 animate-pop-up`}>
             {event.subtitle}
           </div>
-          <h1 className="text-4xl md:text-7xl lg:text-8xl text-white mb-6 uppercase font-black drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] leading-none animate-neo-slam" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl text-white mb-6 uppercase font-black drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] leading-none animate-pop-up" style={{ animationDelay: '0.2s' }}>
             {event.title}
           </h1>
-          <p className="text-neo-yellow max-w-3xl font-bold bg-black inline-block px-6 py-3 neo-border neo-shadow-sm text-sm md:text-lg animate-neo-bounce-in">
+          <p className="text-neo-yellow max-w-3xl font-bold bg-black inline-block px-6 py-3 neo-border neo-shadow-sm text-sm md:text-lg animate-pop-up">
             {event.description}
           </p>
         </div>
@@ -262,17 +262,17 @@ export default function EventDetail() {
         {/* Left Column */}
         <div className="md:col-span-2 space-y-8">
           {/* About Section */}
-          <ScrollReveal animation="animate-neo-slam">
-            <div className="bg-white p-8 neo-border neo-shadow neo-tilt">
-              <h2 className="text-3xl font-black mb-6 flex items-center gap-3 uppercase border-b-4 border-black pb-4">
+          <ScrollReveal animation="animate-pop-up">
+            <div className="bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
+              <h2 className="text-3xl font-black mb-6 flex items-center gap-3 uppercase border-b-4 border-black dark:border-white pb-4">
                 <span className="material-symbols-outlined text-[36px] text-neo-blue animate-neo-swing">info</span>
                 TENTANG ACARA
               </h2>
               <ul className="space-y-4">
                 {event.about.map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 bg-[#f0f0f0] p-4 neo-border neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group">
+                  <li key={i} className="flex items-start gap-4 bg-[#f0f0f0] dark:bg-[#0f3460] p-4 neo-border dark:border-white neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group">
                     <span className="material-symbols-outlined text-neo-pink text-2xl mt-1 group-hover:animate-neo-swing">check_circle</span>
-                    <p className="font-bold text-lg">{item}</p>
+                    <p className="font-bold text-lg dark:text-[#e0e0e0]">{item}</p>
                   </li>
                 ))}
               </ul>
@@ -280,17 +280,17 @@ export default function EventDetail() {
           </ScrollReveal>
 
           {/* Rules Section */}
-          <ScrollReveal animation="animate-neo-stamp" delay={0.15}>
+          <ScrollReveal animation="animate-pop-up" delay={0.15}>
             <div className={`${event.accentBg} p-8 neo-border neo-shadow neo-tilt`}>
-              <h2 className="text-3xl font-black mb-6 flex items-center gap-3 uppercase border-b-4 border-black pb-4">
+              <h2 className="text-3xl font-black mb-6 flex items-center gap-3 uppercase border-b-4 border-black dark:border-white pb-4">
                 <span className="material-symbols-outlined text-[36px] animate-neo-jitter">rule</span>
                 RULES &amp; REQUIREMENTS
               </h2>
               <ul className="space-y-4">
                 {event.rules.map((rule, i) => (
-                  <li key={i} className="flex items-start gap-4 bg-white p-4 neo-border neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group">
-                    <span className="material-symbols-outlined text-black text-2xl group-hover:animate-neo-swing">{rule.icon}</span>
-                    <p className="font-bold text-lg">{rule.text}</p>
+                  <li key={i} className="flex items-start gap-4 bg-white dark:bg-[#0f3460] p-4 neo-border dark:border-white neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group">
+                    <span className="material-symbols-outlined text-black dark:text-white text-2xl group-hover:animate-neo-swing">{rule.icon}</span>
+                    <p className="font-bold text-lg dark:text-[#e0e0e0]">{rule.text}</p>
                   </li>
                 ))}
               </ul>
@@ -301,12 +301,12 @@ export default function EventDetail() {
         {/* Right Column */}
         <div className="space-y-8">
           {/* Register Box */}
-          <ScrollReveal animation="animate-neo-stamp" delay={0.1}>
-            <div className="bg-white p-8 neo-border neo-shadow text-center">
-              <div className="inline-block px-4 py-2 bg-neo-pink neo-border font-black mb-4 uppercase transform rotate-2 text-sm animate-neo-swing">
+          <ScrollReveal animation="animate-pop-up" delay={0.1}>
+            <div className="bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow text-center transition-colors">
+              <div className="inline-block px-4 py-2 bg-neo-pink neo-border dark:border-white font-black mb-4 uppercase transform rotate-2 text-sm animate-neo-swing">
                 Siap untuk ikut?
               </div>
-              <p className="font-bold mb-6 bg-neo-yellow px-2 py-1 inline-block neo-border text-sm">
+              <p className="font-bold mb-6 bg-neo-yellow px-2 py-1 inline-block neo-border dark:border-white text-sm dark:text-black">
                 Pendaftaran ditutup 14 hari lagi.
               </p>
               <a href="#" className="block w-full bg-neo-blue text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg">
@@ -316,9 +316,9 @@ export default function EventDetail() {
           </ScrollReveal>
 
           {/* Prize Pool */}
-          <ScrollReveal animation="animate-neo-flip" delay={0.2}>
-            <div className="bg-white p-8 neo-border neo-shadow neo-tilt">
-              <h3 className="text-2xl font-black mb-6 flex items-center gap-2 uppercase border-b-4 border-black pb-4">
+          <ScrollReveal animation="animate-pop-up" delay={0.2}>
+            <div className="bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
+              <h3 className="text-2xl font-black mb-6 flex items-center gap-2 uppercase border-b-4 border-black dark:border-white pb-4">
                 <span className="material-symbols-outlined text-[28px] text-neo-orange animate-neo-swing">emoji_events</span>
                 PRIZE POOL
               </h3>
@@ -334,9 +334,9 @@ export default function EventDetail() {
           </ScrollReveal>
 
           {/* Timeline */}
-          <ScrollReveal animation="animate-neo-slam" delay={0.3}>
-            <div className="bg-white p-8 neo-border neo-shadow relative overflow-hidden neo-tilt">
-              <h3 className="text-2xl font-black mb-6 uppercase border-b-4 border-black pb-4">TIMELINE</h3>
+          <ScrollReveal animation="animate-pop-up" delay={0.3}>
+            <div className="bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow relative overflow-hidden neo-tilt transition-colors">
+              <h3 className="text-2xl font-black mb-6 uppercase border-b-4 border-black dark:border-white pb-4">TIMELINE</h3>
               <div className="absolute left-[39px] top-[80px] bottom-8 w-1 bg-black animate-neo-strips"></div>
               <div className="space-y-6 relative">
                 {event.timeline.map((item, i) => (
@@ -344,12 +344,12 @@ export default function EventDetail() {
                     <div className={`w-10 h-10 ${item.color} neo-border flex-shrink-0 flex items-center justify-center z-10 neo-shadow-sm group-hover:scale-110 group-hover:animate-neo-swing transition-transform`}>
                       {item.active && <div className="w-3 h-3 bg-black animate-neo-jitter"></div>}
                       {item.highlight && <span className="material-symbols-outlined text-sm animate-neo-swing">star</span>}
-                    </div>
-                    <div className="bg-[#f0f0f0] p-3 neo-border flex-grow hover:translate-x-1 transition-transform">
+                     </div>
+                    <div className="bg-[#f0f0f0] dark:bg-[#0f3460] p-3 neo-border dark:border-white flex-grow hover:translate-x-1 transition-transform">
                       <div className={`text-xs mb-1 font-black uppercase tracking-widest ${item.highlight ? 'bg-neo-pink text-white inline-block px-2 animate-neo-jitter' : item.active ? 'bg-neo-yellow inline-block px-2 animate-neo-jitter' : ''}`}>
                         {item.date}
                       </div>
-                      <div className="font-black text-sm uppercase">{item.label}</div>
+                      <div className="font-black text-sm uppercase dark:text-white">{item.label}</div>
                     </div>
                   </div>
                 ))}

@@ -43,7 +43,7 @@ const stats = [
 
 export default function StatsCounter() {
   return (
-    <section className="py-16 bg-black border-y-8 border-black relative overflow-hidden">
+    <section className="py-16 bg-black dark:bg-[#0a0a1a] border-y-8 border-black dark:border-white relative overflow-hidden transition-colors">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 11px)',
@@ -52,7 +52,7 @@ export default function StatsCounter() {
       <div className="container mx-auto px-6 max-w-screen-xl relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, i) => (
-            <ScrollReveal key={stat.label} animation="animate-neo-slam" delay={i * 0.12}>
+            <ScrollReveal key={stat.label} animation="animate-pop-up" delay={i * 0.12}>
               <div className={`${stat.bg} p-6 neo-border neo-shadow-sm text-center transform hover:-translate-y-1 hover:shadow-none transition-all group`}>
                 <span className="material-symbols-outlined text-4xl mb-2 block group-hover:animate-wiggle">{stat.icon}</span>
                 <div className="text-4xl md:text-5xl font-black text-black mb-2">

@@ -14,6 +14,7 @@ import ScrollToTop from './components/ScrollToTop';
 import StatsCounter from './components/StatsCounter';
 import NoiseOverlay from './components/NoiseOverlay';
 import { DotDivider } from './components/SectionDivider';
+import useDarkMode from './hooks/useDarkMode';
 
 function LandingPage() {
   return (
@@ -34,9 +35,10 @@ function LandingPage() {
 
 export default function App() {
   const location = useLocation();
+  const [dark] = useDarkMode();
 
   return (
-    <div className="antialiased selection:bg-black selection:text-white flex flex-col min-h-screen bg-[#f0f0f0] text-black">
+    <div className={`antialiased selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black flex flex-col min-h-screen bg-[#f0f0f0] dark:bg-[#1a1a2e] text-black dark:text-[#e0e0e0] transition-colors duration-300`}>
       <CustomCursor />
       <NoiseOverlay />
       <Header />

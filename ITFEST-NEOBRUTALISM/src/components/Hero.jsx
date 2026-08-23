@@ -113,7 +113,7 @@ function CountdownTimer() {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden bg-neo-yellow border-b-8 border-black animate-neo-strips" id="beranda">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden bg-neo-yellow dark:bg-[#0f3460] border-b-8 border-black dark:border-white animate-neo-strips transition-colors" id="beranda">
       <FloatingShapes />
       {/* Decorative Elements - animated */}
       <div className="absolute top-20 left-20 w-32 h-32 bg-neo-blue neo-border neo-shadow rotate-12 hidden lg:block animate-neo-drift"></div>
@@ -130,23 +130,23 @@ export default function Hero() {
         </div>
 
         {/* Headline - SLAM entrance */}
-        <div className="space-y-4 mb-8 bg-white p-6 neo-border neo-shadow inline-block max-w-max animate-neo-slam">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none text-black uppercase animate-neo-jitter-soft" id="main-heading">
+        <div className="space-y-4 mb-8 bg-white dark:bg-[#16213e] p-6 neo-border dark:border-white neo-shadow inline-block max-w-max animate-pop-up transition-colors">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none text-black dark:text-white uppercase animate-neo-jitter-soft" id="main-heading">
             MILAD IT FEST <br />
             <span className="bg-black text-white px-4 inline-block mt-2 animate-neo-squish">2026</span>
           </h1>
-          <p className="text-xl md:text-3xl text-black font-bold tracking-widest uppercase mt-4 min-h-[3rem] md:min-h-[4rem] flex items-center justify-center border-t-4 border-black pt-4 w-[95%]">
+          <p className="text-xl md:text-3xl text-black dark:text-white font-bold tracking-widest uppercase mt-4 min-h-[3rem] md:min-h-[4rem] flex items-center justify-center border-t-4 border-black dark:border-white pt-4 w-[95%]">
             <TypewriterText />
           </p>
         </div>
 
         {/* Info Badges - pop in staggered */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          <div className="flex items-center gap-2 bg-neo-blue px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider animate-neo-pop" style={{ animationDelay: '0.6s' }}>
+          <div className="flex items-center gap-2 bg-neo-blue px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider animate-pop-up" style={{ animationDelay: '0.6s' }}>
             <span className="material-symbols-outlined text-xl animate-neo-swing">calendar_today</span>
             2–3 Desember 2026
           </div>
-          <div className="flex items-center gap-2 bg-neo-green px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider animate-neo-pop" style={{ animationDelay: '0.8s' }}>
+          <div className="flex items-center gap-2 bg-neo-green px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider animate-pop-up" style={{ animationDelay: '0.8s' }}>
             <span className="material-symbols-outlined text-xl animate-neo-swing" style={{ animationDelay: '0.3s' }}>location_on</span>
             GOR Volley UIR, Indoor
           </div>
@@ -154,16 +154,16 @@ export default function Hero() {
 
         {/* CTA Buttons - slam in */}
         <div className="flex flex-wrap justify-center gap-6 mb-16">
-          <a className="bg-black text-white px-10 py-5 font-black text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase animate-neo-slam" style={{ animationDelay: '0.3s' }} href="#daftar">Daftar Sekarang</a>
-          <a className="bg-white text-black px-10 py-5 font-black text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase animate-neo-slam" style={{ animationDelay: '0.5s' }} href="#acara">Explore Event</a>
+          <a className="bg-black text-white px-10 py-5 font-black text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase animate-pop-up" style={{ animationDelay: '0.3s' }} href="#daftar">Daftar Sekarang</a>
+          <a className="bg-white dark:bg-[#16213e] text-black dark:text-white px-10 py-5 font-black text-xl neo-border dark:border-white neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase animate-pop-up" style={{ animationDelay: '0.5s' }} href="#acara">Explore Event</a>
         </div>
 
         {/* Countdown Timer - flip entrance */}
-        <div className="bg-white p-8 w-full max-w-xl neo-border neo-shadow relative animate-neo-flip" style={{ animationDelay: '0.4s' }}>
+        <div className="bg-white dark:bg-[#16213e] p-8 w-full max-w-xl neo-border dark:border-white neo-shadow relative animate-pop-up transition-colors" style={{ animationDelay: '0.4s' }}>
           <div className="absolute -top-4 -left-4 bg-neo-pink px-4 py-1 neo-border font-black text-sm uppercase transform -rotate-6 animate-neo-swing">Live Now</div>
           <div className="flex items-center gap-3 justify-center mb-6">
             <span className="w-4 h-4 bg-red-500 neo-border animate-neo-jitter"></span>
-            <span className="text-sm font-black tracking-[0.2em] text-black uppercase">Registrasi Dibuka Dalam</span>
+            <span className="text-sm font-black tracking-[0.2em] text-black dark:text-white uppercase">Registrasi Dibuka Dalam</span>
           </div>
           <CountdownTimer />
         </div>

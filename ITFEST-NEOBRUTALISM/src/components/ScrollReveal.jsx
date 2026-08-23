@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function ScrollReveal({
   children,
-  animation = 'animate-neo-slam',
+  animation = 'animate-pop-up',
   delay = 0,
   threshold = 0.15,
   className = '',
