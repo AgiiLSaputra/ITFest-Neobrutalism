@@ -17,18 +17,15 @@ function AnimatedNumber({ target, suffix = '', duration = 2000 }) {
 
   useEffect(() => {
     if (!started) return;
-    let start = 0;
-    const increment = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-    return () => clearInterval(timer);
+    let raf;
+    const startTime = performance.now();
+    const tick = (now) => {
+      const progress = Math.min(1, (now - startTime) / duration);
+      setCount(Math.floor(target * progress));
+      if (progress < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
   }, [started, target, duration]);
 
   return <span ref={ref}>{count}{suffix}</span>;

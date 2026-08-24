@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import FloatingShapes from './FloatingShapes';
 
-const MASCOT_URL = "/img/MASKOT-NOBG.png";
-
 const phrases = ["Stay Curious,", "Code the Stars,", "Beyond the Horizons,", "Write the Future,"];
 
 function TypewriterText() {
@@ -12,30 +10,11 @@ function TypewriterText() {
   const [text, setText] = useState(phrases[0]);
 
   useEffect(() => {
-    function type() {
-      const currentPhrase = phrases[phraseIndex];
-
-      if (isDeleting) {
-        setText(currentPhrase.substring(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
-      } else {
-        setText(currentPhrase.substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      }
-    }
-
     let typeSpeed;
-    let nextIsDeleting = isDeleting;
-    let nextPhraseIndex = phraseIndex;
-    let nextCharIndex = charIndex;
-
     if (!isDeleting && charIndex === phrases[phraseIndex].length) {
-      typeSpeed = 2000;
-      nextIsDeleting = true;
+      typeSpeed = 1500;
     } else if (isDeleting && charIndex === 0) {
       typeSpeed = 500;
-      nextIsDeleting = false;
-      nextPhraseIndex = (phraseIndex + 1) % phrases.length;
     } else {
       typeSpeed = isDeleting ? 100 : 150;
     }
@@ -72,14 +51,15 @@ function TypewriterText() {
   );
 }
 
+const COUNTDOWN_TARGET = new Date('2026-12-02T00:00:00');
+
 function CountdownTimer() {
-  const targetDate = new Date('2026-12-02T00:00:00');
   const [timeLeft, setTimeLeft] = useState({ days: 37, hours: 2, minutes: 48, seconds: 56 });
 
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date();
-      const diff = targetDate - now;
+      const diff = COUNTDOWN_TARGET - now;
       if (diff > 0) {
         setTimeLeft({
           days: Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -111,7 +91,8 @@ function CountdownTimer() {
   );
 }
 
-export default function Hero() {
+export default function Hero({ ready = true }) {
+  const intro = ready ? 'hero-intro animate-pop-up' : 'hero-intro opacity-0';
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden bg-neo-yellow dark:bg-[#0f3460] border-b-8 border-black dark:border-white animate-neo-strips transition-colors" id="beranda">
       <FloatingShapes />
@@ -122,15 +103,8 @@ export default function Hero() {
       <div className="absolute bottom-40 left-32 w-8 h-8 bg-black neo-border rotate-45 hidden lg:block animate-spin-slow"></div>
 
       <div className="container mx-auto relative z-10 flex flex-col items-center pt-24">
-        {/* Mascot */}
-        <div className="relative z-20 mb-2" id="mascot-walk-container">
-          <div className="relative w-96 h-96 md:w-[480px] md:h-[480px] animate-float">
-            <img alt="Milad IT Fest Mascot" className="w-full h-full object-contain filter drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-transform duration-500 animate-mascot-float" src={MASCOT_URL} />
-          </div>
-        </div>
-
         {/* Headline - SLAM entrance */}
-        <div className="space-y-4 mb-8 bg-white dark:bg-[#16213e] p-6 neo-border dark:border-white neo-shadow inline-block max-w-max animate-pop-up transition-colors">
+        <div className={`space-y-4 mb-8 bg-white dark:bg-[#16213e] p-6 neo-border dark:border-white neo-shadow inline-block max-w-max transition-colors ${intro}`}>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none text-black dark:text-white uppercase animate-neo-jitter-soft" id="main-heading">
             MILAD IT FEST <br />
             <span className="bg-black text-white px-4 inline-block mt-2 animate-neo-squish">2026</span>
@@ -142,11 +116,11 @@ export default function Hero() {
 
         {/* Info Badges - pop in staggered */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          <div className="flex items-center gap-2 bg-neo-blue px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider animate-pop-up" style={{ animationDelay: '0.6s' }}>
+          <div className={`flex items-center gap-2 bg-neo-blue px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider ${intro}`} style={{ animationDelay: '0.6s' }}>
             <span className="material-symbols-outlined text-xl animate-neo-swing">calendar_today</span>
             2–3 Desember 2026
           </div>
-          <div className="flex items-center gap-2 bg-neo-green px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider animate-pop-up" style={{ animationDelay: '0.8s' }}>
+          <div className={`flex items-center gap-2 bg-neo-green px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider ${intro}`} style={{ animationDelay: '0.8s' }}>
             <span className="material-symbols-outlined text-xl animate-neo-swing" style={{ animationDelay: '0.3s' }}>location_on</span>
             GOR Volley UIR, Indoor
           </div>
@@ -154,12 +128,12 @@ export default function Hero() {
 
         {/* CTA Buttons - slam in */}
         <div className="flex flex-wrap justify-center gap-6 mb-16">
-          <a className="bg-black text-white px-10 py-5 font-black text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase animate-pop-up" style={{ animationDelay: '0.3s' }} href="#daftar">Daftar Sekarang</a>
-          <a className="bg-white dark:bg-[#16213e] text-black dark:text-white px-10 py-5 font-black text-xl neo-border dark:border-white neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase animate-pop-up" style={{ animationDelay: '0.5s' }} href="#acara">Explore Event</a>
+          <a className={`bg-black text-white px-10 py-5 font-black text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`} style={{ animationDelay: '0.3s' }} href="#daftar">Daftar Sekarang</a>
+          <a className={`bg-white dark:bg-[#16213e] text-black dark:text-white px-10 py-5 font-black text-xl neo-border dark:border-white neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`} style={{ animationDelay: '0.5s' }} href="#acara">Explore Event</a>
         </div>
 
         {/* Countdown Timer - flip entrance */}
-        <div className="bg-white dark:bg-[#16213e] p-8 w-full max-w-xl neo-border dark:border-white neo-shadow relative animate-pop-up transition-colors" style={{ animationDelay: '0.4s' }}>
+        <div className={`bg-white dark:bg-[#16213e] p-8 w-full max-w-xl neo-border dark:border-white neo-shadow relative transition-colors ${intro}`} style={{ animationDelay: '0.4s' }}>
           <div className="absolute -top-4 -left-4 bg-neo-pink px-4 py-1 neo-border font-black text-sm uppercase transform -rotate-6 animate-neo-swing">Live Now</div>
           <div className="flex items-center gap-3 justify-center mb-6">
             <span className="w-4 h-4 bg-red-500 neo-border animate-neo-jitter"></span>

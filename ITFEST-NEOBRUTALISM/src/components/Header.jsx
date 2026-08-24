@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import useDarkMode from '../hooks/useDarkMode';
+import { toggleDarkMode } from '../hooks/useDarkMode';
 
 const LOGO_URL = "/img/LogoITFESTUIR.png";
 
@@ -21,7 +21,6 @@ export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
-  const [dark, setDark] = useDarkMode();
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -89,11 +88,11 @@ export default function Header() {
 
         <div className="hidden md:flex items-center gap-3">
           <button
-            onClick={() => setDark(!dark)}
+            onClick={toggleDarkMode}
             className="w-10 h-10 flex items-center justify-center neo-border neo-shadow-sm bg-white dark:bg-[#0f3460] transition-colors hover:scale-110"
             aria-label="Toggle dark mode"
           >
-            <span className="material-symbols-outlined text-xl">{dark ? 'light_mode' : 'dark_mode'}</span>
+            <span className="material-symbols-outlined text-xl theme-icon"></span>
           </button>
           <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active animate-neo-jitter" onClick={() => scrollTo('pendaftaran')}>
             DAFTAR SEKARANG
@@ -102,11 +101,11 @@ export default function Header() {
 
         <div className="flex items-center gap-2 md:hidden">
           <button
-            onClick={() => setDark(!dark)}
+            onClick={toggleDarkMode}
             className="w-9 h-9 flex items-center justify-center neo-border neo-shadow-sm bg-white dark:bg-[#0f3460] transition-colors"
             aria-label="Toggle dark mode"
           >
-            <span className="material-symbols-outlined text-lg">{dark ? 'light_mode' : 'dark_mode'}</span>
+            <span className="material-symbols-outlined text-lg theme-icon"></span>
           </button>
           <button aria-label="Toggle Menu" className="text-black dark:text-white p-2 border-4 border-black dark:border-white" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? (

@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -41,24 +41,14 @@
 .bg-neo-green { background-color: #00ff00; }
 .text-neo-green { color: #00ff00; }
 
-/* ═══════════════════════════════════════════
+/* -------------------------------------------
    EXISTING ANIMATIONS
-   ═══════════════════════════════════════════ */
+   ------------------------------------------- */
 
 @keyframes float { 0% { transform: translateY(24px); } 50% { transform: translateY(8px); } 100% { transform: translateY(24px); } }
 .animate-float { animation: float 8s ease-in-out infinite; }
 @keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 .cursor-blink { animation: cursor-blink 1s step-end infinite; }
-
-@keyframes mascot-float-mirror {
-  0%, 100% { transform: translateX(-50px) translateY(0) scaleX(-1); }
-  25% { transform: translateX(0) translateY(-20px) scaleX(-1); }
-  49% { transform: translateX(50px) translateY(0) scaleX(-1); }
-  50% { transform: translateX(50px) translateY(0) scaleX(1); }
-  75% { transform: translateX(0) translateY(-20px) scaleX(1); }
-  99% { transform: translateX(-50px) translateY(0) scaleX(1); }
-}
-.animate-mascot-float { animation: mascot-float-mirror 12s ease-in-out infinite; }
 
 @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 2rem)); } }
 .animate-scroll-left { animation: scroll-left 40s linear infinite; }
@@ -137,10 +127,10 @@
 }
 .animate-pulse-ring { animation: pulse-ring 2s ease-out infinite; }
 
-/* ═══════════════════════════════════════════
+/* -------------------------------------------
    NEOBRUTALISM ANIMATIONS
    Hard, Bouncy, Bold - No smooth easing!
-   ═══════════════════════════════════════════ */
+   ------------------------------------------- */
 
 /* SLAM - drops in hard like a rubber stamp */
 @keyframes neoSlam {
@@ -252,11 +242,22 @@
 }
 .animate-pop-up { animation: popUp 0.3s ease-out forwards; opacity: 0; }
 
-/* STRIPES - animated diagonal stripes background */
-@keyframes neoStrips { 0% { background-position: 0 0; } 100% { background-position: 40px 40px; } }
+/* STRIPES - animated diagonal stripes background (seamless downward flow)
+   Rendered on a pseudo-element and animated via transform so the compositor
+   handles it on the GPU instead of repainting the whole surface every frame. */
+@keyframes neoStrips { 0% { transform: translateY(0); } 100% { transform: translateY(28.28px); } }
 .animate-neo-strips {
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.05) 10px, rgba(0,0,0,0.05) 20px);
+  position: relative;
+}
+.animate-neo-strips::before {
+  content: '';
+  position: absolute;
+  inset: -28.28px 0 0 0;
+  pointer-events: none;
+  background-image: linear-gradient(45deg, transparent 0 10px, rgba(0,0,0,0.05) 10px 20px);
+  background-size: 28.28px 28.28px;
   animation: neoStrips 1s linear infinite;
+  will-change: transform;
 }
 
 /* COUNTDOWN BOUNCE - each digit bounces on change */
@@ -318,3 +319,111 @@
   body { cursor: none; }
   a, button, [role="button"] { cursor: none; }
 }
+
+/* GPU warm-up for the initial section's entrance nodes */
+.hero-intro { will-change: transform, opacity; }
+
+/* Theme toggle icon — single element, glyph swapped purely via CSS
+   (sun in light mode, moon in dark mode). Zero React re-renders. */
+.theme-icon::after { content: 'light_mode'; }
+.dark .theme-icon::after { content: 'dark_mode'; }
+
+/* ═══════════════════════════════════════════
+   LOADING SCREEN
+   ═══════════════════════════════════════════ */
+
+/* Generic pop-up entrance for loading elements (staggered via animation-delay).
+   `backwards` keeps nodes invisible while waiting for their delay. */
+@keyframes loadPop {
+  0% { opacity: 0; transform: scale(0.5) translateY(30px); }
+  70% { opacity: 1; transform: scale(1.06) translateY(-6px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.animate-load-pop {
+  animation: loadPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+/* Float for decorations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+.float-anim { animation: floatSlow 4s infinite ease-in-out; }
+
+/* Slow rotation */
+@keyframes rotateSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.rotate-anim { animation: rotateSlow 10s infinite linear; }
+
+/* Pulse scale */
+@keyframes pulseScale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.pulse-anim { animation: pulseScale 2s infinite ease-in-out; }
+
+/* Blink */
+@keyframes blinkFast {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.fast-blink { animation: blinkFast 0.5s step-end infinite; }
+.blink-anim { animation: blinkFast 1s step-end infinite; }
+
+/* Glitch scan line — transform-based (GPU), identical trajectory to top:-10%→110% */
+@keyframes scanLine {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(120vh); }
+}
+.glitch-line {
+  position: absolute;
+  top: -10%;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 0, 255, 0.5);
+  animation: scanLine 4s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Moving dot-grid — transform-based (GPU); tile 20px, shift 40px keeps loop seamless */
+@keyframes moveGrid {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(40px, 40px); }
+}
+.bg-grid {
+  margin: -40px;
+  background-image: radial-gradient(#00f2ff 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: moveGrid 10s linear infinite;
+  opacity: 0.2;
+  will-change: transform;
+}
+
+/* Terminal corner text */
+.terminal-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Page slide up from bottom to cover the loading screen.
+   Offset uses 100vh (not 100% of the tall document) so the page edge
+   starts right at the bottom of the viewport — the whole sweep stays
+   visible as it slowly covers the loader, like a rising curtain. */
+@keyframes pageSlideUp {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(0); }
+}
+.animate-page-slide-up {
+  animation: pageSlideUp 2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  will-change: transform;
+}
+
+/* Navbar entrance. Deliberately NO fill-mode: once finished the wrapper
+   has no lingering transform, so position:fixed children stay anchored
+   to the real viewport while scrolling. */
+.navbar-drop { animation: slideDown 0.6s cubic-bezier(0.22, 1, 0.36, 1); }

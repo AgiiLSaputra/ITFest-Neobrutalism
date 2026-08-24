@@ -9,7 +9,7 @@ const eventsData = {
     icon: 'code',
     title: 'HACKATHON 2026',
     subtitle: 'SMA/SMK & MAHASISWA',
-    heroImg: '/img/Foto.jpeg',
+    heroImg: '/img/Foto.webp',
     description: 'Milad IT Fest Hackathon 2026 adalah marathon coding intensif 48 jam yang dirancang untuk mendorong batas inovasi. Peserta akan membentuk tim dan menyelesaikan masalah nyata menggunakan teknologi terkini.',
     about: [
       'Kompetisi ini terbuka untuk pelajar SMA/SMK dan mahasiswa aktif dari seluruh Indonesia.',
@@ -42,7 +42,7 @@ const eventsData = {
     icon: 'sports_esports',
     title: 'E-SPORT TOURNAMENT',
     subtitle: 'UMUM',
-    heroImg: '/img/Foto.jpeg',
+    heroImg: '/img/Foto.webp',
     description: 'Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik di Milad IT Fest 2026.',
     about: [
       'Turnamen Mobile Legends: Bang Bang dengan sistem gugur.',
@@ -75,7 +75,7 @@ const eventsData = {
     icon: 'sports_tennis',
     title: 'BADMINTON TOURNAMENT',
     subtitle: 'MAHASISWA',
-    heroImg: '/img/Foto.jpeg',
+    heroImg: '/img/Foto.webp',
     description: 'Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra Milad IT Fest 2026.',
     about: [
       'Kompetisi badminton ganda putra khusus mahasiswa aktif UIR.',
@@ -108,7 +108,7 @@ const eventsData = {
     icon: 'rocket_launch',
     title: 'IT EXPO',
     subtitle: 'UMUM',
-    heroImg: '/img/Foto.jpeg',
+    heroImg: '/img/Foto.webp',
     description: 'Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan di Milad IT Fest 2026.',
     about: [
       'Pameran produk IoT, Web, dan Mobile Apps dari mahasiswa dan startup.',
@@ -141,7 +141,7 @@ const eventsData = {
     icon: 'groups',
     title: 'NASIONAL SEMINAR',
     subtitle: 'PELAJAR & UMUM',
-    heroImg: '/img/Foto.jpeg',
+    heroImg: '/img/Foto.webp',
     description: 'Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI di Milad IT Fest 2026.',
     about: [
       'Seminar nasional dengan pembicara dari tech giant nasional dan internasional.',
@@ -174,7 +174,7 @@ const eventsData = {
     icon: 'keyboard',
     title: 'TYPING TEST',
     subtitle: 'MAHASISWA',
-    heroImg: '/img/Foto.jpeg',
+    heroImg: '/img/Foto.webp',
     description: 'Seberapa cepat jarimu menari di atas keyboard? Buktikan kecepatan dan akurasimu di Milad IT Fest 2026.',
     about: [
       'Kompetisi ketikan (typing) dengan metrik WPM (Words Per Minute).',
@@ -258,12 +258,10 @@ export default function EventDetail() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Left Column */}
-        <div className="md:col-span-2 space-y-8">
-          {/* About Section */}
-          <ScrollReveal animation="animate-pop-up">
-            <div className="bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        {/* About Section */}
+        <ScrollReveal animation="animate-pop-up" className="md:col-span-2 md:col-start-1 md:row-start-1">
+            <div className="h-full bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
               <h2 className="text-3xl font-black mb-6 flex items-center gap-3 uppercase border-b-4 border-black dark:border-white pb-4">
                 <span className="material-symbols-outlined text-[36px] text-neo-blue animate-neo-swing">info</span>
                 TENTANG ACARA
@@ -277,11 +275,11 @@ export default function EventDetail() {
                 ))}
               </ul>
             </div>
-          </ScrollReveal>
+        </ScrollReveal>
 
-          {/* Rules Section */}
-          <ScrollReveal animation="animate-pop-up" delay={0.15}>
-            <div className={`${event.accentBg} p-8 neo-border neo-shadow neo-tilt`}>
+        {/* Rules Section */}
+        <ScrollReveal animation="animate-pop-up" delay={0.15} className="md:col-span-2 md:col-start-1 md:row-start-2">
+            <div className={`h-full ${event.accentBg} p-8 neo-border neo-shadow neo-tilt`}>
               <h2 className="text-3xl font-black mb-6 flex items-center gap-3 uppercase border-b-4 border-black dark:border-white pb-4">
                 <span className="material-symbols-outlined text-[36px] animate-neo-jitter">rule</span>
                 RULES &amp; REQUIREMENTS
@@ -295,14 +293,11 @@ export default function EventDetail() {
                 ))}
               </ul>
             </div>
-          </ScrollReveal>
-        </div>
+        </ScrollReveal>
 
-        {/* Right Column */}
-        <div className="space-y-8">
-          {/* Register Box */}
-          <ScrollReveal animation="animate-pop-up" delay={0.1}>
-            <div className="bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow text-center transition-colors">
+        {/* Register Box */}
+        <ScrollReveal animation="animate-pop-up" delay={0.1} className="md:col-start-3 md:row-start-1">
+            <div className="h-full bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow text-center transition-colors flex flex-col justify-center">
               <div className="inline-block px-4 py-2 bg-neo-pink neo-border dark:border-white font-black mb-4 uppercase transform rotate-2 text-sm animate-neo-swing">
                 Siap untuk ikut?
               </div>
@@ -313,16 +308,16 @@ export default function EventDetail() {
                 DAFTAR SEKARANG
               </a>
             </div>
-          </ScrollReveal>
+        </ScrollReveal>
 
-          {/* Prize Pool */}
-          <ScrollReveal animation="animate-pop-up" delay={0.2}>
-            <div className="bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
+        {/* Prize Pool */}
+        <ScrollReveal animation="animate-pop-up" delay={0.2} className="md:col-start-3 md:row-start-2">
+            <div className="h-full bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors flex flex-col">
               <h3 className="text-2xl font-black mb-6 flex items-center gap-2 uppercase border-b-4 border-black dark:border-white pb-4">
                 <span className="material-symbols-outlined text-[28px] text-neo-orange animate-neo-swing">emoji_events</span>
                 PRIZE POOL
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-4 flex-1 flex flex-col justify-evenly">
                 {event.prizes.map((prize, i) => (
                   <div key={i} className={`flex justify-between items-center ${prize.bg} p-4 neo-border neo-shadow-sm ${i === 0 ? 'transform -rotate-1 animate-neo-squish' : ''} hover:translate-x-1 hover:-translate-y-1 transition-transform`}>
                     <span className="text-lg font-black uppercase">{prize.place}</span>
@@ -331,33 +326,37 @@ export default function EventDetail() {
                 ))}
               </div>
             </div>
-          </ScrollReveal>
-
-          {/* Timeline */}
-          <ScrollReveal animation="animate-pop-up" delay={0.3}>
-            <div className="bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow relative overflow-hidden neo-tilt transition-colors">
-              <h3 className="text-2xl font-black mb-6 uppercase border-b-4 border-black dark:border-white pb-4">TIMELINE</h3>
-              <div className="absolute left-[39px] top-[80px] bottom-8 w-1 bg-black animate-neo-strips"></div>
-              <div className="space-y-6 relative">
-                {event.timeline.map((item, i) => (
-                  <div key={i} className="flex gap-4 items-center group">
-                    <div className={`w-10 h-10 ${item.color} neo-border flex-shrink-0 flex items-center justify-center z-10 neo-shadow-sm group-hover:scale-110 group-hover:animate-neo-swing transition-transform`}>
-                      {item.active && <div className="w-3 h-3 bg-black animate-neo-jitter"></div>}
-                      {item.highlight && <span className="material-symbols-outlined text-sm animate-neo-swing">star</span>}
-                     </div>
-                    <div className="bg-[#f0f0f0] dark:bg-[#0f3460] p-3 neo-border dark:border-white flex-grow hover:translate-x-1 transition-transform">
-                      <div className={`text-xs mb-1 font-black uppercase tracking-widest ${item.highlight ? 'bg-neo-pink text-white inline-block px-2 animate-neo-jitter' : item.active ? 'bg-neo-yellow inline-block px-2 animate-neo-jitter' : ''}`}>
-                        {item.date}
-                      </div>
-                      <div className="font-black text-sm uppercase dark:text-white">{item.label}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
+        </ScrollReveal>
       </div>
+
+      {/* Timeline - Full Width */}
+      <ScrollReveal animation="animate-pop-up" delay={0.25}>
+        <div className="mt-8 bg-white dark:bg-[#16213e] p-6 md:p-8 neo-border dark:border-white neo-shadow relative overflow-hidden transition-colors">
+          <h3 className="text-2xl font-black mb-8 uppercase border-b-4 border-black dark:border-white pb-4 flex items-center gap-3">
+            <span className="material-symbols-outlined text-[28px] text-neo-pink animate-neo-swing">timeline</span>
+            TIMELINE ACARA
+          </h3>
+          <div className="relative">
+            <div className="hidden md:block absolute left-8 right-8 top-6 h-1 bg-black animate-neo-strips"></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+              {event.timeline.map((item, i) => (
+                <div key={i} className="group">
+                  <div className={`w-12 h-12 ${item.color} neo-border mx-auto flex-shrink-0 flex items-center justify-center mb-4 z-10 neo-shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform`}>
+                    {item.active && <div className="w-3 h-3 bg-black animate-neo-jitter"></div>}
+                    {item.highlight && <span className="material-symbols-outlined text-xl animate-neo-swing">star</span>}
+                  </div>
+                  <div className="bg-[#f0f0f0] dark:bg-[#0f3460] p-4 neo-border dark:border-white text-center hover:-translate-y-1 transition-transform neo-shadow-sm h-full flex flex-col justify-center">
+                    <div className={`text-xs mb-2 font-black uppercase tracking-widest self-start inline-block px-2 ${item.highlight ? 'bg-neo-pink text-white animate-neo-jitter' : item.active ? 'bg-neo-yellow animate-neo-jitter' : ''}`}>
+                      {item.date}
+                    </div>
+                    <div className="font-black text-sm uppercase dark:text-white">{item.label}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
 
       {/* Bottom Decorative Strip */}
       <div className="mt-16 flex justify-center gap-4">

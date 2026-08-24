@@ -1,6 +1,6 @@
 ﻿import ScrollReveal from './ScrollReveal';
 
-const GALERI_FOTO = "/img/Foto.jpeg";
+const GALERI_FOTO = "/img/Foto.webp";
 
 const topRowImages = [
   { src: GALERI_FOTO, rotation: "-rotate-2" },

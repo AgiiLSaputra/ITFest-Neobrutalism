@@ -1,21 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function CustomCursor() {
-  const [pos, setPos] = useState({ x: -100, y: -100 });
-  const [clicking, setClicking] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const dotRef = useRef(null);
+  const [isCoarse] = useState(() => window.matchMedia('(pointer: coarse)').matches);
 
   useEffect(() => {
-    if (window.matchMedia('(pointer: coarse)').matches) return;
+    if (isCoarse) return;
+
+    let clicking = false;
+    const dot = dotRef.current;
+    if (!dot) return;
 
     const move = (e) => {
-      setPos({ x: e.clientX, y: e.clientY });
-      if (!visible) setVisible(true);
+      dot.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px) scale(${clicking ? 0.6 : 1})`;
     };
-    const down = () => setClicking(true);
-    const up = () => setClicking(false);
+    const down = () => { clicking = true; };
+    const up = () => { clicking = false; };
 
-    window.addEventListener('mousemove', move);
+    window.addEventListener('mousemove', move, { passive: true });
     window.addEventListener('mousedown', down);
     window.addEventListener('mouseup', up);
     return () => {
@@ -23,23 +25,18 @@ export default function CustomCursor() {
       window.removeEventListener('mousedown', down);
       window.removeEventListener('mouseup', up);
     };
-  }, [visible]);
+  }, [isCoarse]);
 
-  if (!visible) return null;
+  if (isCoarse) return null;
 
   return (
     <div
-      className="pointer-events-none fixed top-0 left-0 z-[9999] mix-blend-difference hidden md:block"
-      style={{
-        transform: `translate(${pos.x - 20}px, ${pos.y - 20}px) scale(${clicking ? 0.6 : 1})`,
-        transition: 'transform 0.15s cubic-bezier(0.22, 1, 0.36, 1)',
-      }}
+      ref={dotRef}
+      className="pointer-events-none fixed top-0 left-0 z-[10003] mix-blend-difference hidden md:block"
+      style={{ willChange: 'transform', transform: 'translate(-100px, -100px)' }}
     >
       <div className="w-10 h-10 border-4 border-white rounded-full flex items-center justify-center">
-        <div
-          className="w-2 h-2 bg-white rounded-full"
-          style={{ transform: `scale(${clicking ? 2 : 1})`, transition: 'transform 0.15s ease' }}
-        />
+        <div className="w-2 h-2 bg-white rounded-full" />
       </div>
     </div>
   );
