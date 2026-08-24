@@ -1,16 +1,54 @@
-# React + Vite
+# Milad IT Fest 2026 🎉
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Landing page resmi perayaan **Milad IT Fest 2026** yang diselenggarakan oleh **HIMATIF FT UIR**. Dibangun dengan desain bergaya **Neobrutalism**, dilengkapi animasi interaktif, dark mode, dan kursor kustom.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [React 19](https://react.dev) — UI library
+- [Vite 8](https://vite.dev) — Build tool & dev server
+- [Tailwind CSS 4](https://tailwindcss.com) — Styling
+- [React Router 7](https://reactrouter.com) — Client-side routing
+- [Oxlint](https://oxc.rs) — Linter
 
-## React Compiler
+## Fitur
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚡ Halaman utama: Hero, Tentang Acara, Statistik, Dokumentasi, Roadmap, Pendaftaran, dan Sponsor
+- 📄 Halaman detail event dinamis (`/event/:eventId`)
+- 🌗 Dark mode
+- 🖱️ Custom cursor & efek noise overlay
+- ✨ Loading screen animasi + choreographed reveal saat pertama kali dibuka
+- 🔁 Marquee banner, scroll reveal, stats counter, floating shapes/stickers
+- ♿ Dukungan `prefers-reduced-motion`
 
-## Expanding the Oxlint configuration
+## Struktur Proyek
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+src/
+├── components/     # Komponen UI (Hero, Header, Footer, dll)
+├── hooks/          # Custom hooks (useDarkMode, dll)
+├── assets/         # Aset statis
+├── App.jsx         # Routing & layout utama
+├── main.jsx        # Entry point
+└── index.css       # Style global & tema Tailwind
+```
+
+## Menjalankan Proyek
+
+Pastikan sudah menginstall [Node.js](https://nodejs.org).
+
+```bash
+# Install dependencies
+npm install
+
+# Jalankan dev server
+npm run dev
+
+# Build untuk production
+npm run build
+
+# Preview hasil build
+npm run preview
+
+# Jalankan linter
+npm run lint
+```
