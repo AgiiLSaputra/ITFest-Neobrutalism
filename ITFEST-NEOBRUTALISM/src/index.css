@@ -50,11 +50,18 @@
 @keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 .cursor-blink { animation: cursor-blink 1s step-end infinite; }
 
-@keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 2rem)); } }
-.animate-scroll-left { animation: scroll-left 40s linear infinite; }
+/* Marquee dokumentasi — seamless loop:
+   Strip digeser PERSIS sebesar lebar stripnya sendiri (-100%). Jarak antar
+   strip (padding kanan strip-1 16px + padding kiri strip-2 16px = 32px) sama
+   dengan gap antar kartu (gap-8 = 32px), jadi spacing konsisten dan titik
+   loop tidak terlihat — foto terakhir tersambung mulus ke foto pertama.
+   Durasi 80s untuk strip 14 kartu (duplikat) = kecepatan per foto sama
+   dengan versi lama (~5,7 detik per kartu). */
+@keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+.animate-scroll-left { animation: scroll-left 80s linear infinite; will-change: transform; }
 .group:hover .animate-scroll-left { animation-play-state: paused; }
-@keyframes scroll-right { 0% { transform: translateX(calc(-100% - 2rem)); } 100% { transform: translateX(0); } }
-.animate-scroll-right { animation: scroll-right 40s linear infinite; }
+@keyframes scroll-right { 0% { transform: translateX(-100%); } 100% { transform: translateX(0); } }
+.animate-scroll-right { animation: scroll-right 80s linear infinite; will-change: transform; }
 .group:hover .animate-scroll-right { animation-play-state: paused; }
 
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }

@@ -1,49 +1,59 @@
 ﻿import ScrollReveal from './ScrollReveal';
 
-const GALERI_FOTO = "/img/Foto.webp";
-
 const topRowImages = [
-  { src: GALERI_FOTO, rotation: "-rotate-2" },
-  { src: GALERI_FOTO, rotation: "rotate-3" },
-  { src: GALERI_FOTO, rotation: "-rotate-1" },
-  { src: GALERI_FOTO, rotation: "rotate-2" },
-  { src: GALERI_FOTO, rotation: "-rotate-3" },
-  { src: GALERI_FOTO, rotation: "rotate-1" },
-  { src: GALERI_FOTO, rotation: "-rotate-2" },
-  { src: GALERI_FOTO, rotation: "-rotate-2" },
+  { src: "/img/gallery/IMG1.webp", rotation: "-rotate-2" },
+  { src: "/img/gallery/IMG2.webp", rotation: "rotate-3" },
+  { src: "/img/gallery/IMG3.webp", rotation: "-rotate-1" },
+  { src: "/img/gallery/IMG4.webp", rotation: "rotate-2" },
+  { src: "/img/gallery/IMG5.webp", rotation: "-rotate-3" },
+  { src: "/img/gallery/IMG6.webp", rotation: "rotate-1" },
+  { src: "/img/gallery/IMG7.webp", rotation: "-rotate-2" },
 ];
 
 const bottomRowImages = [
-  { src: GALERI_FOTO, rotation: "rotate-2" },
-  { src: GALERI_FOTO, rotation: "-rotate-2" },
-  { src: GALERI_FOTO, rotation: "rotate-1" },
-  { src: GALERI_FOTO, rotation: "-rotate-3" },
-  { src: GALERI_FOTO, rotation: "rotate-2" },
-  { src: GALERI_FOTO, rotation: "-rotate-1" },
-  { src: GALERI_FOTO, rotation: "rotate-3" },
-  { src: GALERI_FOTO, rotation: "rotate-2" },
+  { src: "/img/gallery/IMG8.webp", rotation: "rotate-2" },
+  { src: "/img/gallery/IMG9.webp", rotation: "-rotate-2" },
+  { src: "/img/gallery/IMG10.webp", rotation: "rotate-1" },
+  { src: "/img/gallery/IMG11.webp", rotation: "-rotate-3" },
+  { src: "/img/gallery/IMG12.webp", rotation: "rotate-2" },
+  { src: "/img/gallery/IMG13.webp", rotation: "-rotate-1" },
+  { src: "/img/gallery/IMG14.webp", rotation: "rotate-3" },
 ];
 
 const ImageCard = ({ src, rotation }) => (
-  <div className={`flex-shrink-0 w-72 h-72 neo-border neo-shadow-sm overflow-hidden transform ${rotation} hover:rotate-0 transition-transform`}>
-    <img alt="Gallery Image" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" src={src} />
+  <div className={`flex-shrink-0 w-72 h-72 neo-border neo-shadow-sm overflow-hidden transform-gpu ${rotation} hover:rotate-0 transition-transform`}>
+    <img
+      src={src}
+      alt="Gallery Image"
+      width="600"
+      height="600"
+      loading="lazy"
+      decoding="async"
+      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-[filter]"
+    />
   </div>
 );
 
-const ImageRow = ({ images, scrollDirection }) => (
-  <div className="flex overflow-hidden group border-y-4 border-black dark:border-white bg-white dark:bg-[#16213e] py-6 transition-colors">
-    <div className={`flex animate-scroll-${scrollDirection} gap-8 px-4`}>
-      {images.map((img, i) => (
-        <ImageCard key={`first-${i}`} src={img.src} rotation={img.rotation} />
-      ))}
+const ImageRow = ({ images, scrollDirection }) => {
+  // Deretan foto diduplikasi di dalam tiap strip agar strip cukup lebar
+  // untuk layar ultrawide, sekaligus menjaga jarak loop (-100% lebar strip)
+  // tetap presisi mulus tanpa lompatan.
+  const doubled = [...images, ...images];
+  return (
+    <div className="flex overflow-hidden group border-y-4 border-black dark:border-white bg-white dark:bg-[#16213e] py-6 transition-colors">
+      <div className={`flex animate-scroll-${scrollDirection} gap-8 px-4`}>
+        {doubled.map((img, i) => (
+          <ImageCard key={`first-${i}`} src={img.src} rotation={img.rotation} />
+        ))}
+      </div>
+      <div aria-hidden="true" className={`flex animate-scroll-${scrollDirection} gap-8 px-4`}>
+        {doubled.map((img, i) => (
+          <ImageCard key={`second-${i}`} src={img.src} rotation={img.rotation} />
+        ))}
+      </div>
     </div>
-    <div aria-hidden="true" className={`flex animate-scroll-${scrollDirection} gap-8 px-4`}>
-      {images.map((img, i) => (
-        <ImageCard key={`second-${i}`} src={img.src} rotation={img.rotation} />
-      ))}
-    </div>
-  </div>
-);
+  );
+};
 
 const DokumentasiAcara = () => {
   return (
@@ -60,18 +70,7 @@ const DokumentasiAcara = () => {
       </div>
       <div className="space-y-12">
         <ImageRow images={topRowImages} scrollDirection="left" />
-        <div className="flex overflow-hidden group border-b-4 border-black dark:border-white bg-white dark:bg-[#16213e] py-6 transition-colors">
-          <div className="flex animate-scroll-right gap-8 px-4">
-            {bottomRowImages.map((img, i) => (
-              <ImageCard key={`b-first-${i}`} src={img.src} rotation={img.rotation} />
-            ))}
-          </div>
-          <div aria-hidden="true" className="flex animate-scroll-right gap-8 px-4">
-            {bottomRowImages.map((img, i) => (
-              <ImageCard key={`b-second-${i}`} src={img.src} rotation={img.rotation} />
-            ))}
-          </div>
-        </div>
+        <ImageRow images={bottomRowImages} scrollDirection="right" />
       </div>
     </section>
   );
