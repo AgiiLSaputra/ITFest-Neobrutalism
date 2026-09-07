@@ -36,36 +36,36 @@ export default function TentangAcara() {
           {/* Right Side */}
           <div className="lg:w-1/2 flex flex-col gap-8">
             <ScrollReveal animation="animate-pop-up" delay={0.2}>
-              <div className="p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-6 items-start hover:bg-neo-blue transition-colors group cursor-default neo-tilt">
-                <div className="flex-shrink-0 w-16 h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center relative z-10 group-hover:animate-neo-swing transition-colors">
-                  <span className="material-symbols-outlined text-black dark:text-white text-4xl">school</span>
+              <div className="p-5 sm:p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-blue transition-colors group cursor-default neo-tilt">
+                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center relative z-10 group-hover:animate-neo-swing transition-colors">
+                  <span className="material-symbols-outlined text-black dark:text-white text-3xl sm:text-4xl">school</span>
                 </div>
                 <div className="space-y-3 relative z-10">
-                  <h3 className="text-3xl font-black text-black dark:text-white uppercase">Akademik</h3>
+                  <h3 className="text-2xl sm:text-3xl font-black text-black dark:text-white uppercase">Akademik</h3>
                   <p className="text-base font-bold leading-relaxed">Ajang kompetisi teknologi tingkat nasional. Uji kemampuanmu dalam bidang Web Programming, UI/UX Design, atau Infografis, dan jadikan karyamu sebagai bukti nyata inovasi.</p>
                 </div>
               </div>
             </ScrollReveal>
 
             <ScrollReveal animation="animate-pop-up" delay={0.35}>
-              <div className="p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-6 items-start hover:bg-neo-pink transition-colors group cursor-default neo-tilt">
-                <div className="flex-shrink-0 w-16 h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center group-hover:animate-neo-swing transition-colors">
-                  <span className="material-symbols-outlined text-black dark:text-white text-4xl">celebration</span>
+              <div className="p-5 sm:p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-pink transition-colors group cursor-default neo-tilt">
+                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center group-hover:animate-neo-swing transition-colors">
+                  <span className="material-symbols-outlined text-black dark:text-white text-3xl sm:text-4xl">celebration</span>
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-3xl font-black text-black dark:text-white uppercase">Festival</h3>
+                  <h3 className="text-2xl sm:text-3xl font-black text-black dark:text-white uppercase">Festival</h3>
                   <p className="text-base font-bold leading-relaxed">Sinergi teknologi, olahraga, dan seni. Rayakan festival lewat kompetisi E-Sport, Futsal Cup, Talkshow interaktif, hingga Konser musik spektakuler.</p>
                 </div>
               </div>
             </ScrollReveal>
 
             <ScrollReveal animation="animate-pop-up" delay={0.5}>
-              <div className="p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-6 items-start hover:bg-neo-green transition-colors group cursor-default neo-tilt">
-                <div className="flex-shrink-0 w-16 h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center group-hover:animate-neo-swing transition-colors">
-                  <span className="material-symbols-outlined text-black dark:text-white text-4xl">campaign</span>
+              <div className="p-5 sm:p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-green transition-colors group cursor-default neo-tilt">
+                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center group-hover:animate-neo-swing transition-colors">
+                  <span className="material-symbols-outlined text-black dark:text-white text-3xl sm:text-4xl">campaign</span>
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-3xl font-black text-black dark:text-white uppercase">Publikasi</h3>
+                  <h3 className="text-2xl sm:text-3xl font-black text-black dark:text-white uppercase">Publikasi</h3>
                   <p className="text-base font-bold leading-relaxed">Membuka kolaborasi yang menghubungkan ide inovatif para pelajar dan mahasiswa dengan praktisi industri, akademisi, serta masyarakat luas.</p>
                 </div>
               </div>

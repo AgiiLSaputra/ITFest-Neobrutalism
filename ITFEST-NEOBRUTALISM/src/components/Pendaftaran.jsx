@@ -10,6 +10,7 @@ const events = [
     tags: ['SMA/SMK', 'MAHASISWA'],
     title: 'Hackathon',
     description: 'Tantang kemampuan teknismu dalam membangun solusi inovatif dalam waktu terbatas.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran Hackathon
     daftarBg: 'bg-neo-yellow',
     cardBg: 'bg-white',
     accent: 'bg-neo-blue',
@@ -22,6 +23,7 @@ const events = [
     tags: ['UMUM'],
     title: 'E-Sport Tournament',
     description: 'Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran E-Sport
     daftarBg: 'bg-neo-blue',
     cardBg: 'bg-white',
     accent: 'bg-neo-pink',
@@ -34,6 +36,7 @@ const events = [
     tags: ['MAHASISWA'],
     title: 'Badminton Tournament',
     description: 'Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran Badminton
     daftarBg: 'bg-neo-pink',
     cardBg: 'bg-white',
     accent: 'bg-neo-green',
@@ -46,6 +49,7 @@ const events = [
     tags: ['UMUM'],
     title: 'IT Expo',
     description: 'Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran IT Expo
     daftarBg: 'bg-neo-blue',
     cardBg: 'bg-white',
     accent: 'bg-neo-yellow',
@@ -58,6 +62,7 @@ const events = [
     tags: ['PELAJAR', 'UMUM'],
     title: 'Nasional Seminar',
     description: 'Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran Seminar
     daftarBg: 'bg-neo-green',
     cardBg: 'bg-white',
     accent: 'bg-neo-blue',
@@ -70,6 +75,7 @@ const events = [
     tags: ['MAHASISWA'],
     title: 'Typing Test',
     description: 'Seberapa cepat jarimu menari di atas keyboard? Buktikan kecepatan dan akurasimu di sini.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran Typing Test
     daftarBg: 'bg-neo-yellow',
     cardBg: 'bg-white',
     accent: 'bg-neo-pink',
@@ -79,20 +85,20 @@ const events = [
 function EventCard({ event, index }) {
   return (
     <ScrollReveal animation="animate-pop-up" delay={index * 0.12} className="relative group h-full">
-      <div className={`${event.cardBg} dark:bg-[#16213e] neo-border dark:border-white neo-shadow flex flex-col h-full p-8 transition-all duration-200 group-hover:-translate-y-2 group-hover:-translate-x-2 group-hover:shadow-none neo-tilt group-hover:animate-neo-squish`}>
-        <div className="flex justify-between items-start mb-6 pb-4 border-b-4 border-black">
-          <span className={`px-3 py-1 ${event.categoryBg} neo-border text-sm font-black text-black uppercase tracking-widest animate-neo-jitter`}>{event.category}</span>
-          <span className="material-symbols-outlined text-black text-3xl group-hover:animate-neo-swing">{event.icon}</span>
+      <div className={`${event.cardBg} dark:bg-[#16213e] neo-border dark:border-white neo-shadow flex flex-col h-full p-5 sm:p-8 transition-all duration-200 group-hover:-translate-y-2 group-hover:-translate-x-2 group-hover:shadow-none neo-tilt group-hover:animate-neo-squish`}>
+        <div className="flex justify-between items-start gap-3 mb-6 pb-4 border-b-4 border-black">
+          <span className={`px-2 sm:px-3 py-1 ${event.categoryBg} neo-border text-xs sm:text-sm font-black text-black uppercase tracking-widest animate-neo-jitter`}>{event.category}</span>
+          <span className="material-symbols-outlined text-black text-2xl sm:text-3xl group-hover:animate-neo-swing flex-shrink-0">{event.icon}</span>
         </div>
-        <div className="flex gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-4">
           {event.tags.map((tag) => (
             <span key={tag} className="px-2 py-1 bg-black text-white text-xs font-black uppercase animate-neo-glitch">{tag}</span>
           ))}
         </div>
-        <h3 className="text-3xl font-black mb-4 uppercase">{event.title}</h3>
-        <p className="text-lg font-bold mb-8 leading-relaxed flex-grow">{event.description}</p>
+        <h3 className="text-2xl sm:text-3xl font-black mb-4 uppercase">{event.title}</h3>
+        <p className="text-base sm:text-lg font-bold mb-8 leading-relaxed flex-grow">{event.description}</p>
         <div className="mt-auto space-y-3">
-          <a className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none animate-neo-jitter`} href="#">
+          <a className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none animate-neo-jitter`} href={event.daftarLink} target="_blank" rel="noopener noreferrer">
             DAFTAR SEKARANG
           </a>
           <Link to={`/event/${event.id}`} className="flex items-center justify-center gap-2 w-full py-4 bg-black text-white font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none">

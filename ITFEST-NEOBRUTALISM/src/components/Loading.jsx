@@ -42,7 +42,7 @@ export default function Loading({ onFinish }) {
     <div className="fixed inset-0 z-[9999] bg-[#050b18] flex items-center justify-center font-mono p-6 overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 bg-grid z-0 pointer-events-none"></div>
-      <div className="animate-load-pop absolute top-32 left-10 terminal-text opacity-60 float-anim z-0" style={{ ...pop(0.45), animationDuration: '5s' }}>
+      <div className="animate-load-pop absolute top-32 left-10 terminal-text opacity-60 float-anim z-0 hidden sm:block" style={{ ...pop(0.45), animationDuration: '5s' }}>
         <div>&lt;SYSTEM_OVERRIDE&gt;</div>
         <div className="text-[#00f2ff]">EXEC: 0x44A2</div>
         <div>STATUS: ACTIVE</div>
@@ -51,13 +51,13 @@ export default function Loading({ onFinish }) {
       <div className="glitch-line" style={{ animationDelay: '-2s', height: '5px', opacity: 0.3, background: '#00f2ff' }}></div>
 
       {/* Terminal Streams in Corners */}
-      <div className="animate-load-pop absolute top-4 left-4 terminal-text z-0" style={pop(0.25)}>
+      <div className="animate-load-pop absolute top-4 left-4 terminal-text z-0 hidden sm:block" style={pop(0.25)}>
         <div>SYS_INIT: OK</div>
         <div>MEM_CHECK: <span className="text-[#00f2ff]">PASS</span></div>
         <div className="blink-anim">{hex}</div>
         <div>LOADING SECTOR 7G...</div>
       </div>
-      <div className="animate-load-pop absolute bottom-4 right-4 text-right terminal-text z-0" style={pop(0.35)}>
+      <div className="animate-load-pop absolute bottom-4 right-4 text-right terminal-text z-0 hidden sm:block" style={pop(0.35)}>
         <div>UPLINK_STATUS: <span className="text-[#ff00ff]">ENCRYPTED</span></div>
         <div>NODE_ID: 994-A</div>
         <div className="blink-anim">AWAITING_INPUT_</div>

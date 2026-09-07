@@ -35,7 +35,7 @@ export default function Sponsor() {
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 mb-12">
           {sponsors.map((s, i) => (
             <ScrollReveal key={i} animation="animate-pop-up" delay={i * 0.08}>
-              <div className={`w-44 h-20 flex items-center justify-center ${s.color} neo-border dark:border-white neo-shadow-sm text-black font-black text-sm uppercase transition-all duration-200 hover:-translate-y-2 hover:shadow-none hover:rotate-2 group`}>
+              <div className={`w-36 sm:w-44 h-20 flex items-center justify-center ${s.color} neo-border dark:border-white neo-shadow-sm text-black font-black text-xs sm:text-sm uppercase transition-all duration-200 hover:-translate-y-2 hover:shadow-none hover:rotate-2 group`}>
                 <span className="group-hover:scale-110 transition-transform">{s.name}</span>
               </div>
             </ScrollReveal>

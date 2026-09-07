@@ -11,6 +11,7 @@ const eventsData = {
     subtitle: 'SMA/SMK & MAHASISWA',
     heroImg: '/img/Foto.webp',
     description: 'Milad IT Fest Hackathon 2026 adalah marathon coding intensif 48 jam yang dirancang untuk mendorong batas inovasi. Peserta akan membentuk tim dan menyelesaikan masalah nyata menggunakan teknologi terkini.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran Hackathon
     about: [
       'Kompetisi ini terbuka untuk pelajar SMA/SMK dan mahasiswa aktif dari seluruh Indonesia.',
       'Peserta akan diberikan tantangan berupa problem statement yang diambil dari isu-isu nyata di masyarakat.',
@@ -44,6 +45,7 @@ const eventsData = {
     subtitle: 'UMUM',
     heroImg: '/img/Foto.webp',
     description: 'Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik di Milad IT Fest 2026.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran E-Sport
     about: [
       'Turnamen Mobile Legends: Bang Bang dengan sistem gugur.',
       'Terbuka untuk umum, jangan lewatkan kesempatan menjadi juara!',
@@ -77,6 +79,7 @@ const eventsData = {
     subtitle: 'MAHASISWA',
     heroImg: '/img/Foto.webp',
     description: 'Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra Milad IT Fest 2026.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran Badminton
     about: [
       'Kompetisi badminton ganda putra khusus mahasiswa aktif UIR.',
       'Sistem gugur dengan babak penyisihan dan knockout.',
@@ -110,6 +113,7 @@ const eventsData = {
     subtitle: 'UMUM',
     heroImg: '/img/Foto.webp',
     description: 'Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan di Milad IT Fest 2026.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran IT Expo
     about: [
       'Pameran produk IoT, Web, dan Mobile Apps dari mahasiswa dan startup.',
       'Terbuka untuk umum, gratis tanpa tiket masuk.',
@@ -143,6 +147,7 @@ const eventsData = {
     subtitle: 'PELAJAR & UMUM',
     heroImg: '/img/Foto.webp',
     description: 'Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI di Milad IT Fest 2026.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran Seminar
     about: [
       'Seminar nasional dengan pembicara dari tech giant nasional dan internasional.',
       'Tema: "The Future of AI: Opportunities & Challenges for Indonesia".',
@@ -176,6 +181,7 @@ const eventsData = {
     subtitle: 'MAHASISWA',
     heroImg: '/img/Foto.webp',
     description: 'Seberapa cepat jarimu menari di atas keyboard? Buktikan kecepatan dan akurasimu di Milad IT Fest 2026.',
+    daftarLink: '#', // TODO: ganti dengan link form pendaftaran Typing Test
     about: [
       'Kompetisi ketikan (typing) dengan metrik WPM (Words Per Minute).',
       'Akurasi minimal 95% untuk lolos kualifikasi.',
@@ -304,7 +310,7 @@ export default function EventDetail() {
               <p className="font-bold mb-6 bg-neo-yellow px-2 py-1 inline-block neo-border dark:border-white text-sm dark:text-black">
                 Pendaftaran ditutup 14 hari lagi.
               </p>
-              <a href="#" className="block w-full bg-neo-blue text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg">
+              <a href={event.daftarLink} target="_blank" rel="noopener noreferrer" className="block w-full bg-neo-blue text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg">
                 DAFTAR SEKARANG
               </a>
             </div>
@@ -331,13 +337,13 @@ export default function EventDetail() {
 
       {/* Timeline - Full Width */}
       <ScrollReveal animation="animate-pop-up" delay={0.25}>
-        <div className="mt-8 bg-white dark:bg-[#16213e] p-6 md:p-8 neo-border dark:border-white neo-shadow relative overflow-hidden transition-colors">
+        <div className="mt-8 bg-white dark:bg-[#16213e] p-6 md:p-8 neo-border dark:border-white neo-shadow relative transition-colors">
           <h3 className="text-2xl font-black mb-8 uppercase border-b-4 border-black dark:border-white pb-4 flex items-center gap-3">
             <span className="material-symbols-outlined text-[28px] text-neo-pink animate-neo-swing">timeline</span>
             TIMELINE ACARA
           </h3>
           <div className="relative">
-            <div className="hidden md:block absolute left-8 right-8 top-6 h-1 bg-black animate-neo-strips"></div>
+            <div className="hidden md:block absolute left-8 right-8 top-6 h-1 bg-black"></div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
               {event.timeline.map((item, i) => (
                 <div key={i} className="group">
