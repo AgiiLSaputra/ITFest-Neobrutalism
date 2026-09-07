@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import FloatingShapes from './FloatingShapes';
 
 const phrases = ["Stay Curious,", "Code the Stars,", "Beyond the Horizons,", "Write the Future,"];
+// Frase terpanjang dipakai otomatis sebagai "sizer" agar lebar card judul selalu fix,
+// sekalipun nanti ada frase baru yang lebih panjang di array phrases.
+const longestPhrase = phrases.reduce((a, b) => (b.length > a.length ? b : a), phrases[0]);
 
 function TypewriterText() {
   const [phraseIndex, setPhraseIndex] = useState(0);
@@ -109,8 +112,14 @@ export default function Hero({ ready = true }) {
             MILAD IT FEST <br />
             <span className="bg-black text-white px-4 inline-block mt-2 animate-neo-squish">2026</span>
           </h1>
-          <p className="text-xl md:text-3xl text-black dark:text-white font-bold tracking-widest uppercase mt-4 min-h-[3rem] md:min-h-[4rem] flex items-center justify-center border-t-4 border-black dark:border-white pt-4 w-[95%]">
-            <TypewriterText />
+          <p className="text-lg sm:text-xl md:text-3xl text-black dark:text-white font-bold tracking-widest uppercase mt-4 min-h-[3rem] md:min-h-[4rem] border-t-4 border-black dark:border-white pt-4 w-full grid place-items-center">
+            {/* Sizer (invisible): frase terpanjang + lebar kursor, menjaga lebar card tetap fix saat teks typewriter berganti */}
+            <span className="invisible col-start-1 row-start-1 select-none whitespace-nowrap" aria-hidden="true">
+              {longestPhrase}<span className="inline-block w-[10px] h-[1em] ml-2"></span>
+            </span>
+            <span className="col-start-1 row-start-1 whitespace-nowrap">
+              <TypewriterText />
+            </span>
           </p>
         </div>
 
