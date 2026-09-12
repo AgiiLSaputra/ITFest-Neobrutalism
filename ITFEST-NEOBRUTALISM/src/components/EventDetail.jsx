@@ -9,7 +9,7 @@ const eventsData = {
     icon: "code",
     title: "HACKATHON 2026",
     subtitle: "SMA/SMK & MAHASISWA",
-    heroImg: "/img/Foto.webp",
+    heroImg: "/img/hackathon.webp",
     description:
       "Milad IT Fest Hackathon 2026 adalah marathon coding intensif 48 jam yang dirancang untuk mendorong batas inovasi. Peserta akan membentuk tim dan menyelesaikan masalah nyata menggunakan teknologi terkini.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran Hackathon
@@ -63,7 +63,7 @@ const eventsData = {
     icon: "sports_esports",
     title: "E-SPORT TOURNAMENT",
     subtitle: "UMUM",
-    heroImg: "/img/Foto.webp",
+    heroImg: "/img/ESport.webp",
     description:
       "Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik di Milad IT Fest 2026.",
     daftarLink: "#",
@@ -119,7 +119,7 @@ const eventsData = {
     icon: "sports_tennis",
     title: "BADMINTON TOURNAMENT",
     subtitle: "MAHASISWA",
-    heroImg: "/img/Foto.webp",
+    heroImg: "/img/Badminton.webp",
     description:
       "Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra Milad IT Fest 2026.",
     daftarLink: "#",
@@ -167,7 +167,7 @@ const eventsData = {
     icon: "rocket_launch",
     title: "IT EXPO",
     subtitle: "UMUM",
-    heroImg: "/img/Foto.webp",
+    heroImg: "/img/ITEXPO.webp",
     description:
       "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan di Milad IT Fest 2026.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran IT Expo
@@ -280,7 +280,7 @@ const eventsData = {
     icon: "keyboard",
     title: "TYPING TEST",
     subtitle: "MAHASISWA",
-    heroImg: "/img/Foto.webp",
+    heroImg: "/img/TypingTest.webp",
     description:
       "Seberapa cepat jarimu menari di atas keyboard? Buktikan kecepatan dan akurasimu di Milad IT Fest 2026.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran Typing Test
@@ -380,7 +380,7 @@ export default function EventDetail() {
       <div className="relative overflow-hidden neo-border neo-shadow bg-black mb-12 animate-pop-up">
         <img
           alt={event.title}
-          className="w-full h-[300px] md:h-[500px] object-cover scale-110 brightness-75 contrast-110 transition-transform duration-300 hover:scale-125"
+          className="aspect-[1672/941] w-full h-auto object-cover scale-110 brightness-75 contrast-110 transition-transform duration-300 hover:scale-125"
           src={event.heroImg}
         />
         <div className="absolute inset-0 bg-black/30"></div>
