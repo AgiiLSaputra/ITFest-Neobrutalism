@@ -36,7 +36,7 @@ export default function CustomCursor() {
       style={{ willChange: 'transform', transform: 'translate(-100px, -100px)' }}
     >
       <div className="w-10 h-10 border-4 border-white rounded-full flex items-center justify-center">
-        <div className="w-2 h-2 bg-white rounded-full" />
+        <div className="w-2 h-2 bg-cream rounded-full" />
       </div>
     </div>
   );
