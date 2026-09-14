@@ -55,7 +55,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl transition-all duration-300">
-      <div className="container mx-auto px-8 h-16 flex items-center justify-between bg-white dark:bg-[#16213e] neo-border neo-shadow-sm transition-colors">
+      <div className="container mx-auto px-8 h-16 flex items-center justify-between bg-cream dark:bg-[#16213e] neo-border neo-shadow-sm transition-colors">
         <Link to="/" className="flex items-center group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img alt="Milad IT Fest 2026 Logo" className="h-10 w-auto object-contain bg-black px-2" src={LOGO_URL} />
         </Link>
@@ -71,7 +71,7 @@ export default function Header() {
               <span className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}>expand_more</span>
             </button>
             {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-1 bg-white dark:bg-[#16213e] neo-border neo-shadow-sm py-2 min-w-[220px] animate-dropdown-pop">
+              <div className="absolute top-full left-0 mt-1 bg-cream dark:bg-[#16213e] neo-border neo-shadow-sm py-2 min-w-[220px] animate-dropdown-pop">
                 {eventLinks.map((ev) => (
                   <button key={ev.id} className="w-full text-left px-4 py-2 text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors flex items-center gap-2" onClick={() => goToEvent(ev.id)}>
                     <span className="w-2 h-2 bg-neo-pink neo-border flex-shrink-0"></span>
@@ -89,7 +89,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-3">
           <button
             onClick={toggleDarkMode}
-            className="w-10 h-10 flex items-center justify-center neo-border neo-shadow-sm bg-white dark:bg-[#0f3460] transition-colors hover:scale-110"
+            className="w-10 h-10 flex items-center justify-center neo-border neo-shadow-sm bg-cream dark:bg-[#0f3460] transition-colors hover:scale-110"
             aria-label="Toggle dark mode"
           >
             <span className="material-symbols-outlined text-xl theme-icon"></span>
@@ -102,7 +102,7 @@ export default function Header() {
         <div className="flex items-center gap-2 md:hidden">
           <button
             onClick={toggleDarkMode}
-            className="w-9 h-9 flex items-center justify-center neo-border neo-shadow-sm bg-white dark:bg-[#0f3460] transition-colors"
+            className="w-9 h-9 flex items-center justify-center neo-border neo-shadow-sm bg-cream dark:bg-[#0f3460] transition-colors"
             aria-label="Toggle dark mode"
           >
             <span className="material-symbols-outlined text-lg theme-icon"></span>
@@ -121,7 +121,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className={`md:hidden bg-white dark:bg-[#16213e] neo-border neo-shadow-sm mt-2 transition-all duration-300 ${menuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'}`}>
+      <div className={`md:hidden bg-cream dark:bg-[#16213e] neo-border neo-shadow-sm mt-2 transition-all duration-300 ${menuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'}`}>
         <nav className="flex flex-col gap-4 font-bold">
           <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('beranda'); setMenuOpen(false); }}>Home</button>
           <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('tentang'); setMenuOpen(false); }}>About Us</button>

@@ -2,7 +2,7 @@ import ScrollReveal from './ScrollReveal';
 
 export default function TentangAcara() {
   return (
-    <section className="py-24 relative bg-white dark:bg-[#16213e] border-b-8 border-black dark:border-white transition-colors" id="tentang">
+    <section className="py-24 relative bg-gray-main dark:bg-[#16213e] border-b-8 border-black dark:border-white transition-colors pattern-cross-grid" id="tentang">
       <div className="container mx-auto px-6 max-w-screen-xl">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Left Side */}
@@ -27,7 +27,7 @@ export default function TentangAcara() {
                   Milad IT Fest adalah perayaan tahunan yang menandai hari jadi Program Studi Teknik Informatika Universitas Islam Riau. Acara ini merupakan wujud syukur dan momentum refleksi atas perjalanan panjang serta pencapaian yang telah diraih.
                 </p>
                 <p className="text-xl font-bold leading-relaxed">
-                  Mengusung tema <span className="bg-white px-1 animate-border-dance">"Code the Stars, Beyond the Horizons"</span>, tahun ini kami mengajak seluruh elemen mahasiswa dan civitas akademika untuk melampaui batas inovasi, menggabungkan semangat kebersamaan dengan eksplorasi teknologi masa depan.
+                  Mengusung tema <span className="bg-cream px-1 animate-border-dance">"Code the Stars, Beyond the Horizons"</span>, tahun ini kami mengajak seluruh elemen mahasiswa dan civitas akademika untuk melampaui batas inovasi, menggabungkan semangat kebersamaan dengan eksplorasi teknologi masa depan.
                 </p>
               </div>
             </ScrollReveal>
@@ -36,8 +36,8 @@ export default function TentangAcara() {
           {/* Right Side */}
           <div className="lg:w-1/2 flex flex-col gap-8">
             <ScrollReveal animation="animate-pop-up" delay={0.2}>
-              <div className="p-5 sm:p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-blue transition-colors group cursor-default neo-tilt">
-                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center relative z-10 group-hover:animate-neo-swing transition-colors">
+              <div className="p-5 sm:p-8 bg-cream dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-blue transition-colors group cursor-default neo-tilt">
+                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-cream dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center relative z-10 group-hover:animate-neo-swing transition-colors">
                   <span className="material-symbols-outlined text-black dark:text-white text-3xl sm:text-4xl">school</span>
                 </div>
                 <div className="space-y-3 relative z-10">
@@ -48,8 +48,8 @@ export default function TentangAcara() {
             </ScrollReveal>
 
             <ScrollReveal animation="animate-pop-up" delay={0.35}>
-              <div className="p-5 sm:p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-pink transition-colors group cursor-default neo-tilt">
-                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center group-hover:animate-neo-swing transition-colors">
+              <div className="p-5 sm:p-8 bg-cream dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-pink transition-colors group cursor-default neo-tilt">
+                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-cream dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center group-hover:animate-neo-swing transition-colors">
                   <span className="material-symbols-outlined text-black dark:text-white text-3xl sm:text-4xl">celebration</span>
                 </div>
                 <div className="space-y-3">
@@ -60,8 +60,8 @@ export default function TentangAcara() {
             </ScrollReveal>
 
             <ScrollReveal animation="animate-pop-up" delay={0.5}>
-              <div className="p-5 sm:p-8 bg-white dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-green transition-colors group cursor-default neo-tilt">
-                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center group-hover:animate-neo-swing transition-colors">
+              <div className="p-5 sm:p-8 bg-cream dark:bg-[#0f3460] neo-border dark:border-white neo-shadow flex gap-4 sm:gap-6 items-start hover:bg-neo-green transition-colors group cursor-default neo-tilt">
+                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-cream dark:bg-[#16213e] neo-border dark:border-white flex items-center justify-center group-hover:animate-neo-swing transition-colors">
                   <span className="material-symbols-outlined text-black dark:text-white text-3xl sm:text-4xl">campaign</span>
                 </div>
                 <div className="space-y-3">

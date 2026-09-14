@@ -3,7 +3,7 @@ const shapes = [
   { type: 'circle', size: 'w-8 h-8', bg: 'bg-neo-pink', pos: 'top-[25%] right-[12%]', rotate: '', anim: 'animate-bounce-slow', delay: '1s' },
   { type: 'square', size: 'w-4 h-4', bg: 'bg-neo-green', pos: 'top-[60%] left-[5%]', rotate: 'rotate-12', anim: 'animate-wiggle', delay: '0.5s' },
   { type: 'circle', size: 'w-5 h-5', bg: 'bg-neo-yellow', pos: 'top-[45%] right-[6%]', rotate: '', anim: 'animate-spin-slow', delay: '2s' },
-  { type: 'square', size: 'w-3 h-3', bg: 'bg-white', pos: 'top-[70%] left-[15%]', rotate: 'rotate-[30deg]', anim: 'animate-float', delay: '1.5s' },
+  { type: 'square', size: 'w-3 h-3', bg: 'bg-cream', pos: 'top-[70%] left-[15%]', rotate: 'rotate-[30deg]', anim: 'animate-float', delay: '1.5s' },
   { type: 'triangle', size: 'w-0 h-0', bg: '', pos: 'top-[35%] left-[3%]', rotate: 'rotate-12', anim: 'animate-bounce-slow', delay: '0.8s', style: { borderLeft: '8px solid transparent', borderRight: '8px solid transparent', borderBottom: '14px solid #000' } },
   { type: 'square', size: 'w-5 h-5', bg: 'bg-neo-orange', pos: 'top-[80%] right-[10%]', rotate: 'rotate-[-15deg]', anim: 'animate-float', delay: '3s' },
   { type: 'circle', size: 'w-4 h-4', bg: 'bg-black', pos: 'top-[10%] left-[50%]', rotate: '', anim: 'animate-wiggle', delay: '2.5s' },

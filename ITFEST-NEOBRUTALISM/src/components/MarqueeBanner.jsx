@@ -35,7 +35,7 @@ export default function MarqueeBanner() {
   return (
     <div className="relative">
       <MarqueeRow direction="left" bg="bg-neo-yellow" textBg="bg-black" speed={30} />
-      <MarqueeRow direction="right" bg="bg-white" textBg="bg-neo-pink" speed={40} />
+      <MarqueeRow direction="right" bg="bg-cream" textBg="bg-neo-pink" speed={40} />
     </div>
   );
 }

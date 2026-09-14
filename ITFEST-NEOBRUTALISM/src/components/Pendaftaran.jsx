@@ -11,8 +11,8 @@ const events = [
     title: 'Hackathon',
     description: 'Tantang kemampuan teknismu dalam membangun solusi inovatif dalam waktu terbatas.',
     daftarLink: '#', // TODO: ganti dengan link form pendaftaran Hackathon
-    daftarBg: 'bg-neo-yellow',
-    cardBg: 'bg-white',
+    daftarBg: 'bg-neo-blue',
+    cardBg: 'bg-cream',
     accent: 'bg-neo-blue',
   },
   {
@@ -24,8 +24,8 @@ const events = [
     title: 'E-Sport Tournament',
     description: 'Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik.',
     daftarLink: '#', // TODO: ganti dengan link form pendaftaran E-Sport
-    daftarBg: 'bg-neo-blue',
-    cardBg: 'bg-white',
+    daftarBg: 'bg-neo-pink',
+    cardBg: 'bg-cream',
     accent: 'bg-neo-pink',
   },
   {
@@ -37,8 +37,8 @@ const events = [
     title: 'Badminton Tournament',
     description: 'Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra.',
     daftarLink: '#', // TODO: ganti dengan link form pendaftaran Badminton
-    daftarBg: 'bg-neo-pink',
-    cardBg: 'bg-white',
+    daftarBg: 'bg-neo-green',
+    cardBg: 'bg-cream',
     accent: 'bg-neo-green',
   },
   {
@@ -51,7 +51,7 @@ const events = [
     description: 'Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan.',
     daftarLink: '#', // TODO: ganti dengan link form pendaftaran IT Expo
     daftarBg: 'bg-neo-blue',
-    cardBg: 'bg-white',
+    cardBg: 'bg-cream',
     accent: 'bg-neo-yellow',
   },
   {
@@ -63,8 +63,8 @@ const events = [
     title: 'Nasional Seminar',
     description: 'Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI.',
     daftarLink: '#', // TODO: ganti dengan link form pendaftaran Seminar
-    daftarBg: 'bg-neo-green',
-    cardBg: 'bg-white',
+    daftarBg: 'bg-neo-pink',
+    cardBg: 'bg-cream',
     accent: 'bg-neo-blue',
   },
   {
@@ -76,8 +76,8 @@ const events = [
     title: 'Typing Test',
     description: 'Seberapa cepat jarimu menari di atas keyboard? Buktikan kecepatan dan akurasimu di sini.',
     daftarLink: '#', // TODO: ganti dengan link form pendaftaran Typing Test
-    daftarBg: 'bg-neo-yellow',
-    cardBg: 'bg-white',
+    daftarBg: 'bg-neo-green',
+    cardBg: 'bg-cream',
     accent: 'bg-neo-pink',
   },
 ];
@@ -113,7 +113,7 @@ function EventCard({ event, index }) {
 
 export default function Pendaftaran() {
   return (
-    <section className="py-24 relative bg-[#f0f0f0] dark:bg-[#1a1a2e] border-b-8 border-black dark:border-white transition-colors" id="pendaftaran">
+    <section className="py-24 relative bg-gray-main dark:bg-[#1a1a2e] border-b-8 border-black dark:border-white transition-colors pattern-diagonal-lines" id="pendaftaran">
       <div className="absolute top-8 left-8 bg-neo-orange neo-border neo-shadow-sm px-3 py-1 font-black text-xs uppercase transform -rotate-6 animate-wiggle hidden lg:block z-20">
         🔥 Terbatas!
       </div>
@@ -128,7 +128,7 @@ export default function Pendaftaran() {
             </div>
           </ScrollReveal>
           <ScrollReveal animation="animate-pop-up" delay={0.2}>
-            <p className="text-xl font-bold max-w-2xl mx-auto bg-white dark:bg-[#16213e] p-4 neo-border dark:border-white transition-colors">
+            <p className="text-xl font-bold max-w-2xl mx-auto bg-cream dark:bg-[#16213e] p-4 neo-border dark:border-white transition-colors">
               Pilih cabang kegiatan SwitchFest 2026 yang ingin kamu ikuti. Pelajari informasi selengkapnya atau langsung lakukan pendaftaran!
             </p>
           </ScrollReveal>

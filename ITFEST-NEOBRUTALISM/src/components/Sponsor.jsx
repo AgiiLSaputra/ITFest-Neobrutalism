@@ -9,17 +9,14 @@ const sponsors = [
 ];
 
 const mediaPartners = [
-  { name: 'Media 1', color: 'bg-white' },
-  { name: 'Media 2', color: 'bg-white' },
-  { name: 'Media 3', color: 'bg-white' },
+  { name: 'Media 1', color: 'bg-cream' },
+  { name: 'Media 2', color: 'bg-cream' },
+  { name: 'Media 3', color: 'bg-cream' },
 ];
 
 export default function Sponsor() {
   return (
-    <section className="py-20 border-b-8 border-black dark:border-white bg-[#f0f0f0] dark:bg-[#1a1a2e] relative overflow-hidden transition-colors" id="sponsor">
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{
-        backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 20px, #000 20px, #000 21px)',
-      }}></div>
+    <section className="py-20 border-b-8 border-black dark:border-white bg-gray-main dark:bg-[#1a1a2e] relative overflow-hidden transition-colors pattern-dashed-grid" id="sponsor">
       <div className="container mx-auto px-6 max-w-screen-xl relative z-10">
         <div className="text-center mb-12">
           <ScrollReveal animation="animate-pop-up">
@@ -28,7 +25,7 @@ export default function Sponsor() {
             </div>
           </ScrollReveal>
           <ScrollReveal animation="animate-pop-up" delay={0.15}>
-            <p className="text-lg font-bold bg-white dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">Kolaborasi ini menjadi fondasi acara yang lebih besar.</p>
+            <p className="text-lg font-bold bg-cream dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">Kolaborasi ini menjadi fondasi acara yang lebih besar.</p>
           </ScrollReveal>
         </div>
 
@@ -44,7 +41,7 @@ export default function Sponsor() {
 
         <div className="text-center mb-8">
           <ScrollReveal animation="animate-pop-up" delay={0.3}>
-              <h3 className="text-xl font-black uppercase tracking-widest bg-white dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">
+              <h3 className="text-xl font-black uppercase tracking-widest bg-cream dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">
               Media Partner
             </h3>
           </ScrollReveal>
