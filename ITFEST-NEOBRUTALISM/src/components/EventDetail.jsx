@@ -35,8 +35,8 @@ const eventsData = {
     ],
     prizes: [
       { place: "1st Place", amount: "Rp 10.000.000", bg: "bg-neo-yellow" },
-      { place: "2nd Place", amount: "Rp 7.500.000", bg: "bg-white" },
-      { place: "3rd Place", amount: "Rp 5.000.000", bg: "bg-white" },
+      { place: "2nd Place", amount: "Rp 7.500.000", bg: "bg-cream" },
+      { place: "3rd Place", amount: "Rp 5.000.000", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -45,14 +45,14 @@ const eventsData = {
         color: "bg-neo-blue",
         active: true,
       },
-      { date: "01 NOV 2026", label: "Technical Meeting", color: "bg-white" },
+      { date: "01 NOV 2026", label: "Technical Meeting", color: "bg-cream" },
       {
         date: "15-17 NOV 2026",
         label: "Hackathon Days",
         color: "bg-neo-pink",
         highlight: true,
       },
-      { date: "20 NOV 2026", label: "Winner Announcement", color: "bg-white" },
+      { date: "20 NOV 2026", label: "Winner Announcement", color: "bg-cream" },
     ],
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-pink",
@@ -86,8 +86,8 @@ const eventsData = {
     ],
     prizes: [
       { place: "1st Place", amount: "Rp 5.000.000", bg: "bg-neo-yellow" },
-      { place: "2nd Place", amount: "Rp 3.000.000", bg: "bg-white" },
-      { place: "3rd Place", amount: "Rp 1.500.000", bg: "bg-white" },
+      { place: "2nd Place", amount: "Rp 3.000.000", bg: "bg-cream" },
+      { place: "3rd Place", amount: "Rp 1.500.000", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -96,7 +96,7 @@ const eventsData = {
         color: "bg-neo-blue",
         active: true,
       },
-      { date: "10 NOV 2026", label: "Qualification Round", color: "bg-white" },
+      { date: "10 NOV 2026", label: "Qualification Round", color: "bg-cream" },
       {
         date: "15-16 NOV 2026",
         label: "Main Event",
@@ -139,8 +139,8 @@ const eventsData = {
     ],
     prizes: [
       { place: "1st Place", amount: "Rp 3.000.000", bg: "bg-neo-yellow" },
-      { place: "2nd Place", amount: "Rp 2.000.000", bg: "bg-white" },
-      { place: "3rd Place", amount: "Rp 1.000.000", bg: "bg-white" },
+      { place: "2nd Place", amount: "Rp 2.000.000", bg: "bg-cream" },
+      { place: "3rd Place", amount: "Rp 1.000.000", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -149,8 +149,8 @@ const eventsData = {
         color: "bg-neo-green",
         active: true,
       },
-      { date: "01 NOV 2026", label: "Technical Meeting", color: "bg-white" },
-      { date: "15 NOV 2026", label: "Penyisihan", color: "bg-white" },
+      { date: "01 NOV 2026", label: "Technical Meeting", color: "bg-cream" },
+      { date: "15 NOV 2026", label: "Penyisihan", color: "bg-cream" },
       {
         date: "17 NOV 2026",
         label: "Semi-Final & Final",
@@ -193,8 +193,8 @@ const eventsData = {
     ],
     prizes: [
       { place: "Best Exhibit", amount: "Rp 2.000.000", bg: "bg-neo-yellow" },
-      { place: "Most Innovative", amount: "Rp 1.500.000", bg: "bg-white" },
-      { place: "People's Choice", amount: "Rp 1.000.000", bg: "bg-white" },
+      { place: "Most Innovative", amount: "Rp 1.500.000", bg: "bg-cream" },
+      { place: "People's Choice", amount: "Rp 1.000.000", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -203,7 +203,7 @@ const eventsData = {
         color: "bg-neo-yellow",
         active: true,
       },
-      { date: "01 NOV 2026", label: "Submission Proposal", color: "bg-white" },
+      { date: "01 NOV 2026", label: "Submission Proposal", color: "bg-cream" },
       {
         date: "15-17 NOV 2026",
         label: "Exhibition Day",
@@ -252,8 +252,8 @@ const eventsData = {
     ],
     prizes: [
       { place: "Best Question", amount: "Rp 500.000", bg: "bg-neo-yellow" },
-      { place: "Sertifikat", amount: "Semua Peserta", bg: "bg-white" },
-      { place: "Doorprize", amount: "Menarik Lainnya", bg: "bg-white" },
+      { place: "Sertifikat", amount: "Semua Peserta", bg: "bg-cream" },
+      { place: "Doorprize", amount: "Menarik Lainnya", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -262,14 +262,14 @@ const eventsData = {
         color: "bg-neo-blue",
         active: true,
       },
-      { date: "01 NOV 2026", label: "Speaker Announcement", color: "bg-white" },
+      { date: "01 NOV 2026", label: "Speaker Announcement", color: "bg-cream" },
       {
         date: "16 NOV 2026",
         label: "Seminar Day",
         color: "bg-neo-pink",
         highlight: true,
       },
-      { date: "16 NOV 2026", label: "Networking Session", color: "bg-white" },
+      { date: "16 NOV 2026", label: "Networking Session", color: "bg-cream" },
     ],
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-green",
@@ -303,8 +303,8 @@ const eventsData = {
     ],
     prizes: [
       { place: "1st Place", amount: "Rp 1.500.000", bg: "bg-neo-yellow" },
-      { place: "2nd Place", amount: "Rp 1.000.000", bg: "bg-white" },
-      { place: "3rd Place", amount: "Rp 500.000", bg: "bg-white" },
+      { place: "2nd Place", amount: "Rp 1.000.000", bg: "bg-cream" },
+      { place: "3rd Place", amount: "Rp 500.000", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -313,8 +313,8 @@ const eventsData = {
         color: "bg-neo-pink",
         active: true,
       },
-      { date: "01 NOV 2026", label: "Practice Session", color: "bg-white" },
-      { date: "15 NOV 2026", label: "Qualification Round", color: "bg-white" },
+      { date: "01 NOV 2026", label: "Practice Session", color: "bg-cream" },
+      { date: "15 NOV 2026", label: "Qualification Round", color: "bg-cream" },
       {
         date: "17 NOV 2026",
         label: "Grand Final",
@@ -415,7 +415,7 @@ export default function EventDetail() {
           animation="animate-pop-up"
           className="md:col-span-2 md:col-start-1 md:row-start-1"
         >
-          <div className="h-full bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
+          <div className="h-full bg-cream dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
             <h2 className="text-3xl font-black mb-6 flex items-center gap-3 uppercase border-b-4 border-black dark:border-white pb-4">
               <span className="material-symbols-outlined text-[36px] text-neo-blue animate-neo-swing">
                 info
@@ -426,7 +426,7 @@ export default function EventDetail() {
               {event.about.map((item, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-4 bg-[#f0f0f0] dark:bg-[#0f3460] p-4 neo-border dark:border-white neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group"
+                  className="flex items-start gap-4 bg-cream dark:bg-[#0f3460] p-4 neo-border dark:border-white neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group"
                 >
                   <span className="material-symbols-outlined text-neo-pink text-2xl mt-1 group-hover:animate-neo-swing">
                     check_circle
@@ -459,7 +459,7 @@ export default function EventDetail() {
               {event.rules.map((rule, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-4 bg-white dark:bg-[#0f3460] p-4 neo-border dark:border-white neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group"
+                  className="flex items-start gap-4 bg-cream dark:bg-[#0f3460] p-4 neo-border dark:border-white neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group"
                 >
                   <span className="material-symbols-outlined text-black dark:text-white text-2xl group-hover:animate-neo-swing">
                     {rule.icon}
@@ -479,7 +479,7 @@ export default function EventDetail() {
           delay={0.1}
           className="md:col-start-3 md:row-start-1"
         >
-          <div className="h-full bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow text-center transition-colors flex flex-col justify-center">
+          <div className="h-full bg-cream dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow text-center transition-colors flex flex-col justify-center">
             <div className="inline-block px-4 py-2 bg-neo-pink neo-border dark:border-white font-black mb-4 uppercase transform rotate-2 text-sm animate-neo-swing">
               Siap untuk ikut?
             </div>
@@ -503,7 +503,7 @@ export default function EventDetail() {
           delay={0.2}
           className="md:col-start-3 md:row-start-2"
         >
-          <div className="h-full bg-white dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors flex flex-col">
+          <div className="h-full bg-cream dark:bg-[#16213e] p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors flex flex-col">
             <h3 className="text-2xl font-black mb-6 flex items-center gap-2 uppercase border-b-4 border-black dark:border-white pb-4">
               <span className="material-symbols-outlined text-[28px] text-neo-orange animate-neo-swing">
                 emoji_events
@@ -529,7 +529,7 @@ export default function EventDetail() {
 
       {/* Timeline - Full Width */}
       <ScrollReveal animation="animate-pop-up" delay={0.25}>
-        <div className="mt-8 bg-white dark:bg-[#16213e] p-6 md:p-8 neo-border dark:border-white neo-shadow relative transition-colors">
+        <div className="mt-8 bg-cream dark:bg-[#16213e] p-6 md:p-8 neo-border dark:border-white neo-shadow relative transition-colors">
           <h3 className="text-2xl font-black mb-8 uppercase border-b-4 border-black dark:border-white pb-4 flex items-center gap-3">
             <span className="material-symbols-outlined text-[28px] text-neo-pink animate-neo-swing">
               timeline
@@ -553,7 +553,7 @@ export default function EventDetail() {
                       </span>
                     )}
                   </div>
-                  <div className="bg-[#f0f0f0] dark:bg-[#0f3460] p-4 neo-border dark:border-white text-center hover:-translate-y-1 transition-transform neo-shadow-sm h-full flex flex-col justify-center">
+                  <div className="bg-cream dark:bg-[#0f3460] p-4 neo-border dark:border-white text-center hover:-translate-y-1 transition-transform neo-shadow-sm h-full flex flex-col justify-center">
                     <div
                       className={`text-xs mb-2 font-black uppercase tracking-widest self-start inline-block px-2 ${item.highlight ? "bg-neo-pink text-white animate-neo-jitter" : item.active ? "bg-neo-yellow animate-neo-jitter" : ""}`}
                     >
