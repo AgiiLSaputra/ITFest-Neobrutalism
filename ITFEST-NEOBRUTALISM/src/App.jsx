@@ -87,7 +87,7 @@ export default function App() {
       : '';
 
   return (
-    <div className={`antialiased selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black flex flex-col min-h-screen bg-[#f0f0f0] dark:bg-[#1a1a2e] text-black dark:text-[#e0e0e0] transition-colors duration-300`}>
+    <div className={`antialiased selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black flex flex-col min-h-screen bg-gray-main dark:bg-[#1a1a2e] text-black dark:text-[#e0e0e0] transition-colors duration-300`}>
       {phase !== 'done' && <Loading onFinish={finishLoading} />}
       <MemoizedCustomCursor />
       {/* Navbar lives OUTSIDE the animated page wrapper so it is always
@@ -98,7 +98,7 @@ export default function App() {
           <MemoizedHeader />
         </div>
       )}
-      <div ref={pageRef} className={`relative z-[10000] bg-[#f0f0f0] dark:bg-[#1a1a2e] ${pageClass}`}>
+      <div ref={pageRef} className={`relative z-[10000] bg-gray-main dark:bg-[#1a1a2e] ${pageClass}`}>
         <MemoizedNoiseOverlay />
         <main className="flex-grow relative">
           <Routes location={location} key={location.pathname}>

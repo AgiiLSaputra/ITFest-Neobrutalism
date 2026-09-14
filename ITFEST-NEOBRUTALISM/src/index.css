@@ -8,7 +8,7 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background-color: #f0f0f0;
+    background-color: #e5e7eb;
     color: #000000;
     font-family: 'Space Grotesk', sans-serif;
     margin: 0;
@@ -30,16 +30,18 @@
 .neo-shadow-hover:hover { box-shadow: 4px 4px 0px 0px #000000; transform: translate(4px, 4px); }
 .neo-shadow-active:active { box-shadow: 0px 0px 0px 0px #000000; transform: translate(8px, 8px); }
 
-.bg-neo-yellow { background-color: #ffe600; }
-.text-neo-yellow { color: #ffe600; }
-.bg-neo-blue { background-color: #00e5ff; }
-.text-neo-blue { color: #00e5ff; }
-.bg-neo-pink { background-color: #ff00ff; }
-.text-neo-pink { color: #ff00ff; }
-.bg-neo-orange { background-color: #ff6b00; }
-.text-neo-orange { color: #ff6b00; }
-.bg-neo-green { background-color: #00ff00; }
-.text-neo-green { color: #00ff00; }
+.bg-cream { background-color: #fdf5e6; }
+.bg-gray-main { background-color: #e5e7eb; }
+.bg-neo-yellow { background-color: #ddf4a2; }
+.text-neo-yellow { color: #ddf4a2; }
+.bg-neo-blue { background-color: #0055a6; }
+.text-neo-blue { color: #0055a6; }
+.bg-neo-pink { background-color: #fe9eec; }
+.text-neo-pink { color: #fe9eec; }
+.bg-neo-orange { background-color: #fe9eec; }
+.text-neo-orange { color: #fe9eec; }
+.bg-neo-green { background-color: #ddf4a2; }
+.text-neo-green { color: #ddf4a2; }
 
 /* -------------------------------------------
    EXISTING ANIMATIONS
@@ -267,6 +269,94 @@
   will-change: transform;
 }
 
+/* -------------------------------------------
+   NEOBRUTALISM BACKGROUND PATTERNS
+   Decorative overlays — always use z-0 + pointer-events-none
+   ------------------------------------------- */
+
+/* DOT GRID — classic neobrutalism dot matrix */
+.pattern-dot-grid {
+  position: relative;
+}
+.pattern-dot-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.12) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* CROSS GRID — plus-sign pattern */
+.pattern-cross-grid {
+  position: relative;
+}
+.pattern-cross-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* DIAGONAL LINES — thin diagonal hatching */
+.pattern-diagonal-lines {
+  position: relative;
+}
+.pattern-diagonal-lines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(0,0,0,0.05) 10px,
+    rgba(0,0,0,0.05) 11px
+  );
+}
+
+/* DASHED GRID — dashed lines like graph paper */
+.pattern-dashed-grid {
+  position: relative;
+}
+.pattern-dashed-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 15px, rgba(0,0,0,0.08) 15px, rgba(0,0,0,0.08) 16px),
+    repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(0,0,0,0.08) 15px, rgba(0,0,0,0.08) 16px);
+}
+
+/* CHECKERBOARD — subtle checkerboard */
+.pattern-checker {
+  position: relative;
+}
+.pattern-checker::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(45deg, rgba(0,0,0,0.04) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0,0,0,0.04) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.04) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.04) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
 /* COUNTDOWN BOUNCE - each digit bounces on change */
 @keyframes countBounce {
   0% { transform: scale(1); }
@@ -306,11 +396,11 @@
 
 /* BORDER DANCE - animated gradient border */
 @keyframes borderDance {
-  0% { border-color: #ffe600; }
-  25% { border-color: #00e5ff; }
-  50% { border-color: #ff00ff; }
-  75% { border-color: #00ff00; }
-  100% { border-color: #ffe600; }
+  0% { border-color: #ddf4a2; }
+  25% { border-color: #0055a6; }
+  50% { border-color: #fe9eec; }
+  75% { border-color: #ddf4a2; }
+  100% { border-color: #ddf4a2; }
 }
 .animate-border-dance { animation: borderDance 4s linear infinite; }
 
@@ -402,7 +492,7 @@
 }
 .bg-grid {
   margin: -40px;
-  background-image: radial-gradient(#00f2ff 1px, transparent 1px);
+  background-image: radial-gradient(#0055a6 1px, transparent 1px);
   background-size: 20px 20px;
   animation: moveGrid 10s linear infinite;
   opacity: 0.2;
