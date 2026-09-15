@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const LOGO_URL = "/img/LogoITFESTUIR.png";
 
 const InstagramIcon = () => (
@@ -41,9 +43,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <a
+            <Link
               className="flex items-center gap-4 mb-6 bg-cream p-4 neo-border neo-shadow inline-flex transition-colors"
-              href="#"
+              to="/"
             >
               <img
                 alt="Milad IT Fest Logo"
@@ -53,7 +55,7 @@ export default function Footer() {
               <span className="font-black text-2xl tracking-tight uppercase">
                 Milad IT Fest <span className="bg-neo-pink px-2">2026</span>
               </span>
-            </a>
+            </Link>
             <p className="font-bold text-lg max-w-sm mb-6 bg-cream p-4 neo-border neo-shadow transition-colors">
               Merayakan perjalanan inovasi dan kolaborasi di Teknik Informatika
               Universitas Islam Riau. Code the Stars, Beyond the Horizons.
@@ -88,28 +90,28 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               <li>
-                <a
+                <Link
                   className="font-bold hover:bg-neo-yellow px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                  href="#beranda"
+                  to="/#beranda"
                 >
                   Beranda
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="font-bold hover:bg-neo-pink px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                  href="#tentang"
+                  to="/#tentang"
                 >
                   Tentang
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="font-bold hover:bg-neo-green px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                  href="#roadmap"
+                  to="/#roadmap"
                 >
                   Roadmap
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
