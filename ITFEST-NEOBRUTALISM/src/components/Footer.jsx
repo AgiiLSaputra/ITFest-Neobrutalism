@@ -111,14 +111,6 @@ export default function Footer() {
                   Roadmap
                 </a>
               </li>
-              <li>
-                <a
-                  className="font-bold hover:bg-neo-yellow px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                  href="#acara"
-                >
-                  Kegiatan
-                </a>
-              </li>
             </ul>
           </div>
 
