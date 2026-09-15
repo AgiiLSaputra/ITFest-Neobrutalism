@@ -28,14 +28,6 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-neo-blue dark:bg-[#1a1a2e] border-t-8 border-black dark:border-white pt-16 pb-12 text-black dark:text-[#e0e0e0] relative overflow-hidden transition-colors">
-      {/* Dekoratif floating shapes */}
-      <div className="absolute top-6 left-8 w-16 h-16 bg-neo-yellow border-4 border-black neo-shadow-sm float-anim rotate-anim opacity-80 z-0 hidden md:block" style={{ animationDelay: '0s' }}></div>
-      <div className="absolute top-20 right-12 w-10 h-10 bg-neo-pink border-4 border-black rounded-full float-anim opacity-70 z-0 hidden md:block" style={{ animationDelay: '1.5s' }}></div>
-      <div className="absolute bottom-16 left-[15%] w-8 h-8 bg-neo-green border-4 border-black rotate-45 float-anim z-0 hidden lg:block" style={{ animationDelay: '0.8s' }}></div>
-      <div className="absolute top-1/2 right-[8%] w-12 h-12 bg-neo-yellow border-4 border-black rounded-full float-anim pulse-anim opacity-60 z-0 hidden lg:block" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-8 right-[25%] text-4xl font-black text-neo-yellow opacity-40 float-anim z-0 hidden md:block" style={{ animationDelay: '1s' }}>×</div>
-      <div className="absolute top-1/3 left-[5%] text-3xl font-black text-neo-pink opacity-30 float-anim z-0 hidden md:block" style={{ animationDelay: '2.5s' }}>+</div>
-
       {/* Gradient bar atas */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-neo-yellow via-neo-pink to-neo-green"></div>
 
