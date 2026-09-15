@@ -31,7 +31,9 @@
 .neo-shadow-active:active { box-shadow: 0px 0px 0px 0px #000000; transform: translate(8px, 8px); }
 
 .bg-cream { background-color: #fdf5e6; }
+.dark .bg-cream { background-color: #16213e; }
 .bg-gray-main { background-color: #e5e7eb; }
+.dark .bg-gray-main { background-color: #1a1a2e; }
 .bg-neo-yellow { background-color: #ddf4a2; }
 .text-neo-yellow { color: #ddf4a2; }
 .bg-neo-blue { background-color: #0055a6; }
