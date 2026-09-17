@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import FloatingShapes from './FloatingShapes';
 
-const phrases = ["Stay Curious,", "Code the Stars,", "Beyond the Horizons,", "Write the Future,"];
+const phrases = ["Stay Curious,", "Creating Solutions,", "Shaping the Future,"];
 // Frase terpanjang dipakai otomatis sebagai "sizer" agar lebar card judul selalu fix,
 // sekalipun nanti ada frase baru yang lebih panjang di array phrases.
 const longestPhrase = phrases.reduce((a, b) => (b.length > a.length ? b : a), phrases[0]);

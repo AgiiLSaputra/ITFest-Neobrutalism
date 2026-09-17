@@ -27,7 +27,7 @@ export default function TentangAcara() {
                   Milad IT Fest adalah perayaan tahunan yang menandai hari jadi Program Studi Teknik Informatika Universitas Islam Riau. Acara ini merupakan wujud syukur dan momentum refleksi atas perjalanan panjang serta pencapaian yang telah diraih.
                 </p>
                 <p className="text-xl font-bold leading-relaxed">
-                  Mengusung tema <span className="bg-cream px-1 animate-border-dance">"Code the Stars, Beyond the Horizons"</span>, tahun ini kami mengajak seluruh elemen mahasiswa dan civitas akademika untuk melampaui batas inovasi, menggabungkan semangat kebersamaan dengan eksplorasi teknologi masa depan.
+                  Mengusung tema <span className="bg-cream px-1 animate-border-dance">"Innovation & Technology: Creating Solutions, Shaping the Future"</span>, tahun ini kami mengajak seluruh elemen mahasiswa dan civitas akademika untuk melampaui batas inovasi, menggabungkan semangat kebersamaan dengan eksplorasi teknologi masa depan.
                 </p>
               </div>
             </ScrollReveal>

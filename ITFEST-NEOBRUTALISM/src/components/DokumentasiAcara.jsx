@@ -1,4 +1,4 @@
-import ScrollReveal from './ScrollReveal';
+import ScrollReveal from "./ScrollReveal";
 
 const topRowImages = [
   { src: "/img/gallery/IMG1.webp", rotation: "-rotate-2" },
@@ -21,7 +21,9 @@ const bottomRowImages = [
 ];
 
 const ImageCard = ({ src, rotation }) => (
-  <div className={`flex-shrink-0 w-72 h-72 neo-border neo-shadow-sm overflow-hidden transform-gpu ${rotation} hover:rotate-0 transition-transform`}>
+  <div
+    className={`flex-shrink-0 w-72 h-72 neo-border neo-shadow-sm overflow-hidden transform-gpu ${rotation} hover:rotate-0 transition-transform`}
+  >
     <img
       src={src}
       alt="Gallery Image"
@@ -46,9 +48,16 @@ const ImageRow = ({ images, scrollDirection }) => {
           <ImageCard key={`first-${i}`} src={img.src} rotation={img.rotation} />
         ))}
       </div>
-      <div aria-hidden="true" className={`flex animate-scroll-${scrollDirection} gap-8 px-4`}>
+      <div
+        aria-hidden="true"
+        className={`flex animate-scroll-${scrollDirection} gap-8 px-4`}
+      >
         {doubled.map((img, i) => (
-          <ImageCard key={`second-${i}`} src={img.src} rotation={img.rotation} />
+          <ImageCard
+            key={`second-${i}`}
+            src={img.src}
+            rotation={img.rotation}
+          />
         ))}
       </div>
     </div>
@@ -57,15 +66,22 @@ const ImageRow = ({ images, scrollDirection }) => {
 
 const DokumentasiAcara = () => {
   return (
-    <section className="py-24 relative bg-neo-blue border-b-8 border-black dark:border-white overflow-hidden transition-colors pattern-diagonal-lines" id="gallery">
+    <section
+      className="py-24 relative bg-neo-blue border-b-8 border-black dark:border-white overflow-hidden transition-colors pattern-diagonal-lines"
+      id="gallery"
+    >
       <div className="container mx-auto px-6 max-w-screen-xl text-center mb-12">
         <ScrollReveal animation="animate-pop-up">
           <div className="inline-block bg-cream dark:bg-[#16213e] p-6 neo-border dark:border-white neo-shadow mb-6 transform rotate-1 transition-colors">
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">Dokumentasi <span className="text-neo-pink">Acara</span></h2>
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
+              Dokumentasi <span className="text-neo-pink">Acara</span>
+            </h2>
           </div>
         </ScrollReveal>
         <ScrollReveal animation="animate-pop-up" delay={0.2}>
-          <p className="text-xl font-bold bg-cream dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">Kilas balik keseruan dan inovasi di perhelatan Milad IT Fest sebelumnya.</p>
+          <p className="text-xl font-bold bg-cream dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">
+            Kilas balik keseruan dan inovasi di perhelatan IT Fest sebelumnya.
+          </p>
         </ScrollReveal>
       </div>
       <div className="space-y-12">
