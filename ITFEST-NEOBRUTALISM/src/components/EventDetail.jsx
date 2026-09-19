@@ -376,34 +376,20 @@ export default function EventDetail() {
         BACK TO LANDING PAGE
       </Link>
 
-      {/* Hero Banner */}
-      <div className="relative overflow-hidden neo-border neo-shadow bg-black mb-12 animate-pop-up">
-        <img
-          alt={event.title}
-          className="aspect-[1672/941] w-full h-auto object-cover scale-110 brightness-75 contrast-110 transition-transform duration-300 hover:scale-125"
-          src={event.heroImg}
-        />
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.6) 100%)",
-          }}
-        ></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+      {/* Header */}
+      <div className="text-center max-w-4xl mx-auto py-2 mb-8 animate-pop-up">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
           <div
-            className={`inline-block px-4 py-1 mb-6 border-2 border-black font-black text-sm uppercase ${event.tagBg} text-black neo-shadow-sm transform -rotate-1 animate-pop-up`}
+            className={`px-4 py-1 border-2 border-black font-black text-sm uppercase ${event.tagBg} text-black neo-shadow-sm transform -rotate-1`}
           >
             {event.subtitle}
           </div>
-          <h1
-            className="text-4xl md:text-7xl lg:text-8xl text-white mb-6 uppercase font-black drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] leading-none animate-pop-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+        </div>
+        <div className="space-y-4 max-w-3xl mx-auto">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-black text-black dark:text-white tracking-tighter uppercase leading-none">
             {event.title}
           </h1>
-          <p className="text-neo-yellow max-w-3xl font-bold bg-black inline-block px-6 py-3 neo-border neo-shadow-sm text-sm md:text-lg animate-pop-up">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-bold">
             {event.description}
           </p>
         </div>

@@ -62,7 +62,7 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-6 font-bold">
           <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => scrollTo('beranda')}>Home</button>
-          <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => scrollTo('tentang')}>About Us</button>
+          <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => navigate('/about')}>About Us</button>
           <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => scrollTo('roadmap')}>Proyeksi</button>
 
           <div className="relative" ref={dropdownRef}>
@@ -124,7 +124,7 @@ export default function Header() {
       <div className={`md:hidden bg-cream dark:bg-[#16213e] neo-border neo-shadow-sm mt-2 transition-all duration-300 ${menuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'}`}>
         <nav className="flex flex-col gap-4 font-bold">
           <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('beranda'); setMenuOpen(false); }}>Home</button>
-          <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('tentang'); setMenuOpen(false); }}>About Us</button>
+          <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { navigate('/about'); setMenuOpen(false); }}>About Us</button>
           <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('roadmap'); setMenuOpen(false); }}>Proyeksi</button>
 
           <div>

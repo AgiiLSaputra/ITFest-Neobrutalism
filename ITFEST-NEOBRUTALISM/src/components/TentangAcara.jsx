@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 
 export default function TentangAcara() {
@@ -8,28 +9,37 @@ export default function TentangAcara() {
           {/* Left Side */}
           <div className="lg:w-1/2 space-y-8 relative">
             <div className="absolute -top-4 -right-4 bg-neo-green neo-border neo-shadow-sm px-3 py-1 font-black text-xs uppercase transform rotate-12 animate-bounce-slow hidden md:block z-20">
-              ★ Since 2020
+              ★ Milad Teknik Informatika UIR ke-19
             </div>
             <ScrollReveal animation="animate-pop-up">
-              <div className="inline-block px-4 py-2 bg-neo-pink neo-border font-black uppercase tracking-wider transform -rotate-2">
-                Tentang Acara
+              <div className="inline-block px-4 py-2 bg-neo-yellow neo-border font-black uppercase tracking-wider transform -rotate-2">
+                Informasi Utama
               </div>
             </ScrollReveal>
             <ScrollReveal animation="animate-pop-up" delay={0.15}>
               <h2 className="text-5xl md:text-6xl font-black leading-tight uppercase">
-                Perayaan Anniversary <br />
-                <span className="bg-black text-white px-2 inline-block">Teknik Informatika UIR</span>
+                Tentang Milad <br />
+                IT FEST <span className="bg-black text-white px-2 inline-block">2026</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal animation="animate-pop-up" delay={0.3}>
               <div className="p-6 bg-neo-yellow neo-border neo-shadow-sm neo-tilt">
                 <p className="text-xl font-bold leading-relaxed mb-4">
-                  Milad IT Fest adalah perayaan tahunan yang menandai hari jadi Program Studi Teknik Informatika Universitas Islam Riau. Acara ini merupakan wujud syukur dan momentum refleksi atas perjalanan panjang serta pencapaian yang telah diraih.
+                  MILAD IT FEST 2026 adalah perhelatan tahunan terbesar yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika (HIMATIF) Universitas Islam Riau.
                 </p>
                 <p className="text-xl font-bold leading-relaxed">
-                  Mengusung tema <span className="bg-cream px-1 animate-border-dance">"Innovation & Technology: Creating Solutions, Shaping the Future"</span>, tahun ini kami mengajak seluruh elemen mahasiswa dan civitas akademika untuk melampaui batas inovasi, menggabungkan semangat kebersamaan dengan eksplorasi teknologi masa depan.
+                  Menggabungkan perayaan ulang tahun ke-19 Program Studi Teknik Informatika UIR dengan ajang Technofest UIR Vol. 2, event ini menghadirkan berbagai kompetisi teknologi, olahraga, pameran inovasi, dan seminar nasional bertaraf tinggi.
                 </p>
               </div>
+            </ScrollReveal>
+            <ScrollReveal animation="animate-pop-up" delay={0.4}>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 neo-border neo-shadow font-black text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors"
+              >
+                <span>Lihat Selengkapnya</span>
+                <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              </Link>
             </ScrollReveal>
           </div>
 
@@ -42,7 +52,7 @@ export default function TentangAcara() {
                 </div>
                 <div className="space-y-3 relative z-10">
                   <h3 className="text-2xl sm:text-3xl font-black text-black dark:text-white uppercase">Akademik</h3>
-                  <p className="text-base font-bold leading-relaxed">Ajang kompetisi teknologi tingkat nasional. Uji kemampuanmu dalam bidang Web Programming, UI/UX Design, atau Infografis, dan jadikan karyamu sebagai bukti nyata inovasi.</p>
+                  <p className="text-base font-bold leading-relaxed">Kompetisi UI/UX Design, Hackathon Web Innovation, dan Seminar Nasional bertaraf nasional. Uji kemampuanmu dan jadikan karyamu sebagai bukti nyata inovasi.</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -54,7 +64,7 @@ export default function TentangAcara() {
                 </div>
                 <div className="space-y-3">
                   <h3 className="text-2xl sm:text-3xl font-black text-black dark:text-white uppercase">Festival</h3>
-                  <p className="text-base font-bold leading-relaxed">Sinergi teknologi, olahraga, dan seni. Rayakan festival lewat kompetisi E-Sport, Futsal Cup, Talkshow interaktif, hingga Konser musik spektakuler.</p>
+                  <p className="text-base font-bold leading-relaxed">Sinergi teknologi, olahraga, dan seni. Rayakan festival lewat kompetisi E-Sports Mobile Legends, Badminton Championship, Tech Innovation Expo, hingga Closing Ceremony spektakuler.</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -66,7 +76,7 @@ export default function TentangAcara() {
                 </div>
                 <div className="space-y-3">
                   <h3 className="text-2xl sm:text-3xl font-black text-black dark:text-white uppercase">Publikasi</h3>
-                  <p className="text-base font-bold leading-relaxed">Membuka kolaborasi yang menghubungkan ide inovatif para pelajar dan mahasiswa dengan praktisi industri, akademisi, serta masyarakat luas.</p>
+                  <p className="text-base font-bold leading-relaxed">Membangun jejaring kolaborasi antara akademisi, praktisi industri, dan komunitas teknologi untuk akselerasi talenta digital muda Indonesia.</p>
                 </div>
               </div>
             </ScrollReveal>

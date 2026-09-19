@@ -9,13 +9,12 @@ import Pendaftaran from './components/Pendaftaran';
 import Sponsor from './components/Sponsor';
 import Footer from './components/Footer';
 import EventDetail from './components/EventDetail';
+import AboutPage from './components/AboutPage';
 import CustomCursor from './components/CustomCursor';
 import MarqueeBanner from './components/MarqueeBanner';
 import ScrollToTop from './components/ScrollToTop';
-import StatsCounter from './components/StatsCounter';
 import NoiseOverlay from './components/NoiseOverlay';
 import Loading from './components/Loading';
-import { DotDivider } from './components/SectionDivider';
 import useDarkMode from './hooks/useDarkMode';
 
 const MemoizedHeader = memo(Header);
@@ -31,12 +30,10 @@ function LandingPage({ introReady = true }) {
       <MemoizedHero ready={introReady} />
       <MarqueeBanner />
       <TentangAcara />
-      <StatsCounter />
-      <DotDivider color="bg-black" />
-      <DokumentasiAcara />
       <Roadmap />
       <Pendaftaran />
       <MarqueeBanner />
+      <DokumentasiAcara />
       <Sponsor />
     </>
   );
@@ -103,6 +100,7 @@ export default function App() {
         <main className="flex-grow relative">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<MemoizedLandingPage introReady={phase !== 'loading'} />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/event/:eventId" element={<EventDetail />} />
           </Routes>
         </main>
