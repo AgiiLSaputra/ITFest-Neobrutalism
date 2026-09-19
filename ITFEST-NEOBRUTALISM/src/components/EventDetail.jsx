@@ -2,6 +2,12 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import ScrollReveal from "./ScrollReveal";
 
+// Helper: cek apakah tanggal timeline sudah lewat (sama seperti lib/date.ts di Milad_IT_Fest)
+const isPastDate = (iso) => {
+  if (!iso) return false;
+  return Date.now() > new Date(iso).getTime();
+};
+
 const eventsData = {
   hackathon: {
     category: "IT COMPETITION",
@@ -39,20 +45,10 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      {
-        date: "10 OCT 2026",
-        label: "Registration Opens",
-        color: "bg-neo-blue",
-        active: true,
-      },
-      { date: "01 NOV 2026", label: "Technical Meeting", color: "bg-cream" },
-      {
-        date: "15-17 NOV 2026",
-        label: "Hackathon Days",
-        color: "bg-neo-pink",
-        highlight: true,
-      },
-      { date: "20 NOV 2026", label: "Winner Announcement", color: "bg-cream" },
+      { dateFormatted: "10 – 25 Oktober 2026", endDateIso: "2026-10-25T23:59:59+07:00", title: "Pendaftaran Gelombang 1 (Early Bird)", description: "Pendaftaran dibuka dengan kuota tim terbatas." },
+      { dateFormatted: "26 Oktober – 8 November 2026", endDateIso: "2026-11-08T23:59:59+07:00", title: "Pendaftaran Gelombang 2", description: "Pendaftaran reguler hingga seluruh kuota tim terpenuhi." },
+      { dateFormatted: "14 November 2026", endDateIso: "2026-11-14T23:59:59+07:00", title: "Technical Meeting (Online)", description: "Penjelasan problem statement dan teknis pelaksanaan 48 jam." },
+      { dateFormatted: "15 – 17 November 2026", endDateIso: "2026-11-17T23:59:59+07:00", title: "Hackathon Days & Winner Announcement", description: "Marathon coding 48 jam, demo produk, dan pengumuman pemenang." },
     ],
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-pink",
@@ -90,25 +86,10 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      {
-        date: "10 OCT 2026",
-        label: "Registration Opens",
-        color: "bg-neo-blue",
-        active: true,
-      },
-      { date: "10 NOV 2026", label: "Qualification Round", color: "bg-cream" },
-      {
-        date: "15-16 NOV 2026",
-        label: "Main Event",
-        color: "bg-neo-pink",
-        highlight: true,
-      },
-      {
-        date: "17 NOV 2026",
-        label: "Grand Final",
-        color: "bg-neo-pink",
-        highlight: true,
-      },
+      { dateFormatted: "1 – 25 Oktober 2026", endDateIso: "2026-10-25T23:59:59+07:00", title: "Pendaftaran Gelombang 1 (Early Bird)", description: "Pendaftaran dibuka dengan kuota terbatas 16 tim." },
+      { dateFormatted: "26 Oktober – 16 November 2026", endDateIso: "2026-11-16T23:59:59+07:00", title: "Pendaftaran Gelombang 2", description: "Pendaftaran reguler hingga kuota 32 tim terpenuhi." },
+      { dateFormatted: "18 November 2026", endDateIso: "2026-11-18T23:59:59+07:00", title: "Technical Meeting (Online)", description: "Pengundian bracket dan pembacaan rulebook pertandingan." },
+      { dateFormatted: "21 – 22 November 2026", endDateIso: "2026-11-22T23:59:59+07:00", title: "Main Event & Grand Final", description: "Pertandingan babak knockout dan babak puncaknya di Stage Utama." },
     ],
     accentBg: "bg-neo-pink",
     tagBg: "bg-neo-blue",
@@ -143,20 +124,9 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      {
-        date: "10 OCT 2026",
-        label: "Registration Opens",
-        color: "bg-neo-green",
-        active: true,
-      },
-      { date: "01 NOV 2026", label: "Technical Meeting", color: "bg-cream" },
-      { date: "15 NOV 2026", label: "Penyisihan", color: "bg-cream" },
-      {
-        date: "17 NOV 2026",
-        label: "Semi-Final & Final",
-        color: "bg-neo-pink",
-        highlight: true,
-      },
+      { dateFormatted: "1 Oktober – 8 November 2026", endDateIso: "2026-11-08T23:59:59+07:00", title: "Masa Pendaftaran Registrasi", description: "Pendaftaran peserta dan verifikasi berkas identitas." },
+      { dateFormatted: "10 November 2026", endDateIso: "2026-11-10T23:59:59+07:00", title: "Technical Meeting", description: "Penjelasan peraturan pertandingan dan drawing lawan." },
+      { dateFormatted: "14 – 15 November 2026", endDateIso: "2026-11-15T23:59:59+07:00", title: "Pertandingan Babak Penyisihan - Final", description: "Pelaksanaan pertandingan di Lapangan Indoor GSG UIR." },
     ],
     accentBg: "bg-neo-green",
     tagBg: "bg-neo-yellow",
@@ -197,25 +167,8 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      {
-        date: "10 OCT 2026",
-        label: "Registration Opens",
-        color: "bg-neo-yellow",
-        active: true,
-      },
-      { date: "01 NOV 2026", label: "Submission Proposal", color: "bg-cream" },
-      {
-        date: "15-17 NOV 2026",
-        label: "Exhibition Day",
-        color: "bg-neo-pink",
-        highlight: true,
-      },
-      {
-        date: "17 NOV 2026",
-        label: "Awarding Ceremony",
-        color: "bg-neo-pink",
-        highlight: true,
-      },
+      { dateFormatted: "15 September – 5 Oktober 2026", endDateIso: "2026-10-05T23:59:59+07:00", title: "Pendaftaran Stand / Booth Karya", description: "Pendaftaran tim/karya mahasiswa yang ingin membuka booth expo." },
+      { dateFormatted: "13 – 16 Oktober 2026", endDateIso: "2026-10-16T23:59:59+07:00", title: "Pelaksanaan Tech Innovation Expo", description: "Pameran berlangsung selama 4 hari penuh di Atrium Gedung Serbaguna UIR." },
     ],
     accentBg: "bg-neo-yellow",
     tagBg: "bg-neo-blue",
@@ -256,20 +209,8 @@ const eventsData = {
       { icon: "redeem", place: "Doorprize", amount: "Menarik Lainnya", bg: "bg-cream" },
     ],
     timeline: [
-      {
-        date: "10 OCT 2026",
-        label: "Registration Opens",
-        color: "bg-neo-blue",
-        active: true,
-      },
-      { date: "01 NOV 2026", label: "Speaker Announcement", color: "bg-cream" },
-      {
-        date: "16 NOV 2026",
-        label: "Seminar Day",
-        color: "bg-neo-pink",
-        highlight: true,
-      },
-      { date: "16 NOV 2026", label: "Networking Session", color: "bg-cream" },
+      { dateFormatted: "1 September – 10 Oktober 2026", endDateIso: "2026-10-10T23:59:59+07:00", title: "Masa Registrasi Peserta", description: "Pembelian tiket presale & tiket reguler seminar nasional." },
+      { dateFormatted: "16 Oktober 2026", endDateIso: "2026-10-16T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan Milad IT Fest 2026." },
     ],
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-green",
@@ -307,20 +248,10 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      {
-        date: "10 OCT 2026",
-        label: "Registration Opens",
-        color: "bg-neo-pink",
-        active: true,
-      },
-      { date: "01 NOV 2026", label: "Practice Session", color: "bg-cream" },
-      { date: "15 NOV 2026", label: "Qualification Round", color: "bg-cream" },
-      {
-        date: "17 NOV 2026",
-        label: "Grand Final",
-        color: "bg-neo-pink",
-        highlight: true,
-      },
+      { dateFormatted: "10 Oktober – 8 November 2026", endDateIso: "2026-11-08T23:59:59+07:00", title: "Pendaftaran Peserta", description: "Pendaftaran dan verifikasi identitas mahasiswa aktif UIR." },
+      { dateFormatted: "1 – 14 November 2026", endDateIso: "2026-11-14T23:59:59+07:00", title: "Practice Session", description: "Sesi latihan bebas menggunakan platform typing yang sama dengan lomba." },
+      { dateFormatted: "15 November 2026", endDateIso: "2026-11-15T23:59:59+07:00", title: "Qualification Round", description: "Babak kualifikasi online dengan akurasi minimal 95% untuk lolos." },
+      { dateFormatted: "17 November 2026", endDateIso: "2026-11-17T23:59:59+07:00", title: "Grand Final", description: "Babak final di venue menggunakan mechanical keyboard panitia." },
     ],
     accentBg: "bg-neo-pink",
     tagBg: "bg-neo-yellow",
@@ -525,41 +456,63 @@ export default function EventDetail() {
       {/* Timeline - Full Width */}
       <ScrollReveal animation="animate-pop-up" delay={0.25}>
         <div className="mt-8 bg-cream dark:bg-[#16213e] p-6 md:p-8 neo-border dark:border-white neo-shadow relative transition-colors">
-          <h3 className="text-2xl font-black mb-8 uppercase border-b-4 border-black dark:border-white pb-4 flex items-center gap-3">
+          <h3 className="text-2xl font-black mb-2 uppercase border-b-4 border-black dark:border-white pb-4 flex items-center gap-3">
             <span className="material-symbols-outlined text-[28px] text-neo-pink animate-neo-swing">
               timeline
             </span>
-            TIMELINE ACARA
+            SCHEDULE &amp; AGENDA
           </h3>
+          <p className="text-sm sm:text-base font-bold mb-8 uppercase tracking-wide opacity-70">
+            Timeline Kegiatan {event.title}
+          </p>
+          {/* Timeline vertikal zig-zag: mobile garis di kiri, desktop garis di tengah.
+              Item yang tanggalnya sudah lewat otomatis abu-abu + tanda "(Selesai)". */}
           <div className="relative">
-            <div className="hidden md:block absolute left-8 right-8 top-6 h-1 bg-black"></div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-              {event.timeline.map((item, i) => (
-                <div key={i} className="group">
-                  <div
-                    className={`w-12 h-12 ${item.color} neo-border mx-auto flex-shrink-0 flex items-center justify-center mb-4 z-10 neo-shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform`}
-                  >
-                    {item.active && (
-                      <div className="w-3 h-3 bg-black animate-neo-jitter"></div>
-                    )}
-                    {item.highlight && (
-                      <span className="material-symbols-outlined text-xl animate-neo-swing">
-                        star
-                      </span>
-                    )}
-                  </div>
-                  <div className="bg-cream dark:bg-[#0f3460] p-4 neo-border dark:border-white text-center hover:-translate-y-1 transition-transform neo-shadow-sm h-full flex flex-col justify-center">
+            <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 bottom-2 w-1 bg-black dark:bg-white"></div>
+            <div className="md:hidden absolute left-5 top-2 bottom-2 w-1 bg-black dark:bg-white"></div>
+            <div className="space-y-8 md:space-y-12">
+              {event.timeline.map((item, i) => {
+                const expired = isPastDate(item.endDateIso);
+                const isEven = i % 2 === 0;
+                return (
+                  <div key={i} className={`relative ${expired ? "grayscale opacity-70" : ""}`}>
+                    {/* Badge nomor urut di garis */}
                     <div
-                      className={`text-xs mb-2 font-black uppercase tracking-widest self-start inline-block px-2 ${item.highlight ? "bg-neo-pink text-white animate-neo-jitter" : item.active ? "bg-neo-yellow animate-neo-jitter" : ""}`}
+                      className={`absolute left-5 md:left-1/2 -translate-x-1/2 top-1 z-10 w-9 h-9 rounded-full neo-border dark:border-white neo-shadow-sm flex items-center justify-center font-black text-sm ${
+                        expired ? "bg-black dark:bg-white text-white dark:text-black" : "bg-neo-yellow text-black"
+                      }`}
                     >
-                      {item.date}
+                      {expired ? (
+                        <span className="material-symbols-outlined text-base">
+                          check_circle
+                        </span>
+                      ) : (
+                        i + 1
+                      )}
                     </div>
-                    <div className="font-black text-sm uppercase dark:text-white">
-                      {item.label}
+                    {/* Card bergantian kiri/kanan di desktop */}
+                    <div className={`w-full pl-14 md:pl-0 md:w-[calc(50%-3rem)] ${isEven ? "md:mr-auto" : "md:ml-auto"}`}>
+                      <div className="bg-gray-main p-4 sm:p-5 neo-border dark:border-white neo-shadow-sm transition-transform hover:-translate-y-1">
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                          <h4 className={`text-sm sm:text-base font-black uppercase ${expired ? "line-through dark:text-[#e0e0e0]" : "dark:text-white"}`}>
+                            {item.title}
+                          </h4>
+                          <span className={`inline-flex items-center gap-1 shrink-0 text-[10px] sm:text-xs font-mono font-black px-2 py-0.5 neo-border dark:border-white ${expired ? "bg-cream dark:text-white" : "bg-neo-yellow text-black"}`}>
+                            <span className="material-symbols-outlined text-sm">
+                              {expired ? "schedule" : "calendar_month"}
+                            </span>
+                            {item.dateFormatted}
+                            {expired && " (Selesai)"}
+                          </span>
+                        </div>
+                        <p className="text-xs sm:text-sm font-bold leading-relaxed dark:text-[#e0e0e0]">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
