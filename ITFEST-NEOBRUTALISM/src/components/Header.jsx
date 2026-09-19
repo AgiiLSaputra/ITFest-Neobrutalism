@@ -97,7 +97,6 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6 font-bold">
           <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => scrollTo('beranda')}>Home</button>
           <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => navigate('/about')}>About Us</button>
-          <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => scrollTo('roadmap')}>Proyeksi</button>
 
           <div className="relative" ref={dropdownRef}>
             <button className={`${navBtn} flex items-center gap-1 dark:hover:bg-white dark:hover:text-black`} onClick={() => setDropdownOpen(!dropdownOpen)}>
@@ -116,7 +115,6 @@ export default function Header() {
             )}
           </div>
 
-          <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => scrollTo('pendaftaran')}>Daftar Acara</button>
           <button className={`${navBtn} dark:hover:bg-white dark:hover:text-black`} onClick={() => scrollTo('sponsor')}>Sponsor</button>
         </nav>
 
@@ -159,7 +157,6 @@ export default function Header() {
         <nav className="flex flex-col gap-4 font-bold">
           <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('beranda'); setMenuOpen(false); }}>Home</button>
           <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { navigate('/about'); setMenuOpen(false); }}>About Us</button>
-          <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('roadmap'); setMenuOpen(false); }}>Proyeksi</button>
 
           <div>
             <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left flex items-center gap-1 w-full" onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}>
@@ -178,7 +175,6 @@ export default function Header() {
             )}
           </div>
 
-          <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('pendaftaran'); setMenuOpen(false); }}>Daftar Acara</button>
           <button className="text-sm font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black dark:hover:border-white text-left" onClick={() => { scrollTo('sponsor'); setMenuOpen(false); }}>Sponsor</button>
           <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border neo-shadow text-center" onClick={() => { scrollTo('pendaftaran'); setMenuOpen(false); }}>DAFTAR SEKARANG</button>
         </nav>
