@@ -22,6 +22,23 @@ export default function Header() {
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
 
+  // Pembungkus navbar baru muncul (neo-boxed) saat halaman di-scroll > 50px.
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 50);
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -54,8 +71,25 @@ export default function Header() {
   const navBtn = "text-sm font-black hover:bg-black hover:text-white px-2 py-1 transition-colors border-2 border-transparent hover:border-black";
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl transition-all duration-300">
-      <div className="container mx-auto px-8 h-16 flex items-center justify-between bg-cream dark:bg-[#16213e] neo-border neo-shadow-sm transition-colors">
+    // Shrinking floating navbar: lebar penuh & menempel di atas saat awal,
+    // menyempit + melayang dengan pembungkus neo saat di-scroll.
+    <header
+      className={`fixed left-1/2 -translate-x-1/2 z-50 transition-[width,transform,max-width] duration-300 ease-in-out will-change-transform ${
+        scrolled
+          ? 'translate-y-4 w-[95%] md:w-[68%] lg:w-[65%] max-w-[1280px]'
+          : 'translate-y-0 w-full max-w-full'
+      }`}
+    >
+      {/* Awal: hanya garis horizontal (border-bawah) full-width. Saat di-scroll,
+          garis menyusut bersama lebar navbar dan membentuk pembungkus neo
+          (border 4 sisi + bg + hard shadow). Padding/ukuran dijaga sama. */}
+      <div
+        className={`w-full px-8 h-16 flex items-center justify-between transition-all duration-300 ease-in-out ${
+          scrolled
+            ? 'bg-cream dark:bg-[#16213e] border-4 border-black shadow-[4px_4px_0px_0px_#000000]'
+            : 'bg-transparent border-b-4 border-black shadow-[0px_0px_0px_0px_#000000]'
+        }`}
+      >
         <Link to="/" className="flex items-center group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img alt="Milad IT Fest 2026 Logo" className="h-10 w-auto object-contain bg-black px-2" src={LOGO_URL} />
         </Link>
