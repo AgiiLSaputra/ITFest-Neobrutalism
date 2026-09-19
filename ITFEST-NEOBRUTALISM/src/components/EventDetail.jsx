@@ -34,9 +34,9 @@ const eventsData = {
       },
     ],
     prizes: [
-      { place: "1st Place", amount: "Rp 10.000.000", bg: "bg-neo-yellow" },
-      { place: "2nd Place", amount: "Rp 7.500.000", bg: "bg-cream" },
-      { place: "3rd Place", amount: "Rp 5.000.000", bg: "bg-cream" },
+      { icon: "workspace_premium", place: "E-Certificate Resmi", amount: "Semua Peserta", bg: "bg-neo-yellow" },
+      { icon: "emoji_events", place: "Trophy / Medali", amount: "Untuk Juara", bg: "bg-cream" },
+      { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -85,9 +85,9 @@ const eventsData = {
       { icon: "emoji_events", text: "Fair play adalah prioritas utama." },
     ],
     prizes: [
-      { place: "1st Place", amount: "Rp 5.000.000", bg: "bg-neo-yellow" },
-      { place: "2nd Place", amount: "Rp 3.000.000", bg: "bg-cream" },
-      { place: "3rd Place", amount: "Rp 1.500.000", bg: "bg-cream" },
+      { icon: "workspace_premium", place: "E-Certificate Resmi", amount: "Semua Peserta", bg: "bg-neo-yellow" },
+      { icon: "emoji_events", place: "Trophy / Medali", amount: "Untuk Juara", bg: "bg-cream" },
+      { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -138,9 +138,9 @@ const eventsData = {
       { icon: "schedule", text: "Jadwal pertandingan akan diumumkan H-3." },
     ],
     prizes: [
-      { place: "1st Place", amount: "Rp 3.000.000", bg: "bg-neo-yellow" },
-      { place: "2nd Place", amount: "Rp 2.000.000", bg: "bg-cream" },
-      { place: "3rd Place", amount: "Rp 1.000.000", bg: "bg-cream" },
+      { icon: "workspace_premium", place: "E-Certificate Resmi", amount: "Semua Peserta", bg: "bg-neo-yellow" },
+      { icon: "emoji_events", place: "Medali Juara", amount: "Untuk Juara", bg: "bg-cream" },
+      { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -192,9 +192,9 @@ const eventsData = {
       },
     ],
     prizes: [
-      { place: "Best Exhibit", amount: "Rp 2.000.000", bg: "bg-neo-yellow" },
-      { place: "Most Innovative", amount: "Rp 1.500.000", bg: "bg-cream" },
-      { place: "People's Choice", amount: "Rp 1.000.000", bg: "bg-cream" },
+      { icon: "workspace_premium", place: "E-Certificate Resmi", amount: "Semua Peserta", bg: "bg-neo-yellow" },
+      { icon: "thumb_up", place: "Best Exhibit", amount: "Karya Favorit", bg: "bg-cream" },
+      { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -251,9 +251,9 @@ const eventsData = {
       { icon: "wifi", text: "Akses Wi-Fi gratis tersedia di venue." },
     ],
     prizes: [
-      { place: "Best Question", amount: "Rp 500.000", bg: "bg-neo-yellow" },
-      { place: "Sertifikat", amount: "Semua Peserta", bg: "bg-cream" },
-      { place: "Doorprize", amount: "Menarik Lainnya", bg: "bg-cream" },
+      { icon: "workspace_premium", place: "E-Certificate Nasional", amount: "Semua Peserta", bg: "bg-neo-yellow" },
+      { icon: "restaurant", place: "Snack Box", amount: "Semua Peserta", bg: "bg-cream" },
+      { icon: "redeem", place: "Doorprize", amount: "Menarik Lainnya", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -302,9 +302,9 @@ const eventsData = {
       },
     ],
     prizes: [
-      { place: "1st Place", amount: "Rp 1.500.000", bg: "bg-neo-yellow" },
-      { place: "2nd Place", amount: "Rp 1.000.000", bg: "bg-cream" },
-      { place: "3rd Place", amount: "Rp 500.000", bg: "bg-cream" },
+      { icon: "workspace_premium", place: "E-Certificate Resmi", amount: "Semua Peserta", bg: "bg-neo-yellow" },
+      { icon: "emoji_events", place: "Trophy / Medali", amount: "Untuk Juara", bg: "bg-cream" },
+      { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
       {
@@ -483,7 +483,7 @@ export default function EventDetail() {
           </div>
         </ScrollReveal>
 
-        {/* Prize Pool */}
+        {/* Fasilitas Peserta (eks Prize Pool) */}
         <ScrollReveal
           animation="animate-pop-up"
           delay={0.2}
@@ -494,18 +494,27 @@ export default function EventDetail() {
               <span className="material-symbols-outlined text-[28px] text-neo-orange animate-neo-swing">
                 emoji_events
               </span>
-              PRIZE POOL
+              FASILITAS PESERTA
             </h3>
             <div className="space-y-4 flex-1 flex flex-col justify-evenly">
               {event.prizes.map((prize, i) => (
                 <div
                   key={i}
-                  className={`flex justify-between items-center ${prize.bg} p-4 neo-border neo-shadow-sm ${i === 0 ? "transform -rotate-1 animate-neo-squish" : ""} hover:translate-x-1 hover:-translate-y-1 transition-transform`}
+                  className={`flex items-center gap-3 ${prize.bg} p-4 neo-border neo-shadow-sm ${i === 0 ? "transform -rotate-1 animate-neo-squish" : ""} hover:translate-x-1 hover:-translate-y-1 transition-transform`}
                 >
-                  <span className="text-lg font-black uppercase">
-                    {prize.place}
+                  <span className="material-symbols-outlined text-2xl flex-shrink-0">
+                    {prize.icon}
                   </span>
-                  <span className="text-lg font-black">{prize.amount}</span>
+                  <div>
+                    <span className="block text-lg font-black uppercase leading-tight">
+                      {prize.place}
+                    </span>
+                    {prize.amount && (
+                      <span className="block text-xs font-bold opacity-70">
+                        {prize.amount}
+                      </span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
