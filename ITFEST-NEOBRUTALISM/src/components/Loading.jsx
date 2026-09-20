@@ -18,12 +18,12 @@ export default function Loading({ onFinish }) {
       pctRef.current = Math.min(100, pctRef.current + Math.floor(Math.random() * 5) + 1);
       setPercentage(pctRef.current);
       if (pctRef.current >= 100) {
-        add(onFinish, 800);
+        add(onFinish, 350);
         return;
       }
-      add(tick, Math.random() * 200 + 50);
+      add(tick, Math.random() * 120 + 20);
     };
-    add(tick, 1000);
+    add(tick, 450);
 
     // Randomized hex code in the SYS_INIT terminal block (every 2s).
     intervalRef.current = setInterval(() => {
