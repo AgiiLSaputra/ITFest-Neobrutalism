@@ -53,6 +53,21 @@ export default function App() {
 
   const finishLoading = useCallback(() => setPhase('sliding'), []);
 
+  // Handle hash scrolling after page loads or route changes
+  useEffect(() => {
+    if (phase !== 'done') return;
+    const hash = window.location.hash;
+    if (hash) {
+      const timer = setTimeout(() => {
+        const element = document.getElementById(hash.slice(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [phase, location]);
+
   useEffect(() => {
     if (phase !== 'sliding') return;
     const el = pageRef.current;

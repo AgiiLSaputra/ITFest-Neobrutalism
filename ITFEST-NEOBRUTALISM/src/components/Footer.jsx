@@ -82,28 +82,28 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               <li>
-                <Link
+                <a
+                  href="/#beranda"
                   className="font-bold hover:bg-neo-yellow px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                  to="/#beranda"
                 >
                   Beranda
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
+                  href="/#tentang"
                   className="font-bold hover:bg-neo-pink px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                  to="/#tentang"
                 >
                   Tentang
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
+                  href="/#roadmap"
                   className="font-bold hover:bg-neo-green px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                  to="/#roadmap"
                 >
                   Roadmap
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
