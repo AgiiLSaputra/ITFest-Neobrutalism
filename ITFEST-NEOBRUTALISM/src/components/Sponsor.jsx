@@ -1,62 +1,125 @@
+import { useState } from 'react';
 import ScrollReveal from './ScrollReveal';
 
 const sponsors = [
-  { name: 'Sponsor 1', color: 'bg-neo-yellow' },
-  { name: 'Sponsor 2', color: 'bg-neo-blue' },
-  { name: 'Sponsor 3', color: 'bg-neo-pink' },
-  { name: 'Sponsor 4', color: 'bg-neo-green' },
-  { name: 'Sponsor 5', color: 'bg-neo-orange' },
+  { id: 1, name: 'Sponsor 1', color: 'bg-neo-yellow' },
+  { id: 2, name: 'Sponsor 2', color: 'bg-neo-blue' },
+  { id: 3, name: 'Sponsor 3', color: 'bg-neo-pink' },
+  { id: 4, name: 'Sponsor 4', color: 'bg-neo-green' },
+  { id: 5, name: 'Sponsor 5', color: 'bg-neo-orange' },
 ];
 
 const mediaPartners = [
-  { name: 'Media 1', color: 'bg-cream' },
-  { name: 'Media 2', color: 'bg-cream' },
-  { name: 'Media 3', color: 'bg-cream' },
+  { id: 1, name: 'Media 1', color: 'bg-cream' },
+  { id: 2, name: 'Media 2', color: 'bg-cream' },
+  { id: 3, name: 'Media 3', color: 'bg-cream' },
 ];
 
-export default function Sponsor() {
+const marqueeSponsors = Array(6).fill(sponsors).flat();
+const marqueeMedia = Array(8).fill(mediaPartners).flat();
+
+function SponsorCard({ item, isHovered, onEnter, onLeave }) {
   return (
-    <section className="py-20 border-b-8 border-black dark:border-white bg-gray-main dark:bg-[#1a1a2e] relative overflow-hidden transition-colors pattern-dashed-grid" id="sponsor">
-      <div className="container mx-auto px-6 max-w-screen-xl relative z-10">
-        <div className="text-center mb-12">
-          <ScrollReveal animation="animate-pop-up">
-            <div className="inline-block bg-neo-yellow p-4 neo-border neo-shadow mb-4 transform -rotate-1">
-              <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-widest">Didukung Oleh</h2>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal animation="animate-pop-up" delay={0.15}>
-            <p className="text-lg font-bold bg-cream dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">Kolaborasi ini menjadi fondasi acara yang lebih besar.</p>
-          </ScrollReveal>
-        </div>
-
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 mb-12">
-          {sponsors.map((s, i) => (
-            <ScrollReveal key={i} animation="animate-pop-up" delay={i * 0.08}>
-              <div className={`w-36 sm:w-44 h-20 flex items-center justify-center ${s.color} neo-border dark:border-white neo-shadow-sm text-black font-black text-xs sm:text-sm uppercase transition-all duration-200 hover:-translate-y-2 hover:shadow-none hover:rotate-2 group`}>
-                <span className="group-hover:scale-110 transition-transform">{s.name}</span>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        <div className="text-center mb-8">
-          <ScrollReveal animation="animate-pop-up" delay={0.3}>
-              <h3 className="text-xl font-black uppercase tracking-widest bg-cream dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">
-              Media Partner
-            </h3>
-          </ScrollReveal>
-        </div>
-
-        <div className="flex flex-wrap justify-center items-center gap-6">
-          {mediaPartners.map((m, i) => (
-            <ScrollReveal key={i} animation="animate-pop-up" delay={0.4 + i * 0.1}>
-              <div className={`w-36 h-14 flex items-center justify-center ${m.color} neo-border dark:border-white neo-shadow-sm text-black font-bold text-xs uppercase transition-all duration-200 hover:-translate-y-1 hover:shadow-none group`}>
-                <span className="group-hover:scale-105 transition-transform">{m.name}</span>
-              </div>
-            </ScrollReveal>
-          ))}
+    <div
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
+      className={
+        'cursor-pointer flex flex-col items-center justify-center text-center p-3 neo-border transition-all duration-300 shrink-0 '
+        + (isHovered
+          ? item.color + ' opacity-100 scale-110 z-20 neo-shadow rotate-2'
+          : 'bg-cream dark:bg-[#16213e] opacity-60 hover:opacity-100 hover:scale-110 hover:neo-shadow-sm')
+      }
+    >
+      <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center mb-2 transition-all duration-300">
+        <div className={
+          'w-14 h-14 sm:w-16 sm:h-16 neo-border flex items-center justify-center transition-all duration-300 '
+          + (isHovered ? item.color : 'bg-gray-300 dark:bg-gray-600')
+        }>
+          <span className="font-black text-lg sm:text-xl text-black">{item.name.split(' ')[1]}</span>
         </div>
       </div>
+      <h4 className={
+        'font-extrabold text-xs sm:text-sm tracking-tight mb-1 whitespace-nowrap transition-colors '
+        + (isHovered ? 'text-black' : 'text-gray-700 dark:text-gray-300')
+      }>
+        {item.name}
+      </h4>
+    </div>
+  );
+}
+
+export default function Sponsor() {
+  const [hoveredItemKey, setHoveredItemKey] = useState(null);
+
+  return (
+    <section className="py-20 bg-gray-main dark:bg-[#1a1a2e] relative overflow-hidden transition-colors pattern-dashed-grid" id="sponsor">
+
+      <div className="text-center mb-12">
+        <ScrollReveal animation="animate-pop-up">
+          <div className="inline-block bg-neo-yellow p-4 neo-border neo-shadow mb-4 transform -rotate-1">
+            <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-widest">Didukung Oleh</h2>
+          </div>
+        </ScrollReveal>
+      </div>
+
+      <ScrollReveal animation="animate-pop-up" delay={0.2}>
+        <div className="mb-10">
+          <div className="flex justify-center mb-3">
+            <div className="inline-flex items-center gap-2 bg-neo-blue text-white neo-border px-4 py-1.5 text-xs font-black uppercase tracking-wider">
+              Sponsor Resmi
+            </div>
+          </div>
+          <div className="relative overflow-hidden w-full group py-4">
+            <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-gray-main dark:from-[#1a1a2e] to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-gray-main dark:from-[#1a1a2e] to-transparent z-10 pointer-events-none" />
+            <div className="flex w-max animate-sponsor-left">
+              {marqueeSponsors.map((sponsor, index) => {
+                const itemKey = 's-' + sponsor.id + '-' + index;
+                return (
+                  <div key={itemKey} className="px-4">
+                    <SponsorCard
+                      item={sponsor}
+                      isHovered={hoveredItemKey === itemKey}
+                      onEnter={() => setHoveredItemKey(itemKey)}
+                      onLeave={() => setHoveredItemKey(null)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <ScrollReveal animation="animate-pop-up" delay={0.35}>
+        <div className="mb-4">
+          <div className="flex justify-center mb-3">
+            <div className="inline-flex items-center gap-2 bg-neo-pink text-black neo-border px-4 py-1.5 text-xs font-black uppercase tracking-wider">
+              Media Partner
+            </div>
+          </div>
+          <div className="relative overflow-hidden w-full group py-4">
+            <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-gray-main dark:from-[#1a1a2e] to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-gray-main dark:from-[#1a1a2e] to-transparent z-10 pointer-events-none" />
+            <div className="flex w-max animate-sponsor-right">
+              {marqueeMedia.map((media, index) => {
+                const itemKey = 'm-' + media.id + '-' + index;
+                return (
+                  <div key={itemKey} className="px-4">
+                    <SponsorCard
+                      item={media}
+                      isHovered={hoveredItemKey === itemKey}
+                      onEnter={() => setHoveredItemKey(itemKey)}
+                      onLeave={() => setHoveredItemKey(null)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
     </section>
   );
 }
