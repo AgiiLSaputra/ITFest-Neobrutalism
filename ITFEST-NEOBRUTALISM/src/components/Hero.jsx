@@ -137,7 +137,7 @@ export default function Hero({ ready = true }) {
 
         {/* CTA Buttons - slam in */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-16 w-full">
-          <a className={`bg-black text-white w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`} style={{ animationDelay: '0.3s' }} href="#daftar">Daftar Sekarang</a>
+          <a className={`bg-neo-pink text-black w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`} style={{ animationDelay: '0.3s' }} href="#daftar">Daftar Sekarang</a>
           <a className={`bg-cream text-black w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`} style={{ animationDelay: '0.5s' }} href="#acara">Explore Event</a>
         </div>
 
