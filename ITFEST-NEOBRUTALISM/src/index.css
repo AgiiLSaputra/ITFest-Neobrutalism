@@ -117,8 +117,8 @@
 @keyframes marquee-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
 
 /* Sponsor marquee — infinite scroll with hover pause */
-.animate-sponsor-left { animation: marquee-left 30s linear infinite; will-change: transform; }
-.animate-sponsor-right { animation: marquee-right 40s linear infinite; will-change: transform; }
+.animate-sponsor-left { animation: marquee-left 45s linear infinite; will-change: transform; }
+.animate-sponsor-right { animation: marquee-right 55s linear infinite; will-change: transform; }
 .group:hover .animate-sponsor-left,
 .group:hover .animate-sponsor-right { animation-play-state: paused; }
 
