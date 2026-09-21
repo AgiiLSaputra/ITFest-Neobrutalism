@@ -61,7 +61,7 @@ function isPastDate(iso) {
 export default function Roadmap() {
   return (
     <section
-      className="py-24 relative bg-gray-main dark:bg-[#16213e] border-b-8 border-black dark:border-white overflow-hidden transition-colors pattern-dot-grid"
+      className="py-24 relative bg-gray-main border-b-8 border-black overflow-hidden transition-colors pattern-dot-grid"
       id="roadmap"
     >
       <div className="absolute top-4 right-8 bg-neo-pink neo-border neo-shadow-sm px-3 py-1 font-black text-xs uppercase transform rotate-3 animate-wiggle hidden md:block z-20">
@@ -132,7 +132,7 @@ export default function Roadmap() {
                       delay={index * 0.1}
                     >
                       <div
-                        className={`relative p-6 neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt overflow-hidden ${expired ? "bg-gray-300 dark:bg-[#1a1a2e]" : item.highlight ? "bg-neo-yellow" : "bg-cream dark:bg-[#0f3460]"}`}
+                        className={`relative p-6 neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt overflow-hidden ${expired ? "bg-gray-300" : item.highlight ? "bg-neo-yellow" : "bg-cream"}`}
                       >
                         {expired && (
                           <div className="absolute -bottom-2 -right-2 w-14 h-14 bg-neo-green border-4 border-black flex items-center justify-center rotate-12 z-10">
@@ -142,18 +142,18 @@ export default function Roadmap() {
                           </div>
                         )}
                         <div
-                          className={`inline-block px-3 py-1 mb-4 neo-border text-xs font-black tracking-wider ${expired ? "bg-gray-400 text-white" : `${item.color} text-black dark:text-white`} ${!expired ? "animate-neo-jitter" : ""}`}
+                          className={`inline-block px-3 py-1 mb-4 neo-border text-xs font-black tracking-wider ${expired ? "bg-gray-400 text-white" : `${item.color} text-black`} ${!expired ? "animate-neo-jitter" : ""}`}
                         >
                           {item.dateFormatted}
                           {expired && " (Selesai)"}
                         </div>
                         <h3
-                          className={`text-xl md:text-2xl font-black mb-2 uppercase ${expired ? "text-gray-500 dark:text-gray-400" : "text-black dark:text-white"}`}
+                          className={`text-xl md:text-2xl font-black mb-2 uppercase ${expired ? "text-gray-500" : "text-black"}`}
                         >
                           {item.title}
                         </h3>
                         <p
-                          className={`text-sm font-bold ${expired ? "text-gray-500 dark:text-gray-400" : "text-black dark:text-[#e0e0e0]"}`}
+                          className={`text-sm font-bold ${expired ? "text-gray-500" : "text-black"}`}
                         >
                           {item.description}
                         </p>

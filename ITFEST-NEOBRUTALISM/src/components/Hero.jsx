@@ -97,7 +97,7 @@ function CountdownTimer() {
 export default function Hero({ ready = true }) {
   const intro = ready ? 'hero-intro animate-pop-up' : 'hero-intro opacity-0';
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden bg-neo-yellow dark:bg-[#0f3460] border-b-8 border-black dark:border-white animate-neo-strips transition-colors" id="beranda">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden bg-neo-yellow border-b-8 border-black animate-neo-strips transition-colors" id="beranda">
       <FloatingShapes />
       {/* Decorative Elements - animated */}
       <div className="absolute top-20 left-20 w-32 h-32 bg-neo-blue neo-border neo-shadow rotate-12 hidden lg:block animate-neo-drift"></div>
@@ -107,12 +107,12 @@ export default function Hero({ ready = true }) {
 
       <div className="container mx-auto relative z-10 flex flex-col items-center pt-24">
         {/* Headline - SLAM entrance */}
-        <div className={`space-y-4 mb-8 bg-cream dark:bg-[#16213e] p-4 sm:p-6 neo-border dark:border-white neo-shadow inline-block max-w-full transition-colors ${intro}`}>
-          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none text-black dark:text-white uppercase animate-neo-jitter-soft" id="main-heading">
+        <div className={`space-y-4 mb-8 bg-cream p-4 sm:p-6 neo-border neo-shadow inline-block max-w-full transition-colors ${intro}`}>
+          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none text-black uppercase animate-neo-jitter-soft" id="main-heading">
             MILAD IT FEST <br />
             <span className="bg-black text-white px-4 inline-block mt-2 animate-neo-squish">2026</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-3xl text-black dark:text-white font-bold tracking-widest uppercase mt-4 min-h-[3rem] md:min-h-[4rem] border-t-4 border-black dark:border-white pt-4 w-full grid place-items-center">
+          <p className="text-lg sm:text-xl md:text-3xl text-black font-bold tracking-widest uppercase mt-4 min-h-[3rem] md:min-h-[4rem] border-t-4 border-black pt-4 w-full grid place-items-center">
             {/* Sizer (invisible): frase terpanjang + lebar kursor, menjaga lebar card tetap fix saat teks typewriter berganti */}
             <span className="invisible col-start-1 row-start-1 select-none whitespace-nowrap" aria-hidden="true">
               {longestPhrase}<span className="inline-block w-[10px] h-[1em] ml-2"></span>
@@ -138,15 +138,15 @@ export default function Hero({ ready = true }) {
         {/* CTA Buttons - slam in */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-16 w-full">
           <a className={`bg-black text-white w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`} style={{ animationDelay: '0.3s' }} href="#daftar">Daftar Sekarang</a>
-          <a className={`bg-cream dark:bg-[#16213e] text-black dark:text-white w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border dark:border-white neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`} style={{ animationDelay: '0.5s' }} href="#acara">Explore Event</a>
+          <a className={`bg-cream text-black w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`} style={{ animationDelay: '0.5s' }} href="#acara">Explore Event</a>
         </div>
 
         {/* Countdown Timer - flip entrance */}
-        <div className={`bg-cream dark:bg-[#16213e] p-5 sm:p-8 w-full max-w-xl neo-border dark:border-white neo-shadow relative transition-colors ${intro}`} style={{ animationDelay: '0.4s' }}>
+        <div className={`bg-cream p-5 sm:p-8 w-full max-w-xl neo-border neo-shadow relative transition-colors ${intro}`} style={{ animationDelay: '0.4s' }}>
           <div className="absolute -top-4 -left-4 bg-neo-pink px-4 py-1 neo-border font-black text-sm uppercase transform -rotate-6 animate-neo-swing">Live Now</div>
           <div className="flex items-center gap-3 justify-center mb-6">
             <span className="w-4 h-4 bg-red-500 neo-border animate-neo-jitter"></span>
-            <span className="text-sm font-black tracking-[0.2em] text-black dark:text-white uppercase">Registrasi Dibuka Dalam</span>
+            <span className="text-sm font-black tracking-[0.2em] text-black uppercase">Registrasi Dibuka Dalam</span>
           </div>
           <CountdownTimer />
         </div>

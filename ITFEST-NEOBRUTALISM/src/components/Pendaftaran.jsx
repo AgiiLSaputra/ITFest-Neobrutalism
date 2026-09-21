@@ -85,7 +85,7 @@ const events = [
 function EventCard({ event, index }) {
   return (
     <ScrollReveal animation="animate-pop-up" delay={index * 0.12} className="relative group h-full">
-      <div className={`${event.cardBg} dark:bg-[#16213e] neo-border dark:border-white neo-shadow flex flex-col h-full p-5 sm:p-8 transition-all duration-200 group-hover:-translate-y-2 group-hover:-translate-x-2 group-hover:shadow-none neo-tilt group-hover:animate-neo-squish`}>
+      <div className={`${event.cardBg} neo-border neo-shadow flex flex-col h-full p-5 sm:p-8 transition-all duration-200 group-hover:-translate-y-2 group-hover:-translate-x-2 group-hover:shadow-none neo-tilt group-hover:animate-neo-squish`}>
         <div className="flex justify-between items-start gap-3 mb-6 pb-4 border-b-4 border-black">
           <span className={`px-2 sm:px-3 py-1 ${event.categoryBg} neo-border text-xs sm:text-sm font-black text-black uppercase tracking-widest animate-neo-jitter`}>{event.category}</span>
           <span className="material-symbols-outlined text-black text-2xl sm:text-3xl group-hover:animate-neo-swing flex-shrink-0">{event.icon}</span>
@@ -113,7 +113,7 @@ function EventCard({ event, index }) {
 
 export default function Pendaftaran() {
   return (
-    <section className="py-24 relative bg-gray-main dark:bg-[#1a1a2e] border-b-8 border-black dark:border-white transition-colors pattern-diagonal-lines" id="pendaftaran">
+    <section className="py-24 relative bg-gray-main border-b-8 border-black transition-colors pattern-diagonal-lines" id="pendaftaran">
       <div className="absolute top-8 left-8 bg-neo-orange neo-border neo-shadow-sm px-3 py-1 font-black text-xs uppercase transform -rotate-6 animate-wiggle hidden lg:block z-20">
         🔥 Terbatas!
       </div>
@@ -128,7 +128,7 @@ export default function Pendaftaran() {
             </div>
           </ScrollReveal>
           <ScrollReveal animation="animate-pop-up" delay={0.2}>
-            <p className="text-xl font-bold max-w-2xl mx-auto bg-cream dark:bg-[#16213e] p-4 neo-border dark:border-white transition-colors">
+            <p className="text-xl font-bold max-w-2xl mx-auto bg-cream p-4 neo-border transition-colors">
               Pilih cabang kegiatan SwitchFest 2026 yang ingin kamu ikuti. Pelajari informasi selengkapnya atau langsung lakukan pendaftaran!
             </p>
           </ScrollReveal>

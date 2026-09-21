@@ -40,7 +40,7 @@ const stats = [
 
 export default function StatsCounter() {
   return (
-    <section className="py-16 bg-black dark:bg-[#0a0a1a] border-y-8 border-black dark:border-white relative overflow-hidden transition-colors">
+    <section className="py-16 bg-black border-y-8 border-black relative overflow-hidden transition-colors">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 11px)',

@@ -20,7 +20,7 @@ export default function AboutPage() {
       <div className="absolute top-48 left-4 w-10 h-10 bg-neo-pink rounded-full neo-border neo-shadow-sm -rotate-12 animate-neo-swing hidden lg:block"></div>
       <div className="absolute bottom-32 right-16 w-12 h-12 bg-neo-blue neo-border neo-shadow-sm rotate-45 animate-spin-slow hidden lg:block"></div>
 
-      <Link to="/" className="inline-flex items-center gap-2 mb-8 text-black dark:text-white font-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-3 py-1 transition-colors neo-border dark:border-white font-mono text-sm uppercase neo-shadow-hover animate-pop-up">
+      <Link to="/" className="inline-flex items-center gap-2 mb-8 text-black font-black hover:bg-black hover:text-white px-3 py-1 transition-colors neo-border font-mono text-sm uppercase neo-shadow-hover animate-pop-up">
         <span className="material-symbols-outlined text-[18px]">arrow_back</span>
         BACK TO LANDING PAGE
       </Link>
@@ -32,7 +32,7 @@ export default function AboutPage() {
       </ScrollReveal>
 
       <ScrollReveal animation="animate-pop-up" delay={0.1}>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none text-black dark:text-white uppercase mb-4">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none text-black uppercase mb-4">
           Tentang Kami
         </h1>
       </ScrollReveal>
@@ -46,12 +46,12 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         <div className="lg:col-span-7 space-y-6">
           <ScrollReveal animation="animate-pop-up" delay={0.2}>
-            <div className="bg-cream dark:bg-[#16213e] p-6 sm:p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
-              <h2 className="text-2xl font-black mb-4 flex items-center gap-3 uppercase border-b-4 border-black dark:border-white pb-4">
+            <div className="bg-cream p-6 sm:p-8 neo-border neo-shadow neo-tilt transition-colors">
+              <h2 className="text-2xl font-black mb-4 flex items-center gap-3 uppercase border-b-4 border-black pb-4">
                 <span className="material-symbols-outlined text-[36px] text-neo-blue animate-neo-swing">school</span>
                 Sejarah & Latar Belakang
               </h2>
-              <div className="space-y-4 text-base font-bold leading-relaxed dark:text-[#e0e0e0]">
+              <div className="space-y-4 text-base font-bold leading-relaxed">
                 <p>
                   Program Studi Teknik Informatika Universitas Islam Riau (UIR) didirikan untuk melahirkan insan akademis yang unggul, profesional, dan mampu bersaing di industri teknologi global.
                 </p>
@@ -66,12 +66,12 @@ export default function AboutPage() {
           </ScrollReveal>
 
           <ScrollReveal animation="animate-pop-up" delay={0.35}>
-            <div className="bg-cream dark:bg-[#16213e] p-6 sm:p-8 neo-border dark:border-white neo-shadow neo-tilt transition-colors">
-              <h2 className="text-2xl font-black mb-4 flex items-center gap-3 uppercase border-b-4 border-black dark:border-white pb-4">
+            <div className="bg-cream p-6 sm:p-8 neo-border neo-shadow neo-tilt transition-colors">
+              <h2 className="text-2xl font-black mb-4 flex items-center gap-3 uppercase border-b-4 border-black pb-4">
                 <span className="material-symbols-outlined text-[36px] text-neo-green animate-neo-swing">emoji_events</span>
                 Visi & Tujuan Strategis
               </h2>
-              <p className="text-base font-bold leading-relaxed italic border-l-4 border-neo-yellow pl-4 mb-6 dark:text-[#e0e0e0]">
+              <p className="text-base font-bold leading-relaxed italic border-l-4 border-neo-yellow pl-4 mb-6">
                 "Menjadi wadah akselerasi talenta digital muda Indonesia untuk berinovasi, berkompetisi secara sehat, dan menciptakan solusi teknologi berdampak tinggi bagi masa depan."
               </p>
               <div className="space-y-3">
@@ -79,9 +79,9 @@ export default function AboutPage() {
                   Misi Penyelenggaraan:
                 </span>
                 {missionPoints.map((m, idx) => (
-                  <div key={idx} className="flex items-start gap-3 bg-cream dark:bg-[#0f3460] p-3 neo-border dark:border-white neo-shadow-sm">
+                  <div key={idx} className="flex items-start gap-3 bg-cream p-3 neo-border neo-shadow-sm">
                     <span className="material-symbols-outlined text-neo-green text-xl mt-0.5 shrink-0">check_circle</span>
-                    <span className="text-sm font-bold dark:text-[#e0e0e0]">{m}</span>
+                    <span className="text-sm font-bold">{m}</span>
                   </div>
                 ))}
               </div>

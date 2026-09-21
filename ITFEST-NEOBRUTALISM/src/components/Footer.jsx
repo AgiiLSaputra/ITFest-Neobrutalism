@@ -27,7 +27,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-neo-blue dark:bg-[#1a1a2e] border-t-8 border-black dark:border-white pt-16 pb-12 text-black dark:text-[#e0e0e0] relative overflow-hidden transition-colors">
+    <footer className="bg-neo-blue border-t-8 border-black pt-16 pb-12 text-black relative overflow-hidden transition-colors">
       {/* Gradient bar atas */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-neo-yellow via-neo-pink to-neo-green"></div>
 

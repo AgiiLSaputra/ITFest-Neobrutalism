@@ -42,7 +42,7 @@ const ImageRow = ({ images, scrollDirection }) => {
   // tetap presisi mulus tanpa lompatan.
   const doubled = [...images, ...images];
   return (
-    <div className="flex overflow-hidden group border-y-4 border-black dark:border-white bg-cream dark:bg-[#16213e] py-6 transition-colors">
+    <div className="flex overflow-hidden group border-y-4 border-black bg-cream py-6 transition-colors">
       <div className={`flex animate-scroll-${scrollDirection} gap-8 px-4`}>
         {doubled.map((img, i) => (
           <ImageCard key={`first-${i}`} src={img.src} rotation={img.rotation} />
@@ -67,19 +67,19 @@ const ImageRow = ({ images, scrollDirection }) => {
 const DokumentasiAcara = () => {
   return (
     <section
-      className="py-24 relative bg-neo-blue border-b-8 border-black dark:border-white overflow-hidden transition-colors pattern-diagonal-lines"
+      className="py-24 relative bg-neo-blue border-b-8 border-black overflow-hidden transition-colors pattern-diagonal-lines"
       id="gallery"
     >
       <div className="container mx-auto px-6 max-w-screen-xl text-center mb-12">
         <ScrollReveal animation="animate-pop-up">
-          <div className="inline-block bg-cream dark:bg-[#16213e] p-6 neo-border dark:border-white neo-shadow mb-6 transform rotate-1 transition-colors">
+          <div className="inline-block bg-cream p-6 neo-border neo-shadow mb-6 transform rotate-1 transition-colors">
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
               Dokumentasi <span className="text-neo-pink">Acara</span>
             </h2>
           </div>
         </ScrollReveal>
         <ScrollReveal animation="animate-pop-up" delay={0.2}>
-          <p className="text-xl font-bold bg-cream dark:bg-[#16213e] inline-block px-4 py-2 neo-border dark:border-white transition-colors">
+          <p className="text-xl font-bold bg-cream inline-block px-4 py-2 neo-border transition-colors">
             Kilas balik keseruan dan inovasi di perhelatan IT Fest sebelumnya.
           </p>
         </ScrollReveal>

@@ -15,7 +15,7 @@ import MarqueeBanner from './components/MarqueeBanner';
 import ScrollToTop from './components/ScrollToTop';
 import NoiseOverlay from './components/NoiseOverlay';
 import Loading from './components/Loading';
-import useDarkMode from './hooks/useDarkMode';
+
 
 const MemoizedHeader = memo(Header);
 const MemoizedHero = memo(Hero);
@@ -43,7 +43,7 @@ const MemoizedLandingPage = memo(LandingPage);
 
 export default function App() {
   const location = useLocation();
-  useDarkMode();
+
   // Choreographed reveal:
   //   'loading' -> loader overlay covers the (already mounted) page
   //   'sliding' -> page slides up from the bottom, covering the loader
@@ -99,7 +99,7 @@ export default function App() {
       : '';
 
   return (
-    <div className={`antialiased selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black flex flex-col min-h-screen bg-gray-main dark:bg-[#1a1a2e] text-black dark:text-[#e0e0e0] transition-colors duration-300`}>
+    <div className="antialiased selection:bg-black selection:text-white flex flex-col min-h-screen bg-gray-main text-black transition-colors duration-300">
       {phase !== 'done' && <Loading onFinish={finishLoading} />}
       <MemoizedCustomCursor />
       {/* Navbar lives OUTSIDE the animated page wrapper so it is always
@@ -110,7 +110,7 @@ export default function App() {
           <MemoizedHeader />
         </div>
       )}
-      <div ref={pageRef} className={`relative z-[10000] bg-gray-main dark:bg-[#1a1a2e] ${pageClass}`}>
+      <div ref={pageRef} className={`relative z-[10000] bg-gray-main ${pageClass}`}>
         <MemoizedNoiseOverlay />
         <main className="flex-grow relative">
           <Routes location={location} key={location.pathname}>
