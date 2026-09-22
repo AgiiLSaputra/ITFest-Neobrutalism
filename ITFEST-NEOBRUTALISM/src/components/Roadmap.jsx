@@ -87,8 +87,8 @@ export default function Roadmap() {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute inset-0 pointer-events-none flex justify-center hidden md:flex z-0">
-            <div className="w-1 bg-black h-full animate-neo-strips"></div>
+          <div className="absolute inset-0 pointer-events-none flex justify-start md:justify-center z-0">
+            <div className="w-1 bg-black h-full animate-neo-strips ml-[14px] md:ml-0"></div>
           </div>
 
           <div className="space-y-12 relative z-10">
