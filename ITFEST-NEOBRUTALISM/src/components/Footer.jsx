@@ -124,7 +124,7 @@ export default function Footer() {
               </li>
               <li className="pt-4">
                 <a
-                  className="bg-neo-pink text-black px-4 py-2 neo-border hover:bg-neo-yellow transition-colors block text-center"
+                  className="bg-neo-pink text-black px-4 py-2 neo-border neo-shadow-sm block text-center font-black underline decoration-2 underline-offset-4 transition-all hover:bg-neo-yellow hover:-translate-y-1 hover:shadow-none active:translate-y-1 active:shadow-none"
                   href="mailto:miladitfestuir@gmail.com"
                 >
                   miladitfestuir@gmail.com
