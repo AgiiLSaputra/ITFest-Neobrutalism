@@ -16,7 +16,6 @@ Landing page resmi perayaan **Milad IT Fest 2026** yang diselenggarakan oleh **H
 - 📄 Halaman detail event dinamis (`/event/:eventId`)
 - 🌗 Dark mode
 - 🖱️ Custom cursor & efek noise overlay
-- ✨ Loading screen animasi + choreographed reveal saat pertama kali dibuka
 - 🔁 Marquee banner, scroll reveal, stats counter, floating shapes/stickers
 - ♿ Dukungan `prefers-reduced-motion`
 
