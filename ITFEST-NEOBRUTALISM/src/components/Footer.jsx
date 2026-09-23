@@ -22,7 +22,6 @@ const InstagramIcon = () => (
 const socialLinks = [
   { isInstagram: true, label: "Instagram @miladituir", handle: "@miladituir", href: "https://www.instagram.com/miladituir" },
   { isInstagram: true, label: "Instagram @technofestuir", handle: "@technofestuir", href: "https://www.instagram.com/technofestuir" },
-  { icon: "tag", label: "TikTok", href: "#" },
 ];
 
 export default function Footer() {
