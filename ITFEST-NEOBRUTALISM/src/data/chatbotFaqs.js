@@ -5,11 +5,9 @@ export const CHATBOT_PROFILE = {
   status: 'ONLINE',
   greeting: {
     intro: 'Halo Sobat IT! Aku MIFA, asisten resmi Milad IT Fest 2026 dari Teknik Informatika Universitas Islam Riau.',
-    outro: 'Klik salah satu topik pertanyaan di bawah untuk jawaban cepat, atau ketik pertanyaanmu sendiri. Aku siap bantu!',
+    outro: 'Klik salah satu topik pertanyaan di bawah untuk melihat jawaban resminya secara instan!',
   },
-  fallback:
-    'Hmm, pertanyaan itu belum aku kuasai. Coba klik salah satu topik di bawah, atau langsung hubungi panitia lewat WhatsApp ya!',
-  footerNote: 'Mode Interaktif Pertanyaan Terarah • Bebas Ketik Manual',
+  footerNote: 'Mode Interaktif Pertanyaan Terarah',
   contact: {
     whatsapp: 'https://wa.link/mea7wh',
     whatsappLabel: 'Hubungi Panitia WhatsApp',
@@ -22,7 +20,6 @@ export const chatFaqs = [
     icon: '💡',
     label: 'Apa itu Milad IT Fest?',
     badge: 'TENTANG ACARA',
-    keywords: ['tentang', 'apa itu', 'milad', 'it fest', 'technofest', 'event', 'acara', 'keterangan'],
     blocks: [
       {
         type: 'p',
@@ -48,7 +45,6 @@ export const chatFaqs = [
     icon: '📅',
     label: 'Kapan dan di mana acaranya?',
     badge: 'WAKTU & VENUE',
-    keywords: ['jadwal', 'kapan', 'dimana', 'di mana', 'tanggal', 'lokasi', 'tempat', 'venue', 'waktu', 'desember'],
     blocks: [
       {
         type: 'kv',
@@ -77,7 +73,6 @@ export const chatFaqs = [
     icon: '🏆',
     label: 'Apa saja cabang lombanya?',
     badge: 'KOMPETISI',
-    keywords: ['cabang', 'lomba', 'kompetisi', 'event', 'perlombaan', 'daftar acara', 'ada apa'],
     blocks: [
       { type: 'p', text: 'Enam cabang kegiatan yang bisa kamu ikuti:' },
       {
@@ -99,7 +94,6 @@ export const chatFaqs = [
     icon: '📝',
     label: 'Bagaimana cara mendaftar?',
     badge: 'PENDAFTARAN',
-    keywords: ['daftar', 'mendaftar', 'pendaftaran', 'registrasi', 'join', 'ikut', 'form', 'gimana cara'],
     blocks: [
       {
         type: 'ol',
@@ -122,7 +116,6 @@ export const chatFaqs = [
     icon: '👥',
     label: 'Siapa saja yang boleh ikut?',
     badge: 'PESERTA',
-    keywords: ['peserta', 'siapa', 'boleh ikut', 'pelajar', 'mahasiswa', 'umum', 'sma', 'smk', 'eligibilitas'],
     blocks: [
       { type: 'p', text: 'Setiap cabang punya kelas pesertanya sendiri:' },
       {
@@ -144,7 +137,6 @@ export const chatFaqs = [
     icon: '🤝',
     label: 'Mau jadi sponsor / hubungi panitia?',
     badge: 'KERJASAMA',
-    keywords: ['sponsor', 'sponsorship', 'kerjasama', 'partner', 'kontak', 'panitia', 'hubungi', 'wa', 'whatsapp', 'email'],
     blocks: [
       {
         type: 'p',

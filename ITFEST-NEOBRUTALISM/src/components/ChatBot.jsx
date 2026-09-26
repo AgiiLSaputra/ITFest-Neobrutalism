@@ -6,35 +6,6 @@ const nextId = () => `msg-${++messageCounter}`;
 
 const createGreeting = () => ({ id: nextId(), from: 'bot', kind: 'greeting' });
 
-const normalize = (value) =>
-  value
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .split(/\s+/)
-    .filter(Boolean);
-
-function matchFaq(text) {
-  const words = normalize(text);
-  if (!words.length) return null;
-
-  let best = null;
-  let bestScore = 0;
-
-  chatFaqs.forEach((faq) => {
-    const haystack = [...faq.keywords, ...normalize(faq.label)];
-    const score = words.reduce(
-      (total, word) => total + (word.length > 2 && haystack.includes(word) ? 1 : 0),
-      0
-    );
-    if (score > bestScore) {
-      best = faq;
-      bestScore = score;
-    }
-  });
-
-  return best;
-}
-
 function BotAvatar({ size = 'w-10 h-10' }) {
   return (
     <div className={`${size} shrink-0 bg-neo-yellow neo-border flex items-center justify-center`}>
@@ -122,7 +93,6 @@ export default function ChatBot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([createGreeting]);
   const [typing, setTyping] = useState(false);
-  const [input, setInput] = useState('');
   const listRef = useRef(null);
   const timerRef = useRef(null);
 
@@ -157,23 +127,9 @@ export default function ChatBot() {
 
   const handleInternalLink = () => setOpen(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const text = input.trim();
-    if (!text) return;
-
-    setMessages((prev) => [...prev, { id: nextId(), from: 'user', text }]);
-    setInput('');
-
-    const faq = matchFaq(text);
-    if (faq) botSay({ kind: 'faq', faq });
-    else botSay({ kind: 'text', text: CHATBOT_PROFILE.fallback });
-  };
-
   const resetChat = () => {
     clearTimeout(timerRef.current);
     setTyping(false);
-    setInput('');
     setMessages([createGreeting()]);
   };
 
@@ -274,10 +230,6 @@ export default function ChatBot() {
                         </div>
                       )}
 
-                      {message.kind === 'text' && (
-                        <p className="text-sm font-bold leading-relaxed">{message.text}</p>
-                      )}
-
                       {message.kind === 'faq' && (
                         <div>
                           <span className="inline-block bg-neo-yellow text-black text-[10px] font-black uppercase tracking-wider px-2 py-0.5 neo-border mb-2">
@@ -307,17 +259,17 @@ export default function ChatBot() {
             )}
           </div>
 
-          {/* Preset questions + input */}
+          {/* Preset questions */}
           <div className="border-t-4 border-black bg-cream p-3.5 shrink-0">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wide">
                 <span className="material-symbols-outlined text-neo-pink text-base">help</span>
                 Pilih Pertanyaan:
               </div>
-              <div className="hidden sm:block text-[10px] font-bold text-neutral-600">KLIK UNTUK JAWABAN CEPAT</div>
+              <div className="hidden sm:block text-[10px] font-bold text-neutral-600">KLIK TOMBOL UNTUK JAWABAN</div>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 max-h-[140px] overflow-y-auto pr-0.5">
+            <div className="grid grid-cols-2 gap-2 max-h-[176px] overflow-y-auto pr-0.5">
               {chatFaqs.map((faq, index) => (
                 <button
                   key={faq.id}
@@ -333,25 +285,7 @@ export default function ChatBot() {
               ))}
             </div>
 
-            <form onSubmit={handleSubmit} className="flex gap-2 mt-3">
-              <input
-                type="text"
-                value={input}
-                onChange={(event) => setInput(event.target.value)}
-                placeholder="Tulis pertanyaanmu..."
-                aria-label="Tulis pertanyaan"
-                className="flex-1 min-w-0 bg-white px-3 py-2.5 text-sm font-bold neo-border outline-none focus:bg-neo-yellow"
-              />
-              <button
-                type="submit"
-                aria-label="Kirim pesan"
-                className="shrink-0 w-11 bg-neo-pink neo-border neo-shadow-sm flex items-center justify-center transition-all hover:translate-x-1 hover:-translate-y-1 active:translate-x-2 active:-translate-y-2"
-              >
-                <span className="material-symbols-outlined text-xl text-black">send</span>
-              </button>
-            </form>
-
-            <div className="mt-2.5 pt-2 border-t-2 border-dashed border-neutral-400 flex flex-wrap items-center justify-between gap-2 text-[10px] font-bold text-neutral-600">
+            <div className="mt-3 pt-2 border-t-2 border-dashed border-neutral-400 flex flex-wrap items-center justify-between gap-2 text-[10px] font-bold text-neutral-600">
               <span className="flex items-center gap-1.5">
                 <span className="w-2 h-2 bg-neo-green rounded-full" />
                 {CHATBOT_PROFILE.footerNote}
