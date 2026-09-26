@@ -407,8 +407,11 @@ export default function EventDetail() {
               href={event.daftarLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-neo-blue text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg"
+              className="flex w-full items-center justify-center gap-3 bg-neo-pink text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg"
             >
+              <span className="material-symbols-outlined text-[28px]">
+                how_to_reg
+              </span>
               DAFTAR SEKARANG
             </a>
           </div>
