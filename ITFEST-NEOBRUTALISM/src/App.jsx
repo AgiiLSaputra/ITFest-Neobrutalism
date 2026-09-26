@@ -14,6 +14,7 @@ import CustomCursor from './components/CustomCursor';
 import MarqueeBanner from './components/MarqueeBanner';
 import ScrollToTop from './components/ScrollToTop';
 import NoiseOverlay from './components/NoiseOverlay';
+import ChatBot from './components/ChatBot';
 
 
 const MemoizedHeader = memo(Header);
@@ -74,6 +75,7 @@ export default function App() {
         </main>
         <MemoizedFooter />
         <MemoizedScrollToTop />
+        <ChatBot />
       </div>
     </div>
   );
