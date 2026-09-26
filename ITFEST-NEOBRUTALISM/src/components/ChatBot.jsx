@@ -6,10 +6,25 @@ const nextId = () => `msg-${++messageCounter}`;
 
 const createGreeting = () => ({ id: nextId(), from: 'bot', kind: 'greeting' });
 
+const MASCOT_URL = '/img/MaskotMilad.png';
+
 function BotAvatar({ size = 'w-10 h-10' }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
-    <div className={`${size} shrink-0 bg-neo-yellow neo-border flex items-center justify-center`}>
-      <span className="material-symbols-outlined text-xl">smart_toy</span>
+    <div
+      className={`${size} shrink-0 bg-neo-yellow neo-border overflow-hidden flex items-center justify-center`}
+    >
+      {imgError ? (
+        <span className="material-symbols-outlined text-xl">smart_toy</span>
+      ) : (
+        <img
+          src={MASCOT_URL}
+          alt="Maskot Milad IT Fest"
+          onError={() => setImgError(true)}
+          className="w-full h-full object-cover"
+        />
+      )}
     </div>
   );
 }
