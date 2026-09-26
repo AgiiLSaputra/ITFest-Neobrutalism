@@ -17,7 +17,7 @@ export const CHATBOT_PROFILE = {
 export const chatFaqs = [
   {
     id: 'tentang',
-    icon: '💡',
+    icon: 'lightbulb',
     label: 'Apa itu Milad IT Fest?',
     badge: 'TENTANG ACARA',
     blocks: [
@@ -42,7 +42,7 @@ export const chatFaqs = [
   },
   {
     id: 'jadwal',
-    icon: '📅',
+    icon: 'event',
     label: 'Kapan dan di mana acaranya?',
     badge: 'WAKTU & VENUE',
     blocks: [
@@ -70,7 +70,7 @@ export const chatFaqs = [
   },
   {
     id: 'cabang',
-    icon: '🏆',
+    icon: 'emoji_events',
     label: 'Apa saja cabang lombanya?',
     badge: 'KOMPETISI',
     blocks: [
@@ -91,7 +91,7 @@ export const chatFaqs = [
   },
   {
     id: 'daftar',
-    icon: '📝',
+    icon: 'edit_document',
     label: 'Bagaimana cara mendaftar?',
     badge: 'PENDAFTARAN',
     blocks: [
@@ -113,7 +113,7 @@ export const chatFaqs = [
   },
   {
     id: 'peserta',
-    icon: '👥',
+    icon: 'group',
     label: 'Siapa saja yang boleh ikut?',
     badge: 'PESERTA',
     blocks: [
@@ -134,7 +134,7 @@ export const chatFaqs = [
   },
   {
     id: 'sponsor',
-    icon: '🤝',
+    icon: 'handshake',
     label: 'Mau jadi sponsor / hubungi panitia?',
     badge: 'KERJASAMA',
     blocks: [

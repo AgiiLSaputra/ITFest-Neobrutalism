@@ -54,10 +54,9 @@ function AnswerBlocks({ blocks, onNavigate }) {
                 <li
                   key={itemIndex}
                   className={`bg-gray-main p-2 neo-border text-xs leading-snug ${
-                    block.type === 'ul' ? 'flex items-start gap-2' : ''
+                    block.type === 'ol' ? 'list-decimal pl-5 marker:text-black' : ''
                   }`}
                 >
-                  {block.type === 'ul' && <span className="font-black">▸</span>}
                   <span>{item}</span>
                 </li>
               ))}
@@ -237,7 +236,7 @@ export default function ChatBot() {
                       {message.kind === 'greeting' && (
                         <div className="space-y-2">
                           <p className="text-sm font-black leading-relaxed">
-                            👋 {CHATBOT_PROFILE.greeting.intro}
+                            {CHATBOT_PROFILE.greeting.intro}
                           </p>
                           <p className="text-sm font-bold text-neutral-700 leading-relaxed">
                             {CHATBOT_PROFILE.greeting.outro}
@@ -294,7 +293,7 @@ export default function ChatBot() {
                     ['bg-neo-yellow', 'bg-neo-blue', 'bg-neo-green', 'bg-neo-pink'][index % 4]
                   }`}
                 >
-                  <span>{faq.icon}</span>
+                  <span className="material-symbols-outlined text-sm leading-none">{faq.icon}</span>
                   <span className="leading-tight">{faq.label}</span>
                 </button>
               ))}
