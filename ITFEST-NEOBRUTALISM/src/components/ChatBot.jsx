@@ -106,7 +106,7 @@ function AnswerBlocks({ blocks, onNavigate }) {
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState([createGreeting]);
+  const [messages, setMessages] = useState(() => [createGreeting()]);
   const [typing, setTyping] = useState(false);
   const listRef = useRef(null);
   const timerRef = useRef(null);
