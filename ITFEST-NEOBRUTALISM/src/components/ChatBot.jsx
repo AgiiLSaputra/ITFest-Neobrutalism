@@ -280,7 +280,6 @@ export default function ChatBot() {
                 <span className="material-symbols-outlined text-neo-pink text-base">help</span>
                 Pilih Pertanyaan:
               </div>
-              <div className="hidden sm:block text-[10px] font-bold text-neutral-600">KLIK TOMBOL UNTUK JAWABAN</div>
             </div>
 
             <div className="grid grid-cols-2 gap-2 max-h-[176px] overflow-y-auto pr-0.5">
