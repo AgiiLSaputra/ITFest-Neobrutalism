@@ -299,8 +299,17 @@ export default function ChatBot() {
               </span>
             </button>
 
-            {faqOpen && (
-              <div id="chatbot-faq-options">
+            <div
+              id="chatbot-faq-options"
+              className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                faqOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+              }`}
+            >
+              <div
+                className={`overflow-hidden min-h-0 transition-opacity duration-200 ${
+                  faqOpen ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
                 <div className="grid grid-cols-2 gap-2 max-h-[176px] overflow-y-auto pr-0.5 mt-2">
                   {chatFaqs.map((faq, index) => (
                     <button
@@ -333,7 +342,7 @@ export default function ChatBot() {
                   </a>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       )}
