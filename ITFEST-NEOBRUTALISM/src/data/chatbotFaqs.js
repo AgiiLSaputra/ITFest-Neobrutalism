@@ -158,4 +158,129 @@ export const chatFaqs = [
       },
     ],
   },
+  {
+    id: 'hadiah',
+    icon: 'workspace_premium',
+    label: 'Apa saja hadiah & fasilitasnya?',
+    badge: 'HADIAH & FASILITAS',
+    blocks: [
+      {
+        type: 'p',
+        text: 'Total hadiah Milad IT Fest 2026 lebih dari Rp10 juta untuk seluruh cabang kegiatan.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'E-Certificate resmi untuk semua peserta',
+          'Trophy / Medali untuk para juara',
+          'Merchandise event',
+          'Seminar Nasional: E-Sertifikat Nasional + Snack Box + Doorprize',
+          'IT Expo: predikat Best Exhibit (Karya Favorit)',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Fasilitas lengkap tiap cabang bisa dilihat di halaman detail masing-masing acara.',
+      },
+      {
+        type: 'link',
+        label: 'Lihat Detail Acara',
+        href: '/#pendaftaran',
+      },
+    ],
+  },
+  {
+    id: 'biaya',
+    icon: 'payments',
+    label: 'Apakah ada biaya / tiket masuk?',
+    badge: 'BIAYA & TIKET',
+    blocks: [
+      {
+        type: 'ul',
+        items: [
+          'IT Expo: GRATIS, terbuka untuk umum tanpa tiket masuk',
+          'Seminar Nasional: berbayar, tersedia tiket presale & tiket reguler',
+          'Cabang lomba lainnya: cek form pendaftaran resmi tiap cabang',
+          'Wi-Fi gratis tersedia di venue Seminar Nasional',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Info biaya resmi tiap cabang diumumkan lewat kanal Instagram panitia.',
+      },
+      {
+        type: 'link',
+        label: 'Instagram @miladituir',
+        href: 'https://www.instagram.com/miladituir',
+        external: true,
+      },
+    ],
+  },
+  {
+    id: 'ketentuan',
+    icon: 'rule',
+    label: 'Apa ketentuan penting tiap lomba?',
+    badge: 'KETENTUAN LOMBA',
+    blocks: [
+      {
+        type: 'ul',
+        items: [
+          'Hackathon: tim 2–4 orang, kode ditulis saat event berlangsung, submit project + demo video',
+          'E-Sport Mobile Legends: tim 5 pemain + 1 cadangan, Single Elimination Best of 3',
+          'Badminton: ganda putra khusus mahasiswa aktif UIR, jadwal diumumkan H-3',
+          'IT Expo: booth 3x3 meter disediakan panitia, tim minimal 2 orang, bawa peralatan sendiri',
+          'Typing Test: metrik WPM, akurasi minimal 95%, durasi 5 menit per sesi',
+          'Seminar Nasional: pintu ditutup 15 menit sebelum acara dimulai',
+        ],
+      },
+      {
+        type: 'link',
+        label: 'Lihat Semua Lomba',
+        href: '/#pendaftaran',
+      },
+    ],
+  },
+  {
+    id: 'kontak',
+    icon: 'support_agent',
+    label: 'Bagaimana cara hubungi panitia?',
+    badge: 'KONTAK PANITIA',
+    blocks: [
+      {
+        type: 'p',
+        text: 'Tim panitia siap membantu lewat kanal resmi berikut:',
+      },
+      {
+        type: 'kv',
+        items: [
+          { label: 'Email Humas', value: 'miladitfestuir@gmail.com' },
+          { label: 'Instagram', value: '@miladituir & @technofestuir' },
+          { label: 'Instagram HIMATIF', value: '@himatifuir_' },
+        ],
+      },
+      {
+        type: 'link',
+        label: 'Chat Panitia via WhatsApp',
+        href: 'https://wa.link/mea7wh',
+        external: true,
+      },
+    ],
+  },
+  {
+    id: 'gallery',
+    icon: 'photo_library',
+    label: 'Di mana lihat dokumentasi acara?',
+    badge: 'DOKUMENTASI',
+    blocks: [
+      {
+        type: 'p',
+        text: 'Kilas balik keseruan momen Milad IT Fest tersedia di galeri resmi — 14 foto dokumentasi acara sebelumnya.',
+      },
+      {
+        type: 'link',
+        label: 'Buka Galeri Dokumentasi',
+        href: '/#gallery',
+      },
+    ],
+  },
 ];
