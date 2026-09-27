@@ -166,7 +166,7 @@ export const chatFaqs = [
     blocks: [
       {
         type: 'p',
-        text: 'Total hadiah Milad IT Fest 2026 lebih dari Rp10 juta untuk seluruh cabang kegiatan.',
+        text: 'Setiap cabang lomba Milad IT Fest 2026 berkesempatan mendapatkan hadiah jutaan rupiah.',
       },
       {
         type: 'ul',
