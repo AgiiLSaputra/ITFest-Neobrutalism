@@ -57,7 +57,7 @@ export const chatFaqs = [
       {
         type: 'ul',
         items: [
-          '1 Oktober 2026 — Pembukaan pendaftaran seluruh cabang lomba',
+          '1 September 2026 — Pembukaan pendaftaran perdana (Seminar Nasional & IT Expo), disusul cabang lomba lainnya sejak Oktober 2026',
           '14 – 15 November 2026 — Badminton (Gor Badminton, Simpang Tiga)',
           '21 November 2026 — Final Lomba UI/UX Design',
           '21 – 22 November 2026 — Mobile Legends (Selasar Coffee)',
@@ -103,6 +103,35 @@ export const chatFaqs = [
           'Klik LIHAT DETAIL ACARA untuk melihat timeline, kuota, dan ketentuan tiap cabang.',
           'Pendaftaran seluruh cabang dibuka serentak sejak 1 Oktober 2026.',
         ],
+      },
+      {
+        type: 'link',
+        label: 'Ke Section Pendaftaran',
+        href: '/#pendaftaran',
+      },
+    ],
+  },
+  {
+    id: 'deadline',
+    icon: 'schedule',
+    label: 'Sampai kapan pendaftaran ditutup?',
+    badge: 'DEADLINE PENDAFTARAN',
+    blocks: [
+      { type: 'p', text: 'Tenggat pendaftaran tiap cabang berbeda-beda:' },
+      {
+        type: 'ul',
+        items: [
+          'Seminar Nasional (tiket): 1 September – 10 Oktober 2026',
+          'IT Expo (booth): 15 September – 5 Oktober 2026',
+          'Hackathon: Gelombang 1 10–25 Oktober, Gelombang 2 26 Oktober – 8 November 2026',
+          'E-Sport Mobile Legends: Gelombang 1 1–25 Oktober, Gelombang 2 26 Oktober – 16 November 2026 (kuota 32 tim)',
+          'Badminton: 1 Oktober – 8 November 2026',
+          'Typing Test: 10 Oktober – 8 November 2026',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Gelombang 1 (Early Bird) kuotanya terbatas — daftar sebelum kehabisan!',
       },
       {
         type: 'link',
