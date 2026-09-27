@@ -182,7 +182,7 @@ export default function ChatBot() {
               <div className="min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="font-black uppercase text-sm tracking-wide truncate">
-                    {CHATBOT_PROFILE.name} <span className="text-neo-pink">//</span> {CHATBOT_PROFILE.title}
+                    {CHATBOT_PROFILE.name} <span className="text-neo-pink">-</span> {CHATBOT_PROFILE.title}
                   </span>
                   <span className="bg-neo-green text-black text-[10px] font-black uppercase px-1.5 py-0.5 neo-border">
                     {CHATBOT_PROFILE.status}
