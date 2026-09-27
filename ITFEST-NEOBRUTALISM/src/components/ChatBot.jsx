@@ -105,6 +105,7 @@ function AnswerBlocks({ blocks, onNavigate }) {
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
+  const [faqOpen, setFaqOpen] = useState(true);
   const [messages, setMessages] = useState(() => [createGreeting()]);
   const [typing, setTyping] = useState(false);
   const listRef = useRef(null);
@@ -275,44 +276,64 @@ export default function ChatBot() {
 
           {/* Preset questions */}
           <div className="border-t-4 border-black bg-cream p-3.5 shrink-0">
-            <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wide">
+            <button
+              type="button"
+              onClick={() => setFaqOpen((value) => !value)}
+              aria-expanded={faqOpen}
+              aria-controls="chatbot-faq-options"
+              className="w-full flex items-center justify-between gap-2 text-xs font-black uppercase tracking-wide"
+            >
+              <span className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-neo-pink text-base">help</span>
                 Pilih Pertanyaan:
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-2 max-h-[176px] overflow-y-auto pr-0.5">
-              {chatFaqs.map((faq, index) => (
-                <button
-                  key={faq.id}
-                  type="button"
-                  onClick={() => askFaq(faq)}
-                  className={`text-left text-[11px] font-black p-2 neo-border neo-shadow-sm leading-tight flex items-start gap-1.5 transition-all hover:translate-x-1 hover:-translate-y-1 active:translate-x-2 active:-translate-y-2 ${
-                    ['bg-neo-yellow', 'bg-neo-blue', 'bg-neo-green', 'bg-neo-pink'][index % 4]
+              </span>
+              <span className="flex items-center gap-1.5 text-[10px] font-bold text-neutral-600 normal-case">
+                {faqOpen ? 'Tutup Opsi' : 'Buka Opsi'}
+                <span
+                  className={`material-symbols-outlined text-base transition-transform ${
+                    faqOpen ? 'rotate-180' : ''
                   }`}
                 >
-                  <span className="material-symbols-outlined text-sm leading-none">{faq.icon}</span>
-                  <span className="leading-tight">{faq.label}</span>
-                </button>
-              ))}
-            </div>
-
-            <div className="mt-3 pt-2 border-t-2 border-dashed border-neutral-400 flex flex-wrap items-center justify-between gap-2 text-[10px] font-bold text-neutral-600">
-              <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 bg-neo-green rounded-full" />
-                {CHATBOT_PROFILE.footerNote}
+                  expand_more
+                </span>
               </span>
-              <a
-                href={CHATBOT_PROFILE.contact.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-black font-black hover:underline"
-              >
-                {CHATBOT_PROFILE.contact.whatsappLabel}
-                <span className="material-symbols-outlined text-xs">arrow_outward</span>
-              </a>
-            </div>
+            </button>
+
+            {faqOpen && (
+              <div id="chatbot-faq-options">
+                <div className="grid grid-cols-2 gap-2 max-h-[176px] overflow-y-auto pr-0.5 mt-2">
+                  {chatFaqs.map((faq, index) => (
+                    <button
+                      key={faq.id}
+                      type="button"
+                      onClick={() => askFaq(faq)}
+                      className={`text-left text-[11px] font-black p-2 neo-border neo-shadow-sm leading-tight flex items-start gap-1.5 transition-all hover:translate-x-1 hover:-translate-y-1 active:translate-x-2 active:-translate-y-2 ${
+                        ['bg-neo-yellow', 'bg-neo-blue', 'bg-neo-green', 'bg-neo-pink'][index % 4]
+                      }`}
+                    >
+                      <span className="material-symbols-outlined text-sm leading-none">{faq.icon}</span>
+                      <span className="leading-tight">{faq.label}</span>
+                    </button>
+                  ))}
+                </div>
+
+                <div className="mt-3 pt-2 border-t-2 border-dashed border-neutral-400 flex flex-wrap items-center justify-between gap-2 text-[10px] font-bold text-neutral-600">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 bg-neo-green rounded-full" />
+                    {CHATBOT_PROFILE.footerNote}
+                  </span>
+                  <a
+                    href={CHATBOT_PROFILE.contact.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-black font-black hover:underline"
+                  >
+                    {CHATBOT_PROFILE.contact.whatsappLabel}
+                    <span className="material-symbols-outlined text-xs">arrow_outward</span>
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
