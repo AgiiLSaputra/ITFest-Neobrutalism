@@ -326,11 +326,7 @@ export default function ChatBot() {
                   ))}
                 </div>
 
-                <div className="mt-3 pt-2 border-t-2 border-dashed border-neutral-400 flex flex-wrap items-center justify-between gap-2 text-[10px] font-bold text-neutral-600">
-                  <span className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 bg-neo-green rounded-full" />
-                    {CHATBOT_PROFILE.footerNote}
-                  </span>
+                <div className="mt-3 pt-2 border-t-2 border-dashed border-neutral-400 flex flex-wrap items-center justify-end gap-2 text-[10px] font-bold text-neutral-600">
                   <a
                     href={CHATBOT_PROFILE.contact.whatsapp}
                     target="_blank"
