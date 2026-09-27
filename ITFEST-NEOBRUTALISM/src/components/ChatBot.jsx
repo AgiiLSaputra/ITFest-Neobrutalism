@@ -310,7 +310,7 @@ export default function ChatBot() {
                   faqOpen ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <div className="grid grid-cols-2 gap-2 max-h-[176px] overflow-y-auto pr-0.5 mt-2">
+                <div className="grid grid-cols-2 gap-2 max-h-[184px] overflow-y-auto overflow-x-hidden overscroll-contain pr-2.5 pt-2">
                   {chatFaqs.map((faq, index) => (
                     <button
                       key={faq.id}
