@@ -127,7 +127,7 @@ export default function Hero({ ready = true }) {
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
           <div className={`flex items-center justify-center gap-2 bg-neo-pink px-4 sm:px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider text-sm sm:text-base ${intro}`} style={{ animationDelay: '0.6s' }}>
             <span className="material-symbols-outlined text-xl animate-neo-swing">calendar_today</span>
-            2–3 Desember 2026
+            1 – 2 Desember 2026
           </div>
           <div className={`flex items-center justify-center gap-2 bg-neo-green px-4 sm:px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider text-sm sm:text-base ${intro}`} style={{ animationDelay: '0.8s' }}>
             <span className="material-symbols-outlined text-xl animate-neo-swing" style={{ animationDelay: '0.3s' }}>location_on</span>

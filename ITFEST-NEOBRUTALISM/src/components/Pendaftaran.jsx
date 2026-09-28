@@ -129,7 +129,7 @@ export default function Pendaftaran() {
           </ScrollReveal>
           <ScrollReveal animation="animate-pop-up" delay={0.2}>
             <p className="text-xl font-bold max-w-2xl mx-auto bg-cream p-4 neo-border transition-colors">
-              Pilih cabang kegiatan SwitchFest 2026 yang ingin kamu ikuti. Pelajari informasi selengkapnya atau langsung lakukan pendaftaran!
+              Pilih cabang kegiatan Milad IT Fest 2026 yang ingin kamu ikuti. Pelajari informasi selengkapnya atau langsung lakukan pendaftaran!
             </p>
           </ScrollReveal>
         </div>
