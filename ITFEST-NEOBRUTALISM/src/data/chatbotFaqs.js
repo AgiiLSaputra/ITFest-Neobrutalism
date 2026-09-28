@@ -9,7 +9,7 @@ export const CHATBOT_PROFILE = {
   },
   footerNote: 'Mode Interaktif Pertanyaan Terarah',
   contact: {
-    whatsapp: 'https://wa.link/mea7wh',
+    whatsapp: 'https://wa.me/6281374591558',
     whatsappLabel: 'Hubungi Panitia WhatsApp',
   },
 };
@@ -290,7 +290,7 @@ export const chatFaqs = [
       {
         type: 'link',
         label: 'Chat Panitia via WhatsApp',
-        href: 'https://wa.link/mea7wh',
+        href: 'https://wa.me/6281374591558',
         external: true,
       },
     ],
