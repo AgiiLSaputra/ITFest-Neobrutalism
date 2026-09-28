@@ -24,6 +24,15 @@ const socialLinks = [
   { isInstagram: true, label: "Instagram @technofestuir", handle: "@technofestuir", href: "https://www.instagram.com/technofestuir" },
 ];
 
+const navItems = [
+  { label: "Beranda", href: "/#beranda", hover: "hover:bg-neo-yellow" },
+  { label: "Tentang", href: "/#tentang", hover: "hover:bg-neo-pink" },
+  { label: "Roadmap", href: "/#roadmap", hover: "hover:bg-neo-green" },
+  { label: "Pendaftaran", href: "/#pendaftaran", hover: "hover:bg-neo-yellow" },
+  { label: "Dokumentasi", href: "/#gallery", hover: "hover:bg-neo-pink" },
+  { label: "Kontak", href: "mailto:miladitfestuir@gmail.com", hover: "hover:bg-neo-green" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-neo-blue border-t-8 border-black pt-16 pb-12 text-black relative overflow-hidden transition-colors">
@@ -52,15 +61,15 @@ export default function Footer() {
                 Our Story
               </span>
               <p className="font-bold text-base leading-relaxed mb-3 pt-2">
-                Merayakan perjalanan{" "}
+                19 tahun tumbuh, satu panggung buat mahasiswa IT UIR{" "}
                 <span className="bg-neo-yellow px-1 border-2 border-black box-decoration-clone">
-                  inovasi
+                  unjuk karya
                 </span>{" "}
                 dan{" "}
                 <span className="bg-neo-pink px-1 border-2 border-black box-decoration-clone">
-                  kolaborasi
-                </span>{" "}
-                bersama Teknik Informatika Universitas Islam Riau.
+                  adu skill
+                </span>
+                . Ini perayaan kita bersama.
               </p>
               <p className="font-black uppercase tracking-wide text-lg leading-snug border-t-4 border-black pt-3">
                 Innovation,{" "}
@@ -100,31 +109,17 @@ export default function Footer() {
             <h4 className="text-black font-black mb-6 uppercase text-xl tracking-wider bg-neo-yellow inline-block px-3 py-1 neo-border">
               Navigasi
             </h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="/#beranda"
-                  className="font-bold hover:bg-neo-yellow px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                >
-                  Beranda
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/#tentang"
-                  className="font-bold hover:bg-neo-pink px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                >
-                  Tentang
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/#roadmap"
-                  className="font-bold hover:bg-neo-green px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black"
-                >
-                  Roadmap
-                </a>
-              </li>
+            <ul className="space-y-3">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className={`font-bold ${item.hover} px-2 py-1 transition-colors text-lg inline-block border-2 border-transparent hover:border-black`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
