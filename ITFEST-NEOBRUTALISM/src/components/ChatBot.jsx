@@ -207,7 +207,7 @@ export default function ChatBot() {
             ref={listRef}
             role="log"
             aria-live="polite"
-            className="flex-1 min-h-0 overflow-y-auto p-4 space-y-4 bg-gray-main"
+            className="neo-scrollbar flex-1 min-h-0 overflow-y-auto p-4 space-y-4 bg-gray-main"
           >
             {messages.map((message) => {
               if (message.from === 'user') {
@@ -310,7 +310,7 @@ export default function ChatBot() {
                   faqOpen ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <div className="grid grid-cols-2 gap-2 max-h-[184px] overflow-y-auto overflow-x-hidden overscroll-contain pr-2.5 pt-2">
+                <div className="neo-scrollbar grid grid-cols-2 gap-2 max-h-[184px] overflow-y-auto overflow-x-hidden overscroll-contain pr-2.5 pt-2">
                   {chatFaqs.map((faq, index) => (
                     <button
                       key={faq.id}

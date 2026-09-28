@@ -23,6 +23,19 @@
 .neo-shadow-hover:hover { box-shadow: 4px 4px 0px 0px #000000; transform: translate(4px, 4px); }
 .neo-shadow-active:active { box-shadow: 0px 0px 0px 0px #000000; transform: translate(8px, 8px); }
 
+/* SCROLLBAR neo-brutalist — tebal, kotak, border hitam */
+.neo-scrollbar { scrollbar-width: thin; scrollbar-color: #000000 #fdf5e6; scrollbar-gutter: stable; }
+.neo-scrollbar::-webkit-scrollbar { width: 14px; height: 14px; }
+.neo-scrollbar::-webkit-scrollbar-track { background: #fdf5e6; border-left: 3px solid #000000; }
+.neo-scrollbar::-webkit-scrollbar-thumb {
+  background: #ddf4a2;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+}
+.neo-scrollbar::-webkit-scrollbar-thumb:hover { background: #fe9eec; }
+.neo-scrollbar::-webkit-scrollbar-thumb:active { background: #0055a6; box-shadow: none; }
+.neo-scrollbar::-webkit-scrollbar-corner { background: #fdf5e6; border-left: 3px solid #000000; }
+
 .bg-cream { background-color: #fdf5e6; }
 .bg-gray-main { background-color: #e5e7eb; }
 .bg-neo-yellow { background-color: #ddf4a2; }
