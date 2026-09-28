@@ -64,10 +64,10 @@ export default function Footer() {
               </p>
               <p className="font-black uppercase tracking-wide text-lg leading-snug border-t-4 border-black pt-3">
                 Innovation,{" "}
-                <span className="bg-black text-white px-2 inline-block -rotate-1">
+                <span className="bg-neo-green text-black px-2 border-2 border-black box-decoration-clone">
                   Competition
                 </span>{" "}
-                <span className="bg-neo-blue text-white px-2 border-2 border-black box-decoration-clone">
+                <span className="bg-black text-white px-2 inline-block -rotate-1">
                   Celebration
                 </span>
               </p>
