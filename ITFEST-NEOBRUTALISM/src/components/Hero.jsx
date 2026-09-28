@@ -153,6 +153,15 @@ export default function Hero({ ready = true }) {
           </p>
         </div>
 
+        {/* Subheadline - intro singkat acara */}
+        <p
+          className={`max-w-2xl mx-auto mb-8 text-base sm:text-lg md:text-xl font-bold text-black leading-relaxed ${intro}`}
+          style={{ animationDelay: "0.2s" }}
+        >
+          Perayaan ke-19 Teknik Informatika UIR × Technofest UIR Vol. 2 — 6
+          cabang lomba, satu panggung buat buktikan karyamu.
+        </p>
+
         {/* Info Badges - pop in staggered */}
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
           <div
@@ -183,14 +192,14 @@ export default function Hero({ ready = true }) {
           <a
             className={`bg-neo-pink text-black w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`}
             style={{ animationDelay: "0.3s" }}
-            href="#daftar"
+            href="#pendaftaran"
           >
             Daftar Sekarang
           </a>
           <a
             className={`bg-cream text-black w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`}
             style={{ animationDelay: "0.5s" }}
-            href="#acara"
+            href="#tentang"
           >
             Explore Event
           </a>
@@ -202,12 +211,12 @@ export default function Hero({ ready = true }) {
           style={{ animationDelay: "0.4s" }}
         >
           <div className="absolute -top-4 -left-4 bg-neo-pink px-4 py-1 neo-border font-black text-sm uppercase transform -rotate-6 animate-neo-swing">
-            Live Now
+            Countdown
           </div>
           <div className="flex items-center gap-3 justify-center mb-6">
             <span className="w-4 h-4 bg-red-500 neo-border animate-neo-jitter"></span>
             <span className="text-sm font-black tracking-[0.2em] text-black uppercase">
-              Registrasi Dibuka Dalam
+              Menuju Puncak Acara
             </span>
           </div>
           <CountdownTimer />
