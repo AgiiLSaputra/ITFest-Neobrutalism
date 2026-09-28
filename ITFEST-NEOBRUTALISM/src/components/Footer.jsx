@@ -47,10 +47,28 @@ export default function Footer() {
                 Milad IT Fest <span className="bg-neo-pink px-2">2026</span>
               </span>
             </Link>
-            <p className="font-bold text-lg max-w-sm mb-6 bg-cream p-4 neo-border neo-shadow transition-colors">
-              Merayakan perjalanan inovasi dan kolaborasi di Teknik Informatika
-              Universitas Islam Riau. Code the Stars, Beyond the Horizons.
-            </p>
+            <div className="max-w-sm mb-6 bg-cream p-4 neo-border neo-shadow relative transition-colors">
+              <span className="absolute -top-4 -left-3 bg-neo-pink px-3 py-1 neo-border font-black text-[11px] uppercase tracking-widest transform -rotate-3 animate-neo-swing">
+                Our Story
+              </span>
+              <p className="font-bold text-base leading-relaxed mb-3 pt-2">
+                Merayakan perjalanan{" "}
+                <span className="bg-neo-yellow px-1 border-2 border-black box-decoration-clone">
+                  inovasi
+                </span>{" "}
+                dan{" "}
+                <span className="bg-neo-pink px-1 border-2 border-black box-decoration-clone">
+                  kolaborasi
+                </span>{" "}
+                bersama Teknik Informatika Universitas Islam Riau.
+              </p>
+              <p className="font-black uppercase tracking-wide text-lg leading-snug border-t-4 border-black pt-3">
+                Code the Stars,{" "}
+                <span className="bg-black text-white px-2 inline-block -rotate-1">
+                  Beyond the Horizons
+                </span>
+              </p>
+            </div>
             <div className="flex gap-3">
               {socialLinks.map((s) => (
                 <a
