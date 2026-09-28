@@ -63,9 +63,12 @@ export default function Footer() {
                 bersama Teknik Informatika Universitas Islam Riau.
               </p>
               <p className="font-black uppercase tracking-wide text-lg leading-snug border-t-4 border-black pt-3">
-                Code the Stars,{" "}
+                Innovation,{" "}
                 <span className="bg-black text-white px-2 inline-block -rotate-1">
-                  Beyond the Horizons
+                  Competition
+                </span>{" "}
+                <span className="bg-neo-blue text-white px-2 border-2 border-black box-decoration-clone">
+                  Celebration
                 </span>
               </p>
             </div>
