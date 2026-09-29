@@ -151,10 +151,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t-4 border-black pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-bold">
-          <p className="text-sm bg-cream px-4 py-2 neo-border neo-shadow-sm transition-colors">
-            © 2026 Teknik Informatika UIR. Hak Cipta Dilindungi.
-          </p>
+        <div className="border-t-4 border-black pt-8 flex flex-col md:flex-row items-center justify-between md:justify-end gap-4 font-bold">
           <div className="flex items-center gap-2 text-sm">
             <span className="w-2 h-2 bg-neo-green neo-border animate-pulse-ring"></span>
             <span className="bg-cream px-3 py-1 neo-border neo-shadow-sm font-black text-xs uppercase tracking-widest transition-colors">
