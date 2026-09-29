@@ -99,6 +99,7 @@ function EventCard({ event, index }) {
         <p className="text-base sm:text-lg font-bold mb-8 leading-relaxed flex-grow">{event.description}</p>
         <div className="mt-auto space-y-3">
           <a className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none animate-neo-jitter`} href={event.daftarLink} target="_blank" rel="noopener noreferrer">
+            <span className="material-symbols-outlined text-lg">how_to_reg</span>
             DAFTAR SEKARANG
           </a>
           <Link to={`/event/${event.id}`} className="flex items-center justify-center gap-2 w-full py-4 bg-black text-white font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none">

@@ -119,7 +119,8 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active animate-neo-jitter" onClick={() => scrollTo('pendaftaran')}>
+          <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active animate-neo-jitter flex items-center gap-2" onClick={() => scrollTo('pendaftaran')}>
+            <span className="material-symbols-outlined text-[18px]">how_to_reg</span>
             DAFTAR SEKARANG
           </button>
         </div>
@@ -162,7 +163,10 @@ export default function Header() {
           </div>
 
           <button className="text-sm font-black hover:bg-black hover:text-white px-2 py-1 transition-colors border-2 border-transparent hover:border-black text-left" onClick={() => { scrollTo('sponsor'); setMenuOpen(false); }}>Sponsor</button>
-          <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border neo-shadow text-center" onClick={() => { scrollTo('pendaftaran'); setMenuOpen(false); }}>DAFTAR SEKARANG</button>
+          <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border neo-shadow text-center flex items-center justify-center gap-2" onClick={() => { scrollTo('pendaftaran'); setMenuOpen(false); }}>
+            <span className="material-symbols-outlined text-[18px]">how_to_reg</span>
+            DAFTAR SEKARANG
+          </button>
         </nav>
       </div>
     </header>

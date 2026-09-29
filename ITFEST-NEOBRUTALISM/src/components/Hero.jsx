@@ -190,10 +190,11 @@ export default function Hero({ ready = true }) {
         {/* CTA Buttons - slam in */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-16 w-full">
           <a
-            className={`bg-neo-pink text-black w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase ${intro}`}
+            className={`bg-neo-pink text-black w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase flex items-center justify-center gap-3 ${intro}`}
             style={{ animationDelay: "0.3s" }}
             href="#pendaftaran"
           >
+            <span className="material-symbols-outlined text-[26px]">how_to_reg</span>
             Daftar Sekarang
           </a>
           <a
