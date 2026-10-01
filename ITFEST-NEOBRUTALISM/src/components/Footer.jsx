@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const LOGO_URL = "/img/LogoITFESTUIR.png";
+const LOGO_URL = "/img/Logo-Milad-ItFest.png";
 
 const InstagramIcon = () => (
   <svg
@@ -49,7 +49,7 @@ export default function Footer() {
             >
               <img
                 alt="Milad IT Fest Logo"
-                className="h-10 w-auto object-contain bg-black px-2"
+                className="h-10 w-auto object-contain"
                 src={LOGO_URL}
               />
               <span className="font-black text-2xl tracking-tight uppercase">
