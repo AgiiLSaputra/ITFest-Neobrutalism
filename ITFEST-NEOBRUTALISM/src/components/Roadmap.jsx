@@ -100,11 +100,11 @@ export default function Roadmap() {
               return (
                 <div
                   key={index}
-                  className={`relative flex flex-col md:flex-row items-center justify-between w-full group ${expired ? "grayscale opacity-60" : ""}`}
+                  className={`relative flex flex-col md:flex-row items-center justify-between w-full group`}
                 >
                   {!isLast && (
                     <div
-                      className={`absolute left-4 md:left-1/2 w-0.5 h-full -translate-x-1/2 ${expired ? "z-10 bg-gray-400" : "z-0 bg-black"}`}
+                      className={`absolute left-4 md:left-1/2 w-0.5 h-full -translate-x-1/2 z-0 ${expired ? "bg-gray-400" : "bg-black"}`}
                     ></div>
                   )}
 
@@ -113,10 +113,10 @@ export default function Roadmap() {
                   ></div>
 
                   <div
-                    className={`absolute left-4 md:left-1/2 w-8 h-8 ${expired ? "bg-gray-400" : item.color} border-4 border-black transform -translate-x-1/2 flex items-center justify-center ${expired ? "" : "z-10"} neo-shadow-sm group-hover:animate-neo-swing transition-all`}
+                    className={`absolute left-4 md:left-1/2 w-8 h-8 ${expired ? "bg-neo-green" : item.color} border-4 border-black transform -translate-x-1/2 flex items-center justify-center z-20 neo-shadow-sm group-hover:animate-neo-swing transition-all`}
                   >
                     {expired ? (
-                      <span className="material-symbols-outlined text-white text-sm">
+                      <span className="material-symbols-outlined text-black text-sm">
                         check
                       </span>
                     ) : (
@@ -132,7 +132,7 @@ export default function Roadmap() {
                       delay={index * 0.1}
                     >
                       <div
-                        className={`relative p-6 neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt overflow-hidden ${expired ? "bg-gray-300" : item.highlight ? "bg-neo-yellow" : "bg-cream"}`}
+                        className={`relative p-6 neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt overflow-hidden ${expired ? "grayscale opacity-60 bg-gray-300" : item.highlight ? "bg-neo-yellow" : "bg-cream"}`}
                       >
                         {expired && (
                           <div className="absolute -bottom-2 -right-2 w-14 h-14 bg-neo-green border-4 border-black flex items-center justify-center rotate-12 z-10">
