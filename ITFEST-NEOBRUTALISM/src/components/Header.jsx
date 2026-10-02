@@ -91,7 +91,7 @@ export default function Header() {
         }`}
       >
         <Link to="/" className="flex items-center group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img alt="Milad IT Fest 2026 Logo" className="h-10 w-auto object-contain" src={LOGO_URL} />
+          <img alt="Milad IT Fest 2026 Logo" className="h-14 w-auto object-contain" src={LOGO_URL} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 font-bold">
