@@ -108,6 +108,7 @@ export default function ChatBot() {
   const [faqOpen, setFaqOpen] = useState(true);
   const [messages, setMessages] = useState(() => [createGreeting()]);
   const [typing, setTyping] = useState(false);
+  const [toggleImgError, setToggleImgError] = useState(false);
   const listRef = useRef(null);
   const timerRef = useRef(null);
 
@@ -158,7 +159,16 @@ export default function ChatBot() {
         aria-expanded={open}
         className="fixed bottom-6 left-4 sm:bottom-8 sm:left-8 z-[10004] w-14 h-14 bg-neo-yellow neo-border neo-shadow flex items-center justify-center transition-all hover:-translate-y-1 hover:shadow-none active:translate-y-1 active:shadow-[0px_0px_0px_0px_#000]"
       >
-        <span className="material-symbols-outlined text-3xl">{open ? 'close' : 'chat'}</span>
+        {open || toggleImgError ? (
+          <span className="material-symbols-outlined text-3xl">{open ? 'close' : 'chat'}</span>
+        ) : (
+          <img
+            src={MASCOT_URL}
+            alt="Foto profil MIFA"
+            onError={() => setToggleImgError(true)}
+            className="w-full h-full object-cover"
+          />
+        )}
         {!open && (
           <span className="absolute -top-3 -right-4 bg-neo-pink neo-border px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wider animate-neo-jitter-soft">
             Chat
