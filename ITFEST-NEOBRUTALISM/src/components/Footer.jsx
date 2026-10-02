@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const LOGO_URL = "/img/Logo-Milad-ItFest.png";
+const LOGO_URL = "/img/logo_milad.png";
 
 const InstagramIcon = () => (
   <svg

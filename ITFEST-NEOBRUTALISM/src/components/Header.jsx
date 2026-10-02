@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
-const LOGO_URL = "/img/Logo-Milad-ItFest.png";
+const LOGO_URL = "/img/logo_milad.png";
 
 const eventLinks = [
   { id: 'hackathon', label: 'Hackathon' },
