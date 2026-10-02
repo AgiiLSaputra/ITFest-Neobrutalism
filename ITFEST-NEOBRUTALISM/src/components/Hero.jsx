@@ -55,58 +55,6 @@ function TypewriterText() {
   );
 }
 
-const COUNTDOWN_TARGET = new Date("2026-12-02T00:00:00");
-
-function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 37,
-    hours: 2,
-    minutes: 48,
-    seconds: 56,
-  });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date();
-      const diff = COUNTDOWN_TARGET - now;
-      if (diff > 0) {
-        setTimeLeft({
-          days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((diff % (1000 * 60)) / 1000),
-        });
-      }
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const items = [
-    { value: timeLeft.days, label: "HARI", bg: "bg-neo-yellow" },
-    { value: timeLeft.hours, label: "JAM", bg: "bg-neo-blue" },
-    { value: timeLeft.minutes, label: "MENIT", bg: "bg-neo-pink" },
-    { value: timeLeft.seconds, label: "DETIK", bg: "bg-neo-green" },
-  ];
-
-  return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-      {items.map((item) => (
-        <div
-          key={item.label}
-          className={`${item.bg} p-3 sm:p-4 neo-border neo-shadow-sm flex flex-col items-center justify-center neo-tilt`}
-        >
-          <div className="text-3xl sm:text-4xl md:text-5xl font-black text-black tabular-nums leading-none">
-            {String(item.value).padStart(2, "0")}
-          </div>
-          <div className="text-[10px] sm:text-[12px] text-black mt-2 font-black tracking-widest border-t-2 border-black w-full text-center pt-1">
-            {item.label}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 export default function Hero({ ready = true }) {
   const intro = ready ? "hero-intro animate-pop-up" : "hero-intro opacity-0";
   return (
@@ -204,23 +152,6 @@ export default function Hero({ ready = true }) {
           >
             Explore Event
           </a>
-        </div>
-
-        {/* Countdown Timer - flip entrance */}
-        <div
-          className={`bg-cream p-5 sm:p-8 w-full max-w-xl neo-border neo-shadow relative transition-colors ${intro}`}
-          style={{ animationDelay: "0.4s" }}
-        >
-          <div className="absolute -top-4 -left-4 bg-neo-pink px-4 py-1 neo-border font-black text-sm uppercase transform -rotate-6 animate-neo-swing">
-            Countdown
-          </div>
-          <div className="flex items-center gap-3 justify-center mb-6">
-            <span className="w-4 h-4 bg-red-500 neo-border animate-neo-jitter"></span>
-            <span className="text-sm font-black tracking-[0.2em] text-black uppercase">
-              Menuju Puncak Acara
-            </span>
-          </div>
-          <CountdownTimer />
         </div>
       </div>
     </section>
