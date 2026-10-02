@@ -60,6 +60,7 @@ const eventsData = {
     title: "E-SPORT TOURNAMENT",
     subtitle: "UMUM",
     heroImg: "/img/ESport.webp",
+    mascotImg: "/img/MaskotML.png",
     description:
       "Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik di Milad IT Fest 2026.",
     daftarLink: "#",
@@ -288,7 +289,17 @@ export default function EventDetail() {
   }
 
   return (
-    <section className="pt-32 pb-24 px-4 md:px-6 max-w-6xl mx-auto w-full relative">
+    <>
+      {/* Maskot di posisi awal halaman (tidak fixed, ikut halaman saat scroll) */}
+      {event.mascotImg && (
+        <img
+          src={event.mascotImg}
+          alt=""
+          aria-hidden="true"
+          className="hidden md:block absolute right-0 top-[30vh] lg:top-[25vh] h-[70vh] lg:h-[75vh] w-auto max-w-none -z-10 pointer-events-none select-none"
+        />
+      )}
+      <section className="pt-32 pb-24 px-4 md:px-6 max-w-6xl mx-auto w-full relative">
       {/* Floating Decorations */}
       <div className="absolute top-24 right-8 w-16 h-16 bg-neo-yellow neo-border neo-shadow rotate-12 animate-bounce-slow animate-neo-drift hidden lg:block"></div>
       <div className="absolute top-48 left-4 w-10 h-10 bg-neo-pink rounded-full neo-border neo-shadow-sm -rotate-12 animate-neo-swing hidden lg:block"></div>
@@ -530,6 +541,7 @@ export default function EventDetail() {
         <div className="w-8 h-8 bg-neo-orange rounded-full neo-border animate-wiggle"></div>
         <div className="w-8 h-8 bg-black neo-border rotate-[30deg] animate-neo-swing"></div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
