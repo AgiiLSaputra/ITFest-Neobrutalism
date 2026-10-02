@@ -130,11 +130,11 @@ export default function Hero({ ready = true }) {
           className={`space-y-4 mb-8 bg-cream p-4 sm:p-6 neo-border neo-shadow inline-block max-w-full transition-colors ${intro}`}
         >
           <h1
-            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none text-black uppercase animate-neo-jitter-soft"
+            className="font-pixel text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-none text-black uppercase animate-neo-jitter-soft"
             id="main-heading"
           >
             MILAD IT FEST <br />
-            <span className="bg-black text-white px-4 inline-block mt-2 animate-neo-squish">
+            <span className="inline-block mt-2 animate-neo-squish">
               2026
             </span>
           </h1>

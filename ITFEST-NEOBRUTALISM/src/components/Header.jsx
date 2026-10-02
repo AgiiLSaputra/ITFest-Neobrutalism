@@ -82,12 +82,12 @@ export default function Header() {
     >
       {/* Awal: hanya garis horizontal (border-bawah) full-width. Saat di-scroll,
           garis menyusut bersama lebar navbar dan membentuk pembungkus neo
-          (border 4 sisi + bg + hard shadow). Padding/ukuran dijaga sama. */}
+          (border 4 sisi + bg, tanpa hard shadow). Padding/ukuran dijaga sama. */}
       <div
         className={`w-full px-8 h-16 flex items-center justify-between transition-all duration-300 ease-in-out ${
           scrolled
-            ? 'bg-cream border-4 border-black shadow-[4px_4px_0px_0px_#000000]'
-            : 'bg-transparent border-b-4 border-black shadow-[0px_0px_0px_0px_#000000]'
+            ? 'bg-cream border-4 border-black'
+            : 'bg-transparent border-b-4 border-black'
         }`}
       >
         <Link to="/" className="flex items-center group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -104,7 +104,7 @@ export default function Header() {
               <span className={`material-symbols-outlined text-[16px] transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}>expand_more</span>
             </button>
             {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-1 bg-cream neo-border neo-shadow-sm py-2 min-w-[220px] animate-dropdown-pop">
+              <div className="absolute top-full left-0 mt-1 bg-cream neo-border py-2 min-w-[220px] animate-dropdown-pop">
                 {eventLinks.map((ev) => (
                   <button key={ev.id} className="w-full text-left px-4 py-2 text-sm font-black hover:bg-black hover:text-white transition-colors flex items-center gap-2" onClick={() => goToEvent(ev.id)}>
                     <span className="w-2 h-2 bg-neo-pink neo-border flex-shrink-0"></span>
@@ -119,7 +119,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active animate-neo-jitter flex items-center gap-2" onClick={() => scrollTo('pendaftaran')}>
+          <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border transition-all hover:translate-x-1 hover:translate-y-1 active:translate-x-2 active:translate-y-2 flex items-center gap-2" onClick={() => scrollTo('pendaftaran')}>
             <span className="material-symbols-outlined text-[18px]">how_to_reg</span>
             DAFTAR SEKARANG
           </button>
@@ -140,7 +140,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className={`md:hidden bg-cream neo-border neo-shadow-sm mt-2 transition-all duration-300 ${menuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'}`}>
+      <div className={`md:hidden bg-cream neo-border mt-2 transition-all duration-300 ${menuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'}`}>
         <nav className="flex flex-col gap-4 font-bold">
           <button className="text-sm font-black hover:bg-black hover:text-white px-2 py-1 transition-colors border-2 border-transparent hover:border-black text-left" onClick={() => { scrollTo('beranda'); setMenuOpen(false); }}>Home</button>
           <button className="text-sm font-black hover:bg-black hover:text-white px-2 py-1 transition-colors border-2 border-transparent hover:border-black text-left" onClick={() => { navigate('/about'); setMenuOpen(false); }}>About Us</button>
@@ -163,7 +163,7 @@ export default function Header() {
           </div>
 
           <button className="text-sm font-black hover:bg-black hover:text-white px-2 py-1 transition-colors border-2 border-transparent hover:border-black text-left" onClick={() => { scrollTo('sponsor'); setMenuOpen(false); }}>Sponsor</button>
-          <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border neo-shadow text-center flex items-center justify-center gap-2" onClick={() => { scrollTo('pendaftaran'); setMenuOpen(false); }}>
+          <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border text-center flex items-center justify-center gap-2" onClick={() => { scrollTo('pendaftaran'); setMenuOpen(false); }}>
             <span className="material-symbols-outlined text-[18px]">how_to_reg</span>
             DAFTAR SEKARANG
           </button>

@@ -36,6 +36,12 @@
 .neo-scrollbar::-webkit-scrollbar-thumb:active { background: #0055a6; box-shadow: none; }
 .neo-scrollbar::-webkit-scrollbar-corner { background: #fdf5e6; border-left: 3px solid #000000; }
 
+/* Font pixel — judul utama "MILAD IT FEST" (Google Fonts: Press Start 2P) */
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: 0;
+}
+
 .bg-cream { background-color: #fdf5e6; }
 .bg-gray-main { background-color: #e5e7eb; }
 .bg-neo-yellow { background-color: #ddf4a2; }
