@@ -296,7 +296,7 @@ export default function EventDetail() {
           src={event.mascotImg}
           alt=""
           aria-hidden="true"
-          className="hidden md:block absolute right-0 top-[30vh] lg:top-[25vh] h-[70vh] lg:h-[75vh] w-auto max-w-none -z-10 pointer-events-none select-none"
+          className="hidden md:block absolute right-[12vw] top-[25vh] h-[45vh] lg:h-[50vh] w-auto max-w-none -z-10 pointer-events-none select-none"
         />
       )}
       <section className="pt-32 pb-24 px-4 md:px-6 max-w-6xl mx-auto w-full relative">
