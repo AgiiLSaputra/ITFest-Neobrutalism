@@ -101,42 +101,8 @@ export default function Hero({ ready = true }) {
           </p>
         </div>
 
-        {/* Subheadline - intro singkat acara */}
-        <p
-          className={`max-w-2xl mx-auto mb-8 text-base sm:text-lg md:text-xl font-bold text-black leading-relaxed ${intro}`}
-          style={{ animationDelay: "0.2s" }}
-        >
-          Perayaan ke-19 Teknik Informatika UIR × Technofest UIR Vol. 2 — 6
-          cabang lomba, satu panggung buat buktikan karyamu.
-        </p>
-
-        {/* Info Badges - pop in staggered */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
-          <div
-            className={`flex items-center justify-center gap-2 bg-neo-pink px-4 sm:px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider text-sm sm:text-base ${intro}`}
-            style={{ animationDelay: "0.6s" }}
-          >
-            <span className="material-symbols-outlined text-xl animate-neo-swing">
-              calendar_today
-            </span>
-            1 – 2 Desember 2026
-          </div>
-          <div
-            className={`flex items-center justify-center gap-2 bg-neo-green px-4 sm:px-6 py-3 neo-border neo-shadow-sm font-bold text-black uppercase tracking-wider text-sm sm:text-base ${intro}`}
-            style={{ animationDelay: "0.8s" }}
-          >
-            <span
-              className="material-symbols-outlined text-xl animate-neo-swing"
-              style={{ animationDelay: "0.3s" }}
-            >
-              location_on
-            </span>
-            GOR Volley UIR, Indoor
-          </div>
-        </div>
-
         {/* CTA Buttons - slam in */}
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-16 w-full">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-6 sm:mt-10 mb-16 w-full">
           <a
             className={`bg-neo-pink text-black w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-black text-lg sm:text-xl neo-border neo-shadow transition-all neo-shadow-hover neo-shadow-active uppercase flex items-center justify-center gap-3 ${intro}`}
             style={{ animationDelay: "0.3s" }}
