@@ -59,7 +59,7 @@ export default function Hero({ ready = true }) {
   const intro = ready ? "hero-intro animate-pop-up" : "hero-intro opacity-0";
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-start px-6 text-center overflow-hidden bg-neo-yellow border-b-8 border-black animate-neo-strips transition-colors"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden bg-neo-yellow border-b-8 border-black animate-neo-strips transition-colors"
       id="beranda"
     >
       <FloatingShapes />
@@ -72,7 +72,7 @@ export default function Hero({ ready = true }) {
       <div className="absolute top-40 right-32 w-12 h-12 bg-neo-green neo-border -rotate-6 hidden lg:block animate-bounce-slow"></div>
       <div className="absolute bottom-40 left-32 w-8 h-8 bg-black neo-border rotate-45 hidden lg:block animate-spin-slow"></div>
 
-      <div className="container mx-auto relative z-10 flex flex-col items-center pt-24">
+      <div className="container mx-auto relative z-10 flex flex-col items-center justify-center py-28">
         {/* Headline - SLAM entrance */}
         <div
           className={`space-y-4 mb-8 bg-cream p-4 sm:p-6 neo-border neo-shadow inline-block max-w-full transition-colors ${intro}`}
