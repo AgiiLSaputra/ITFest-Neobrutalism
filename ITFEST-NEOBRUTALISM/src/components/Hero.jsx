@@ -75,7 +75,7 @@ export default function Hero({ ready = true }) {
       <div className="container mx-auto relative z-10 flex flex-col items-center justify-center py-28">
         {/* Headline - SLAM entrance */}
         <div
-          className={`space-y-4 mb-8 bg-cream pt-7 sm:pt-10 lg:pt-14 px-7 sm:px-10 lg:px-14 pb-8 sm:pb-12 lg:pb-16 neo-border neo-shadow inline-block max-w-full transition-colors ${intro}`}
+          className={`space-y-4 mb-8 bg-cream pt-7 sm:pt-10 lg:pt-14 px-7 sm:px-10 lg:px-14 pb-6 sm:pb-9 lg:pb-12 neo-border neo-shadow inline-block max-w-full transition-colors ${intro}`}
         >
           <h1
             className="font-pixel text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-none text-black uppercase animate-neo-jitter-soft"
