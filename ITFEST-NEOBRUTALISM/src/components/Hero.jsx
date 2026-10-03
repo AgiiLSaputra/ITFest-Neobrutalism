@@ -59,7 +59,7 @@ export default function Hero({ ready = true }) {
   const intro = ready ? "hero-intro animate-pop-up" : "hero-intro opacity-0";
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden bg-neo-yellow border-b-8 border-black animate-neo-strips transition-colors"
+      className="relative min-h-screen flex flex-col items-center justify-start px-6 text-center overflow-hidden bg-neo-yellow border-b-8 border-black animate-neo-strips transition-colors"
       id="beranda"
     >
       <FloatingShapes />
