@@ -44,12 +44,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <Link
-              className="flex items-center gap-4 mb-6 bg-cream p-4 neo-border neo-shadow inline-flex transition-colors"
+              className="flex items-center gap-4 mb-6 bg-cream p-4 neo-border neo-shadow w-full max-w-sm transition-colors"
               to="/"
             >
               <img
                 alt="Milad IT Fest Logo"
-                className="h-8 w-auto object-contain"
+                className="h-5 w-auto object-contain shrink-0"
                 src={LOGO_URL}
               />
               <span className="font-black text-2xl tracking-tight uppercase">
