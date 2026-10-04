@@ -51,7 +51,7 @@ export default function SponsorPage() {
 
       <ScrollReveal animation="animate-pop-up">
         <div className="inline-block px-4 py-2 bg-neo-blue text-white neo-border font-black uppercase tracking-wider transform -rotate-2 mb-6">
-          Partnership Page
+          Partnership
         </div>
       </ScrollReveal>
 
