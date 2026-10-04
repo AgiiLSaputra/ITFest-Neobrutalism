@@ -10,6 +10,7 @@ import Sponsor from './components/Sponsor';
 import Footer from './components/Footer';
 import EventDetail from './components/EventDetail';
 import AboutPage from './components/AboutPage';
+import SponsorPage from './components/SponsorPage';
 import CustomCursor from './components/CustomCursor';
 import MarqueeBanner from './components/MarqueeBanner';
 import ScrollToTop from './components/ScrollToTop';
@@ -70,6 +71,7 @@ export default function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<MemoizedLandingPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/sponsor" element={<SponsorPage />} />
             <Route path="/event/:eventId" element={<EventDetail />} />
           </Routes>
         </main>

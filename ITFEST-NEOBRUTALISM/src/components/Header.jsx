@@ -115,7 +115,7 @@ export default function Header() {
             )}
           </div>
 
-          <button className={`${navBtn}`} onClick={() => scrollTo('sponsor')}>Sponsor</button>
+          <button className={`${navBtn}`} onClick={() => { navigate('/sponsor'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Sponsor</button>
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
@@ -162,7 +162,7 @@ export default function Header() {
             )}
           </div>
 
-          <button className="text-sm font-black hover:bg-black hover:text-white px-2 py-1 transition-colors border-2 border-transparent hover:border-black text-left" onClick={() => { scrollTo('sponsor'); setMenuOpen(false); }}>Sponsor</button>
+          <button className="text-sm font-black hover:bg-black hover:text-white px-2 py-1 transition-colors border-2 border-transparent hover:border-black text-left" onClick={() => { navigate('/sponsor'); setMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Sponsor</button>
           <button className="bg-neo-yellow text-black px-6 py-2 font-black text-sm neo-border text-center flex items-center justify-center gap-2" onClick={() => { scrollTo('pendaftaran'); setMenuOpen(false); }}>
             <span className="material-symbols-outlined text-[18px]">how_to_reg</span>
             DAFTAR SEKARANG
