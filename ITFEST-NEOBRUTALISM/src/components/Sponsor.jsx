@@ -19,10 +19,16 @@ function SponsorCard({ item, isHovered, onEnter, onLeave }) {
     >
       <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center mb-2 transition-all duration-300">
         <div className={
-          'w-14 h-14 sm:w-16 sm:h-16 neo-border flex items-center justify-center transition-all duration-300 '
-          + (isHovered ? item.color : 'bg-gray-300')
+          'neo-border flex items-center justify-center transition-all duration-300 p-2 '
+          + (item.img
+            ? 'bg-black w-16 h-16 sm:w-20 sm:h-20'
+            : (isHovered ? item.color : 'bg-gray-300') + ' w-14 h-14 sm:w-16 sm:h-16')
         }>
-          <span className="font-black text-lg sm:text-xl text-black">{item.name.split(' ')[1]}</span>
+          {item.img ? (
+            <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-contain" />
+          ) : (
+            <span className="font-black text-lg sm:text-xl text-black">{item.name.split(' ')[1]}</span>
+          )}
         </div>
       </div>
       <h4 className={

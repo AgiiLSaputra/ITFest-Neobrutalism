@@ -6,8 +6,12 @@ import { sponsors, mediaPartners } from '../data/sponsors';
 function SponsorGridCard({ item }) {
   return (
     <div className="group bg-cream p-4 neo-border neo-shadow-sm flex flex-col items-center text-center gap-3 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt">
-      <div className={`w-20 h-20 sm:w-24 sm:h-24 ${item.color} neo-border flex items-center justify-center transition-transform duration-200 group-hover:rotate-6`}>
-        <span className="font-black text-2xl sm:text-3xl text-black">{item.name.split(' ')[1]}</span>
+      <div className={`w-20 h-20 sm:w-24 sm:h-24 ${item.img ? 'bg-black' : item.color} neo-border flex items-center justify-center transition-transform duration-200 group-hover:rotate-6 p-3`}>
+        {item.img ? (
+          <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-contain" />
+        ) : (
+          <span className="font-black text-2xl sm:text-3xl text-black">{item.name.split(' ')[1]}</span>
+        )}
       </div>
       <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
     </div>

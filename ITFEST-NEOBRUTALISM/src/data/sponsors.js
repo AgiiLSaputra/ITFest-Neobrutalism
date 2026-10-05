@@ -10,4 +10,5 @@ export const mediaPartners = [
   { id: 1, name: 'Media 1', color: 'bg-cream' },
   { id: 2, name: 'Media 2', color: 'bg-cream' },
   { id: 3, name: 'Media 3', color: 'bg-cream' },
+  { id: 4, name: 'BroSisPKU', color: 'bg-cream', img: '/SponsorDanMediaPartner/BroSisPKU-Transparent-White.png' },
 ];
