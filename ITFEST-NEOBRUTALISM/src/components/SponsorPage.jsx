@@ -49,23 +49,25 @@ export default function SponsorPage() {
         BACK TO LANDING PAGE
       </Link>
 
-      <ScrollReveal animation="animate-pop-up">
-        <div className="inline-block px-4 py-2 bg-neo-blue text-white neo-border font-black uppercase tracking-wider transform -rotate-2 mb-6">
-          Partnership
-        </div>
-      </ScrollReveal>
+      <div className="text-center flex flex-col items-center">
+        <ScrollReveal animation="animate-pop-up">
+          <div className="inline-block px-4 py-2 bg-neo-blue text-white neo-border font-black uppercase tracking-wider transform -rotate-2 mb-6">
+            Partnership
+          </div>
+        </ScrollReveal>
 
-      <ScrollReveal animation="animate-pop-up" delay={0.1}>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none text-black uppercase mb-4">
-          Sponsor &<br />Media Partner
-        </h1>
-      </ScrollReveal>
+        <ScrollReveal animation="animate-pop-up" delay={0.1}>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none text-black uppercase mb-4">
+            Sponsor &<br />Media Partner
+          </h1>
+        </ScrollReveal>
 
-      <ScrollReveal animation="animate-pop-up" delay={0.15}>
-        <p className="text-sm font-bold text-neo-blue mb-12">
-          Didukung oleh mitra yang percaya pada inovasi teknologi generasi muda
-        </p>
-      </ScrollReveal>
+        <ScrollReveal animation="animate-pop-up" delay={0.15}>
+          <p className="text-sm font-bold text-neo-blue mb-12 max-w-2xl">
+            Didukung oleh mitra yang percaya pada inovasi teknologi generasi muda
+          </p>
+        </ScrollReveal>
+      </div>
 
       <TierSection
         label="Sponsor Resmi"
