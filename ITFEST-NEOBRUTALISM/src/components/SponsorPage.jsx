@@ -4,9 +4,25 @@ import ScrollReveal from './ScrollReveal';
 import { sponsors, mediaPartners } from '../data/sponsors';
 
 function SponsorGridCard({ item }) {
+  if (item.img && item.frameless) {
+    return (
+      <div className="group bg-cream p-4 neo-border neo-shadow-sm flex flex-col items-center text-center gap-3 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt">
+        <div className="w-full h-20 sm:h-24 p-3 flex items-center justify-center">
+          <img
+            src={item.img}
+            alt={item.name}
+            loading="lazy"
+            className="h-full w-auto max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
+          />
+        </div>
+        <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
+      </div>
+    );
+  }
+
   return (
     <div className="group bg-cream p-4 neo-border neo-shadow-sm flex flex-col items-center text-center gap-3 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt">
-      <div className={`w-20 h-20 sm:w-24 sm:h-24 ${item.img ? 'bg-black' : item.color} neo-border flex items-center justify-center transition-transform duration-200 group-hover:rotate-6 p-3`}>
+      <div className={`w-20 h-20 sm:w-24 sm:h-24 ${item.img ? item.imgBg || 'bg-black' : item.color} neo-border flex items-center justify-center transition-transform duration-200 group-hover:rotate-6 p-3`}>
         {item.img ? (
           <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-contain" />
         ) : (
