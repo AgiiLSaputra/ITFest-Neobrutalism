@@ -98,7 +98,7 @@ export default function SponsorPage() {
             href="https://wa.link/mea7wh"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-neo-green text-black font-black uppercase tracking-wider px-8 py-4 neo-border neo-shadow-sm text-sm sm:text-base transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none"
+            className="inline-flex items-center gap-2 bg-neo-pink text-black font-black uppercase tracking-wider px-8 py-4 neo-border neo-shadow-sm text-sm sm:text-base transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none"
           >
             Kunjungi Portal
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 sm:w-6 sm:h-6">
