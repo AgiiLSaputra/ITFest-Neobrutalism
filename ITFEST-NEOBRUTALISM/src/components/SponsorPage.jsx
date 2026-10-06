@@ -6,29 +6,32 @@ import { sponsors, mediaPartners } from '../data/sponsors';
 function SponsorGridCard({ item }) {
   if (item.img && item.frameless) {
     return (
-      <div className="group bg-cream p-4 neo-border neo-shadow-sm flex flex-col items-center text-center gap-3 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt">
-        <div className="w-full h-20 sm:h-24 p-3 flex items-center justify-center">
-          <img
-            src={item.img}
-            alt={item.name}
-            loading="lazy"
-            className="h-full w-auto max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
-          />
-        </div>
+      <div className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt w-[calc(200%+1rem)] sm:w-[calc(200%+1.5rem)] lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]">
+        <img
+          src={item.img}
+          alt={item.name}
+          loading="lazy"
+          className="w-[calc(100%+2rem)] -mx-4 h-[96px] sm:h-[112px] object-contain object-top"
+        />
         <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
       </div>
     );
   }
 
   return (
-    <div className="group bg-cream p-4 neo-border neo-shadow-sm flex flex-col items-center text-center gap-3 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt">
-      <div className={`w-20 h-20 sm:w-24 sm:h-24 ${item.img ? item.imgBg || 'bg-black' : item.color} neo-border flex items-center justify-center transition-transform duration-200 group-hover:rotate-6 p-3`}>
-        {item.img ? (
-          <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-contain" />
-        ) : (
-          <span className="font-black text-2xl sm:text-3xl text-black">{item.name.split(' ')[1]}</span>
-        )}
-      </div>
+    <div className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-6 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt">
+      {item.img ? (
+        <img
+          src={item.img}
+          alt={item.name}
+          loading="lazy"
+          className={`w-20 h-20 sm:w-24 sm:h-24 ${item.imgBg || 'bg-black'} neo-border p-3 object-contain transition-transform duration-200 group-hover:rotate-6`}
+        />
+      ) : (
+        <span className={`w-20 h-20 sm:w-24 sm:h-24 ${item.color} neo-border p-3 flex items-center justify-center font-black text-2xl sm:text-3xl text-black transition-transform duration-200 group-hover:rotate-6`}>
+          {item.name.split(' ')[1]}
+        </span>
+      )}
       <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
     </div>
   );

@@ -11,31 +11,33 @@ function SponsorCard({ item, isHovered, onEnter, onLeave }) {
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       className={
-        'cursor-pointer flex flex-col items-center justify-center text-center p-3 neo-border transition-all duration-300 shrink-0 '
+        'cursor-pointer flex flex-col items-center justify-center text-center px-3 pt-3 pb-1 neo-border transition-all duration-300 shrink-0 '
         + (isHovered
           ? item.color + ' opacity-100 scale-110 z-20 neo-shadow rotate-2'
           : 'bg-cream opacity-60 hover:opacity-100 hover:scale-110 hover:neo-shadow-sm')
       }
     >
       {item.img && item.frameless ? (
-        <div className="w-36 sm:w-44 h-20 sm:h-24 mb-2 flex items-center justify-center transition-all duration-300">
-          <img src={item.img} alt={item.name} loading="lazy" className="h-full w-auto max-w-full object-contain" />
-        </div>
+        <img
+          src={item.img}
+          alt={item.name}
+          loading="lazy"
+          className="w-[258px] sm:w-[304px] h-[92px] sm:h-[108px] mb-1 object-contain object-top transition-all duration-300"
+        />
+      ) : item.img ? (
+        <img
+          src={item.img}
+          alt={item.name}
+          loading="lazy"
+          className={(item.imgBg || 'bg-black') + ' w-20 h-20 sm:w-24 sm:h-24 neo-border p-2 mb-4 object-contain transition-all duration-300'}
+        />
       ) : (
-        <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center mb-2 transition-all duration-300">
-          <div className={
-            'neo-border flex items-center justify-center transition-all duration-300 p-2 '
-            + (item.img
-              ? (item.imgBg || 'bg-black') + ' w-16 h-16 sm:w-20 sm:h-20'
-              : (isHovered ? item.color : 'bg-gray-300') + ' w-14 h-14 sm:w-16 sm:h-16')
-          }>
-            {item.img ? (
-              <img src={item.img} alt={item.name} loading="lazy" className="w-full h-full object-contain" />
-            ) : (
-              <span className="font-black text-lg sm:text-xl text-black">{item.name.split(' ')[1]}</span>
-            )}
-          </div>
-        </div>
+        <span className={
+          'w-20 h-20 sm:w-24 sm:h-24 neo-border p-2 mb-4 flex items-center justify-center font-black text-lg sm:text-xl text-black transition-all duration-300 '
+          + (isHovered ? item.color : 'bg-gray-300')
+        }>
+          {item.name.split(' ')[1]}
+        </span>
       )}
       <h4 className={
         'font-extrabold text-xs sm:text-sm tracking-tight mb-1 whitespace-nowrap transition-colors '
