@@ -4,9 +4,17 @@ import ScrollReveal from './ScrollReveal';
 import { sponsors, mediaPartners } from '../data/sponsors';
 
 function SponsorGridCard({ item }) {
+  const Tag = item.link ? 'a' : 'div';
+  const linkProps = item.link
+    ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' }
+    : {};
+
   if (item.img && item.frameless) {
     return (
-      <div className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt w-[calc(200%+1rem)] sm:w-[calc(200%+1.5rem)] lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]">
+      <Tag
+        {...linkProps}
+        className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt w-[calc(200%+1rem)] sm:w-[calc(200%+1.5rem)] lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]"
+      >
         <img
           src={item.img}
           alt={item.name}
@@ -16,14 +24,9 @@ function SponsorGridCard({ item }) {
           className="w-[calc(100%+2rem)] -mx-4 h-[96px] sm:h-[112px] object-contain object-top"
         />
         <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
-      </div>
+      </Tag>
     );
   }
-
-  const Tag = item.link ? 'a' : 'div';
-  const linkProps = item.link
-    ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' }
-    : {};
 
   return (
     <Tag
