@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import ScrollReveal from "./ScrollReveal";
+import EventFaq from "./EventFaq";
+import { buildEventFaq } from "../data/eventFaqs";
 
 // Helper: cek apakah tanggal timeline sudah lewat (sama seperti lib/date.ts di Milad_IT_Fest)
 const isPastDate = (iso) => {
@@ -541,6 +543,11 @@ export default function EventDetail() {
         <div className="w-8 h-8 bg-neo-orange rounded-full neo-border animate-wiggle"></div>
         <div className="w-8 h-8 bg-black neo-border rotate-[30deg] animate-neo-swing"></div>
       </div>
+
+      {/* FAQ detail kegiatan - paling bawah, di atas footer */}
+      <ScrollReveal animation="animate-pop-up" delay={0.3}>
+        <EventFaq key={eventId} event={event} items={buildEventFaq(event)} />
+      </ScrollReveal>
       </section>
     </>
   );
