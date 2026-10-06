@@ -13,7 +13,7 @@ function SponsorGridCard({ item }) {
     return (
       <Tag
         {...linkProps}
-        className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt w-[calc(200%+1rem)] sm:w-[calc(200%+1.5rem)] lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]"
+        className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt col-span-2 lg:col-span-1 lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]"
       >
         <img
           src={item.img}
