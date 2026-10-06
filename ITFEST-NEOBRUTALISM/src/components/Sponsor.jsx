@@ -137,12 +137,13 @@ export default function Sponsor() {
 
       <ScrollReveal animation="animate-pop-up" delay={0.5}>
         <div className="flex flex-col items-center mt-12 px-4 text-center">
-          <h3 className="text-2xl sm:text-4xl font-black uppercase tracking-widest text-black mb-3">
-            Open Sponsorship
+          <h3 className="text-2xl sm:text-4xl font-black tracking-tight text-black mb-3">
+            Tertarik Menjadi Sponsor / Media Partner Kami?
           </h3>
 
           <p className="text-sm sm:text-base font-medium leading-relaxed text-black/80 max-w-xl mx-auto mb-6">
-            Dukung Inovasi Teknologi Generasi Muda — Bergabung Sebagai Sponsor IT Fest 2026 Sekarang.
+            Jangkau ribuan mahasiswa, pelajar, dan komunitas IT se-Riau dan Indonesia melalui paket
+            sponsorship eksklusif Milad IT Fest 2026.
           </p>
 
           <a
