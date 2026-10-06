@@ -429,10 +429,32 @@
 }
 .animate-ticker { animation: ticker 20s linear infinite; }
 
-/* Hide default cursor on desktop when custom cursor is active */
+/* Custom cursor pixel art 1-bit ala Windows 95/98 — aset di /public/cursors/
+   Grid 16x16 dirender 2x jadi 32x32 (shape-rendering="crispEdges"). */
 @media (pointer: fine) {
-  body { cursor: none; }
-  a, button, [role="button"] { cursor: none; }
+  body {
+    cursor: url('/cursors/cursor-arrow.svg') 2 2, auto;
+  }
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  label[for],
+  select,
+  summary,
+  .cursor-pointer {
+    cursor: url('/cursors/cursor-hand.svg') 10 0, pointer;
+  }
+  .cursor-default {
+    cursor: url('/cursors/cursor-arrow.svg') 2 2, auto;
+  }
+  button:disabled,
+  input:disabled,
+  select:disabled,
+  textarea:disabled,
+  [aria-disabled="true"] {
+    cursor: url('/cursors/cursor-arrow.svg') 2 2, not-allowed;
+  }
 }
 
 /* GPU warm-up for the initial section's entrance nodes */

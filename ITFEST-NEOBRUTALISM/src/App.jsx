@@ -11,7 +11,6 @@ import Footer from './components/Footer';
 import EventDetail from './components/EventDetail';
 import AboutPage from './components/AboutPage';
 import SponsorPage from './components/SponsorPage';
-import CustomCursor from './components/CustomCursor';
 import MarqueeBanner from './components/MarqueeBanner';
 import ScrollToTop from './components/ScrollToTop';
 import NoiseOverlay from './components/NoiseOverlay';
@@ -20,7 +19,6 @@ import ChatBot from './components/ChatBot';
 
 const MemoizedHeader = memo(Header);
 const MemoizedHero = memo(Hero);
-const MemoizedCustomCursor = memo(CustomCursor);
 const MemoizedNoiseOverlay = memo(NoiseOverlay);
 const MemoizedFooter = memo(Footer);
 const MemoizedScrollToTop = memo(ScrollToTop);
@@ -61,7 +59,6 @@ export default function App() {
 
   return (
     <div className="antialiased selection:bg-black selection:text-white flex flex-col min-h-screen bg-gray-main text-black transition-colors duration-300">
-      <MemoizedCustomCursor />
       <div className="navbar-drop relative z-[10002]">
         <MemoizedHeader />
       </div>
