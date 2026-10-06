@@ -73,14 +73,14 @@ const events = [
     accent: "bg-neo-blue",
   },
   {
-    id: "typing",
+    id: "uiux",
     category: "SKILL CHALLENGE",
     categoryBg: "bg-neo-pink",
-    icon: "keyboard",
+    icon: "design_services",
     tags: ["MAHASISWA"],
-    title: "Typing Test",
+    title: "UI/UX Design",
     description:
-      "Seberapa cepat jarimu menari di atas keyboard? Buktikan kecepatan dan akurasimu di sini.",
+      "Rancang antarmuka yang intuitive dan bikin pengguna betah — buktikan insting desainmu di sini.",
     daftarLink: "#",
     daftarBg: "bg-neo-green",
     cardBg: "bg-cream",

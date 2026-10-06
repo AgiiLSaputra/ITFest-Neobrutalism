@@ -1,6 +1,6 @@
 const items = [
   'HACKATHON', '★', 'E-SPORT', '★', 'BADMINTON', '★',
-  'IT EXPO', '★', 'SEMINAR NASIONAL', '★', 'TYPING TEST', '★',
+  'IT EXPO', '★', 'SEMINAR NASIONAL', '★', 'UI/UX DESIGN', '★',
 ];
 
 function MarqueeRow({ direction, bg, textBg, speed = 35 }) {

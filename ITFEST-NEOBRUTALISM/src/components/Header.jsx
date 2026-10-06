@@ -10,7 +10,7 @@ const eventLinks = [
   { id: 'badminton', label: 'Badminton' },
   { id: 'expo', label: 'Expo' },
   { id: 'seminar', label: 'Seminar Nasional' },
-  { id: 'typing', label: 'Typing Test' },
+  { id: 'uiux', label: 'UI/UX Design' },
 ];
 
 export default function Header() {

@@ -216,32 +216,32 @@ const eventsData = {
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-green",
   },
-  typing: {
+  uiux: {
     category: "SKILL CHALLENGE",
     categoryBg: "bg-neo-pink",
-    icon: "keyboard",
-    title: "TYPING TEST",
+    icon: "design_services",
+    title: "UI/UX DESIGN",
     subtitle: "MAHASISWA",
-    heroImg: "/img/TypingTest.webp",
+    heroImg: "/img/UIUX.svg",
     description:
-      "Seberapa cepat jarimu menari di atas keyboard? Buktikan kecepatan dan akurasimu di Milad IT Fest 2026.",
-    daftarLink: "#", // TODO: ganti dengan link form pendaftaran Typing Test
+      "Rancang pengalaman pengguna yang intuitive dan estetis. Buktikan insting desain dan pemecahan masalahmu di Milad IT Fest 2026.",
+    daftarLink: "#", // TODO: ganti dengan link form pendaftaran UI/UX Design
     about: [
-      "Kompetisi ketikan (typing) dengan metrik WPM (Words Per Minute).",
-      "Akurasi minimal 95% untuk lolos kualifikasi.",
+      "Kompetisi desain antarmuka berbasis studi kasus nyata: dari riset, wireframe, sampai high-fidelity prototype.",
+      "Penilaian menekankan usability, estetika visual, dan kesesuaian solusi dengan kebutuhan pengguna.",
       "Terbuka untuk mahasiswa aktif UIR.",
     ],
     rules: [
-      { icon: "speed", text: "WPM (Words Per Minute) adalah metrik utama." },
       {
-        icon: "check_circle",
-        text: "Akurasi minimal 95% untuk lolos babak kualifikasi.",
+        icon: "design_services",
+        text: "Karya berupa wireframe + high-fidelity mockup (Figma, Sketch, atau Adobe XD).",
       },
-      { icon: "timer", text: "Durasi: 5 menit per sesi ketikan." },
+      { icon: "groups", text: "Dikerjakan secara individu atau tim maksimal 3 orang." },
       {
-        icon: "devices",
-        text: "Keyboard disediakan panitia (mechanical keyboard).",
+        icon: "search",
+        text: "Sertakan user persona, user flow, dan hasil riset pengguna.",
       },
+      { icon: "schedule", text: "Durasi 4 jam saat hari pelaksanaan, presentasi karya maksimal 5 menit." },
     ],
     prizes: [
       { icon: "workspace_premium", place: "E-Certificate Resmi", amount: "Semua Peserta", bg: "bg-neo-yellow" },
@@ -250,9 +250,9 @@ const eventsData = {
     ],
     timeline: [
       { dateFormatted: "10 Oktober – 8 November 2026", endDateIso: "2026-11-08T23:59:59+07:00", title: "Pendaftaran Peserta", description: "Pendaftaran dan verifikasi identitas mahasiswa aktif UIR." },
-      { dateFormatted: "1 – 14 November 2026", endDateIso: "2026-11-14T23:59:59+07:00", title: "Practice Session", description: "Sesi latihan bebas menggunakan platform typing yang sama dengan lomba." },
-      { dateFormatted: "15 November 2026", endDateIso: "2026-11-15T23:59:59+07:00", title: "Qualification Round", description: "Babak kualifikasi online dengan akurasi minimal 95% untuk lolos." },
-      { dateFormatted: "17 November 2026", endDateIso: "2026-11-17T23:59:59+07:00", title: "Grand Final", description: "Babak final di venue menggunakan mechanical keyboard panitia." },
+      { dateFormatted: "1 – 14 November 2026", endDateIso: "2026-11-14T23:59:59+07:00", title: "Brief & Workshop", description: "Pembahasan studi kasus dan workshop tools desain bersama mentor." },
+      { dateFormatted: "15 November 2026", endDateIso: "2026-11-15T23:59:59+07:00", title: "Babak Penyisihan", description: "Pengumpulan karya desain sesuai brief secara online untuk lolos ke babak final." },
+      { dateFormatted: "17 November 2026", endDateIso: "2026-11-17T23:59:59+07:00", title: "Grand Final", description: "Presentasi dan pitch karya di depan dewan juri Milad IT Fest 2026." },
     ],
     accentBg: "bg-neo-pink",
     tagBg: "bg-neo-yellow",
