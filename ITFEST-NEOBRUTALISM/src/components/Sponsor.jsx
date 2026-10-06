@@ -6,8 +6,14 @@ const marqueeSponsors = Array(6).fill(sponsors).flat();
 const marqueeMedia = Array(8).fill(mediaPartners).flat();
 
 const SponsorCard = memo(function SponsorCard({ item, itemKey, isHovered, onEnter, onLeave }) {
+  const Tag = item.link ? 'a' : 'div';
+  const linkProps = item.link
+    ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' }
+    : {};
+
   return (
-    <div
+    <Tag
+      {...linkProps}
       onMouseEnter={() => onEnter(itemKey)}
       onMouseLeave={onLeave}
       className={
@@ -49,7 +55,7 @@ const SponsorCard = memo(function SponsorCard({ item, itemKey, isHovered, onEnte
       }>
         {item.name}
       </h4>
-    </div>
+    </Tag>
   );
 });
 

@@ -20,8 +20,16 @@ function SponsorGridCard({ item }) {
     );
   }
 
+  const Tag = item.link ? 'a' : 'div';
+  const linkProps = item.link
+    ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' }
+    : {};
+
   return (
-    <div className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-6 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt">
+    <Tag
+      {...linkProps}
+      className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-6 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt"
+    >
       {item.img ? (
         <img
           src={item.img}
@@ -37,7 +45,7 @@ function SponsorGridCard({ item }) {
         </span>
       )}
       <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
-    </div>
+    </Tag>
   );
 }
 
