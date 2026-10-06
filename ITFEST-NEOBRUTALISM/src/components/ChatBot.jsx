@@ -6,7 +6,7 @@ const nextId = () => `msg-${++messageCounter}`;
 
 const createGreeting = () => ({ id: nextId(), from: 'bot', kind: 'greeting' });
 
-const MASCOT_URL = '/img/MaskotMilad.png';
+const MASCOT_URL = '/img/logo_chatbot.png';
 
 function BotAvatar({ size = 'w-10 h-10' }) {
   const [imgError, setImgError] = useState(false);
