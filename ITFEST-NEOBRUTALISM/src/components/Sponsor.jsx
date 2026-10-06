@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import ScrollReveal from './ScrollReveal';
 import { sponsors, mediaPartners } from '../data/sponsors';
 
 const marqueeSponsors = Array(6).fill(sponsors).flat();
 const marqueeMedia = Array(8).fill(mediaPartners).flat();
 
-function SponsorCard({ item, isHovered, onEnter, onLeave }) {
+const SponsorCard = memo(function SponsorCard({ item, itemKey, isHovered, onEnter, onLeave }) {
   return (
     <div
-      onMouseEnter={onEnter}
+      onMouseEnter={() => onEnter(itemKey)}
       onMouseLeave={onLeave}
       className={
         'cursor-pointer flex flex-col items-center justify-center text-center px-3 pt-3 pb-1 neo-border transition-all duration-300 shrink-0 '
@@ -22,6 +22,8 @@ function SponsorCard({ item, isHovered, onEnter, onLeave }) {
           src={item.img}
           alt={item.name}
           loading="lazy"
+          decoding="async"
+          draggable={false}
           className="w-[258px] sm:w-[304px] h-[92px] sm:h-[108px] mb-1 object-contain object-top transition-all duration-300"
         />
       ) : item.img ? (
@@ -29,6 +31,8 @@ function SponsorCard({ item, isHovered, onEnter, onLeave }) {
           src={item.img}
           alt={item.name}
           loading="lazy"
+          decoding="async"
+          draggable={false}
           className={(item.imgBg || 'bg-black') + ' w-20 h-20 sm:w-24 sm:h-24 neo-border p-2 mb-4 object-contain transition-all duration-300'}
         />
       ) : (
@@ -47,10 +51,12 @@ function SponsorCard({ item, isHovered, onEnter, onLeave }) {
       </h4>
     </div>
   );
-}
+});
 
 export default function Sponsor() {
   const [hoveredItemKey, setHoveredItemKey] = useState(null);
+  const handleEnter = useCallback((key) => setHoveredItemKey(key), []);
+  const handleLeave = useCallback(() => setHoveredItemKey(null), []);
 
   return (
     <section className="py-20 bg-gray-main relative overflow-hidden transition-colors pattern-dashed-grid" id="sponsor">
@@ -80,9 +86,10 @@ export default function Sponsor() {
                   <div key={itemKey} className="px-4">
                     <SponsorCard
                       item={sponsor}
+                      itemKey={itemKey}
                       isHovered={hoveredItemKey === itemKey}
-                      onEnter={() => setHoveredItemKey(itemKey)}
-                      onLeave={() => setHoveredItemKey(null)}
+                      onEnter={handleEnter}
+                      onLeave={handleLeave}
                     />
                   </div>
                 );
@@ -109,9 +116,10 @@ export default function Sponsor() {
                   <div key={itemKey} className="px-4">
                     <SponsorCard
                       item={media}
+                      itemKey={itemKey}
                       isHovered={hoveredItemKey === itemKey}
-                      onEnter={() => setHoveredItemKey(itemKey)}
-                      onLeave={() => setHoveredItemKey(null)}
+                      onEnter={handleEnter}
+                      onLeave={handleLeave}
                     />
                   </div>
                 );

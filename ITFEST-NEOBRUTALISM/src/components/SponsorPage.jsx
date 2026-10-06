@@ -11,6 +11,8 @@ function SponsorGridCard({ item }) {
           src={item.img}
           alt={item.name}
           loading="lazy"
+          decoding="async"
+          draggable={false}
           className="w-[calc(100%+2rem)] -mx-4 h-[96px] sm:h-[112px] object-contain object-top"
         />
         <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
@@ -25,6 +27,8 @@ function SponsorGridCard({ item }) {
           src={item.img}
           alt={item.name}
           loading="lazy"
+          decoding="async"
+          draggable={false}
           className={`w-20 h-20 sm:w-24 sm:h-24 ${item.imgBg || 'bg-black'} neo-border p-3 object-contain transition-transform duration-200 group-hover:rotate-6`}
         />
       ) : (
