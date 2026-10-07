@@ -11,5 +11,5 @@ export const mediaPartners = [
   { id: 5, name: 'TeknoEventCampus25', color: 'bg-cream', img: '/SponsorDanMediaPartner/Logo%20TeknoEventCampus25%20(1).png', frameless: true, lgSpan2: true, link: 'https://www.instagram.com/teknoeventcampus?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==' },
   { id: 6, name: 'TeknoEvent', color: 'bg-cream', img: '/SponsorDanMediaPartner/LogoTeknoEvent251.png', frameless: true, lgSpan2: true, link: 'https://www.instagram.com/teknoevent/' },
   { id: 7, name: 'LombaTekno', color: 'bg-cream', img: '/SponsorDanMediaPartner/LogoLombaTekno.png', frameless: true, lgSpan2: true, link: 'https://www.instagram.com/lombatekno/' },
-  { id: 8, name: 'LombaUIUX', color: 'bg-cream', img: '/SponsorDanMediaPartner/LogoLombaUIUX.png', frameless: true, lgSpan2: true },
+  { id: 8, name: 'LombaUIUX', color: 'bg-cream', img: '/SponsorDanMediaPartner/LogoLombaUIUX.png', frameless: true, lgSpan2: true, link: 'https://www.instagram.com/lombauiux/' },
 ];
