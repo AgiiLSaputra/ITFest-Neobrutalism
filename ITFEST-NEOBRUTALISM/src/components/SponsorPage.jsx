@@ -9,29 +9,35 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
     ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' }
     : {};
 
+  const lgSpanClass = item.lgSpan2 ? 'lg:col-span-2' : 'lg:col-span-1';
+
   if (item.img && item.frameless) {
-    const rowPos = index % 5;
-    const prevFrameless = index > 0 && Boolean(items[index - 1]?.frameless);
-    const nextFrameless = Boolean(items[index + 1]?.frameless);
-    const inGroup = prevFrameless || nextFrameless;
-    let runIndex = 0;
-    for (let i = index - 1; i >= 0 && items[i]?.frameless; i--) {
-      runIndex++;
-    }
-    const canExtend = rowPos === 4 || index === total - 1 || inGroup;
-    const extendClass = canExtend
-      ? ' lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]'
-      : '';
-    const shiftClass =
-      runIndex === 1
-        ? ' lg:ml-[max(20px,min(120px,(100vw_-_1170px)/2_+_16px))]'
-        : runIndex === 2
-        ? ' lg:ml-[calc(2_*_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]'
+    const useWideSpan = Boolean(item.lgSpan2);
+    const shiftClass = useWideSpan ? '' : (() => {
+      const prevFrameless = index > 0 && Boolean(items[index - 1]?.frameless);
+      const nextFrameless = Boolean(items[index + 1]?.frameless);
+      const inGroup = prevFrameless || nextFrameless;
+      let runIndex = 0;
+      for (let i = index - 1; i >= 0 && items[i]?.frameless; i--) {
+        runIndex++;
+      }
+      const rowPos = index % 5;
+      const canExtend = rowPos === 4 || index === total - 1 || inGroup;
+      const extendClass = canExtend
+        ? ' lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]'
         : '';
+      const shift =
+        runIndex === 1
+          ? ' lg:ml-[max(20px,min(120px,(100vw_-_1170px)/2_+_16px))]'
+          : runIndex === 2
+          ? ' lg:ml-[calc(2_*_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]'
+          : '';
+      return shift + extendClass;
+    })();
     return (
       <Tag
         {...linkProps}
-        className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt lg:col-span-1${shiftClass}${extendClass}`}
+        className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt ${lgSpanClass}${shiftClass}`}
       >
         <img
           src={item.img}
@@ -49,7 +55,7 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
   return (
     <Tag
       {...linkProps}
-      className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-6 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt"
+      className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-6 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt ${lgSpanClass}`}
     >
       {item.img ? (
         <img
@@ -137,7 +143,7 @@ export default function SponsorPage() {
         chipClass="bg-neo-pink text-black"
         items={mediaPartners}
         delay={0.3}
-        gridClass="grid-cols-1 sm:grid-cols-2 lg:grid-cols-5"
+        gridClass="grid-cols-1 sm:grid-cols-2 lg:grid-cols-6"
       />
 
       <ScrollReveal animation="animate-pop-up" delay={0.4}>
