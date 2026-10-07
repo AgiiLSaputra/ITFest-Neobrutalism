@@ -9,18 +9,18 @@ const roadmapItems = [
     color: "bg-neo-blue",
   },
   {
-    dateFormatted: "14 – 15 November 2026",
-    endDateIso: "2026-11-15T23:59:59+07:00",
-    title: "Pelaksanaan Lomba Badminton",
-    description: "Bertempat di Gor Badminton, Simpang Tiga.",
-    color: "bg-neo-green",
-  },
-  {
     dateFormatted: "21 – 22 November 2026",
     endDateIso: "2026-11-22T23:59:59+07:00",
     title: "Pelaksanaan Lomba Mobile Legends",
     description: "Bertempat di Selasar Coffee.",
     color: "bg-neo-pink",
+  },
+  {
+    dateFormatted: "14 – 15 November 2026",
+    endDateIso: "2026-11-15T23:59:59+07:00",
+    title: "Pelaksanaan Lomba Badminton",
+    description: "Bertempat di Gor Badminton, Simpang Tiga.",
+    color: "bg-neo-green",
   },
   {
     dateFormatted: "21 November 2026",
