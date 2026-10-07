@@ -5,12 +5,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 const LOGO_URL = "/img/logo_milad_horizontal_trim.png";
 
 const eventLinks = [
-  { id: 'hackathon', label: 'Hackathon' },
   { id: 'esport', label: 'Mobile Legends' },
   { id: 'badminton', label: 'Badminton' },
+  { id: 'uiux', label: 'UI/UX Design' },
+  { id: 'hackathon', label: 'Hackathon' },
   { id: 'expo', label: 'Expo' },
   { id: 'seminar', label: 'Seminar Nasional' },
-  { id: 'uiux', label: 'UI/UX Design' },
 ];
 
 export default function Header() {

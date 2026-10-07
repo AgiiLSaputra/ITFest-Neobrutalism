@@ -3,20 +3,6 @@ import ScrollReveal from "./ScrollReveal";
 
 const events = [
   {
-    id: "hackathon",
-    category: "IT COMPETITION",
-    categoryBg: "bg-neo-blue",
-    icon: "code",
-    tags: ["SMA/SMK", "MAHASISWA"],
-    title: "Hackathon",
-    description:
-      "Tantang kemampuan teknismu dalam membangun solusi inovatif dalam waktu terbatas.",
-    daftarLink: "#",
-    daftarBg: "bg-neo-blue",
-    cardBg: "bg-cream",
-    accent: "bg-neo-blue",
-  },
-  {
     id: "esport",
     category: "E-SPORT ARENA",
     categoryBg: "bg-neo-pink",
@@ -45,6 +31,34 @@ const events = [
     accent: "bg-neo-green",
   },
   {
+    id: "uiux",
+    category: "SKILL CHALLENGE",
+    categoryBg: "bg-neo-pink",
+    icon: "design_services",
+    tags: ["MAHASISWA"],
+    title: "UI/UX Design",
+    description:
+      "Rancang antarmuka yang intuitive dan bikin pengguna betah — buktikan insting desainmu di sini.",
+    daftarLink: "#",
+    daftarBg: "bg-neo-green",
+    cardBg: "bg-cream",
+    accent: "bg-neo-pink",
+  },
+  {
+    id: "hackathon",
+    category: "IT COMPETITION",
+    categoryBg: "bg-neo-blue",
+    icon: "code",
+    tags: ["SMA/SMK", "MAHASISWA"],
+    title: "Hackathon",
+    description:
+      "Tantang kemampuan teknismu dalam membangun solusi inovatif dalam waktu terbatas.",
+    daftarLink: "#",
+    daftarBg: "bg-neo-blue",
+    cardBg: "bg-cream",
+    accent: "bg-neo-blue",
+  },
+  {
     id: "expo",
     category: "EXHIBITION",
     categoryBg: "bg-neo-yellow",
@@ -71,20 +85,6 @@ const events = [
     daftarBg: "bg-neo-pink",
     cardBg: "bg-cream",
     accent: "bg-neo-blue",
-  },
-  {
-    id: "uiux",
-    category: "SKILL CHALLENGE",
-    categoryBg: "bg-neo-pink",
-    icon: "design_services",
-    tags: ["MAHASISWA"],
-    title: "UI/UX Design",
-    description:
-      "Rancang antarmuka yang intuitive dan bikin pengguna betah — buktikan insting desainmu di sini.",
-    daftarLink: "#",
-    daftarBg: "bg-neo-green",
-    cardBg: "bg-cream",
-    accent: "bg-neo-pink",
   },
 ];
 
