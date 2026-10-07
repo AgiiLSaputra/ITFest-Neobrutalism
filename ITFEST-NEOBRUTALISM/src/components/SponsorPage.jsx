@@ -11,20 +11,27 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
 
   if (item.img && item.frameless) {
     const rowPos = index % 5;
-    const isPairLead = rowPos === 0 && Boolean(items[index + 1]?.frameless);
-    const isPairTail =
-      rowPos === 1 && index > 0 && (index - 1) % 5 === 0 && Boolean(items[index - 1]?.frameless);
-    const canExtend = rowPos === 4 || index === total - 1 || isPairLead;
+    const prevFrameless = index > 0 && Boolean(items[index - 1]?.frameless);
+    const nextFrameless = Boolean(items[index + 1]?.frameless);
+    const inGroup = prevFrameless || nextFrameless;
+    let runIndex = 0;
+    for (let i = index - 1; i >= 0 && items[i]?.frameless; i--) {
+      runIndex++;
+    }
+    const canExtend = rowPos === 4 || index === total - 1 || inGroup;
     const extendClass = canExtend
       ? ' lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]'
       : '';
-    const tailShiftClass = isPairTail
-      ? ' lg:ml-[max(20px,min(120px,(100vw_-_1170px)/2_+_16px))]'
-      : '';
+    const shiftClass =
+      runIndex === 1
+        ? ' lg:ml-[max(20px,min(120px,(100vw_-_1170px)/2_+_16px))]'
+        : runIndex === 2
+        ? ' lg:ml-[calc(2_*_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]'
+        : '';
     return (
       <Tag
         {...linkProps}
-        className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt col-span-2 lg:col-span-1${tailShiftClass}${extendClass}`}
+        className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt lg:col-span-1${shiftClass}${extendClass}`}
       >
         <img
           src={item.img}
@@ -63,7 +70,7 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
   );
 }
 
-function TierSection({ label, chipClass, items, delay }) {
+function TierSection({ label, chipClass, items, delay, gridClass }) {
   return (
     <ScrollReveal animation="animate-pop-up" delay={delay}>
       <div className="mb-12">
@@ -72,7 +79,7 @@ function TierSection({ label, chipClass, items, delay }) {
             {label}
           </div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+        <div className={`grid ${gridClass || 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5'} gap-4 sm:gap-6`}>
           {items.map((item, index) => (
             <SponsorGridCard key={item.id} item={item} items={items} index={index} total={items.length} />
           ))}
@@ -130,6 +137,7 @@ export default function SponsorPage() {
         chipClass="bg-neo-pink text-black"
         items={mediaPartners}
         delay={0.3}
+        gridClass="grid-cols-1 sm:grid-cols-2 lg:grid-cols-5"
       />
 
       <ScrollReveal animation="animate-pop-up" delay={0.4}>

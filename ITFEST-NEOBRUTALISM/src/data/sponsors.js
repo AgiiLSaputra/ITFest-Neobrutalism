@@ -7,9 +7,6 @@ export const sponsors = [
 ];
 
 export const mediaPartners = [
-  { id: 1, name: 'Media 1', color: 'bg-cream' },
-  { id: 2, name: 'Media 2', color: 'bg-cream' },
-  { id: 3, name: 'Media 3', color: 'bg-cream' },
   { id: 4, name: 'BroSisPKU', color: 'bg-cream', img: '/SponsorDanMediaPartner/BroSisPKU-Transparent-White.png', imgBg: 'bg-black', link: 'https://www.instagram.com/brosispku?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==' },
   { id: 5, name: 'TeknoEventCampus25', color: 'bg-cream', img: '/SponsorDanMediaPartner/Logo%20TeknoEventCampus25%20(1).png', frameless: true, link: 'https://www.instagram.com/teknoeventcampus?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==' },
   { id: 6, name: 'TeknoEvent', color: 'bg-cream', img: '/SponsorDanMediaPartner/LogoTeknoEvent251.png', frameless: true, link: 'https://www.instagram.com/teknoevent/' },
