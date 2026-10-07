@@ -11,19 +11,20 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
 
   if (item.img && item.frameless) {
     const rowPos = index % 5;
-    const canExtend =
-      rowPos === 4 || index === total - 1 || (rowPos === 0 && Boolean(items[index + 1]?.frameless));
+    const isPairLead = rowPos === 0 && Boolean(items[index + 1]?.frameless);
+    const isPairTail =
+      rowPos === 1 && index > 0 && (index - 1) % 5 === 0 && Boolean(items[index - 1]?.frameless);
+    const canExtend = rowPos === 4 || index === total - 1 || isPairLead;
     const extendClass = canExtend
       ? ' lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]'
       : '';
-    const colStartClass =
-      rowPos === 1 && index > 0 && (index - 1) % 5 === 0 && Boolean(items[index - 1]?.frameless)
-        ? ' lg:col-start-3'
-        : '';
+    const tailShiftClass = isPairTail
+      ? ' lg:ml-[max(20px,min(120px,(100vw_-_1170px)/2_+_16px))]'
+      : '';
     return (
       <Tag
         {...linkProps}
-        className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt col-span-2 lg:col-span-1 ${colStartClass}${extendClass}`}
+        className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt col-span-2 lg:col-span-1${tailShiftClass}${extendClass}`}
       >
         <img
           src={item.img}
