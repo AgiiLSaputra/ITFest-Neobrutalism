@@ -3,17 +3,21 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import { sponsors, mediaPartners } from '../data/sponsors';
 
-function SponsorGridCard({ item }) {
+function SponsorGridCard({ item, index = 0, total = 1 }) {
   const Tag = item.link ? 'a' : 'div';
   const linkProps = item.link
     ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' }
     : {};
 
   if (item.img && item.frameless) {
+    const canExtend = index % 5 === 4 || index === total - 1;
+    const extendClass = canExtend
+      ? ' lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]'
+      : '';
     return (
       <Tag
         {...linkProps}
-        className="group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt col-span-2 lg:col-span-1 lg:w-[calc(100%_+_max(20px,min(120px,(100vw_-_1170px)/2_+_16px)))]"
+        className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt col-span-2 lg:col-span-1${extendClass}`}
       >
         <img
           src={item.img}
@@ -62,8 +66,8 @@ function TierSection({ label, chipClass, items, delay }) {
           </div>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-          {items.map((item) => (
-            <SponsorGridCard key={item.id} item={item} />
+          {items.map((item, index) => (
+            <SponsorGridCard key={item.id} item={item} index={index} total={items.length} />
           ))}
         </div>
       </div>
