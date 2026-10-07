@@ -9,7 +9,7 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
     ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' }
     : {};
 
-  const lgSpanClass = item.lgSpan2 ? 'lg:col-span-2' : 'lg:col-span-1';
+  const lgSpanClass = item.lgSpan2 ? 'lg:col-span-2' : 'col-span-2 sm:col-span-2 lg:col-span-1';
 
   if (item.img && item.frameless) {
     const useWideSpan = Boolean(item.lgSpan2);
@@ -55,7 +55,7 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
   return (
     <Tag
       {...linkProps}
-      className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-6 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt ${lgSpanClass}`}
+      className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-6 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt ${item.lgSpan2 ? 'lg:col-span-2' : ''}`}
     >
       {item.img ? (
         <img
