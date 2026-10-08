@@ -104,6 +104,7 @@ const eventsData = {
     title: "BADMINTON TOURNAMENT",
     subtitle: "MAHASISWA",
     heroImg: "/img/Badminton.webp",
+    mascotImg: "/img/MaskotBadminton.png",
     description:
       "Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra MILAD IT FEST 19.",
     daftarLink: "#",
