@@ -107,7 +107,7 @@ const eventsData = {
     mascotImg: "/img/MaskotBadminton.png",
     description:
       "Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra MILAD IT FEST 19.",
-    daftarLink: "#",
+    daftarLink: "https://forms.gle/AdgaC2UcVuUhLQXe9",
     about: [
       "Kompetisi badminton ganda putra khusus mahasiswa aktif UIR.",
       "Sistem gugur dengan babak penyisihan dan knockout.",

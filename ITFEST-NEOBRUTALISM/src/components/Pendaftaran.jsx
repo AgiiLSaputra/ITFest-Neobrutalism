@@ -25,7 +25,7 @@ const events = [
     title: "Badminton Tournament",
     description:
       "Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra.",
-    daftarLink: "#",
+    daftarLink: "https://forms.gle/AdgaC2UcVuUhLQXe9",
     daftarBg: "bg-neo-green",
     cardBg: "bg-cream",
     accent: "bg-neo-green",
