@@ -53,7 +53,7 @@ export default function Footer() {
                 src={LOGO_URL}
               />
               <span className="font-black text-2xl tracking-tight uppercase">
-                Milad IT Fest <span className="bg-neo-pink px-2">2026</span>
+                Milad IT Fest <span className="bg-neo-pink px-2">19</span>
               </span>
             </Link>
             <div className="max-w-sm mb-6 bg-cream p-4 neo-border neo-shadow relative transition-colors">

@@ -19,7 +19,7 @@ export default function TentangAcara() {
             <ScrollReveal animation="animate-pop-up" delay={0.15}>
               <h2 className="text-5xl md:text-6xl font-black leading-tight uppercase">
                 Tentang Milad <br />
-                IT FEST <span className="bg-black text-white px-2 inline-block">2026</span>
+                IT FEST <span className="bg-black text-white px-2 inline-block">19</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal animation="animate-pop-up" delay={0.3}>
