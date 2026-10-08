@@ -39,7 +39,7 @@ const events = [
     title: "UI/UX Design",
     description:
       "Rancang antarmuka yang intuitive dan bikin pengguna betah — buktikan insting desainmu di sini.",
-    daftarLink: "#",
+    daftarLink: "https://forms.gle/AvBs1SFLNo3gt8iv7",
     daftarBg: "bg-neo-green",
     cardBg: "bg-cream",
     accent: "bg-neo-pink",

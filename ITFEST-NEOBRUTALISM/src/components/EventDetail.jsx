@@ -229,7 +229,7 @@ const eventsData = {
     mascotImg: "/img/MaskotUIUXDesign.png",
     description:
       "Rancang pengalaman pengguna yang intuitive dan estetis. Buktikan insting desain dan pemecahan masalahmu di MILAD IT FEST 19.",
-    daftarLink: "#", // TODO: ganti dengan link form pendaftaran UI/UX Design
+    daftarLink: "https://forms.gle/AvBs1SFLNo3gt8iv7",
     about: [
       "Kompetisi desain antarmuka berbasis studi kasus nyata: dari riset, wireframe, sampai high-fidelity prototype.",
       "Penilaian menekankan usability, estetika visual, dan kesesuaian solusi dengan kebutuhan pengguna.",
