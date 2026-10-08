@@ -4,7 +4,7 @@ export const CHATBOT_PROFILE = {
   subtitle: 'ASISTEN RESMI MILAD IT FEST UIR 2026',
   status: 'ONLINE',
   greeting: {
-    intro: 'Halo Sobat IT! Aku MIFA, asisten resmi Milad IT Fest 2026 dari Teknik Informatika Universitas Islam Riau.',
+    intro: 'Halo Sobat IT! Aku MIFA, asisten resmi MILAD IT FEST 19 dari Teknik Informatika Universitas Islam Riau.',
     outro: 'Klik salah satu topik pertanyaan di bawah untuk melihat jawaban resminya secara instan!',
   },
   footerNote: 'Mode Interaktif Pertanyaan Terarah',
@@ -23,7 +23,7 @@ export const chatFaqs = [
     blocks: [
       {
         type: 'p',
-        text: 'MILAD IT FEST 2026 adalah perayaan tahunan terbesar yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika (HIMATIF) Universitas Islam Riau.',
+        text: 'MILAD IT FEST 19 adalah perayaan tahunan terbesar yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika (HIMATIF) Universitas Islam Riau.',
       },
       {
         type: 'p',
@@ -169,7 +169,7 @@ export const chatFaqs = [
     blocks: [
       {
         type: 'p',
-        text: 'Dukung inovasi teknologi generasi muda — bergabung sebagai sponsor Milad IT Fest 2026. Cek card Open Sponsorship di section Sponsor untuk peluang kerjasama.',
+        text: 'Dukung inovasi teknologi generasi muda — bergabung sebagai sponsor MILAD IT FEST 19. Cek card Open Sponsorship di section Sponsor untuk peluang kerjasama.',
       },
       {
         type: 'ul',
@@ -195,7 +195,7 @@ export const chatFaqs = [
     blocks: [
       {
         type: 'p',
-        text: 'Setiap cabang lomba Milad IT Fest 2026 berkesempatan mendapatkan hadiah jutaan rupiah.',
+        text: 'Setiap cabang lomba MILAD IT FEST 19 berkesempatan mendapatkan hadiah jutaan rupiah.',
       },
       {
         type: 'ul',

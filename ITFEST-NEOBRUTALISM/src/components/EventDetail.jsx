@@ -64,7 +64,7 @@ const eventsData = {
     heroImg: "/img/ESport.webp",
     mascotImg: "/img/MaskotML.png",
     description:
-      "Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik di Milad IT Fest 2026.",
+      "Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik di MILAD IT FEST 19.",
     daftarLink: "#",
     about: [
       "Turnamen Mobile Legends: Bang Bang dengan sistem gugur.",
@@ -105,7 +105,7 @@ const eventsData = {
     subtitle: "MAHASISWA",
     heroImg: "/img/Badminton.webp",
     description:
-      "Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra Milad IT Fest 2026.",
+      "Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra MILAD IT FEST 19.",
     daftarLink: "#",
     about: [
       "Kompetisi badminton ganda putra khusus mahasiswa aktif UIR.",
@@ -142,7 +142,7 @@ const eventsData = {
     subtitle: "UMUM",
     heroImg: "/img/ITEXPO.webp",
     description:
-      "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan di Milad IT Fest 2026.",
+      "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan di MILAD IT FEST 19.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran IT Expo
     about: [
       "Pameran produk IoT, Web, dan Mobile Apps dari mahasiswa dan startup.",
@@ -184,7 +184,7 @@ const eventsData = {
     subtitle: "PELAJAR & UMUM",
     heroImg: "/img/Foto.webp",
     description:
-      "Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI di Milad IT Fest 2026.",
+      "Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI di MILAD IT FEST 19.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran Seminar
     about: [
       "Seminar nasional dengan pembicara dari tech giant nasional dan internasional.",
@@ -213,7 +213,7 @@ const eventsData = {
     ],
     timeline: [
       { dateFormatted: "1 September – 10 Oktober 2026", endDateIso: "2026-10-10T23:59:59+07:00", title: "Masa Registrasi Peserta", description: "Pembelian tiket presale & tiket reguler seminar nasional." },
-      { dateFormatted: "16 Oktober 2026", endDateIso: "2026-10-16T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan Milad IT Fest 2026." },
+      { dateFormatted: "16 Oktober 2026", endDateIso: "2026-10-16T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan MILAD IT FEST 19." },
     ],
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-green",
@@ -226,7 +226,7 @@ const eventsData = {
     subtitle: "MAHASISWA",
     heroImg: "/img/UIUX.svg",
     description:
-      "Rancang pengalaman pengguna yang intuitive dan estetis. Buktikan insting desain dan pemecahan masalahmu di Milad IT Fest 2026.",
+      "Rancang pengalaman pengguna yang intuitive dan estetis. Buktikan insting desain dan pemecahan masalahmu di MILAD IT FEST 19.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran UI/UX Design
     about: [
       "Kompetisi desain antarmuka berbasis studi kasus nyata: dari riset, wireframe, sampai high-fidelity prototype.",
@@ -254,7 +254,7 @@ const eventsData = {
       { dateFormatted: "10 Oktober – 8 November 2026", endDateIso: "2026-11-08T23:59:59+07:00", title: "Pendaftaran Peserta", description: "Pendaftaran dan verifikasi identitas mahasiswa aktif UIR." },
       { dateFormatted: "1 – 14 November 2026", endDateIso: "2026-11-14T23:59:59+07:00", title: "Brief & Workshop", description: "Pembahasan studi kasus dan workshop tools desain bersama mentor." },
       { dateFormatted: "15 November 2026", endDateIso: "2026-11-15T23:59:59+07:00", title: "Babak Penyisihan", description: "Pengumpulan karya desain sesuai brief secara online untuk lolos ke babak final." },
-      { dateFormatted: "17 November 2026", endDateIso: "2026-11-17T23:59:59+07:00", title: "Grand Final", description: "Presentasi dan pitch karya di depan dewan juri Milad IT Fest 2026." },
+      { dateFormatted: "17 November 2026", endDateIso: "2026-11-17T23:59:59+07:00", title: "Grand Final", description: "Presentasi dan pitch karya di depan dewan juri MILAD IT FEST 19." },
     ],
     accentBg: "bg-neo-pink",
     tagBg: "bg-neo-yellow",

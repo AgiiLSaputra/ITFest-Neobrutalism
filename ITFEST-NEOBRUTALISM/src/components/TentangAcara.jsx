@@ -25,7 +25,7 @@ export default function TentangAcara() {
             <ScrollReveal animation="animate-pop-up" delay={0.3}>
               <div className="p-6 bg-neo-yellow neo-border neo-shadow-sm neo-tilt">
                 <p className="text-xl font-bold leading-relaxed mb-4">
-                  MILAD IT FEST 2026 adalah perhelatan tahunan terbesar yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika (HIMATIF) Universitas Islam Riau.
+                  MILAD IT FEST 19 adalah perhelatan tahunan terbesar yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika (HIMATIF) Universitas Islam Riau.
                 </p>
                 <p className="text-xl font-bold leading-relaxed">
                   Menggabungkan perayaan ulang tahun ke-19 Program Studi Teknik Informatika UIR dengan ajang Technofest UIR Vol. 2, event ini menghadirkan berbagai kompetisi teknologi, olahraga, pameran inovasi, dan seminar nasional bertaraf tinggi.

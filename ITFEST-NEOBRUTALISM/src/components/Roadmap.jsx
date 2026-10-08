@@ -80,7 +80,7 @@ export default function Roadmap() {
           <div className="block">
             <ScrollReveal animation="animate-pop-up" delay={0.15}>
               <p className="text-xl font-bold bg-cream inline-block px-4 py-2 neo-border">
-                Perjalanan menuju puncak perayaan Milad IT Fest 2026.
+                Perjalanan menuju puncak perayaan MILAD IT FEST 19.
               </p>
             </ScrollReveal>
           </div>

@@ -15,7 +15,7 @@ const GENERAL_FAQ = [
       },
       {
         type: 'p',
-        text: 'Pendaftaran seluruh cabang Milad IT Fest 2026 dibuka serentak sejak Oktober 2026.',
+        text: 'Pendaftaran seluruh cabang MILAD IT FEST 19 dibuka serentak sejak Oktober 2026.',
       },
       {
         type: 'link',
@@ -31,7 +31,7 @@ const GENERAL_FAQ = [
     blocks: [
       {
         type: 'p',
-        text: 'Tim panitia Milad IT Fest 2026 siap membantu lewat kanal resmi berikut:',
+        text: 'Tim panitia MILAD IT FEST 19 siap membantu lewat kanal resmi berikut:',
       },
       {
         type: 'kv',
@@ -124,7 +124,7 @@ export const buildEventFaq = (event) => {
         },
         {
           type: 'p',
-          text: 'Seluruh peserta resmi berhak atas e-certificate Milad IT Fest 2026.',
+          text: 'Seluruh peserta resmi berhak atas e-certificate MILAD IT FEST 19.',
         },
       ]),
     },

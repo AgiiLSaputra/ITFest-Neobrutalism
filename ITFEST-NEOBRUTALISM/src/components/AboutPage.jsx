@@ -56,7 +56,7 @@ export default function AboutPage() {
                   Program Studi Teknik Informatika Universitas Islam Riau (UIR) didirikan untuk melahirkan insan akademis yang unggul, profesional, dan mampu bersaing di industri teknologi global.
                 </p>
                 <p>
-                  Dalam rangka merayakan usia ke-19 tahun, Himpunan Mahasiswa Teknik Informatika (HIMATIF) menyelenggarakan <strong>MILAD IT FEST 2026</strong> yang berkolaborasi dengan <strong>Technofest UIR Vol. 2</strong>.
+                  Dalam rangka merayakan usia ke-19 tahun, Himpunan Mahasiswa Teknik Informatika (HIMATIF) menyelenggarakan <strong>MILAD IT FEST 19</strong> yang berkolaborasi dengan <strong>Technofest UIR Vol. 2</strong>.
                 </p>
                 <p>
                   Event ini dirancang sebagai ajang unjuk kebolehan talenta muda Indonesia di bidang E-Sports, Olahraga, Desain Antarmuka, Pemrograman (Hackathon), serta ajang pertukaran wawasan melalui Seminar Nasional.

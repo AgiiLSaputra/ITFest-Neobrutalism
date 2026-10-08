@@ -1,6 +1,6 @@
-# Milad IT Fest 2026 🎉
+# MILAD IT FEST 19 🎉
 
-Landing page resmi perayaan **Milad IT Fest 2026** yang diselenggarakan oleh **HIMATIF FT UIR**. Dibangun dengan desain bergaya **Neobrutalism**, dilengkapi animasi interaktif, dark mode, dan kursor kustom.
+Landing page resmi perayaan **MILAD IT FEST 19** yang diselenggarakan oleh **HIMATIF FT UIR**. Dibangun dengan desain bergaya **Neobrutalism**, dilengkapi animasi interaktif, dark mode, dan kursor kustom.
 
 ## Tech Stack
 
