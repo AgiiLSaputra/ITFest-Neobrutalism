@@ -83,7 +83,7 @@ export default function Hero({ ready = true }) {
           >
             MILAD IT FEST <br />
             <span className="inline-block mt-2 animate-neo-squish">
-              2026
+              19
             </span>
           </h1>
           <p className="text-lg sm:text-xl md:text-3xl text-black font-bold tracking-widest uppercase mt-4 min-h-[3rem] md:min-h-[4rem] border-t-4 border-black pt-4 w-full grid place-items-center">
