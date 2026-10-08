@@ -225,6 +225,7 @@ const eventsData = {
     title: "UI/UX DESIGN",
     subtitle: "MAHASISWA",
     heroImg: "/img/UIUX.svg",
+    mascotImg: "/img/MaskotUIUXDesign.png",
     description:
       "Rancang pengalaman pengguna yang intuitive dan estetis. Buktikan insting desain dan pemecahan masalahmu di MILAD IT FEST 19.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran UI/UX Design
@@ -298,7 +299,9 @@ export default function EventDetail() {
           src={event.mascotImg}
           alt=""
           aria-hidden="true"
-          className="absolute top-28 right-2 sm:top-24 sm:right-6 md:top-24 md:right-10 lg:top-24 lg:right-16 h-40 sm:h-56 md:h-72 lg:h-[60vh] w-auto max-w-[45vw] -z-10 opacity-90 pointer-events-none select-none object-contain drop-shadow-[6px_6px_0px_rgba(0,0,0,0.85)] animate-neo-drift"
+           className={eventId === 'uiux'
+             ? "absolute top-32 right-10 sm:top-28 sm:right-16 md:top-28 md:right-24 lg:top-28 lg:right-36 h-32 sm:h-44 md:h-60 lg:h-[48vh] w-auto max-w-[42vw] -z-10 opacity-90 pointer-events-none select-none object-contain drop-shadow-[6px_6px_0px_rgba(0,0,0,0.85)] animate-neo-drift"
+             : "absolute top-28 right-2 sm:top-24 sm:right-6 md:top-24 md:right-10 lg:top-24 lg:right-16 h-40 sm:h-56 md:h-72 lg:h-[60vh] w-auto max-w-[45vw] -z-10 opacity-90 pointer-events-none select-none object-contain drop-shadow-[6px_6px_0px_rgba(0,0,0,0.85)] animate-neo-drift"}
         />
       )}
       <section className="pt-32 pb-24 px-4 md:px-6 max-w-6xl mx-auto w-full relative">
