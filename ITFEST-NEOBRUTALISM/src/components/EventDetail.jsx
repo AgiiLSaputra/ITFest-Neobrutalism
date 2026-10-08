@@ -65,7 +65,7 @@ const eventsData = {
     mascotImg: "/img/MaskotML.png",
     description:
       "Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik di MILAD IT FEST 19.",
-    daftarLink: "#",
+    daftarLink: "https://forms.gle/HazoUVQp7GruBPg37",
     about: [
       "Turnamen Mobile Legends: Bang Bang dengan sistem gugur.",
       "Terbuka untuk umum, jangan lewatkan kesempatan menjadi juara!",

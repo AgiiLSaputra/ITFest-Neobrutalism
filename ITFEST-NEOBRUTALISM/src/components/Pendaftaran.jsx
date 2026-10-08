@@ -11,7 +11,7 @@ const events = [
     title: "E-Sport Tournament",
     description:
       "Kuasai arena kompetitif Mobile Legends dan buktikan timmu adalah yang terbaik.",
-    daftarLink: "#",
+    daftarLink: "https://forms.gle/HazoUVQp7GruBPg37",
     daftarBg: "bg-neo-pink",
     cardBg: "bg-cream",
     accent: "bg-neo-pink",
