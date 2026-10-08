@@ -298,7 +298,7 @@ export default function EventDetail() {
           src={event.mascotImg}
           alt=""
           aria-hidden="true"
-          className="hidden md:block absolute right-[12vw] top-[25vh] h-[45vh] lg:h-[50vh] w-auto max-w-none -z-10 pointer-events-none select-none"
+          className="absolute top-28 right-2 sm:top-24 sm:right-6 md:top-24 md:right-10 lg:top-24 lg:right-16 h-40 sm:h-56 md:h-72 lg:h-[60vh] w-auto max-w-[45vw] -z-10 opacity-90 pointer-events-none select-none object-contain drop-shadow-[6px_6px_0px_rgba(0,0,0,0.85)] animate-neo-drift"
         />
       )}
       <section className="pt-32 pb-24 px-4 md:px-6 max-w-6xl mx-auto w-full relative">
