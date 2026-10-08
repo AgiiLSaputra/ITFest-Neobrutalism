@@ -50,6 +50,7 @@ const roadmapItems = [
     description:
       "Seminar nasional bertema 'Transformasi Digital: AI untuk Kemanusiaan' dan pameran teknologi.",
     color: "bg-neo-yellow",
+    badgeColor: "bg-neo-pink",
     highlight: true,
   },
 ];
@@ -132,7 +133,7 @@ export default function Roadmap() {
                       delay={index * 0.1}
                     >
                       <div
-                        className={`relative p-6 neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt overflow-hidden ${expired ? "grayscale opacity-60 bg-gray-300" : item.highlight ? "bg-neo-pink" : "bg-cream"}`}
+                        className={`relative p-6 neo-border neo-shadow hover:-translate-y-1 transition-transform neo-tilt overflow-hidden ${expired ? "grayscale opacity-60 bg-gray-300" : item.highlight ? "bg-neo-yellow" : "bg-cream"}`}
                       >
                         {expired && (
                           <div className="absolute -bottom-2 -right-2 w-14 h-14 bg-neo-green border-4 border-black flex items-center justify-center rotate-12 z-10">
@@ -142,7 +143,7 @@ export default function Roadmap() {
                           </div>
                         )}
                         <div
-                          className={`inline-block px-3 py-1 mb-4 neo-border text-xs font-black tracking-wider ${expired ? "bg-gray-400 text-white" : `${item.color} text-black`} ${!expired ? "animate-neo-jitter" : ""}`}
+                          className={`inline-block px-3 py-1 mb-4 neo-border text-xs font-black tracking-wider ${expired ? "bg-gray-400 text-white" : `${item.badgeColor || item.color} text-black`} ${!expired ? "animate-neo-jitter" : ""}`}
                         >
                           {item.dateFormatted}
                           {expired && " (Selesai)"}
