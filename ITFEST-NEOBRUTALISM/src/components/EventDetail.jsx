@@ -30,6 +30,7 @@ const eventsData = {
     title: "HACKATHON WEB INNOVATION",
     subtitle: "SMA/SMK & MAHASISWA",
     heroImg: "/img/hackathon.webp",
+    mascotImg: "/img/MaskotHackathon.png",
     description:
       "Kompetisi pengembangan solusi digital berbasis Web Application dengan tema \"Technology for Sustainable Impact\". Peserta identifikasi permasalahan nyata, rancang solusi inovatif, dan implementasikan sesuai subtema SDG di MILAD IT FEST 19.",
     daftarLink: "https://forms.gle/uPtpzmGkGBmW9fQs7",
