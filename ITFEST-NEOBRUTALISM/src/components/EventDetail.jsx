@@ -245,6 +245,8 @@ const eventsData = {
       location:
         "Kampus UIR, Jl. Kaharuddin Nasution No.113, Simpang Tiga, Pekanbaru, Riau",
     },
+    agendaExtra:
+      'Seminar nasional bertema "Beyond Code: From Problem Solving to Impactful Digital Innovation" yang mengangkat pembangunan solusi digital yang relevan melalui problem solving, teknologi, dan inovasi — mulai dari masalah nyata ke solusi digital, inovasi yang berdampak bagi pengguna dan keberlanjutan (SDGs), hingga menyiapkan generasi problem solver digital. Terbuka untuk mahasiswa (Informatika, Ilmu Komputer, Sistem Informasi, Teknik), pelajar SMA/SMK, akademisi, praktisi, dan masyarakat umum.',
     susunanAcara: [
       {
         title: "Registrasi Peserta",
@@ -583,6 +585,11 @@ export default function EventDetail() {
                 </span>
                 AGENDA &amp; INFORMASI
               </h3>
+              {event.agendaExtra && (
+                <p className="mb-6 text-sm sm:text-base font-bold leading-relaxed">
+                  {event.agendaExtra}
+                </p>
+              )}
               <ul className="space-y-4">
                 <li className="flex items-center gap-4 bg-cream p-4 neo-border neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform">
                   <span className="material-symbols-outlined text-2xl text-neo-pink">
