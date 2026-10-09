@@ -108,6 +108,7 @@ const eventsData = {
     description:
       "Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra MILAD IT FEST 19.",
     daftarLink: "https://forms.gle/AdgaC2UcVuUhLQXe9",
+    daftarBg: "bg-neo-blue",
     about: [
       "Kompetisi badminton ganda putra khusus mahasiswa aktif UIR.",
       "Sistem gugur dengan babak penyisihan dan knockout.",
@@ -436,7 +437,7 @@ export default function EventDetail() {
                 href={event.daftarLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-center gap-3 bg-neo-pink text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg"
+                className={`flex w-full items-center justify-center gap-3 ${event.daftarBg || "bg-neo-pink"} text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg`}
               >
                 <span className="material-symbols-outlined text-[28px]">
                   how_to_reg

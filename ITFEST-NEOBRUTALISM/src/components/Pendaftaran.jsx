@@ -26,7 +26,7 @@ const events = [
     description:
       "Tunjukkan sportivitas dan ketangkasanmu di lapangan hijau dalam kompetisi ganda putra.",
     daftarLink: "https://forms.gle/AdgaC2UcVuUhLQXe9",
-    daftarBg: "bg-neo-green",
+    daftarBg: "bg-neo-blue",
     cardBg: "bg-cream",
     accent: "bg-neo-green",
   },
