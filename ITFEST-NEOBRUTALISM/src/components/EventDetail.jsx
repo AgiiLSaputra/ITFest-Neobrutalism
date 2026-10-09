@@ -22,6 +22,8 @@ const eventsData = {
       "Milad IT Fest Hackathon 2026 adalah marathon coding intensif 48 jam yang dirancang untuk mendorong batas inovasi. Peserta akan membentuk tim dan menyelesaikan masalah nyata menggunakan teknologi terkini.",
     daftarLink: "https://forms.gle/uPtpzmGkGBmW9fQs7",
     daftarBg: "bg-neo-pink",
+    guidebookLink:
+      "https://docs.google.com/document/d/1QPjSx7ey2PD5qZfO4pi7Hem0E1LhIrlJaZDSQ2X3OTA/edit?tab=t.0#heading=h.irgbtqn1yi2f",
     about: [
       "Kompetisi ini terbuka untuk pelajar SMA/SMK dan mahasiswa aktif dari seluruh Indonesia.",
       "Peserta akan diberikan tantangan berupa problem statement yang diambil dari isu-isu nyata di masyarakat.",
@@ -235,6 +237,8 @@ const eventsData = {
     description:
       "Rancang pengalaman pengguna yang intuitive dan estetis. Buktikan insting desain dan pemecahan masalahmu di MILAD IT FEST 19.",
     daftarLink: "https://forms.gle/AvBs1SFLNo3gt8iv7",
+    guidebookLink:
+      "https://docs.google.com/document/d/1HLm7LQ_JY-GLt-bcnKBU6nJ4wTheemUDgca4DOmvSjg/edit?tab=t.0",
     about: [
       "Kompetisi desain antarmuka berbasis studi kasus nyata: dari riset, wireframe, sampai high-fidelity prototype.",
       "Penilaian menekankan usability, estetika visual, dan kesesuaian solusi dengan kebutuhan pengguna.",
@@ -447,6 +451,19 @@ export default function EventDetail() {
                   how_to_reg
                 </span>
                 DAFTAR SEKARANG
+              </a>
+            )}
+            {event.guidebookLink && (
+              <a
+                href={event.guidebookLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 flex w-full items-center justify-center gap-3 bg-neo-yellow text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg"
+              >
+                <span className="material-symbols-outlined text-[28px]">
+                  menu_book
+                </span>
+                DOWNLOAD GUIDEBOOK
               </a>
             )}
           </div>
