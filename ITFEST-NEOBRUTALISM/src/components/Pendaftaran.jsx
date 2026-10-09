@@ -68,6 +68,7 @@ const events = [
     description:
       "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan.",
     daftarLink: "#",
+    comingSoon: true,
     daftarBg: "bg-neo-blue",
     cardBg: "bg-cream",
     accent: "bg-neo-yellow",
@@ -82,6 +83,7 @@ const events = [
     description:
       "Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI.",
     daftarLink: "#",
+    comingSoon: true,
     daftarBg: "bg-neo-pink",
     cardBg: "bg-cream",
     accent: "bg-neo-blue",
@@ -125,17 +127,26 @@ function EventCard({ event, index }) {
           {event.description}
         </p>
         <div className="mt-auto space-y-3">
-          <a
-            className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none animate-neo-jitter`}
-            href={event.daftarLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="material-symbols-outlined text-lg">
-              how_to_reg
-            </span>
-            DAFTAR SEKARANG
-          </a>
+          {event.comingSoon ? (
+            <div className="flex items-center justify-center gap-2 w-full py-4 bg-neo-green text-black font-black uppercase neo-border neo-shadow-sm cursor-not-allowed">
+              <span className="material-symbols-outlined text-lg">
+                hourglass_top
+              </span>
+              COMING SOON
+            </div>
+          ) : (
+            <a
+              className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none animate-neo-jitter`}
+              href={event.daftarLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="material-symbols-outlined text-lg">
+                how_to_reg
+              </span>
+              DAFTAR SEKARANG
+            </a>
+          )}
           <Link
             to={`/event/${event.id}`}
             className="flex items-center justify-center gap-2 w-full py-4 bg-black text-white font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none"

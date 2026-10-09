@@ -145,6 +145,7 @@ const eventsData = {
     description:
       "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan di MILAD IT FEST 19.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran IT Expo
+    comingSoon: true,
     about: [
       "Pameran produk IoT, Web, dan Mobile Apps dari mahasiswa dan startup.",
       "Terbuka untuk umum, gratis tanpa tiket masuk.",
@@ -187,6 +188,7 @@ const eventsData = {
     description:
       "Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI di MILAD IT FEST 19.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran Seminar
+    comingSoon: true,
     about: [
       "Seminar nasional dengan pembicara dari tech giant nasional dan internasional.",
       'Tema: "The Future of AI: Opportunities & Challenges for Indonesia".',
@@ -418,19 +420,30 @@ export default function EventDetail() {
               Siap untuk ikut?
             </div>
             <p className="font-bold mb-6 bg-neo-yellow px-2 py-1 inline-block neo-border text-sm">
-              Pendaftaran ditutup 14 hari lagi.
+              {event.comingSoon
+                ? "Pendaftaran segera dibuka."
+                : "Pendaftaran ditutup 14 hari lagi."}
             </p>
-            <a
-              href={event.daftarLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-3 bg-neo-pink text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg"
-            >
-              <span className="material-symbols-outlined text-[28px]">
-                how_to_reg
-              </span>
-              DAFTAR SEKARANG
-            </a>
+            {event.comingSoon ? (
+              <div className="flex w-full items-center justify-center gap-3 bg-neo-green text-black font-black py-4 uppercase neo-border neo-shadow-sm text-lg cursor-not-allowed">
+                <span className="material-symbols-outlined text-[28px]">
+                  hourglass_top
+                </span>
+                COMING SOON
+              </div>
+            ) : (
+              <a
+                href={event.daftarLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-3 bg-neo-pink text-black font-black py-4 uppercase neo-border neo-shadow-sm transition-all hover:translate-x-1 hover:-translate-y-1 hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none text-lg"
+              >
+                <span className="material-symbols-outlined text-[28px]">
+                  how_to_reg
+                </span>
+                DAFTAR SEKARANG
+              </a>
+            )}
           </div>
         </ScrollReveal>
 
