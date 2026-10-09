@@ -234,6 +234,44 @@ const eventsData = {
     ],
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-green",
+    guestStar: {
+      img: "/img/SiluetOrang.png",
+      name: "Segera Diumumkan",
+      role: "Keynote Speaker",
+    },
+    agendaInfo: {
+      date: "16 Oktober 2026",
+      time: "Segera Diumumkan",
+      location:
+        "Kampus UIR, Jl. Kaharuddin Nasution No.113, Simpang Tiga, Pekanbaru, Riau",
+    },
+    susunanAcara: [
+      {
+        title: "Registrasi Peserta",
+        description: "Check-in peserta dan verifikasi tiket.",
+      },
+      {
+        title: "Pembukaan",
+        description: "Sambutan panitia dan pembukaan MILAD IT FEST 19.",
+      },
+      {
+        title: "Keynote Speech",
+        description:
+          "Pidato utama bertema \"The Future of AI: Opportunities & Challenges for Indonesia\".",
+      },
+      {
+        title: "Sesi Tanya Jawab",
+        description: "Q&A interaktif bersama pembicara.",
+      },
+      {
+        title: "Doorprize",
+        description: "Pengundian hadiah untuk peserta yang hadir.",
+      },
+      {
+        title: "Penutupan",
+        description: "Closing Ceremony MILAD IT FEST 19.",
+      },
+    ],
   },
   uiux: {
     category: "SKILL CHALLENGE",
@@ -516,6 +554,115 @@ export default function EventDetail() {
           </div>
         </ScrollReveal>
       </div>
+
+      {/* Speaker + Agenda & Informasi */}
+      {event.guestStar && event.agendaInfo && (
+        <ScrollReveal animation="animate-pop-up" delay={0.22}>
+          <div className="mt-8 bg-cream p-6 md:p-8 neo-border neo-shadow transition-colors flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            {/* Profil speaker - posisi tengah sebelah kiri */}
+            <div className="flex flex-col items-center justify-center text-center md:w-1/3 shrink-0">
+              <img
+                src={event.guestStar.img}
+                alt={event.guestStar.name}
+                loading="lazy"
+                decoding="async"
+                className="w-40 h-40 sm:w-48 sm:h-48 object-cover object-top neo-border neo-shadow-sm bg-neo-yellow mb-4"
+              />
+              <span className="inline-block px-3 py-1 bg-neo-pink neo-border text-xs font-black uppercase tracking-widest mb-2">
+                {event.guestStar.role}
+              </span>
+              <h4 className="text-xl sm:text-2xl font-black uppercase">
+                {event.guestStar.name}
+              </h4>
+            </div>
+            {/* Agenda & Informasi - sebelah kanan, paling atas */}
+            <div className="flex-1 w-full">
+              <h3 className="text-2xl font-black mb-6 uppercase border-b-4 border-black pb-4 flex items-center gap-3">
+                <span className="material-symbols-outlined text-[28px] text-neo-blue animate-neo-swing">
+                  event
+                </span>
+                AGENDA &amp; INFORMASI
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-4 bg-cream p-4 neo-border neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                  <span className="material-symbols-outlined text-2xl text-neo-pink">
+                    calendar_month
+                  </span>
+                  <div>
+                    <span className="block text-xs font-black uppercase opacity-70">
+                      Tanggal
+                    </span>
+                    <span className="block font-black text-lg">
+                      {event.agendaInfo.date}
+                    </span>
+                  </div>
+                </li>
+                <li className="flex items-center gap-4 bg-cream p-4 neo-border neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                  <span className="material-symbols-outlined text-2xl text-neo-blue">
+                    schedule
+                  </span>
+                  <div>
+                    <span className="block text-xs font-black uppercase opacity-70">
+                      Waktu
+                    </span>
+                    <span className="block font-black text-lg">
+                      {event.agendaInfo.time}
+                    </span>
+                  </div>
+                </li>
+                <li className="flex items-center gap-4 bg-cream p-4 neo-border neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                  <span className="material-symbols-outlined text-2xl text-neo-orange">
+                    location_on
+                  </span>
+                  <div>
+                    <span className="block text-xs font-black uppercase opacity-70">
+                      Lokasi
+                    </span>
+                    <span className="block font-black text-lg">
+                      {event.agendaInfo.location}
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ScrollReveal>
+      )}
+
+      {/* Susunan Acara Seminar */}
+      {event.susunanAcara && (
+        <ScrollReveal animation="animate-pop-up" delay={0.24}>
+          <div className="mt-8 bg-cream p-6 md:p-8 neo-border neo-shadow transition-colors">
+            <h3 className="text-2xl font-black mb-2 uppercase border-b-4 border-black pb-4 flex items-center gap-3">
+              <span className="material-symbols-outlined text-[28px] text-neo-green animate-neo-swing">
+                checklist
+              </span>
+              SUSUNAN ACARA SEMINAR
+            </h3>
+            <p className="text-sm sm:text-base font-bold mb-8 uppercase tracking-wide opacity-70">
+              Rangkaian sesi {event.title}
+            </p>
+            <ol className="space-y-4">
+              {event.susunanAcara.map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-start gap-4 bg-cream p-4 neo-border neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform group"
+                >
+                  <span className="w-9 h-9 shrink-0 rounded-full bg-neo-yellow neo-border neo-shadow-sm flex items-center justify-center font-black text-sm group-hover:animate-neo-swing">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h4 className="font-black uppercase">{item.title}</h4>
+                    <p className="font-bold text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </ScrollReveal>
+      )}
 
       {/* Timeline - Full Width */}
       <ScrollReveal animation="animate-pop-up" delay={0.25}>
