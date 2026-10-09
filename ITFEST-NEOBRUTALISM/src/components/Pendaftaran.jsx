@@ -53,7 +53,7 @@ const events = [
     title: "Hackathon",
     description:
       "Tantang kemampuan teknismu dalam membangun solusi inovatif dalam waktu terbatas.",
-    daftarLink: "#",
+    daftarLink: "https://forms.gle/uPtpzmGkGBmW9fQs7",
     daftarBg: "bg-neo-blue",
     cardBg: "bg-cream",
     accent: "bg-neo-blue",

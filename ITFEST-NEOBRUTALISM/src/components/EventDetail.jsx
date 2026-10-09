@@ -20,7 +20,7 @@ const eventsData = {
     heroImg: "/img/hackathon.webp",
     description:
       "Milad IT Fest Hackathon 2026 adalah marathon coding intensif 48 jam yang dirancang untuk mendorong batas inovasi. Peserta akan membentuk tim dan menyelesaikan masalah nyata menggunakan teknologi terkini.",
-    daftarLink: "#", // TODO: ganti dengan link form pendaftaran Hackathon
+    daftarLink: "https://forms.gle/uPtpzmGkGBmW9fQs7",
     about: [
       "Kompetisi ini terbuka untuk pelajar SMA/SMK dan mahasiswa aktif dari seluruh Indonesia.",
       "Peserta akan diberikan tantangan berupa problem statement yang diambil dari isu-isu nyata di masyarakat.",
