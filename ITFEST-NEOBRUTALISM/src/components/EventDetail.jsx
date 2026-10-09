@@ -632,7 +632,7 @@ export default function EventDetail() {
       {/* Susunan Acara Seminar */}
       {event.susunanAcara && (
         <ScrollReveal animation="animate-pop-up" delay={0.24}>
-          <div className="mt-8 bg-cream p-6 md:p-8 neo-border neo-shadow transition-colors">
+          <div className="mt-8 bg-neo-pink p-6 md:p-8 neo-border neo-shadow transition-colors">
             <h3 className="text-2xl font-black mb-2 uppercase border-b-4 border-black pb-4 flex items-center gap-3">
               <span className="material-symbols-outlined text-[28px] text-neo-green animate-neo-swing">
                 checklist
