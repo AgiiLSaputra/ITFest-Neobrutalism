@@ -488,9 +488,15 @@ export default function EventDetail() {
               Siap untuk ikut?
             </div>
             <p className="font-bold mb-6 bg-neo-yellow px-2 py-1 inline-block neo-border text-sm">
-              {event.comingSoon
-                ? "Pendaftaran segera dibuka."
-                : `Pendaftaran ditutup ${getPendaftaranDeadline(event) || "segera"}.`}
+              {event.comingSoon ? (
+                "Pendaftaran segera dibuka."
+              ) : (
+                <>
+                  Pendaftaran ditutup
+                  <br />
+                  {getPendaftaranDeadline(event) || "segera"}.
+                </>
+              )}
             </p>
             {event.comingSoon ? (
               <div
