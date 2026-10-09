@@ -10,6 +10,18 @@ const isPastDate = (iso) => {
   return Date.now() > new Date(iso).getTime();
 };
 
+const MONTHS_ID = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
+// Helper: ambil batas akhir pendaftaran dari timeline (entry "Pendaftaran" dengan endDateIso terakhir)
+const getPendaftaranDeadline = (event) => {
+  const ends = (event.timeline || [])
+    .filter((t) => /pendaftaran/i.test(t.title) && t.endDateIso)
+    .map((t) => new Date(t.endDateIso).getTime());
+  if (!ends.length) return null;
+  const d = new Date(Math.max(...ends));
+  return `${d.getDate()} ${MONTHS_ID[d.getMonth()]} ${d.getFullYear()}`;
+};
+
 const eventsData = {
   hackathon: {
     category: "IT COMPETITION",
@@ -478,7 +490,7 @@ export default function EventDetail() {
             <p className="font-bold mb-6 bg-neo-yellow px-2 py-1 inline-block neo-border text-sm">
               {event.comingSoon
                 ? "Pendaftaran segera dibuka."
-                : "Pendaftaran ditutup 14 hari lagi."}
+                : `Pendaftaran ditutup ${getPendaftaranDeadline(event) || "segera"}.`}
             </p>
             {event.comingSoon ? (
               <div
