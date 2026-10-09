@@ -23,7 +23,7 @@ const eventsData = {
     daftarLink: "https://forms.gle/uPtpzmGkGBmW9fQs7",
     daftarBg: "bg-neo-pink",
     guidebookLink:
-      "https://docs.google.com/document/d/1QPjSx7ey2PD5qZfO4pi7Hem0E1LhIrlJaZDSQ2X3OTA/edit?tab=t.0#heading=h.irgbtqn1yi2f",
+      "https://drive.google.com/drive/folders/1_JQNXGHyEKiSmgGFfNJCAmB_mIfgBNxB",
     about: [
       "Tema \"Technology for Sustainable Impact\" dengan subtema SDG: Kesehatan, Pendidikan, Pekerjaan & Ekonomi, serta Kota & Komunitas Berkelanjutan.",
       "Tim 2–4 orang dari SMA/SMK sederajat atau mahasiswa aktif D3/D4/S1 se-Indonesia. Biaya Rp160.000/tim (Batch 1) dan Rp180.000/tim (Batch 2).",
@@ -287,7 +287,7 @@ const eventsData = {
       "Rancang pengalaman pengguna yang intuitive dan estetis. Buktikan insting desain dan pemecahan masalahmu di MILAD IT FEST 19.",
     daftarLink: "https://forms.gle/AvBs1SFLNo3gt8iv7",
     guidebookLink:
-      "https://docs.google.com/document/d/1HLm7LQ_JY-GLt-bcnKBU6nJ4wTheemUDgca4DOmvSjg/edit?tab=t.0",
+      "https://drive.google.com/drive/folders/1_JQNXGHyEKiSmgGFfNJCAmB_mIfgBNxB",
     about: [
       "Kompetisi desain antarmuka berbasis studi kasus nyata: dari riset, wireframe, sampai high-fidelity prototype.",
       "Penilaian menekankan usability, estetika visual, dan kesesuaian solusi dengan kebutuhan pengguna.",
