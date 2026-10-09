@@ -148,6 +148,7 @@ const eventsData = {
       "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan di MILAD IT FEST 19.",
     daftarLink: "#", // TODO: ganti dengan link form pendaftaran IT Expo
     comingSoon: true,
+    comingSoonBg: "bg-neo-blue",
     about: [
       "Pameran produk IoT, Web, dan Mobile Apps dari mahasiswa dan startup.",
       "Terbuka untuk umum, gratis tanpa tiket masuk.",
@@ -427,7 +428,9 @@ export default function EventDetail() {
                 : "Pendaftaran ditutup 14 hari lagi."}
             </p>
             {event.comingSoon ? (
-              <div className="flex w-full items-center justify-center gap-3 bg-neo-green text-black font-black py-4 uppercase neo-border neo-shadow-sm text-lg cursor-not-allowed">
+              <div
+                className={`flex w-full items-center justify-center gap-3 ${event.comingSoonBg || "bg-neo-green"} text-black font-black py-4 uppercase neo-border neo-shadow-sm text-lg cursor-not-allowed`}
+              >
                 <span className="material-symbols-outlined text-[28px]">
                   hourglass_top
                 </span>

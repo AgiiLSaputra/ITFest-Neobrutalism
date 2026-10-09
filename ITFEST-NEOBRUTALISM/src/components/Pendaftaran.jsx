@@ -69,6 +69,7 @@ const events = [
       "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan.",
     daftarLink: "#",
     comingSoon: true,
+    comingSoonBg: "bg-neo-blue",
     daftarBg: "bg-neo-blue",
     cardBg: "bg-cream",
     accent: "bg-neo-yellow",
@@ -128,7 +129,9 @@ function EventCard({ event, index }) {
         </p>
         <div className="mt-auto space-y-3">
           {event.comingSoon ? (
-            <div className="flex items-center justify-center gap-2 w-full py-4 bg-neo-green text-black font-black uppercase neo-border neo-shadow-sm cursor-not-allowed">
+            <div
+              className={`flex items-center justify-center gap-2 w-full py-4 ${event.comingSoonBg || "bg-neo-green"} text-black font-black uppercase neo-border neo-shadow-sm cursor-not-allowed`}
+            >
               <span className="material-symbols-outlined text-lg">
                 hourglass_top
               </span>
