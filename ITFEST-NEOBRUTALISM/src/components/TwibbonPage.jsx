@@ -591,7 +591,7 @@ export default function TwibbonPage() {
                 {copied ? 'Tersalin!' : 'Salin Deskripsi'}
               </button>
               <p className="text-xs font-bold mt-3">
-                Tag juga akun resmi kami: <strong>@himatifuir_</strong> · #MiladITFest19
+                Tag juga akun resmi kami: <strong>@himatifuir_</strong>
               </p>
             </div>
           </ScrollReveal>

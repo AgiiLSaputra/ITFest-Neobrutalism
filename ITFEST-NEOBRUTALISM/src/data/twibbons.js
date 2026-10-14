@@ -24,7 +24,7 @@ export const twibbons = [
     about:
       'Kompetisi pengembangan solusi digital berbasis Web Application bertema "Technology for Sustainable Impact". Pasang twibbon ini untuk mendukung tim favoritmu!',
     caption:
-      '🚀 Aku siap berkontribusi di HACKATHON MILAD IT FEST 19!\n\nTema: "Technology for Sustainable Impact"\nSMA/SMK & Mahasiswa | Tim 2-4 orang\n1-2 Desember 2026, Universitas Islam Riau\n\nAyo daftar dan raih hadiahnya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #Hackathon #HIMATIFUIR #UIR',
+      '🚀 Aku siap berkontribusi di HACKATHON MILAD IT FEST 19!\n\nTema: "Technology for Sustainable Impact"\nSMA/SMK & Mahasiswa | Tim 2-4 orang\n1-2 Desember 2026, Universitas Islam Riau\n\nAyo daftar dan raih hadiahnya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#TechnofestUIR #Hackathon #HIMATIFUIR #UIR',
   },
   {
     id: 'uiux',
@@ -40,7 +40,7 @@ export const twibbons = [
     about:
       'Lomba desain antarmuka untuk mahasiswa. Tunjukan ide terbaikmu lewat desain yang fungsional dan estetis.',
     caption:
-      '🎨 Aku ikut ajang UI/UX DESIGN di MILAD IT FEST 19!\n\nBuktikan bahwa desain yang baik bisa mengubah pengalaman pengguna.\n1-2 Desember 2026, Universitas Islam Riau\n\nIkut juga, yuk! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #UIUXDesign #HIMATIFUIR #UIR',
+      '🎨 Aku ikut ajang UI/UX DESIGN di MILAD IT FEST 19!\n\nBuktikan bahwa desain yang baik bisa mengubah pengalaman pengguna.\n1-2 Desember 2026, Universitas Islam Riau\n\nIkut juga, yuk! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#TechnofestUIR #UIUXDesign #HIMATIFUIR #UIR',
   },
   {
     id: 'panitia',
@@ -56,7 +56,7 @@ export const twibbons = [
     about:
       'Twibbon untuk segenap panitia MILAD IT FEST 19 — HIMATIF UIR. Pasang fotomu sebagai tanda ikut mensukseskan rangkaian acara.',
     caption:
-      '🤝 Aku bagian dari PANITIA MILAD IT FEST 19!\n\nBersama HIMATIF UIR merayakan Technofest UIR Vol. 2 & Milad Teknik Informatika UIR ke-19\n1-2 Desember 2026, Universitas Islam Riau\n\nAyo sukseskan acaranya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #Panitia #HIMATIFUIR #UIR',
+      '🤝 Aku bagian dari PANITIA MILAD IT FEST 19!\n\nBersama HIMATIF UIR merayakan Technofest UIR Vol. 2 & Milad Teknik Informatika UIR ke-19\n1-2 Desember 2026, Universitas Islam Riau\n\nAyo sukseskan acaranya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#TechnofestUIR #Panitia #HIMATIFUIR #UIR',
   },
 ];
 
