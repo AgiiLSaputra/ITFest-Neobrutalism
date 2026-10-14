@@ -65,19 +65,6 @@ export const twibbons = [
     caption:
       '🏸 Aku siap menyaksikan dan mendukung para pemain di TURNAMEN BADMINTON MILAD IT FEST 19!\n\n1-2 Desember 2026, Universitas Islam Riau\n\nSampai jumpa di lapangan! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #Badminton #HIMATIFUIR #UIR',
   },
-  {
-    id: 'expo',
-    label: 'Expo',
-    title: 'TWIBBON EXPO',
-    frame: '/img/TWIBBON HACKATHON.png',
-    ready: false,
-    accent: 'bg-neo-yellow',
-    ink: 'text-black',
-    about:
-      'Pameran karya dan produk digital dari berbagai komunitas teknologi. (Bingkai khusus Expo sedang disiapkan.)',
-    caption:
-      '✨ Booth, karya, dan inovasi! Aku mengunjungi EXPO MILAD IT FEST 19!\n\nPameran teknologi & karya anak bangsa\n1-2 Desember 2026, Universitas Islam Riau\n\n#MiladITFest19 #TechnofestUIR #Expo #HIMATIFUIR #UIR',
-  },
 ];
 
 export const defaultTwibbonId = 'hackathon';
