@@ -78,19 +78,6 @@ export const twibbons = [
     caption:
       '✨ Booth, karya, dan inovasi! Aku mengunjungi EXPO MILAD IT FEST 19!\n\nPameran teknologi & karya anak bangsa\n1-2 Desember 2026, Universitas Islam Riau\n\n#MiladITFest19 #TechnofestUIR #Expo #HIMATIFUIR #UIR',
   },
-  {
-    id: 'seminar',
-    label: 'Seminar Nasional',
-    title: 'TWIBBON SEMINAR NASIONAL',
-    frame: '/img/TWIBBON HACKATHON.png',
-    ready: false,
-    accent: 'bg-neo-pink',
-    ink: 'text-black',
-    about:
-      'Seminar nasional bersama para praktisi dan akademisi teknologi. (Bingkai khusus Seminar Nasional sedang disiapkan.)',
-    caption:
-      '💡 Ilmu baru, wawasan baru! Aku mengikuti SEMINAR NASIONAL di MILAD IT FEST 19!\n\n1-2 Desember 2026, Universitas Islam Riau\n\nCatat tanggalnya, jangan sampai ketinggalan! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #SeminarNasional #HIMATIFUIR #UIR',
-  },
 ];
 
 export const defaultTwibbonId = 'hackathon';
