@@ -52,19 +52,6 @@ export const twibbons = [
     caption:
       '🎮 Squad, berkumpul! Aku mendukung tim favoritku di MOBILE LEGENDS MILAD IT FEST 19!\n\nE-Sports Tournament | 1-2 Desember 2026\nUniversitas Islam Riau\n\nGG WP, let\'s go! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #MobileLegends #ESports #HIMATIFUIR',
   },
-  {
-    id: 'badminton',
-    label: 'Badminton',
-    title: 'TWIBBON BADMINTON',
-    frame: '/img/TWIBBON HACKATHON.png',
-    ready: false,
-    accent: 'bg-neo-green',
-    ink: 'text-black',
-    about:
-      'Turnamen bulu tangkis untuk umum. Tunjukkan semangat sportivitasmu dan dukung para pemain. (Bingkai khusus Badminton sedang disiapkan.)',
-    caption:
-      '🏸 Aku siap menyaksikan dan mendukung para pemain di TURNAMEN BADMINTON MILAD IT FEST 19!\n\n1-2 Desember 2026, Universitas Islam Riau\n\nSampai jumpa di lapangan! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #Badminton #HIMATIFUIR #UIR',
-  },
 ];
 
 export const defaultTwibbonId = 'hackathon';
