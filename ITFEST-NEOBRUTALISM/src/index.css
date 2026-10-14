@@ -36,6 +36,49 @@
 .neo-scrollbar::-webkit-scrollbar-thumb:active { background: #0055a6; box-shadow: none; }
 .neo-scrollbar::-webkit-scrollbar-corner { background: #fdf5e6; border-left: 3px solid #000000; }
 
+/* RANGE slider neo-brutalist (zoom & rotate twibbon) — track tebal + thumb kotak.
+   Hitam pakai box-shadow (bukan border) supaya posisi thumb selalu presisi:
+   margin-top = -(tinggi_thumb - tinggi_track) / 2. */
+.neo-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 36px;
+  background: transparent;
+  cursor: pointer;
+}
+.neo-range:disabled { opacity: 0.4; cursor: not-allowed; }
+.neo-range::-webkit-slider-runnable-track {
+  height: 20px;
+  background: #fdf5e6;
+  box-shadow: 0 0 0 4px #000000, 4px 4px 0 0 #000000;
+}
+.neo-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 28px;
+  margin-top: -4px;
+  background: #ddf4a2;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+}
+.neo-range::-moz-range-track {
+  height: 20px;
+  background: #fdf5e6;
+  box-shadow: 0 0 0 4px #000000, 4px 4px 0 0 #000000;
+}
+.neo-range::-moz-range-thumb {
+  width: 24px;
+  height: 28px;
+  border-radius: 0;
+  background: #ddf4a2;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+}
+.neo-range:focus-visible::-webkit-slider-thumb { background: #fe9eec; }
+.neo-range:focus-visible::-moz-range-thumb { background: #fe9eec; }
+
 /* Font pixel — judul utama "MILAD IT FEST" (Google Fonts: Press Start 2P) */
 .font-pixel {
   font-family: 'Press Start 2P', monospace;

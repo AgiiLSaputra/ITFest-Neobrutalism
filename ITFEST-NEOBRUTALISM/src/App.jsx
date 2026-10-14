@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import EventDetail from './components/EventDetail';
 import AboutPage from './components/AboutPage';
 import SponsorPage from './components/SponsorPage';
+import TwibbonPage from './components/TwibbonPage';
 import MarqueeBanner from './components/MarqueeBanner';
 import ScrollToTop from './components/ScrollToTop';
 import NoiseOverlay from './components/NoiseOverlay';
@@ -69,6 +70,7 @@ export default function App() {
             <Route path="/" element={<MemoizedLandingPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/sponsor" element={<SponsorPage />} />
+            <Route path="/twibbon" element={<TwibbonPage />} />
             <Route path="/event/:eventId" element={<EventDetail />} />
           </Routes>
         </main>
