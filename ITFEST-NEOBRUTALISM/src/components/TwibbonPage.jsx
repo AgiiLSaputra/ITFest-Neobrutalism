@@ -451,11 +451,7 @@ export default function TwibbonPage() {
             <div className={`${active.accent} ${active.ink} p-5 neo-border neo-shadow neo-tilt`}>
               <div className="flex items-center gap-2 flex-wrap">
                 <h2 className="text-lg font-black uppercase">{active.title}</h2>
-                {active.ready ? (
-                  <span className="text-[10px] font-black uppercase bg-black text-white px-2 py-1 border-2 border-black">
-                    BINGKAI RESMI
-                  </span>
-                ) : (
+                {!active.ready && (
                   <span className="text-[10px] font-black uppercase bg-cream px-2 py-1 border-2 border-black">
                     BINGKAI MENYUSUL
                   </span>
