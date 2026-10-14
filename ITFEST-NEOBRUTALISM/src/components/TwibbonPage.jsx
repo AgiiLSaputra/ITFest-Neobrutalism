@@ -362,11 +362,6 @@ export default function TwibbonPage() {
                   }`}
                 >
                   {t.label}
-                  {!t.ready && (
-                    <span className="ml-2 text-[10px] px-1.5 py-0.5 border-2 border-current">
-                      BINGKAI MENYUSUL
-                    </span>
-                  )}
                 </button>
               );
             })}
