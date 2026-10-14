@@ -413,7 +413,10 @@ export default function TwibbonPage() {
                 )}
 
                 {!photo && (
-                  <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-3 p-4 text-center translate-x-[6%]">
+                  <div
+                    className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-3 p-4 text-center"
+                    style={{ transform: `translate(${active.phX ?? 6}%, ${active.phY ?? 0}%)` }}
+                  >
                     <span className="material-symbols-outlined text-5xl text-black">add_a_photo</span>
                     <p className="font-black text-sm uppercase">
                       Belum ada foto

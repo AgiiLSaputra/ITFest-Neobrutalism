@@ -32,6 +32,9 @@ export const twibbons = [
     title: 'TWIBBON UI/UX DESIGN',
     frame: '/img/TWIBBON UIUX.png',
     ready: true,
+    // Posisi placeholder "Belum ada foto" (persen dari lebar/tinggi stage) → pas di tengah lubang bingkai
+    phX: -3.2,
+    phY: 12.9,
     accent: 'bg-neo-pink',
     ink: 'text-black',
     about:
