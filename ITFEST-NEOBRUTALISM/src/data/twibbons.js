@@ -46,12 +46,15 @@ export const twibbons = [
     id: 'panitia',
     label: 'Panitia',
     title: 'TWIBBON PANITIA',
-    frame: '/img/TWIBBON HACKATHON.png',
-    ready: false,
+    frame: '/img/TWIBBON_PANITIA.png',
+    ready: true,
+    // Posisi placeholder "Belum ada foto" → pusat lubang bingkai (48.9% W, 51.3% H)
+    phX: -1.1,
+    phY: 1.3,
     accent: 'bg-neo-blue',
     ink: 'text-white',
     about:
-      'Twibbon untuk segenap panitia MILAD IT FEST 19 — HIMATIF UIR. Pasang fotomu sebagai tanda ikut mensukseskan rangkaian acara. (Bingkai khusus Panitia sedang disiapkan.)',
+      'Twibbon untuk segenap panitia MILAD IT FEST 19 — HIMATIF UIR. Pasang fotomu sebagai tanda ikut mensukseskan rangkaian acara.',
     caption:
       '🤝 Aku bagian dari PANITIA MILAD IT FEST 19!\n\nBersama HIMATIF UIR merayakan Technofest UIR Vol. 2 & Milad Teknik Informatika UIR ke-19\n1-2 Desember 2026, Universitas Islam Riau\n\nAyo sukseskan acaranya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #Panitia #HIMATIFUIR #UIR',
   },
