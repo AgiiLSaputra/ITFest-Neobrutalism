@@ -583,6 +583,9 @@ export default function TwibbonPage() {
 
           <ScrollReveal animation="animate-pop-up" delay={0.4}>
             <div className="bg-neo-pink p-5 neo-border neo-shadow">
+              <h2 className="text-lg font-black uppercase border-b-4 border-black pb-3 mb-4">
+                Deskripsi
+              </h2>
               <pre className="bg-cream p-4 neo-border text-sm font-bold whitespace-pre-wrap leading-relaxed max-h-64 overflow-y-auto neo-scrollbar">
                 {active.caption}
               </pre>
