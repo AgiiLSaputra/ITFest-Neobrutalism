@@ -300,8 +300,6 @@ export default function TwibbonPage() {
     copiedTimer.current = setTimeout(() => setCopied(false), 2000);
   };
 
-  const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(active.caption)}`;
-
   const ctrlBtn =
     'px-3 py-2 neo-border bg-cream font-black text-xs uppercase flex items-center gap-1 justify-center transition-all hover:translate-x-1 hover:translate-y-1 hover:neo-shadow-sm active:translate-x-2 active:translate-y-2 active:shadow-none disabled:opacity-40 disabled:pointer-events-none';
 
@@ -580,26 +578,15 @@ export default function TwibbonPage() {
               <pre className="bg-cream p-4 neo-border text-sm font-bold whitespace-pre-wrap leading-relaxed max-h-64 overflow-y-auto neo-scrollbar">
                 {active.caption}
               </pre>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-                <button
-                  className="bg-neo-yellow px-4 py-2 neo-border neo-shadow-sm font-black text-sm uppercase transition-all hover:translate-x-1 hover:translate-y-1 hover:neo-shadow active:translate-x-2 active:translate-y-2 active:shadow-none flex items-center justify-center gap-2"
-                  onClick={handleCopy}
-                >
-                  <span className="material-symbols-outlined text-lg">
-                    {copied ? 'check' : 'content_copy'}
-                  </span>
-                  {copied ? 'Tersalin!' : 'Salin Deskripsi'}
-                </button>
-                <a
-                  href={shareUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-cream px-4 py-2 neo-border neo-shadow-sm font-black text-sm uppercase transition-all hover:translate-x-1 hover:translate-y-1 hover:neo-shadow active:translate-x-2 active:translate-y-2 active:shadow-none flex items-center justify-center gap-2"
-                >
-                  <span className="material-symbols-outlined text-lg">share</span>
-                  Bagikan ke X
-                </a>
-              </div>
+              <button
+                className="w-full mt-4 bg-neo-yellow px-4 py-2 neo-border neo-shadow-sm font-black text-sm uppercase transition-all hover:translate-x-1 hover:translate-y-1 hover:neo-shadow active:translate-x-2 active:translate-y-2 active:shadow-none flex items-center justify-center gap-2"
+                onClick={handleCopy}
+              >
+                <span className="material-symbols-outlined text-lg">
+                  {copied ? 'check' : 'content_copy'}
+                </span>
+                {copied ? 'Tersalin!' : 'Salin Deskripsi'}
+              </button>
               <p className="text-xs font-bold mt-3">
                 Tag juga akun resmi kami: <strong>@himatifuir_</strong> · #MiladITFest19
               </p>
