@@ -40,17 +40,17 @@ export const twibbons = [
       '🎨 Aku ikut ajang UI/UX DESIGN di MILAD IT FEST 19!\n\nBuktikan bahwa desain yang baik bisa mengubah pengalaman pengguna.\n1-2 Desember 2026, Universitas Islam Riau\n\nIkut juga, yuk! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #UIUXDesign #HIMATIFUIR #UIR',
   },
   {
-    id: 'esport',
-    label: 'Mobile Legends',
-    title: 'TWIBBON MOBILE LEGENDS',
+    id: 'panitia',
+    label: 'Panitia',
+    title: 'TWIBBON PANITIA',
     frame: '/img/TWIBBON HACKATHON.png',
     ready: false,
     accent: 'bg-neo-blue',
     ink: 'text-white',
     about:
-      'Turnamen E-Sports Mobile Legends: Bang Bang. Dukung squad kesayanganmu dengan memasang twibbon ini. (Bingkai khusus E-Sports sedang disiapkan.)',
+      'Twibbon untuk segenap panitia MILAD IT FEST 19 — HIMATIF UIR. Pasang fotomu sebagai tanda ikut mensukseskan rangkaian acara. (Bingkai khusus Panitia sedang disiapkan.)',
     caption:
-      '🎮 Squad, berkumpul! Aku mendukung tim favoritku di MOBILE LEGENDS MILAD IT FEST 19!\n\nE-Sports Tournament | 1-2 Desember 2026\nUniversitas Islam Riau\n\nGG WP, let\'s go! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #MobileLegends #ESports #HIMATIFUIR',
+      '🤝 Aku bagian dari PANITIA MILAD IT FEST 19!\n\nBersama HIMATIF UIR merayakan Technofest UIR Vol. 2 & Milad Teknik Informatika UIR ke-19\n1-2 Desember 2026, Universitas Islam Riau\n\nAyo sukseskan acaranya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #Panitia #HIMATIFUIR #UIR',
   },
 ];
 
