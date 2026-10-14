@@ -379,14 +379,11 @@ export default function TwibbonPage() {
         <div className="lg:col-span-7">
           <ScrollReveal animation="animate-pop-up" delay={0.25}>
             <div className="bg-cream p-4 sm:p-5 neo-border neo-shadow">
-              <div className="flex items-center justify-between border-b-4 border-black pb-3 mb-4 gap-3">
+              <div className="flex items-center border-b-4 border-black pb-3 mb-4 gap-3">
                 <h2 className="text-lg font-black uppercase flex items-center gap-2">
                   <span className="material-symbols-outlined text-neo-pink">crop_free</span>
                   Preview
                 </h2>
-                <span className="text-[11px] font-black uppercase bg-neo-yellow border-2 border-black px-2 py-1">
-                  {frameDims.w || '—'} x {frameDims.h || '—'} PX
-                </span>
               </div>
 
               <div
