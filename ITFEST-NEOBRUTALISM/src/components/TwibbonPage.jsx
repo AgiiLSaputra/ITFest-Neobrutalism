@@ -320,7 +320,7 @@ export default function TwibbonPage() {
 
       <ScrollReveal animation="animate-pop-up">
         <div className="inline-block px-4 py-2 bg-neo-pink neo-border font-black uppercase tracking-wider transform -rotate-2 mb-6">
-          Twibbon Maker
+          Twibbon
         </div>
       </ScrollReveal>
 
