@@ -30,12 +30,12 @@ export const twibbons = [
     id: 'uiux',
     label: 'UI/UX Design',
     title: 'TWIBBON UI/UX DESIGN',
-    frame: '/img/TWIBBON HACKATHON.png',
-    ready: false,
+    frame: '/img/TWIBBON UIUX.png',
+    ready: true,
     accent: 'bg-neo-pink',
     ink: 'text-black',
     about:
-      'Lomba desain antarmuka untuk mahasiswa. Tunjukan ide terbaikmu lewat desain yang fungsional dan estetis. (Bingkai khusus UI/UX sedang disiapkan.)',
+      'Lomba desain antarmuka untuk mahasiswa. Tunjukan ide terbaikmu lewat desain yang fungsional dan estetis.',
     caption:
       '🎨 Aku ikut ajang UI/UX DESIGN di MILAD IT FEST 19!\n\nBuktikan bahwa desain yang baik bisa mengubah pengalaman pengguna.\n1-2 Desember 2026, Universitas Islam Riau\n\nIkut juga, yuk! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#MiladITFest19 #TechnofestUIR #UIUXDesign #HIMATIFUIR #UIR',
   },
