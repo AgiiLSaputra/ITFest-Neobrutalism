@@ -40,7 +40,7 @@ export const twibbons = [
     about:
       'Lomba desain antarmuka untuk mahasiswa. Tunjukan ide terbaikmu lewat desain yang fungsional dan estetis.',
     caption:
-      '🎨 Aku ikut ajang UI/UX DESIGN di MILAD IT FEST 19!\n\nBuktikan bahwa desain yang baik bisa mengubah pengalaman pengguna.\n1-2 Desember 2026, Universitas Islam Riau\n\nIkut juga, yuk! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#TechnofestUIR #UIUXDesign #HIMATIFUIR #UIR',
+      '🎨 **READY TO DESIGN THE FUTURE!**\n\nIdeas into interfaces, creativity into solutions. 🚀\n\nHalo! Saya **[Nama Peserta]** dari **[Nama Tim/Asal Instansi]**, siap menjadi bagian dari **UI/UX Competition MILAD IT FEST**!\n\nSaatnya menuangkan kreativitas, merancang pengalaman digital yang bermakna, dan menghadirkan solusi melalui desain. Bukan sekadar tampilan, tetapi bagaimana sebuah desain dapat memberikan pengalaman terbaik bagi penggunanya.\n\nDengan semangat inovasi dan kolaborasi, mari ciptakan karya yang berdampak!\n\n**“Innovation & Technology: Creating Solutions, Shaping the Future”**\n\nLet\'s design something meaningful!\n\n@miladtiur @technofestuir @himatifuir_\n\n#MiladITFest19 #MiladTIUIR #TechnoFestUIR #InnovationAnd Technology #TeknikInformatikaUIR',
   },
   {
     id: 'panitia',
