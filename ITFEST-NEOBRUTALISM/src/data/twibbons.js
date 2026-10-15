@@ -24,7 +24,7 @@ export const twibbons = [
     about:
       'Kompetisi pengembangan solusi digital berbasis Web Application bertema "Technology for Sustainable Impact". Pasang twibbon ini untuk mendukung tim favoritmu!',
     caption:
-      '🚀 Aku siap berkontribusi di HACKATHON MILAD IT FEST 19!\n\nTema: "Technology for Sustainable Impact"\nSMA/SMK & Mahasiswa | Tim 2-4 orang\n1-2 Desember 2026, Universitas Islam Riau\n\nAyo daftar dan raih hadiahnya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#TechnofestUIR #Hackathon #HIMATIFUIR #UIR',
+      '💻 **READY TO CODE THE FUTURE!**\n\nThink. Build. Innovate. ⚡\n\nHalo! Saya **[Nama Peserta]** dari **[Nama Tim/Asal Instansi]**, siap menjadi bagian dari **Hackathon Web Innovation MILAD IT FEST**!\n\nSaatnya mengubah ide menjadi inovasi, menghadapi tantangan melalui teknologi, dan membangun solusi digital yang bermanfaat. Setiap ide punya potensi, setiap baris kode punya arti!\n\nBersama semangat kreativitas dan kolaborasi, mari buktikan bahwa teknologi dapat menciptakan perubahan.\n\n**“Innovation & Technology: Creating Solutions, Shaping the Future”**\n\nLet\'s build something impactful!\n\n@miladtiur @technofestuir @himatifuir_\n\n#MiladITFest19 #MiladTIUIR #TechnoFestUIR #InnovationAnd Technology #TeknikInformatikaUIR',
   },
   {
     id: 'uiux',
