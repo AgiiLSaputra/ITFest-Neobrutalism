@@ -67,8 +67,8 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      { dateFormatted: "10 – 25 Oktober 2026", endDateIso: "2026-10-25T23:59:59+07:00", title: "Pendaftaran Batch 1", description: "Pendaftaran daring melalui formulir resmi panitia." },
-      { dateFormatted: "26 Oktober – 19 November 2026", endDateIso: "2026-11-19T23:59:59+07:00", title: "Pendaftaran Batch 2", description: "Pendaftaran daring melalui formulir resmi panitia." },
+      { dateFormatted: "10 – 31 Oktober 2026", endDateIso: "2026-10-31T23:59:59+07:00", title: "Pendaftaran Batch 1", description: "Pendaftaran daring melalui formulir resmi panitia." },
+      { dateFormatted: "1 – 19 November 2026", endDateIso: "2026-11-19T23:59:59+07:00", title: "Pendaftaran Batch 2", description: "Pendaftaran daring melalui formulir resmi panitia." },
       { dateFormatted: "19 November 2026", endDateIso: "2026-11-19T23:59:59+07:00", title: "Batas Pengumpulan Proposal", description: "Batas akhir pengumpulan proposal ide solusi sesuai subtema yang dipilih." },
       { dateFormatted: "20 – 27 November 2026", endDateIso: "2026-11-27T23:59:59+07:00", title: "Screening Proposal", description: "Seleksi proposal berdasarkan kriteria yang telah ditentukan." },
       { dateFormatted: "28 November 2026", endDateIso: "2026-11-28T23:59:59+07:00", title: "Pengumuman Finalis", description: "Pengumuman tim yang lolos sebagai finalis." },
@@ -117,7 +117,7 @@ const eventsData = {
       { dateFormatted: "1 – 25 Oktober 2026", endDateIso: "2026-10-25T23:59:59+07:00", title: "Pendaftaran Gelombang 1 (Early Bird)", description: "Pendaftaran dibuka dengan kuota terbatas 16 tim." },
       { dateFormatted: "26 Oktober – 16 November 2026", endDateIso: "2026-11-16T23:59:59+07:00", title: "Pendaftaran Gelombang 2", description: "Pendaftaran reguler hingga kuota 32 tim terpenuhi." },
       { dateFormatted: "18 November 2026", endDateIso: "2026-11-18T23:59:59+07:00", title: "Technical Meeting (Online)", description: "Pengundian bracket dan pembacaan rulebook pertandingan." },
-      { dateFormatted: "21 – 22 November 2026", endDateIso: "2026-11-22T23:59:59+07:00", title: "Main Event & Grand Final", description: "Pertandingan babak knockout dan babak puncaknya di Stage Utama." },
+      { dateFormatted: "27 – 29 November 2026", endDateIso: "2026-11-29T23:59:59+07:00", title: "Main Event & Grand Final", description: "Pertandingan babak knockout dan babak puncaknya di Stage Utama." },
     ],
     accentBg: "bg-neo-pink",
     tagBg: "bg-neo-blue",
@@ -156,7 +156,7 @@ const eventsData = {
     timeline: [
       { dateFormatted: "1 Oktober – 8 November 2026", endDateIso: "2026-11-08T23:59:59+07:00", title: "Masa Pendaftaran Registrasi", description: "Pendaftaran peserta dan verifikasi berkas identitas." },
       { dateFormatted: "10 November 2026", endDateIso: "2026-11-10T23:59:59+07:00", title: "Technical Meeting", description: "Penjelasan peraturan pertandingan dan drawing lawan." },
-      { dateFormatted: "14 – 15 November 2026", endDateIso: "2026-11-15T23:59:59+07:00", title: "Pertandingan Babak Penyisihan - Final", description: "Pelaksanaan pertandingan di Lapangan Indoor GSG UIR." },
+      { dateFormatted: "5 – 6 Desember 2026", endDateIso: "2026-12-06T23:59:59+07:00", title: "Pertandingan Babak Penyisihan - Final", description: "Pelaksanaan pertandingan di Lapangan Indoor GSG UIR." },
     ],
     accentBg: "bg-neo-green",
     tagBg: "bg-neo-yellow",
@@ -243,7 +243,7 @@ const eventsData = {
     ],
     timeline: [
       { dateFormatted: "1 September – 10 Oktober 2026", endDateIso: "2026-10-10T23:59:59+07:00", title: "Masa Registrasi Peserta", description: "Pembelian tiket presale & tiket reguler seminar nasional." },
-      { dateFormatted: "16 Oktober 2026", endDateIso: "2026-10-16T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan MILAD IT FEST 19." },
+      { dateFormatted: "10 Desember 2026", endDateIso: "2026-12-10T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan MILAD IT FEST 19." },
     ],
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-green",
@@ -253,7 +253,7 @@ const eventsData = {
       role: "Keynote Speaker",
     },
     agendaInfo: {
-      date: "16 Oktober 2026",
+      date: "10 Desember 2026",
       time: "Segera Diumumkan",
       location:
         "Kampus UIR, Jl. Kaharuddin Nasution No.113, Simpang Tiga, Pekanbaru, Riau",
@@ -327,7 +327,7 @@ const eventsData = {
       { dateFormatted: "10 Oktober – 8 November 2026", endDateIso: "2026-11-08T23:59:59+07:00", title: "Pendaftaran Peserta", description: "Pendaftaran dan verifikasi identitas mahasiswa aktif UIR." },
       { dateFormatted: "1 – 14 November 2026", endDateIso: "2026-11-14T23:59:59+07:00", title: "Brief & Workshop", description: "Pembahasan studi kasus dan workshop tools desain bersama mentor." },
       { dateFormatted: "15 November 2026", endDateIso: "2026-11-15T23:59:59+07:00", title: "Babak Penyisihan", description: "Pengumpulan karya desain sesuai brief secara online untuk lolos ke babak final." },
-      { dateFormatted: "17 November 2026", endDateIso: "2026-11-17T23:59:59+07:00", title: "Grand Final", description: "Presentasi dan pitch karya di depan dewan juri MILAD IT FEST 19." },
+      { dateFormatted: "5 Desember 2026", endDateIso: "2026-12-05T23:59:59+07:00", title: "Grand Final", description: "Presentasi dan pitch karya di depan dewan juri MILAD IT FEST 19." },
     ],
     accentBg: "bg-neo-pink",
     tagBg: "bg-neo-yellow",

@@ -126,7 +126,7 @@ export default function AboutPage() {
               <div className="space-y-3 text-sm font-bold">
                 <div className="bg-cream p-3 neo-border flex items-center gap-2">
                   <span className="material-symbols-outlined text-neo-blue text-base">calendar_today</span>
-                  <span>1 – 2 Desember 2026</span>
+                  <span>9 – 10 Desember 2026</span>
                 </div>
                 <div className="bg-cream p-3 neo-border flex items-start gap-2">
                   <span className="material-symbols-outlined text-neo-pink text-base">pin_drop</span>

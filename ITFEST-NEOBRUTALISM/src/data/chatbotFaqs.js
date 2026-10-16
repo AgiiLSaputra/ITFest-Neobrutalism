@@ -49,7 +49,7 @@ export const chatFaqs = [
       {
         type: 'kv',
         items: [
-          { label: 'Tanggal Puncak Acara', value: '1 – 2 Desember 2026' },
+          { label: 'Tanggal Puncak Acara', value: '9 – 10 Desember 2026' },
           { label: 'Lokasi Utama', value: 'Kampus UIR, Jl. Kaharuddin Nasution No.113, Simpang Tiga, Pekanbaru, Riau' },
         ],
       },
@@ -58,12 +58,12 @@ export const chatFaqs = [
         type: 'ul',
         items: [
           '1 September 2026 — Pembukaan pendaftaran perdana (Seminar Nasional & IT Expo), disusul cabang lomba lainnya sejak Oktober 2026',
-          '14 – 15 November 2026 — Badminton (Gor Badminton, Simpang Tiga)',
-          '21 November 2026 — Final Lomba UI/UX Design',
-          '21 – 22 November 2026 — Mobile Legends (Selasar Coffee)',
-          '28 – 29 November 2026 — Hackathon (Aula Gedung A, Fakultas Teknik UIR)',
-          '1 Desember 2026 — Pembukaan pameran (Indoor Gor Volly UIR)',
-          '2 Desember 2026 — Seminar Nasional & Puncak Acara',
+          '27 – 29 November 2026 — Mobile Legends (Selasar Coffee)',
+          '5 Desember 2026 — Final Lomba UI/UX Design',
+          '5 – 6 Desember 2026 — Badminton (Gor Badminton, Simpang Tiga)',
+          '5 – 6 Desember 2026 — Hackathon (Aula Gedung A, Fakultas Teknik UIR)',
+          '9 Desember 2026 — Pembukaan pameran (Indoor Gor Volly UIR)',
+          '10 Desember 2026 — Seminar Nasional & Puncak Acara',
         ],
       },
     ],
@@ -123,7 +123,7 @@ export const chatFaqs = [
         items: [
           'Seminar Nasional (tiket): 1 September – 10 Oktober 2026',
           'IT Expo (booth): 15 September – 5 Oktober 2026',
-          'Hackathon: Gelombang 1 10–25 Oktober, Gelombang 2 26 Oktober – 8 November 2026',
+          'Hackathon: Gelombang 1 10–31 Oktober, Gelombang 2 1 – 19 November 2026',
           'E-Sport Mobile Legends: Gelombang 1 1–25 Oktober, Gelombang 2 26 Oktober – 16 November 2026 (kuota 32 tim)',
           'Badminton: 1 Oktober – 8 November 2026',
           'UI/UX Design: 10 Oktober – 8 November 2026',

@@ -56,7 +56,7 @@ export const twibbons = [
     about:
       'Twibbon untuk segenap panitia MILAD IT FEST 19 — HIMATIF UIR. Pasang fotomu sebagai tanda ikut mensukseskan rangkaian acara.',
     caption:
-      '🤝 Aku bagian dari PANITIA MILAD IT FEST 19!\n\nBersama HIMATIF UIR merayakan Technofest UIR Vol. 2 & Milad Teknik Informatika UIR ke-19\n1-2 Desember 2026, Universitas Islam Riau\n\nAyo sukseskan acaranya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#TechnofestUIR #Panitia #HIMATIFUIR #UIR',
+      '🤝 Aku bagian dari PANITIA MILAD IT FEST 19!\n\nBersama HIMATIF UIR merayakan Technofest UIR Vol. 2 & Milad Teknik Informatika UIR ke-19\n9-10 Desember 2026, Universitas Islam Riau\n\nAyo sukseskan acaranya! 👇\nhttps://forms.gle/uPtpzmGkGBmW9fQs7\n\n#TechnofestUIR #Panitia #HIMATIFUIR #UIR',
   },
 ];
 
