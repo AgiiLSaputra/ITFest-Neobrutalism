@@ -300,7 +300,7 @@ const eventsData = {
       "Rancang pengalaman pengguna yang intuitive dan estetis. Buktikan insting desain dan pemecahan masalahmu di MILAD IT FEST 19.",
     daftarLink: "https://forms.gle/AvBs1SFLNo3gt8iv7",
     guidebookLink:
-      "https://drive.google.com/drive/folders/1_JQNXGHyEKiSmgGFfNJCAmB_mIfgBNxB",
+      "https://drive.google.com/file/d/1MuzmH7s7EiLTefp1f35XpqLY2KQyMpBJ/view?usp=drive_link",
     about: [
       "Kompetisi desain antarmuka berbasis studi kasus nyata: dari riset, wireframe, sampai high-fidelity prototype.",
       "Penilaian menekankan usability, estetika visual, dan kesesuaian solusi dengan kebutuhan pengguna.",
