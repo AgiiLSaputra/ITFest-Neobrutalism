@@ -36,7 +36,7 @@ const eventsData = {
     daftarLink: "https://forms.gle/uPtpzmGkGBmW9fQs7",
     daftarBg: "bg-neo-pink",
     guidebookLink:
-      "https://drive.google.com/drive/folders/1_JQNXGHyEKiSmgGFfNJCAmB_mIfgBNxB",
+      "https://drive.google.com/file/d/1o-f42Ae35rhadpSdCLi45wSRVUfFdGxa/view?usp=drive_link",
     about: [
       "Tema \"Technology for Sustainable Impact\" dengan subtema SDG: Kesehatan, Pendidikan, Pekerjaan & Ekonomi, serta Kota & Komunitas Berkelanjutan.",
       "Tim 2–4 orang dari SMA/SMK sederajat atau mahasiswa aktif D3/D4/S1 se-Indonesia. Biaya Rp160.000/tim (Batch 1) dan Rp180.000/tim (Batch 2).",
