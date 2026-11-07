@@ -67,7 +67,7 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      { dateFormatted: "10 – 31 Oktober 2026", endDateIso: "2026-10-31T23:59:59+07:00", title: "Pendaftaran Batch 1", description: "Pendaftaran daring melalui formulir resmi panitia." },
+      { dateFormatted: "16 – 31 Oktober 2026", endDateIso: "2026-10-31T23:59:59+07:00", title: "Pendaftaran Batch 1", description: "Pendaftaran daring melalui formulir resmi panitia." },
       { dateFormatted: "1 – 19 November 2026", endDateIso: "2026-11-19T23:59:59+07:00", title: "Pendaftaran Batch 2", description: "Pendaftaran daring melalui formulir resmi panitia." },
       { dateFormatted: "19 November 2026", endDateIso: "2026-11-19T23:59:59+07:00", title: "Batas Pengumpulan Proposal", description: "Batas akhir pengumpulan proposal ide solusi sesuai subtema yang dipilih." },
       { dateFormatted: "20 – 27 November 2026", endDateIso: "2026-11-27T23:59:59+07:00", title: "Screening Proposal", description: "Seleksi proposal berdasarkan kriteria yang telah ditentukan." },
