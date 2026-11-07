@@ -242,7 +242,7 @@ const eventsData = {
       { icon: "redeem", place: "Doorprize", amount: "Menarik Lainnya", bg: "bg-cream" },
     ],
     timeline: [
-      { dateFormatted: "1 September – 10 Oktober 2026", endDateIso: "2026-10-10T23:59:59+07:00", title: "Masa Registrasi Peserta", description: "Pembelian tiket presale & tiket reguler seminar nasional." },
+      { dateFormatted: "1 September – 10 Oktober 2026", endDateIso: "2026-10-10T23:59:59+07:00", title: "Masa Registrasi Peserta", description: "Pembelian tiket presale & tiket reguler seminar nasional.", comingSoon: true },
       { dateFormatted: "10 Desember 2026", endDateIso: "2026-12-10T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan MILAD IT FEST 19." },
     ],
     accentBg: "bg-neo-blue",
@@ -713,7 +713,9 @@ export default function EventDetail() {
             <div className="md:hidden absolute left-5 top-2 bottom-2 w-1 bg-black"></div>
             <div className="space-y-8 md:space-y-12">
               {event.timeline.map((item, i) => {
-                const expired = isPastDate(item.endDateIso);
+                // Item dengan comingSoon: true selalu tampil aktif (tidak dianggap selesai).
+                const comingSoon = Boolean(item.comingSoon);
+                const expired = !comingSoon && isPastDate(item.endDateIso);
                 const isEven = i % 2 === 0;
                 return (
                   <div key={i} className={`relative ${expired ? "grayscale opacity-70" : ""}`}>
@@ -738,11 +740,19 @@ export default function EventDetail() {
                           <h4 className={`text-sm sm:text-base font-black uppercase ${expired ? "line-through" : ""}`}>
                             {item.title}
                           </h4>
-                          <span className={`inline-flex items-center gap-1 shrink-0 text-[10px] sm:text-xs font-mono font-black px-2 py-0.5 neo-border ${expired ? "bg-cream" : "bg-neo-yellow text-black"}`}>
+                          <span
+                            className={`inline-flex items-center gap-1 shrink-0 text-[10px] sm:text-xs font-mono font-black px-2 py-0.5 neo-border ${
+                              expired
+                                ? "bg-cream"
+                                : comingSoon
+                                  ? "bg-neo-green text-black"
+                                  : "bg-neo-yellow text-black"
+                            }`}
+                          >
                             <span className="material-symbols-outlined text-sm">
-                              {expired ? "schedule" : "calendar_month"}
+                              {expired ? "schedule" : comingSoon ? "hourglass_top" : "calendar_month"}
                             </span>
-                            {item.dateFormatted}
+                            {comingSoon ? "COMING SOON" : item.dateFormatted}
                             {expired && " (Selesai)"}
                           </span>
                         </div>
