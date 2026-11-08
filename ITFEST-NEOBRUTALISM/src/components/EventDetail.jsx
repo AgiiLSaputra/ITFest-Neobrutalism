@@ -248,8 +248,8 @@ const eventsData = {
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-green",
     guestStar: {
-      img: "/img/SiluetOrang.png",
-      name: "Segera Diumumkan",
+      img: "/img/Pemateri.jpeg",
+      name: "Setia Budi, Ph.D.",
       role: "Keynote Speaker",
     },
     agendaInfo: {
