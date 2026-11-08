@@ -1,6 +1,6 @@
 export const sponsors = [
   { id: 1, name: 'Keish', color: 'bg-neo-yellow', img: '/SponsorDanMediaPartner/Sponsor1.png', imgBg: 'bg-cream', logoPad: 'p-1.5', link: 'https://www.instagram.com/keishcoffee?cplk=MTdvM2FnMnZ0M20ybQ==' },
-  { id: 2, name: 'Dicoding', color: 'bg-neo-blue', img: '/SponsorDanMediaPartner/Sponsor2.png', wide: true },
+  { id: 2, name: 'Dicoding', color: 'bg-neo-blue', img: '/SponsorDanMediaPartner/Sponsor2.png', wide: true, link: 'https://www.instagram.com/dicoding?obrf=MTg0ZmZkMjFscm5vbA==' },
   { id: 3, name: 'Sponsor 3', color: 'bg-neo-pink' },
   { id: 4, name: 'Sponsor 4', color: 'bg-neo-green' },
   { id: 5, name: 'Sponsor 5', color: 'bg-neo-orange' },
