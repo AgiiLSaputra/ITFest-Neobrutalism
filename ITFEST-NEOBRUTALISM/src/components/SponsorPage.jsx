@@ -52,6 +52,25 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
     );
   }
 
+  if (item.img && item.wide) {
+    return (
+      <Tag
+        {...linkProps}
+        className={`group bg-cream px-4 pt-4 pb-1 neo-border neo-shadow-sm flex flex-col items-center text-center gap-2 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:neo-shadow hover:shadow-none neo-tilt ${item.lgSpan2 ? 'lg:col-span-2' : ''}`}
+      >
+        <img
+          src={item.img}
+          alt={item.name}
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+          className={`w-full h-[96px] sm:h-[112px] ${item.imgBg || 'bg-cream'} neo-border p-3 object-contain`}
+        />
+        <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
+      </Tag>
+    );
+  }
+
   return (
     <Tag
       {...linkProps}

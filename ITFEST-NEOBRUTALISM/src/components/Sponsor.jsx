@@ -23,7 +23,16 @@ const SponsorCard = memo(function SponsorCard({ item, itemKey, isHovered, onEnte
           : 'bg-cream opacity-60 hover:opacity-100 hover:scale-110 hover:neo-shadow-sm')
       }
     >
-      {item.img && item.frameless ? (
+      {item.img && item.wide ? (
+        <img
+          src={item.img}
+          alt={item.name}
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+          className="w-[258px] sm:w-[304px] h-[92px] sm:h-[108px] mb-1 bg-cream neo-border p-2 object-contain transition-all duration-300"
+        />
+      ) : item.img && item.frameless ? (
         <img
           src={item.img}
           alt={item.name}
