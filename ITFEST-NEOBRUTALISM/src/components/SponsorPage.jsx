@@ -83,7 +83,7 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
           loading="lazy"
           decoding="async"
           draggable={false}
-          className={`w-20 h-20 sm:w-24 sm:h-24 ${item.imgBg || 'bg-black'} neo-border p-3 object-contain transition-transform duration-200 group-hover:rotate-6`}
+          className={`w-20 h-20 sm:w-24 sm:h-24 ${item.imgBg || 'bg-black'} p-3 object-contain transition-transform duration-200 group-hover:rotate-6`}
         />
       ) : (
         <span className={`w-20 h-20 sm:w-24 sm:h-24 ${item.color} neo-border p-3 flex items-center justify-center font-black text-2xl sm:text-3xl text-black transition-transform duration-200 group-hover:rotate-6`}>
