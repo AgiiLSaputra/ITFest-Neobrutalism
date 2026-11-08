@@ -48,7 +48,7 @@ const SponsorCard = memo(function SponsorCard({ item, itemKey, isHovered, onEnte
           loading="lazy"
           decoding="async"
           draggable={false}
-          className={(item.imgBg || 'bg-black') + ' w-20 h-20 sm:w-24 sm:h-24 p-2 mb-4 object-contain transition-all duration-300'}
+          className={(item.imgBg || 'bg-black') + ' w-20 h-20 sm:w-24 sm:h-24 ' + (item.logoPad || 'p-2') + ' mb-4 object-contain transition-all duration-300'}
         />
       ) : (
         <span className={
