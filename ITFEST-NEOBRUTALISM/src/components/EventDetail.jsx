@@ -258,8 +258,14 @@ const eventsData = {
       location:
         "Kampus UIR, Jl. Kaharuddin Nasution No.113, Simpang Tiga, Pekanbaru, Riau",
     },
-    agendaExtra:
-      'Seminar nasional bertema "Beyond Code: From Problem Solving to Impactful Digital Innovation" yang mengangkat pembangunan solusi digital yang relevan melalui problem solving, teknologi, dan inovasi — mulai dari masalah nyata ke solusi digital, inovasi yang berdampak bagi pengguna dan keberlanjutan (SDGs), hingga menyiapkan generasi problem solver digital. Terbuka untuk mahasiswa (Informatika, Ilmu Komputer, Sistem Informasi, Teknik), pelajar SMA/SMK, akademisi, praktisi, dan masyarakat umum.',
+    agendaExtra: [
+      "Setia Budi merupakan Machine Learning Engineer di tiket.com yang berpengalaman dalam pengembangan teknologi Artificial Intelligence (AI) dan Machine Learning (ML), seperti hotel dan flight search ranking, recommender system, serta otomatisasi layanan berbasis Large Language Model (LLM). Beliau juga aktif sebagai Content Creator di Indonesia Belajar yang berfokus pada edukasi pemrograman dan teknologi.",
+      "Pengalaman beliau dalam penerapan AI/ML di industri teknologi relevan dengan tema seminar “Beyond Coding: Thriving in the AI Era”. Beliau diharapkan dapat memberikan wawasan mengenai penerapan AI di dunia industri, perkembangan teknologi, serta peluang dan tantangan di era AI.",
+    ],
+    pendidikan: [
+      "S2: Master of Computer Science (Research), University of Tasmania, Australia.",
+      "S3: Ph.D. in Computer Science, University of Tasmania, Australia.",
+    ],
     susunanAcara: [
       {
         title: "Registrasi Peserta",
@@ -609,9 +615,23 @@ export default function EventDetail() {
                 AGENDA &amp; INFORMASI
               </h3>
               {event.agendaExtra && (
-                <p className="mb-6 text-sm sm:text-base font-bold leading-relaxed">
-                  {event.agendaExtra}
-                </p>
+                <div className="mb-6 space-y-3 text-sm sm:text-base font-bold leading-relaxed">
+                  {event.agendaExtra.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                  {event.pendidikan && (
+                    <div>
+                      <p className="font-black uppercase tracking-wide">
+                        Pendidikan
+                      </p>
+                      <ul className="mt-2 space-y-1 list-disc list-inside">
+                        {event.pendidikan.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
               )}
               <ul className="space-y-4">
                 <li className="flex items-center gap-4 bg-cream p-4 neo-border neo-shadow-sm hover:translate-x-1 hover:-translate-y-1 transition-transform">
