@@ -1,5 +1,5 @@
 export const sponsors = [
-  { id: 1, name: 'Sponsor 1', color: 'bg-neo-yellow' },
+  { id: 1, name: 'Keish', color: 'bg-neo-yellow', img: '/SponsorDanMediaPartner/Sponsor1.png', imgBg: 'bg-cream' },
   { id: 2, name: 'Sponsor 2', color: 'bg-neo-blue' },
   { id: 3, name: 'Sponsor 3', color: 'bg-neo-pink' },
   { id: 4, name: 'Sponsor 4', color: 'bg-neo-green' },
