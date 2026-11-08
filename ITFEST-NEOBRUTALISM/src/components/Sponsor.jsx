@@ -30,7 +30,7 @@ const SponsorCard = memo(function SponsorCard({ item, itemKey, isHovered, onEnte
           loading="lazy"
           decoding="async"
           draggable={false}
-          className="w-[258px] sm:w-[304px] h-[92px] sm:h-[108px] mb-1 bg-cream neo-border p-2 object-contain transition-all duration-300"
+          className="w-[258px] sm:w-[304px] h-[92px] sm:h-[108px] mb-1 p-2 object-contain transition-all duration-300"
         />
       ) : item.img && item.frameless ? (
         <img

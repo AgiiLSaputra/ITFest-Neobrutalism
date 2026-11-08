@@ -64,7 +64,7 @@ function SponsorGridCard({ item, items, index = 0, total = 1 }) {
           loading="lazy"
           decoding="async"
           draggable={false}
-          className={`w-full h-[96px] sm:h-[112px] ${item.imgBg || 'bg-cream'} neo-border p-3 object-contain`}
+          className="w-full h-[96px] sm:h-[112px] p-3 object-contain"
         />
         <h4 className="font-black text-sm tracking-tight">{item.name}</h4>
       </Tag>
