@@ -304,7 +304,7 @@ const eventsData = {
     about: [
       "Kompetisi desain antarmuka berbasis studi kasus nyata: dari riset, wireframe, sampai high-fidelity prototype.",
       "Penilaian menekankan usability, estetika visual, dan kesesuaian solusi dengan kebutuhan pengguna.",
-      "Terbuka untuk mahasiswa aktif UIR.",
+      "Terbuka untuk siswa SMA/SMK sederajat dan mahasiswa aktif D3/D4/S1 di seluruh Indonesia.",
     ],
     rules: [
       {
