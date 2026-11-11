@@ -43,9 +43,9 @@ export const twibbons = [
       '🎨 **READY TO DESIGN THE FUTURE!**\n\nIdeas into interfaces, creativity into solutions. 🚀\n\nHalo! Saya **[Nama Peserta]** dari **[Nama Tim/Asal Instansi]**, siap menjadi bagian dari **UI/UX Competition MILAD IT FEST**!\n\nSaatnya menuangkan kreativitas, merancang pengalaman digital yang bermakna, dan menghadirkan solusi melalui desain. Bukan sekadar tampilan, tetapi bagaimana sebuah desain dapat memberikan pengalaman terbaik bagi penggunanya.\n\nDengan semangat inovasi dan kolaborasi, mari ciptakan karya yang berdampak!\n\n**“Innovation & Technology: Creating Solutions, Shaping the Future”**\n\nLet\'s design something meaningful!\n\n@miladtiuir @technofestuir @himatifuir_\n\n#MiladITFest19 #MiladTIUIR #TechnoFestUIR #InnovationAnd Technology #TeknikInformatikaUIR',
   },
   {
-    id: 'panitia',
-    label: 'Panitia',
-    title: 'TWIBBON PANITIA',
+    id: 'umum',
+    label: 'Umum',
+    title: 'TWIBBON UMUM',
     frame: '/img/TWIBBON_PANITIA.png',
     ready: true,
     // Posisi placeholder "Belum ada foto" → pusat lubang bingkai (48.9% W, 51.3% H)
