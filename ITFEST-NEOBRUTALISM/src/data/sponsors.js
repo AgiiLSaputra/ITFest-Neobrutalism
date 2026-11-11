@@ -8,6 +8,7 @@ export const sponsors = [
 
 export const mediaPartners = [
   { id: 13, name: 'EventVerse', color: 'bg-cream', img: '/SponsorDanMediaPartner/EventVerse.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
+  { id: 18, name: 'HIMSI UHT', color: 'bg-cream', img: '/SponsorDanMediaPartner/Himsi_UHT.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 17, name: 'HIMA UNILAK', color: 'bg-cream', img: '/SponsorDanMediaPartner/HIMA_Unilak.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 16, name: 'HIMA UIN', color: 'bg-cream', img: '/SponsorDanMediaPartner/Hima_TE_UIN.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 15, name: 'HIMA UP', color: 'bg-cream', img: '/SponsorDanMediaPartner/HIMA_UP.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
