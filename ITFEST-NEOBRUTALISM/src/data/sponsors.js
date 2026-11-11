@@ -8,6 +8,7 @@ export const sponsors = [
 
 export const mediaPartners = [
   { id: 13, name: 'EventVerse', color: 'bg-cream', img: '/SponsorDanMediaPartner/EventVerse.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
+  { id: 15, name: 'HIMA UP', color: 'bg-cream', img: '/SponsorDanMediaPartner/HIMA_UP.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 14, name: 'BEM Universitas Sains Dan Teknologi Indonesia', color: 'bg-cream', img: '/SponsorDanMediaPartner/BEM_Univ.png', wide: true, imgZoom: true },
   { id: 4, name: 'BroSisPKU', color: 'bg-cream', img: '/SponsorDanMediaPartner/BroSisPKU-Transparent-White.png', imgBg: 'bg-black', link: 'https://www.instagram.com/brosispku?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==' },
   { id: 10, name: 'HM-TIF', color: 'bg-cream', img: '/img/LOGO_HM-TIF.png', imgBg: 'bg-black', link: 'https://www.instagram.com/hmtifumri/' },
