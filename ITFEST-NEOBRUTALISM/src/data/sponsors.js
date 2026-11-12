@@ -12,6 +12,7 @@ export const mediaPartners = [
   { id: 18, name: 'HIMSI UHT', color: 'bg-cream', img: '/SponsorDanMediaPartner/Himsi_UHT.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 20, name: 'HMIF UNAND', color: 'bg-cream', img: '/SponsorDanMediaPartner/HMIF_UNAND.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 21, name: 'ITSA PCR', color: 'bg-cream', img: '/SponsorDanMediaPartner/ITSA_PCR.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
+  { id: 22, name: 'CS Related', color: 'bg-cream', img: '/SponsorDanMediaPartner/CSRELATED.png', wide: true },
   { id: 17, name: 'HIMA UNILAK', color: 'bg-cream', img: '/SponsorDanMediaPartner/HIMA_Unilak.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 16, name: 'HIMA UIN', color: 'bg-cream', img: '/SponsorDanMediaPartner/Hima_TE_UIN.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 15, name: 'HIMA UP', color: 'bg-cream', img: '/SponsorDanMediaPartner/HIMA_UP.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
