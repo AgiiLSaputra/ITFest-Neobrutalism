@@ -326,7 +326,7 @@ const eventsData = {
     ],
     prizes: [
       { icon: "workspace_premium", place: "E-Certificate Resmi", amount: "Semua Peserta", bg: "bg-neo-yellow" },
-      { icon: "emoji_events", place: "Trophy / Medali", amount: "Untuk Juara", bg: "bg-cream" },
+      { icon: "emoji_events", place: "Uang Pembinaan", amount: "Untuk Juara", bg: "bg-cream" },
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
