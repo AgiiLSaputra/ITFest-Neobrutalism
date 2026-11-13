@@ -591,7 +591,15 @@ export default function TwibbonPage() {
                 {copied ? 'Tersalin!' : 'Salin Deskripsi'}
               </button>
               <p className="text-xs font-bold mt-3">
-                Tag juga akun resmi kami: <strong>@himatifuir_</strong>
+                Tag juga akun resmi kami:{' '}
+                <a
+                  href="https://www.instagram.com/miladtiuir?obrf=eHdodGw5aGx4OTZu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-black underline decoration-2 underline-offset-2 bg-neo-yellow px-1 border-2 border-black box-decoration-clone hover:bg-neo-blue transition-colors"
+                >
+                  @himatifuir_
+                </a>
               </p>
             </div>
           </ScrollReveal>
