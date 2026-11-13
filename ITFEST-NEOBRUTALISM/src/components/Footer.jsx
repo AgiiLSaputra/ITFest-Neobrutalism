@@ -20,7 +20,7 @@ const InstagramIcon = () => (
 );
 
 const socialLinks = [
-  { isInstagram: true, label: "Instagram @miladituir", handle: "@miladituir", href: "https://www.instagram.com/miladituir" },
+  { isInstagram: true, label: "Instagram @miladituir", handle: "@miladituir", href: "https://www.instagram.com/miladtiuir?obrf=eHdodGw5aGx4OTZu" },
   { isInstagram: true, label: "Instagram @technofestuir", handle: "@technofestuir", href: "https://www.instagram.com/technofestuir" },
 ];
 
