@@ -599,6 +599,14 @@ export default function TwibbonPage() {
                   className="font-black underline decoration-2 underline-offset-2 bg-neo-yellow px-1 border-2 border-black box-decoration-clone hover:bg-neo-blue transition-colors"
                 >
                   @himatifuir_
+                </a>{' '}
+                <a
+                  href="https://www.instagram.com/technofestuir?xtok=MTEyYnA0c2NocnppMQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-black underline decoration-2 underline-offset-2 bg-neo-green px-1 border-2 border-black box-decoration-clone hover:bg-neo-blue transition-colors"
+                >
+                  @technofestuir
                 </a>
               </p>
             </div>
