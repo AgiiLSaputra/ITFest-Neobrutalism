@@ -139,7 +139,7 @@ function EventCard({ event, index }) {
             </div>
           ) : (
             <a
-              className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none animate-neo-jitter`}
+              className={`flex items-center justify-center gap-2 w-full py-4 ${event.daftarBg} text-black font-black uppercase neo-border neo-shadow-sm transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-none active:translate-x-2 active:-translate-y-2 active:shadow-none`}
               href={event.daftarLink}
               target="_blank"
               rel="noopener noreferrer"
