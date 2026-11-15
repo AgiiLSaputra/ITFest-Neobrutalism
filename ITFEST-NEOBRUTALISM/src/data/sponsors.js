@@ -47,6 +47,7 @@ export const mediaPartners = [
     img: "/SponsorDanMediaPartner/Himsi_UHT.png",
     imgBg: "bg-white",
     logoPad: "p-1.5",
+    link: "https://www.instagram.com/himsiuhtp?srtk=ZGpjdGM1ZWl2NDYw",
   },
   {
     id: 20,
