@@ -100,6 +100,7 @@ export const mediaPartners = [
     img: "/SponsorDanMediaPartner/HIMA_UP.png",
     imgBg: "bg-white",
     logoPad: "p-1.5",
+    link: "https://www.instagram.com/teknik_informatika_up?xtok=ZjdlZjJnanJzNDh1",
   },
   {
     id: 14,
