@@ -74,6 +74,7 @@ export const mediaPartners = [
     img: "/SponsorDanMediaPartner/CSRELATED.png",
     frameless: true,
     lgSpan2: true,
+    link: "https://www.instagram.com/csrelatedcompetitions?cplk=MWRyMjBlYXdsandwbQ==",
   },
   {
     id: 17,
