@@ -69,7 +69,7 @@ export const mediaPartners = [
   },
   {
     id: 22,
-    name: "CSRC",
+    name: "CompSci-Related Competitions (CSRC)",
     color: "bg-cream",
     img: "/SponsorDanMediaPartner/CSRELATED.png",
     frameless: true,
