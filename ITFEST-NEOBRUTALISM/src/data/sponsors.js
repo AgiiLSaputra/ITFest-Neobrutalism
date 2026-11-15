@@ -8,7 +8,7 @@ export const sponsors = [
 
 export const mediaPartners = [
   { id: 13, name: 'EventVerse', color: 'bg-cream', img: '/SponsorDanMediaPartner/EventVerse.png', imgBg: 'bg-white', logoPad: 'p-1.5', link: 'https://www.instagram.com/eventverse.id?rpxt=bHJhaHI3cWcwcnlx' },
-  { id: 19, name: 'Universitas Abdurrab', color: 'bg-cream', img: '/SponsorDanMediaPartner/UniversitasAbdurrab.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
+  { id: 19, name: 'HMTI UNIVRAB', color: 'bg-cream', img: '/SponsorDanMediaPartner/UniversitasAbdurrab.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 18, name: 'HIMSI UHT', color: 'bg-cream', img: '/SponsorDanMediaPartner/Himsi_UHT.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 20, name: 'HMIF UNAND', color: 'bg-cream', img: '/SponsorDanMediaPartner/HMIF_UNAND.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
   { id: 21, name: 'ITSA PCR', color: 'bg-cream', img: '/SponsorDanMediaPartner/ITSA_PCR.png', imgBg: 'bg-white', logoPad: 'p-1.5' },
