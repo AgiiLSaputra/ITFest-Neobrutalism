@@ -91,6 +91,7 @@ export const mediaPartners = [
     img: "/SponsorDanMediaPartner/Hima_TE_UIN.png",
     imgBg: "bg-white",
     logoPad: "p-1.5",
+    link: "https://www.instagram.com/himateuinsuska?vrfl=MW9yc3pxZ2t4aHdncA==",
   },
   {
     id: 15,
