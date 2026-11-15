@@ -69,7 +69,7 @@ export const mediaPartners = [
   },
   {
     id: 22,
-    name: "CS Related",
+    name: "CSRC",
     color: "bg-cream",
     img: "/SponsorDanMediaPartner/CSRELATED.png",
     frameless: true,
