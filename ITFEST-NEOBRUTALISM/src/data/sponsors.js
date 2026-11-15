@@ -56,6 +56,7 @@ export const mediaPartners = [
     img: "/SponsorDanMediaPartner/HMIF_UNAND.png",
     imgBg: "bg-white",
     logoPad: "p-1.5",
+    link: "https://www.instagram.com/hmif_unand?dlrf=MWlpczdhaWVtZWVrZA==",
   },
   {
     id: 21,
