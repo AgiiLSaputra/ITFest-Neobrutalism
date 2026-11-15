@@ -86,7 +86,7 @@ export const mediaPartners = [
   },
   {
     id: 16,
-    name: "HIMA UIN",
+    name: "HIMATE UINSUSKA",
     color: "bg-cream",
     img: "/SponsorDanMediaPartner/Hima_TE_UIN.png",
     imgBg: "bg-white",
