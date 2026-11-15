@@ -65,6 +65,7 @@ export const mediaPartners = [
     img: "/SponsorDanMediaPartner/ITSA_PCR.png",
     imgBg: "bg-white",
     logoPad: "p-1.5",
+    link: "https://www.instagram.com/itsapcr?mdxt=ZGszYTlzcDF0Mmo2",
   },
   {
     id: 22,
