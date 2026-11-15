@@ -95,7 +95,7 @@ export const mediaPartners = [
   },
   {
     id: 15,
-    name: "HIMA UP",
+    name: "HIMANIKKA",
     color: "bg-cream",
     img: "/SponsorDanMediaPartner/HIMA_UP.png",
     imgBg: "bg-white",
