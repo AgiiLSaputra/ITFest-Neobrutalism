@@ -140,7 +140,7 @@ export const mediaPartners = [
   },
   {
     id: 12,
-    name: "FKIP UIR",
+    name: "HIMADIKJAS UIR",
     color: "bg-cream",
     img: "/SponsorDanMediaPartner/FKIP_UIR.png",
     imgBg: "bg-white",
