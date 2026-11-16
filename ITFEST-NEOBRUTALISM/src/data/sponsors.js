@@ -145,6 +145,7 @@ export const mediaPartners = [
     img: "/SponsorDanMediaPartner/FKIP_UIR.png",
     imgBg: "bg-white",
     logoPad: "p-1.5",
+    link: "https://www.instagram.com/himadikjas_uir?rpxt=MTNndWkwMXd5OHVqcA==",
   },
   {
     id: 5,
