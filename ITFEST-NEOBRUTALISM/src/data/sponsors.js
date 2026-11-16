@@ -111,6 +111,7 @@ export const mediaPartners = [
     imgZoom: true,
     homeSize: true,
     lgSpan2: true,
+    link: "https://www.instagram.com/bem_usti?psln=dHhhZm11dXRxN3V0",
   },
   {
     id: 4,
