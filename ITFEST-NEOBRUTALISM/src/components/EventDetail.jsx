@@ -402,7 +402,7 @@ export default function EventDetail() {
         <span className="material-symbols-outlined text-[18px]">
           arrow_back
         </span>
-        BACK TO LANDING PAGE
+        BACK
       </Link>
 
       {/* Header */}

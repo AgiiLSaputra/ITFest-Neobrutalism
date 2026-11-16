@@ -313,7 +313,7 @@ export default function TwibbonPage() {
         className="inline-flex items-center gap-2 mb-8 text-black font-black hover:bg-black hover:text-white px-3 py-1 transition-colors neo-border font-mono text-sm uppercase neo-shadow-hover animate-pop-up"
       >
         <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-        BACK TO LANDING PAGE
+        BACK
       </Link>
 
       <ScrollReveal animation="animate-pop-up">
