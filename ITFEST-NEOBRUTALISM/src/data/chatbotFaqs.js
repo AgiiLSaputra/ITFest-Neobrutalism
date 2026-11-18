@@ -124,7 +124,7 @@ export const chatFaqs = [
           'Seminar Nasional (tiket): 1 September – 10 Oktober 2026',
           'IT Expo (booth): 15 September – 5 Oktober 2026',
           'Hackathon: Gelombang 1 10–31 Oktober, Gelombang 2 1 – 19 November 2026',
-          'E-Sport Mobile Legends: Gelombang 1 1–25 Oktober, Gelombang 2 26 Oktober – 16 November 2026 (kuota 32 tim)',
+          'E-Sport Mobile Legends: 24 November 2026 (pertandingan 27 – 29 November 2026, kuota 32 tim)',
           'Badminton: 1 Oktober – 8 November 2026',
           'UI/UX Design: 10 Oktober – 8 November 2026',
         ],

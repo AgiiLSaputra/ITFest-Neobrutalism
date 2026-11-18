@@ -114,9 +114,8 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      { dateFormatted: "1 – 25 Oktober 2026", endDateIso: "2026-10-25T23:59:59+07:00", title: "Pendaftaran Gelombang 1 (Early Bird)", description: "Pendaftaran dibuka dengan kuota terbatas 16 tim." },
-      { dateFormatted: "26 Oktober – 16 November 2026", endDateIso: "2026-11-16T23:59:59+07:00", title: "Pendaftaran Gelombang 2", description: "Pendaftaran reguler hingga kuota 32 tim terpenuhi." },
-      { dateFormatted: "18 November 2026", endDateIso: "2026-11-18T23:59:59+07:00", title: "Technical Meeting (Online)", description: "Pengundian bracket dan pembacaan rulebook pertandingan." },
+      { dateFormatted: "24 November 2026", endDateIso: "2026-11-24T23:59:59+07:00", title: "Pendaftaran", description: "Pendaftaran tim Mobile Legends dibuka hingga kuota 32 tim terpenuhi." },
+      { dateFormatted: "25 November 2026", endDateIso: "2026-11-25T23:59:59+07:00", title: "Technical Meeting (Online)", description: "Pengundian bracket dan pembacaan rulebook pertandingan." },
       { dateFormatted: "27 – 29 November 2026", endDateIso: "2026-11-29T23:59:59+07:00", title: "Main Event & Grand Final", description: "Pertandingan babak knockout dan babak puncaknya di Stage Utama." },
     ],
     accentBg: "bg-neo-pink",
