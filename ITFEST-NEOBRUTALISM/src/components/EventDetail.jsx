@@ -153,8 +153,8 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      { dateFormatted: "1 Oktober – 8 November 2026", endDateIso: "2026-11-08T23:59:59+07:00", title: "Masa Pendaftaran Registrasi", description: "Pendaftaran peserta dan verifikasi berkas identitas." },
-      { dateFormatted: "10 November 2026", endDateIso: "2026-11-10T23:59:59+07:00", title: "Technical Meeting", description: "Penjelasan peraturan pertandingan dan drawing lawan." },
+      { dateFormatted: "1 Oktober – 24 November 2026", endDateIso: "2026-11-24T23:59:59+07:00", title: "Masa Pendaftaran Registrasi", description: "Pendaftaran peserta dan verifikasi berkas identitas." },
+      { dateFormatted: "2 Desember 2026", endDateIso: "2026-12-02T23:59:59+07:00", title: "Technical Meeting", description: "Penjelasan peraturan pertandingan dan drawing lawan." },
       { dateFormatted: "5 – 6 Desember 2026", endDateIso: "2026-12-06T23:59:59+07:00", title: "Pertandingan Babak Penyisihan - Final", description: "Pelaksanaan pertandingan di Lapangan Indoor GSG UIR." },
     ],
     accentBg: "bg-neo-green",
