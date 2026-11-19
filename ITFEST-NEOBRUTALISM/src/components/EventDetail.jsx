@@ -199,7 +199,7 @@ const eventsData = {
     ],
     timeline: [
       { dateFormatted: "Sedang Berlangsung", title: "Pendaftaran Stand / Booth Karya", description: "Pendaftaran tim/karya mahasiswa yang ingin membuka booth expo dibuka melalui halaman pendaftaran resmi." },
-      { dateFormatted: "10 Desember 2026", endDateIso: "2026-12-10T23:59:59+07:00", title: "Pelaksanaan Tech Innovation Expo", description: "Pameran berlangsung bersamaan dengan Seminar Nasional di Kampus UIR." },
+      { dateFormatted: "9 – 10 Desember 2026", endDateIso: "2026-12-10T23:59:59+07:00", title: "Pelaksanaan Tech Innovation Expo", description: "Pameran berlangsung bersamaan dengan Seminar Nasional di Kampus UIR." },
     ],
     accentBg: "bg-neo-yellow",
     tagBg: "bg-neo-blue",
@@ -243,7 +243,7 @@ const eventsData = {
     ],
     timeline: [
       { dateFormatted: "Sedang Berlangsung", title: "Masa Registrasi Peserta", description: "Pendaftaran peserta seminar nasional dibuka melalui halaman pendaftaran resmi." },
-      { dateFormatted: "10 Desember 2026", endDateIso: "2026-12-10T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan MILAD IT FEST 19." },
+      { dateFormatted: "9 – 10 Desember 2026", endDateIso: "2026-12-10T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan MILAD IT FEST 19." },
     ],
     accentBg: "bg-neo-blue",
     tagBg: "bg-neo-green",
@@ -253,7 +253,7 @@ const eventsData = {
       role: "Keynote Speaker",
     },
     agendaInfo: {
-      date: "10 Desember 2026",
+      date: "9 – 10 Desember 2026",
       time: "Segera Diumumkan",
       location:
         "Kampus UIR, Jl. Kaharuddin Nasution No.113, Simpang Tiga, Pekanbaru, Riau",

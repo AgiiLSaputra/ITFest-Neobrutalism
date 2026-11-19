@@ -62,7 +62,7 @@ export const chatFaqs = [
           '5 Desember 2026 — Final Lomba UI/UX Design',
           '5 – 6 Desember 2026 — Badminton (Gor Badminton, Simpang Tiga)',
           '5 – 6 Desember 2026 — Hackathon (Aula Gedung A, Fakultas Teknik UIR)',
-          '10 Desember 2026 — IT Expo (Indoor Gor Volly UIR) & Seminar Nasional, Puncak Acara',
+          '9 – 10 Desember 2026 — IT Expo (Indoor Gor Volly UIR) & Seminar Nasional, Puncak Acara',
         ],
       },
     ],
