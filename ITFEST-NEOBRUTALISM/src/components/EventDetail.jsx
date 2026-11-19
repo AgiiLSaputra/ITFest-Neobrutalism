@@ -198,8 +198,8 @@ const eventsData = {
       { icon: "redeem", place: "Merchandise Event", amount: "", bg: "bg-cream" },
     ],
     timeline: [
-      { dateFormatted: "15 September – 5 Oktober 2026", endDateIso: "2026-10-05T23:59:59+07:00", title: "Pendaftaran Stand / Booth Karya", description: "Pendaftaran tim/karya mahasiswa yang ingin membuka booth expo." },
-      { dateFormatted: "13 – 16 Oktober 2026", endDateIso: "2026-10-16T23:59:59+07:00", title: "Pelaksanaan Tech Innovation Expo", description: "Pameran berlangsung selama 4 hari penuh di Atrium Gedung Serbaguna UIR." },
+      { dateFormatted: "Sedang Berlangsung", title: "Pendaftaran Stand / Booth Karya", description: "Pendaftaran tim/karya mahasiswa yang ingin membuka booth expo dibuka melalui halaman pendaftaran resmi." },
+      { dateFormatted: "10 Desember 2026", endDateIso: "2026-12-10T23:59:59+07:00", title: "Pelaksanaan Tech Innovation Expo", description: "Pameran berlangsung bersamaan dengan Seminar Nasional di Kampus UIR." },
     ],
     accentBg: "bg-neo-yellow",
     tagBg: "bg-neo-blue",

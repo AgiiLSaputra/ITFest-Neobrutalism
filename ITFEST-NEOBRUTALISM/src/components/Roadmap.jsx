@@ -37,10 +37,10 @@ const roadmapItems = [
     color: "bg-neo-yellow",
   },
   {
-    dateFormatted: "9 Desember 2026",
-    endDateIso: "2026-12-09T23:59:59+07:00",
-    title: "Pembukaan Pameran Hari Pertama",
-    description: "Pameran dilaksanakan di Indoor Gor Volly UIR.",
+    dateFormatted: "10 Desember 2026",
+    endDateIso: "2026-12-10T23:59:59+07:00",
+    title: "Pameran IT Expo",
+    description: "Pameran dilaksanakan di Indoor Gor Volly UIR, bersamaan dengan Seminar Nasional.",
     color: "bg-neo-orange",
   },
   {

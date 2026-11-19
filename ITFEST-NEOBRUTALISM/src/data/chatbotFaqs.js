@@ -62,8 +62,7 @@ export const chatFaqs = [
           '5 Desember 2026 — Final Lomba UI/UX Design',
           '5 – 6 Desember 2026 — Badminton (Gor Badminton, Simpang Tiga)',
           '5 – 6 Desember 2026 — Hackathon (Aula Gedung A, Fakultas Teknik UIR)',
-          '9 Desember 2026 — Pembukaan pameran (Indoor Gor Volly UIR)',
-          '10 Desember 2026 — Seminar Nasional & Puncak Acara',
+          '10 Desember 2026 — IT Expo (Indoor Gor Volly UIR) & Seminar Nasional, Puncak Acara',
         ],
       },
     ],
@@ -121,8 +120,7 @@ export const chatFaqs = [
       {
         type: 'ul',
         items: [
-          'Seminar Nasional (tiket): 1 September – 10 Oktober 2026',
-          'IT Expo (booth): 15 September – 5 Oktober 2026',
+          'Seminar Nasional (tiket) & IT Expo (booth): pendaftaran sedang dibuka',
           'Hackathon: Gelombang 1 10–31 Oktober, Gelombang 2 1 – 19 November 2026',
           'E-Sport Mobile Legends: 24 November 2026 (pertandingan 27 – 29 November 2026, kuota 32 tim)',
           'Badminton: 1 Oktober – 24 November 2026',
