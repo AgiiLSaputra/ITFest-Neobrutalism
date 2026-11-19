@@ -67,9 +67,7 @@ const events = [
     title: "IT Expo",
     description:
       "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan.",
-    daftarLink: "#",
-    comingSoon: true,
-    comingSoonBg: "bg-neo-blue",
+    daftarLink: "https://kampushub.my.id/event/e4496c12-5371-4751-b011-f254e290c708",
     daftarBg: "bg-neo-blue",
     cardBg: "bg-cream",
     accent: "bg-neo-yellow",
@@ -83,8 +81,7 @@ const events = [
     title: "Nasional Seminar",
     description:
       "Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI.",
-    daftarLink: "#",
-    comingSoon: true,
+    daftarLink: "https://kampushub.my.id/event/e4496c12-5371-4751-b011-f254e290c708",
     daftarBg: "bg-neo-pink",
     cardBg: "bg-cream",
     accent: "bg-neo-blue",

@@ -169,9 +169,9 @@ const eventsData = {
     heroImg: "/img/ITEXPO.webp",
     description:
       "Pameran karya inovasi mahasiswa dan startup teknologi. Lihat langsung proyek masa depan di MILAD IT FEST 19.",
-    daftarLink: "#", // TODO: ganti dengan link form pendaftaran IT Expo
-    comingSoon: true,
-    comingSoonBg: "bg-neo-blue",
+    daftarLink: "https://kampushub.my.id/event/e4496c12-5371-4751-b011-f254e290c708",
+    daftarBg: "bg-neo-blue",
+    daftarNote: "Pendaftaran sedang dibuka. Daftar sekarang!",
     about: [
       "Pameran produk IoT, Web, dan Mobile Apps dari mahasiswa dan startup.",
       "Terbuka untuk umum, gratis tanpa tiket masuk.",
@@ -213,8 +213,9 @@ const eventsData = {
     heroImg: "/img/Foto.webp",
     description:
       "Perluas wawasanmu bersama pakar industri teknologi dalam seminar bertema masa depan AI di MILAD IT FEST 19.",
-    daftarLink: "#", // TODO: ganti dengan link form pendaftaran Seminar
-    comingSoon: true,
+    daftarLink: "https://kampushub.my.id/event/e4496c12-5371-4751-b011-f254e290c708",
+    daftarBg: "bg-neo-pink",
+    daftarNote: "Pendaftaran sedang dibuka. Daftar sekarang!",
     about: [
       "Seminar nasional dengan pembicara dari tech giant nasional dan internasional.",
       'Tema: "The Future of AI: Opportunities & Challenges for Indonesia".',
@@ -241,7 +242,7 @@ const eventsData = {
       { icon: "redeem", place: "Doorprize", amount: "Menarik Lainnya", bg: "bg-cream" },
     ],
     timeline: [
-      { dateFormatted: "1 September – 10 Oktober 2026", endDateIso: "2026-10-10T23:59:59+07:00", title: "Masa Registrasi Peserta", description: "Pembelian tiket presale & tiket reguler seminar nasional.", comingSoon: true },
+      { dateFormatted: "Sedang Berlangsung", title: "Masa Registrasi Peserta", description: "Pendaftaran peserta seminar nasional dibuka melalui halaman pendaftaran resmi." },
       { dateFormatted: "10 Desember 2026", endDateIso: "2026-12-10T23:59:59+07:00", title: "Pelaksanaan Seminar Nasional & Closing Ceremony", description: "Sesi keynote speech, Q&A interaktif, doorprize, dan penutupan MILAD IT FEST 19." },
     ],
     accentBg: "bg-neo-blue",
@@ -498,7 +499,9 @@ export default function EventDetail() {
               Siap untuk ikut?
             </div>
             <p className="font-bold mb-6 bg-neo-yellow px-2 py-1 inline-block neo-border text-sm">
-              {event.comingSoon ? (
+              {event.daftarNote ? (
+                event.daftarNote
+              ) : event.comingSoon ? (
                 "Pendaftaran segera dibuka."
               ) : (
                 <>
